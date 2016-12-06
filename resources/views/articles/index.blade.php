@@ -2,7 +2,7 @@
 
 <h1>Article</h1>
 @foreach($article as $key => $values)
-	<h2><a href="#">{{$values->title}}</a></h2>
+	<h2><a href="/article/{$article->id}">{{$values->title}}</a></h2>
 	<article>
 	<div class="body"></div>
 	{{$values->content}}

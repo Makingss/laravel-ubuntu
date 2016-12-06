@@ -19,6 +19,10 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
+        /**
+         * find()
+         * findOrFail()
+         */
         $article = Article::findOrFail($id);
         return view('articles.show')->with('article',$article);
     }
