@@ -14,3 +14,4 @@ Route::get('/','SitesController@index');
 Route::get('/about','SitesController@about');
 Route::get('content','SitesController@content');
 Route::get('article','ArticleController@index');
+Route::get('article/{id}','ArticleController@show');
