@@ -10,12 +10,13 @@ class ArticleController extends Controller
 
     public function index()
     {
-        $article = Article::all();
+        $article = new App\Article;
+        $articleData = $article::all();
         // $article->title = '';
         // $article->content = '';
         // $article->published_at = Carbon\Carbon::now();
         // return view('article',compact('article'));
         
-        return ($article);
+        return ($articleData);
     }
 }
