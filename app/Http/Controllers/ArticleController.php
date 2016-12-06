@@ -10,7 +10,7 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $article = Article::find(1);
+        $article = Article::all();
         return view('articles.index',compact('article'));
     }
 }
