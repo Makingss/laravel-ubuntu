@@ -6,3 +6,8 @@
 Homestead.json
 Homestead.yaml
 .env
+.buildpath
+.project
+.settings/org.eclipse.php.core.prefs
+.settings/org.eclipse.wst.validation.prefs
+index.php
