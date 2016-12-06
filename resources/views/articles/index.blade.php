@@ -2,10 +2,9 @@
 
 <h1>Article</h1>
 @foreach($article as $key => $values)
-<ul>
-	<li>{{$values->updated_at}}</li>
-	<li>{{$values->title}}</li>
-	<li>{{$values->content}}</li>
-	<li>{{$values->published_at}}</li>
-</ul>
+	<h2>{{$values->title}}}</h2>
+	<article>
+	<div class="body"></div>
+	{{$values->content}}
+	</article>
 @endforeach @stop
