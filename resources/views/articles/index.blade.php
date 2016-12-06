@@ -1,9 +1,10 @@
 @extends('app') @section('content')
 
 <h1>Article</h1>
-@if(count($article)!='0') 
-@foreach($article as $key => $values)
+@if(count($article)!='0')
 <ul>
-	<li>$values</li>
+	@foreach($article as $key => $values)
+
+	<li>{{$values}}</li> @endforeach
 </ul>
-@endforeach @entif @stop
+@entif @stop
