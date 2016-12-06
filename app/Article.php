@@ -13,9 +13,6 @@ class Article extends Model
     ];
 
     public function getArticle()
-    {
-        $article = Article::all();
-        dump($article->title);
-    }
+    {}
 }
     
