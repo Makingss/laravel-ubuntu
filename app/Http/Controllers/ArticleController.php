@@ -10,15 +10,12 @@ class ArticleController extends Controller
 
     public function index()
     {
-        //$article = App\Article::find(2);
-        //$article->title = '';
-        //$article->content = '';
-        //$article->published_at = Carbon\Carbon::now();
-           //return view('article',compact('article'));
-	$name='<span style="color:red"> Making</span>';
-        $fisrt = ['making','master','wuyanping'];
+        $article = Article::all();
+        // $article->title = '';
+        // $article->content = '';
+        // $article->published_at = Carbon\Carbon::now();
+        // return view('article',compact('article'));
         
-	$last = 'master';
-        return view('sites.content',compact('fisrt','last','name'));
+        return ($article);
     }
 }
