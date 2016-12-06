@@ -19,6 +19,7 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        return $id;
+        $article=Article::find($id);
+        return $article;
     }
 }
