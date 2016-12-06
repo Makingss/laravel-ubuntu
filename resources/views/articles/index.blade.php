@@ -1,6 +1,9 @@
-@extends('app')
-@section('content')
+@extends('app') @section('content')
 
 <h1>Article</h1>
-
-@stop
+@if(count($article)!='0') 
+@forecho($article as $key => $values)
+<ul>
+	<li>$values</li>
+</ul>
+@endforecho @entif @stop

@@ -8,7 +8,6 @@ use App\Article;
 
 class ArticleController extends Controller
 {
-
     public function index()
     {
         $article = Article::all();
