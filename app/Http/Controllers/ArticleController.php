@@ -11,11 +11,7 @@ class ArticleController extends Controller
 
     public function index()
     {
-        $article=Article::all();
-        // $article->title = '';
-        // $article->content = '';
-        // $article->published_at = Carbon\Carbon::now();
-        // return view('article',compact('article'));
-        return $article;
+        $article = Article::all();
+        return view('article.index')->with('article', $article);
     }
 }
