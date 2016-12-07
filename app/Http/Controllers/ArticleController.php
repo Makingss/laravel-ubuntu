@@ -45,5 +45,12 @@ class ArticleController extends Controller
     }
     public function store(Request $request){
         dd($request->all());
+        //接收POST数据
+        //保存到数据库
+        //重定向
+        $input=$request->all();
+        $input['published_at']=Carbon::now();
+        Article::create($input);
+        return redirect('/articles');
     }
 }
