@@ -3,7 +3,7 @@
     {!! Form::open(['url'=>'/articles']) !!}
     <div class="form-groups">
         {!! Form::label('Title') !!}
-        {!! Form::text('Title',null,['class'=>'form-control']) !!}
+        {!! Form::text('title',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::label('content','Content:') !!}
