@@ -1,9 +1,9 @@
 <?php
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use Carbon;
 use App\Article;
 
 class ArticleController extends Controller
@@ -40,15 +40,17 @@ class ArticleController extends Controller
      */
     public function create()
     {
-    
+
         return view('articles.create');
     }
-    public function store(Request $request){
+
+    public function store(Request $request)
+    {
         //接收POST数据
         //保存到数据库
         //重定向
-        $input=$request->all();
-        $input['published_at']=Carbon::now();
+        $input = $request->all();
+        $input['published_at'] = Carbon::now();
         Article::create($input);
         return redirect('/articles');
     }
