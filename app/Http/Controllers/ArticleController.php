@@ -10,7 +10,7 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $article = Article::all();
+        $article = Article::latest()->get();
         return view('articles.index', compact('article'));
     }
 
