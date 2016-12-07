@@ -38,8 +38,8 @@ class ArticleController extends Controller
     /**
      * create article
      */
-    public function create($date)
+    public function create()
     {
-        return view('articles.create');
+        return 'articles.create';
     }
 }
