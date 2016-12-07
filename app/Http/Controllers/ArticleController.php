@@ -24,6 +24,22 @@ class ArticleController extends Controller
          * findOrFail()
          */
         $article = Article::findOrFail($id);
-        return view('articles.show')->with('article',$article);
+        return view('articles.show')->with('article', $article);
+    }
+
+    /**
+     * update article
+     */
+    public function update()
+    {
+
+    }
+
+    /**
+     * create article
+     */
+    public function create($date)
+    {
+        return view('articles.create');
     }
 }
