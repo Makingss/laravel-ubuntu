@@ -40,6 +40,6 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return 'articles.create';
+        return 'articlesc.reate';
     }
 }
