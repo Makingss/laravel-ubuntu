@@ -2,7 +2,7 @@
     <h1>Create Article</h1>
     {!! Form::open() !!}
     {!! Form::lable('name') !!}
-    {!! Form::input('name') !!}}
+    {!! Form::text('name') !!}
     {!! Form::close() !!}
     <!--<form action="">
         <dev class="body">
