@@ -50,7 +50,6 @@ class ArticleController extends Controller
         //保存到数据库
         //重定向
         $input = $request->all();
-        $input['published_at'] = Carbon::now();
         Article::create($input);
         return redirect('/articles');
     }
