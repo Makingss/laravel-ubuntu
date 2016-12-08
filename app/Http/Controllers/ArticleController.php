@@ -10,7 +10,7 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $article = Article::latest()->get();
+        $article = Article::latest()->where('published_at','<=',Carbon::now())->get();
         return view('articles.index', compact('article'));
     }
 
