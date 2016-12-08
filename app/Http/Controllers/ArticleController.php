@@ -51,7 +51,7 @@ class ArticleController extends Controller
         //接收POST数据
         //保存到数据库
         //重定向
-        $this->validate($request, ['title' => 'required|min 3', 'content' => 'required', 'published_at' => 'required']);
+        $this->validate($request, ['title' => 'required|min3', 'content' => 'required', 'published_at' => 'required']);
         $input = $request->all();
         Article::create($input);
         return redirect('/articles');
