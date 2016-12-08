@@ -15,4 +15,11 @@
     </div>
     {!! Form::submit('发表文章',['class'=>'btn btn-primary form-control']) !!}
     {!! Form::close() !!}
+    @if($errors->any())
+        <ul class="list-group">
+            @foreach($errors as $error)
+                <li class="list-group-item list-group-item-danger">{{$error}}</li>
+            @endforeach
+        </ul>
+    @elseif()
 @stop
