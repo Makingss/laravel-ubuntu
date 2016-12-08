@@ -34,6 +34,7 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request,['title'=>'required|min:3','content'=>'required','published_at'=>'required'])
         $article = Article::findOrFail($id);
         $article->update($request->all());
         return redirect('/articles');
