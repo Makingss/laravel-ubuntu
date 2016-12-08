@@ -25,7 +25,7 @@ class ArticleController extends Controller
          * findOrFail()
          */
         $article = Article::findOrFail($id);
-        $article = $article->published_at->diffFormHumans();
+        #$article = $article->published_at->diffFormHumans();
         return view('articles.show')->with('article', $article);
     }
 
@@ -51,7 +51,7 @@ class ArticleController extends Controller
         //接收POST数据
         //保存到数据库
         //重定向
-        $this->validate($request, ['title' => 'required|min3', 'content' => 'required', 'published_at' => 'required']);
+        $this->validate($request, ['title' => 'required', 'content' => 'required', 'published_at' => 'required']);
         $input = $request->all();
         Article::create($input);
         return redirect('/articles');
