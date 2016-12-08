@@ -11,7 +11,7 @@
     </div>
     <div class="form-group">
         {!! Form::label('Published_at') !!}
-        {!! Form::input('date','published_at') !!}
+        {!! Form::input('date','published_at',date('Y-m-d'),['class'=>'form-control']) !!}
     </div>
     {!! Form::submit('发表文章',['class'=>'btn btn-primary form-control']) !!}
     {!! Form::close() !!}
