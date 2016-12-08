@@ -56,4 +56,10 @@ class ArticleController extends Controller
         Article::create($input);
         return redirect('/articles');
     }
+
+    public function edit($id)
+    {
+        $article = Article::findOrFail($id);
+        return view('articles.edit', compact('article'));
+    }
 }
