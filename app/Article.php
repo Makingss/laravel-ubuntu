@@ -12,6 +12,7 @@ class Article extends Model
         'content',
         'published_at'
     ];
+    protected $dates = ['published_at'];
 
     /**
      * @param $data

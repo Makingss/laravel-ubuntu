@@ -25,6 +25,7 @@ class ArticleController extends Controller
          * findOrFail()
          */
         $article = Article::findOrFail($id);
+        $article = $article->published_at->diffFormHumans();
         return view('articles.show')->with('article', $article);
     }
 
