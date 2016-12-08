@@ -1,6 +1,6 @@
 @extends('app') @section('content')
 
-    <h1>{{$article>title}}</h1>
+    <h1>{{$article->title}}</h1>
     {!! Form::model($article,['method'=>'PATCH','url'=>'/articles'.$article->id]) !!}
     <div class="form-groups">
         {!! Form::label('Title') !!}
