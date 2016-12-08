@@ -32,9 +32,11 @@ class ArticleController extends Controller
     /**
      * update article
      */
-    public function update()
+    public function update(Request $request, $id)
     {
-
+        $article = Article::findOrFail($id);
+        $article->update($request->all());
+        return redirect('/articles');
     }
 
     /**
