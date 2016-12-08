@@ -21,5 +21,5 @@
                 <li class="list-group-item list-group-item-danger">{{$error}}</li>
             @endforeach
         </ul>
-    @elseif()
+    @elseif
 @stop
