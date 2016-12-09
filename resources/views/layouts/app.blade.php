@@ -50,11 +50,9 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <div class="col-md-8 col-md-offset-4">
-                            <button type="button" class="btn btn-primary"><a href="{{ url('/login') }}">登录</a>
-                            </button>
-                        </div>
-
+                        <li><a href="{{ url('/login') }}">
+                                <button type="button" class="btn btn-primary">登录</button>
+                            </a></li>
                         <li><a href="{{ url('/register') }}">加入MAKING</a></li>
                     @else
                         <li class="dropdown">
