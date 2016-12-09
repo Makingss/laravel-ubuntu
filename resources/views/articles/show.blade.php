@@ -6,7 +6,7 @@
         {{$article->content}}
     </article>
     <a href="{{url('articles/'.$article->id.'/edit')}}">
-    <button type="button" class="btn btn-default btn-lg">
+    <button type="button" class="btn btn-primary">
         <span class="glyphicon glyphicon-pencil"></span> 修改文章
     </button>
     </a>
