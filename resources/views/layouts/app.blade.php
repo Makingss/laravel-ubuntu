@@ -50,7 +50,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <button class="btn btn-primary">
+                            <button type="button" class="btn btn-primary">
                             <li><a href="{{ url('/login') }}">登录</a></li>
                             </button>
                             <li><a href="{{ url('/register') }}">加入MAKING</a></li>
