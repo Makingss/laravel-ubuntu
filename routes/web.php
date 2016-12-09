@@ -20,3 +20,7 @@ Route::get('/articles/{id}','ArticleController@show');
 Route::post('/articles','ArticleController@store');
 */
 Route::resource('articles', 'ArticleController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
