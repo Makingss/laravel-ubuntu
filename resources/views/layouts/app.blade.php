@@ -53,7 +53,9 @@
                         <li><a href="{{ url('/login') }}">
                                 <button type="button" class="btn btn-primary">登录</button>
                             </a></li>
-                        <li><a href="{{ url('/register') }}">加入MAKING</a></li>
+                        <li><a href="{{ url('/register') }}">
+                                <button type="button" class="btn btn-primary">加入MAKING</button>
+                            </a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
