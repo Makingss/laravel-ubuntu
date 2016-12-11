@@ -43,25 +43,35 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a href="{{ url('/login') }}">
-                            <button type="button" class="btn btn-default">站点</button>
+                    <li><a href="{{ url('/#') }}">
+                            <button type="button" class="btn btn-link">站点</button>
                         </a></li>
-                    <li><a href="{{ url('/register') }}">
-                            <button type="button" class="btn btn-default">订单</button>
+                    <li><a href="{{ url('/#') }}">
+                            <button type="button" class="btn btn-link">订单</button>
                         </a></li>
-                    <li><a href="{{ url('/login') }}">
-                            <button type="button" class="btn btn-default">商品</button>
+                    <li><a href="{{ url('/#') }}">
+                            <button type="button" class="btn btn-link">商品</button>
                         </a></li>
-                    <li><a href="{{ url('/register') }}">
-                            <button type="button" class="btn btn-default">会员</button>
-                        </a></li><li><a href="{{ url('/login') }}">
-                            <button type="button" class="btn btn-default">营销</button>
+                    <li><a href="{{ url('/#') }}">
+                            <button type="button" class="btn btn-link">会员</button>
                         </a></li>
-                    <li><a href="{{ url('/register') }}">
-                            <button type="button" class="btn btn-default">报表</button>
+                    <li><a href="{{ url('/#') }}">
+                            <button type="button" class="btn btn-link">营销</button>
                         </a></li>
-                    <li><a href="{{ url('/register') }}">
-                            <button type="button" class="btn btn-default">微店</button>
+                    <li><a href="{{ url('/#') }}">
+                            <button type="button" class="btn btn-link">报表</button>
+                        </a></li>
+                    <li><a href="{{ url('/#') }}">
+                            <button type="button" class="btn btn-link">微店</button>
+                        </a></li>
+                    <li><a href="{{ url('/#') }}">
+                            <button type="button" class="btn btn-link">文章</button>
+                        </a></li>
+                    <li><a href="{{ url('/#') }}">
+                            <button type="button" class="btn btn-link">社频</button>
+                        </a></li>
+                    <li><a href="{{ url('/#') }}">
+                            <button type="button" class="btn btn-link">问答</button>
                         </a></li>
 
                 </ul>
