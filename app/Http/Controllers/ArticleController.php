@@ -8,6 +8,8 @@ use App\Article;
 
 class ArticleController extends Controller
 {
+
+
     public function index()
     {
         #$article = Article::latest()->where('published_at','<=',Carbon::now())->get();
@@ -38,6 +40,7 @@ class ArticleController extends Controller
         $article = Article::findOrFail($id);
         $article->update($request->all());
         return redirect('/articles');
+
     }
 
     /**
