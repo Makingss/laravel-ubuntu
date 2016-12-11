@@ -42,13 +42,28 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-left">
                     <li><a href="{{ url('/login') }}">
-                            <button type="button" class="btn btn-primary">登录</button>
+                            <button type="button" class="btn btn-default">站点</button>
                         </a></li>
                     <li><a href="{{ url('/register') }}">
-                            <button type="button" class="btn btn-primary">加入MAKING</button>
+                            <button type="button" class="btn btn-default">订单</button>
                         </a></li>
+                    <li><a href="{{ url('/login') }}">
+                            <button type="button" class="btn btn-default">商品</button>
+                        </a></li>
+                    <li><a href="{{ url('/register') }}">
+                            <button type="button" class="btn btn-default">会员</button>
+                        </a></li><li><a href="{{ url('/login') }}">
+                            <button type="button" class="btn btn-default">营销</button>
+                        </a></li>
+                    <li><a href="{{ url('/register') }}">
+                            <button type="button" class="btn btn-default">报表</button>
+                        </a></li>
+                    <li><a href="{{ url('/register') }}">
+                            <button type="button" class="btn btn-default">微店</button>
+                        </a></li>
+
                 </ul>
 
                 <!-- Right Side Of Navbar -->
