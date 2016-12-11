@@ -43,7 +43,12 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    &nbsp;
+                    <li><a href="{{ url('/login') }}">
+                            <button type="button" class="btn btn-primary">登录</button>
+                        </a></li>
+                    <li><a href="{{ url('/register') }}">
+                            <button type="button" class="btn btn-primary">加入MAKING</button>
+                        </a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
