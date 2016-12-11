@@ -42,9 +42,9 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-left">
+                <ul class="nav nav-tabs nav-justified" role="tablist">
                     <li><a href="{{ url('/#') }}">
-                            <button type="button" class="btn btn-link">站点</button>
+                            <button type="button" class="btn btn-link"><h3>站点</h3></button>
                         </a></li>
                     <li><a href="{{ url('/#') }}">
                             <button type="button" class="btn btn-link">订单</button>
