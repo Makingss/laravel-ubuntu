@@ -318,7 +318,7 @@
 	</header>
 	<!-- // SITE HEADER -->
 
-	<div class="copyrights">Collect from <a href="http://www.jq22.com/" >jQuery插件库</a></div>
+	<div class="copyrights">Collect from <a href="#" ></a></div>
 
 	<!-- HOMEPAGE SLIDER -->
 	<div id="home-slider">
