@@ -38,22 +38,20 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{config('name','MAKING')}}
                 </a>
-                <table class="table">
-                    <ul class="nav nav-tabs nav-justified" role="tablist">
-                        <li><a class="navbar-brand" href="{{ url('/#') }}">
-                                <button type="button" class="btn btn-link">有货商品</button>
-                            </a></li>
-                        <li><a class="navbar-brand" href="{{ url('/#') }}">
-                                <button type="button" class="btn btn-link">价格</button>
-                            </a></li>
-                        <li><a class="navbar-brand" href="{{ url('/#') }}">
-                                <button type="button" class="btn btn-link">折扣</button>
-                            </a></li>
-                        <li><a class="navbar-brand" href="{{ url('/#') }}">
-                                <button type="button" class="btn btn-link">筛选</button>
-                            </a></li>
-                    </ul>
-                </table>
+                <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <li><a class="navbar-brand" href="{{ url('/#') }}">
+                            <button type="button" class="btn btn-link">有货商品</button>
+                        </a></li>
+                    <li><a class="navbar-brand" href="{{ url('/#') }}">
+                            <button type="button" class="btn btn-link">价格</button>
+                        </a></li>
+                    <li><a class="navbar-brand" href="{{ url('/#') }}">
+                            <button type="button" class="btn btn-link">折扣</button>
+                        </a></li>
+                    <li><a class="navbar-brand" href="{{ url('/#') }}">
+                            <button type="button" class="btn btn-link">筛选</button>
+                        </a></li>
+                </ul>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
