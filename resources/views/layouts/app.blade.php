@@ -38,18 +38,18 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{config('name','MAKING')}}
                 </a>
-                <ul class="nav nav-tabs nav-justified" >
+                <ul class="nav nav-tabs nav-justified">
                     <li><a class="navbar-brand" href="{{ url('/#') }}">
-                            <button type="button" class="btn btn-link">有货商品</button>
+                            有货商品
                         </a></li>
                     <li><a class="navbar-brand" href="{{ url('/#') }}">
-                            <button type="button" class="btn btn-link">价格</button>
+                            价格
                         </a></li>
                     <li><a class="navbar-brand" href="{{ url('/#') }}">
-                            <button type="button" class="btn btn-link">折扣</button>
+                            折扣
                         </a></li>
                     <li><a class="navbar-brand" href="{{ url('/#') }}">
-                            <button type="button" class="btn btn-link">筛选</button>
+                            筛选
                         </a></li>
                 </ul>
             </div>
