@@ -11,10 +11,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- Favorite Icons -->
-	<link rel="icon" href="img/favicon/favicon.html" type="image/x-icon" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/apple-touch-icon-144x144-precomposed.html">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/apple-touch-icon-72x72-precomposed.html">
-	<link rel="apple-touch-icon-precomposed" href="img/favicon/apple-touch-icon-precomposed.html">
+	<link rel="icon" href="/img/favicon/favicon.html" type="image/x-icon" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144-precomposed.html">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72-precomposed.html">
+	<link rel="apple-touch-icon-precomposed" href="/img/favicon/apple-touch-icon-precomposed.html">
 	<!-- // Favorite Icons -->
 
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
@@ -165,7 +165,7 @@
 					<!-- SITE LOGO -->
 					<div class="logo-wrapper">
 						<a href="index-2.html" class="logo" title="GFashion - Responsive e-commerce HTML Template">
-							<img src="img/logo.png" alt="GFashion - Responsive e-commerce HTML Template" />
+							<img src="/img/logo.png" alt="GFashion - Responsive e-commerce HTML Template" />
 						</a>
 					</div>
 					<!-- // SITE LOGO -->
@@ -225,10 +225,10 @@
 											<div class="carousel slide m-b" data-ride="carousel">
 												<div class="carousel-inner">
 													<div class="item active">
-														<img src="images/men/slide1.jpg" alt="" />
+														<img src="/images/men/slide1.jpg" alt="" />
 													</div>
 													<div class="item">
-														<img src="images/men/slide2.jpg" alt="" />
+														<img src="/images/men/slide2.jpg" alt="" />
 													</div>
 												</div>
 											</div>
@@ -327,7 +327,7 @@
 				<!-- THE FIRST SLIDE -->
 				<li>
 					<!-- THE MAIN IMAGE IN THE SLIDE -->
-					<img src="rev-slider/img/slides/Street-Fashion.jpg" alt="" />
+					<img src="/rev-slider/img/slides/Street-Fashion.jpg" alt="" />
 
 					<!-- THE CAPTIONS OF THE FIRST SLIDE -->
 					<div class="flex-caption h6 text-bold gfc uppercase animated"
@@ -359,7 +359,7 @@
 				<!-- THE SECOND SLIDE -->
 				<li style="background: #fa6f57;">
 					<!-- THE MAIN IMAGE IN THE SLIDE -->
-					<img src="img/transparent.png" alt="" />
+					<img src="/img/transparent.png" alt="" />
 
 					<div class="flex-caption super-giant gfc animated uppercase"
 						 data-animation="fadeInUp"
@@ -394,7 +394,7 @@
 				<!-- THE SECOND SLIDE -->
 				<li>
 					<!-- THE MAIN IMAGE IN THE SLIDE -->
-					<img src="rev-slider/img/slides/3303349658_cfaebb811f_o.jpg" alt="" />
+					<img src="/rev-slider/img/slides/3303349658_cfaebb811f_o.jpg" alt="" />
 
 					<div class="flex-caption herotext text-bold gfc bg-dark animated uppercase"
 						 data-animation="fadeInUpBig"
@@ -584,7 +584,7 @@
 						<div class="owl-carousel owl-theme" data-visible-items="4" data-navigation="true" data-lazyload="true">
 							<div class="product" data-product-id="1">
 								<div class="entry-media">
-									<img data-src="images/women/basic/848051-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/women/basic/848051-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
@@ -621,7 +621,7 @@
 
 							<div class="product" data-product-id="2">
 								<div class="entry-media">
-									<img data-src="images/women/basic/688086-0286_1_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/women/basic/688086-0286_1_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
@@ -654,7 +654,7 @@
 
 							<div class="product" data-product-id="3">
 								<div class="entry-media">
-									<img data-src="images/women/basic/848099-0067_1_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/women/basic/848099-0067_1_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
@@ -690,7 +690,7 @@
 
 							<div class="product" data-product-id="4">
 								<div class="entry-media">
-									<img data-src="images/women/basic/589550-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/women/basic/589550-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
@@ -723,7 +723,7 @@
 
 							<div class="product" data-product-id="5">
 								<div class="entry-media">
-									<img data-src="images/women/legging/104331-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/women/legging/104331-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
@@ -760,7 +760,7 @@
 
 							<div class="product" data-product-id="6">
 								<div class="entry-media">
-									<img data-src="images/women/legging/714384-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/women/legging/714384-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
@@ -793,7 +793,7 @@
 
 							<div class="product" data-product-id="7">
 								<div class="entry-media">
-									<img data-src="images/women/dress/256479-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/women/dress/256479-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
@@ -829,12 +829,12 @@
 
 							<div class="product" data-product-id="8">
 								<div class="entry-media">
-									<img data-src="images/women/dress/278638-0083_1_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/women/dress/278638-0083_1_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
 											<li>
-												<a href="images/women/dress/278638-0083_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												<a href="/images/women/dress/278638-0083_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 											</li>
 											<li>
 												<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
@@ -894,7 +894,7 @@
 						<div class="owl-carousel owl-theme" data-visible-items="5" data-navigation="true" data-lazyload="true">
 							<div class="product" data-product-id="9">
 								<div class="entry-media">
-									<img data-src="images/men/jacket/271865-0286_1_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/men/jacket/271865-0286_1_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
@@ -902,7 +902,7 @@
 												<div class="circle ribbon ribbon-sale">Sale</div>
 											</li>
 											<li>
-												<a href="images/men/jacket/271865-0286_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												<a href="/images/men/jacket/271865-0286_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 											</li>
 											<li>
 												<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
@@ -927,12 +927,12 @@
 
 							<div class="product" data-product-id="10">
 								<div class="entry-media">
-									<img data-src="images/men/jacket/634082-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/men/jacket/634082-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
 											<li>
-												<a href="images/men/jacket/634082-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												<a href="/images/men/jacket/634082-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 											</li>
 											<li>
 												<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
@@ -956,7 +956,7 @@
 
 							<div class="product" data-product-id="11">
 								<div class="entry-media">
-									<img data-src="images/men/jacket/217365-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/men/jacket/217365-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
@@ -964,7 +964,7 @@
 												<div class="circle ribbon ribbon-new">New</div>
 											</li>
 											<li>
-												<a href="images/men/jacket/217365-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												<a href="/images/men/jacket/217365-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 											</li>
 											<li>
 												<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
@@ -988,12 +988,12 @@
 
 							<div class="product" data-product-id="12">
 								<div class="entry-media">
-									<img data-src="images/men/blazer/105797-1056_1_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/men/blazer/105797-1056_1_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
 											<li>
-												<a href="images/men/blazer/105797-1056_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												<a href="/images/men/blazer/105797-1056_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 											</li>
 											<li>
 												<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
@@ -1017,7 +1017,7 @@
 
 							<div class="product" data-product-id="13">
 								<div class="entry-media">
-									<img data-src="images/men/jumper/271866-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/men/jumper/271866-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
@@ -1025,7 +1025,7 @@
 												<div class="circle ribbon ribbon-sale">Sale</div>
 											</li>
 											<li>
-												<a href="images/men/jumper/271866-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												<a href="/images/men/jumper/271866-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 											</li>
 											<li>
 												<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
@@ -1050,12 +1050,12 @@
 
 							<div class="product" data-product-id="14">
 								<div class="entry-media">
-									<img data-src="images/men/shirt/803500-6989_1_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/men/shirt/803500-6989_1_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
 											<li>
-												<a href="images/men/shirt/803500-6989_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												<a href="/images/men/shirt/803500-6989_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 											</li>
 											<li>
 												<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
@@ -1079,7 +1079,7 @@
 
 							<div class="product" data-product-id="15">
 								<div class="entry-media">
-									<img data-src="images/men/shirt/217360-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/men/shirt/217360-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
@@ -1087,7 +1087,7 @@
 												<div class="circle ribbon ribbon-new">New</div>
 											</li>
 											<li>
-												<a href="images/men/shirt/217360-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												<a href="/images/men/shirt/217360-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 											</li>
 											<li>
 												<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
@@ -1111,12 +1111,12 @@
 
 							<div class="product" data-product-id="16">
 								<div class="entry-media">
-									<img data-src="images/men/accessories/000095-0014_2_t.jpg" alt="" class="lazyOwl thumb" />
+									<img data-src="/images/men/accessories/000095-0014_2_t.jpg" alt="" class="lazyOwl thumb" />
 									<div class="hover">
 										<a href="product.html" class="entry-url"></a>
 										<ul class="icons unstyled">
 											<li>
-												<a href="images/men/accessories/000095-0014_2.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												<a href="/images/men/accessories/000095-0014_2.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 											</li>
 											<li>
 												<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
@@ -1244,7 +1244,7 @@
 									<div class="center-xs">
 										<div class="ads">
 											<a href="#">
-												<img src="images/demo/images-footer.jpg" alt="" />
+												<img src="/images/demo/images-footer.jpg" alt="" />
 											</a>
 											<div class="ads-caption bottom-right">
 												<a href="#" class="btn btn-default btn-round">
@@ -1308,9 +1308,9 @@
 						<div class="pull-right">
 							<div class="vmid">
 								<span class="uppercase">Payment Accept&emsp;</span>
-								<a href="#"><img src="img/visacard.png" alt="" width="40" /></a>
-								<a href="#"><img src="img/mastercard.png" alt="" width="40" /></a>
-								<a href="#"><img src="img/paypal.png" alt="" width="40" /></a>
+								<a href="#"><img src="/img/visacard.png" alt="" width="40" /></a>
+								<a href="#"><img src="/img/mastercard.png" alt="" width="40" /></a>
+								<a href="#"><img src="/img/paypal.png" alt="" width="40" /></a>
 							</div>
 						</div>
 					</div>
