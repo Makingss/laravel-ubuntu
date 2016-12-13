@@ -38,7 +38,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{config('name','MAKING')}}
                 </a>
-                <ul class="nav nav-tabs nav-justified" role="tablist">
+                <ul class="nav nav-tabs nav-justified" >
                     <li><a class="navbar-brand" href="{{ url('/#') }}">
                             <button type="button" class="btn btn-link">有货商品</button>
                         </a></li>
