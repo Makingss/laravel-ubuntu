@@ -24,5 +24,5 @@ Route::resource('articles', 'ArticleController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::get('/mall','MallController@index');
+Route::get('/mall','Mall\MallController@index');
 

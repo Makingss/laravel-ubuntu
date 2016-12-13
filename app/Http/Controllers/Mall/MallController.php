@@ -7,8 +7,7 @@ use App\Http\Controllers\Controller;
 
 class MallController extends Controller
 {
-    public function index()
-    {
-        return view('mall.index');
-    }
+	public function index(){
+    return view('mall.index');
+	}
 }
