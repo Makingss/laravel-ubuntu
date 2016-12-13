@@ -1297,9 +1297,11 @@
 							</ul>
 						</div>
 						<div class="space10"></div>
+						<!--
 						<div class="copyright center-xs">
 							<p>© 2013 More Templates <a href="http://www.jq22.com/" target="_blank" title="jQuery插件库">jQuery插件库</a> - Collect from <a href="http://www.jq22.com/" title="jq22" target="_blank">jq22</a>. All Rights Reserved.</p>
 						</div>
+						-->
 					</div>
 
 					<div class="space40 visible-xs"></div>
