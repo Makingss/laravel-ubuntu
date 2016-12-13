@@ -40,16 +40,16 @@
                 </a>
                 <table class="table">
                     <ul class="nav nav-tabs nav-justified" role="tablist">
-                        <li><a href="{{ url('/#') }}">
+                        <li><a class="navbar-brand" href="{{ url('/#') }}">
                                 <button type="button" class="btn btn-link">有货商品</button>
                             </a></li>
-                        <li><a href="{{ url('/#') }}">
+                        <li><a class="navbar-brand" href="{{ url('/#') }}">
                                 <button type="button" class="btn btn-link">价格</button>
                             </a></li>
-                        <li><a href="{{ url('/#') }}">
+                        <li><a class="navbar-brand" href="{{ url('/#') }}">
                                 <button type="button" class="btn btn-link">折扣</button>
                             </a></li>
-                        <li><a href="{{ url('/#') }}">
+                        <li><a class="navbar-brand" href="{{ url('/#') }}">
                                 <button type="button" class="btn btn-link">筛选</button>
                             </a></li>
                     </ul>
