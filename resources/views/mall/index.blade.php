@@ -282,9 +282,6 @@
 		<!-- // MAIN HEADER -->
 	</header>
 	<!-- // SITE HEADER -->
-    
-    <div class="copyrights">Collect from <a href="http://www.jq22.com/" >jQuery插件库</a></div>
-		
 		<!-- HOMEPAGE SLIDER -->
 		<div id="home-slider">
 			<div class="flexslider">
@@ -1290,13 +1287,17 @@
 <!-- // PAGE WRAPPER -->
 
 <!-- Essential Javascripts -->
-<script src="js/minified.js"></script>
+<script src="sites-js/minified.js"></script>
 <!-- // Essential Javascripts -->
 
 
 	<!-- Particular Page Javascripts -->
-	<script src="js/owl.carousel.js"></script>
-	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="sites-js/owl.carousel.js"></script>
+	<script src="sites-js/jquery.flexslider-min.js"></script>
 	<!-- // Particular Page Javascripts -->
 </body>
+<<<<<<< HEAD
 </html>
+=======
+@stop
+>>>>>>> b5572408dff88fb7772d304bd8cb6205fed791ea
