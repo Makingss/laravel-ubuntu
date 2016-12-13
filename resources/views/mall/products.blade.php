@@ -100,7 +100,7 @@
 								<div id="sub-cart" class="sub-header">
 									<div class="cart-header">
 										<span>Your cart is currently empty.</span>
-										<small><a href="cart.html">(See All)</a></small>
+										<small><a href="cart.blade.php">(See All)</a></small>
 									</div>
 									<ul class="cart-items product-medialist unstyled clearfix"></ul>
 									<div class="cart-footer">
@@ -109,7 +109,7 @@
 											<span class="pull-right total">$ 0</span>
 										</div>
 										<div class="text-right">
-											<a href="cart.html" class="btn btn-default btn-round view-cart">View Cart</a>
+											<a href="cart.blade.php" class="btn btn-default btn-round view-cart">View Cart</a>
 										</div>
 									</div>
 								</div>
@@ -154,8 +154,8 @@
 						<nav id="tiny-menu" class="clearfix">
 							<ul class="user-menu">
 								<li><a href="#">My Account</a></li>
-								<li><a href="cart.html">My Wishlist</a></li>
-								<li><a href="checkout.html">Checkout</a></li>
+								<li><a href="cart.blade.php">My Wishlist</a></li>
+								<li><a href="checkout.blade.php">Checkout</a></li>
 								<li><a href="#">Log Out</a></li>
 							</ul>
 						</nav>
@@ -164,7 +164,7 @@
 					<!-- // CURRENCY / LANGUAGE / USER MENU -->
 					<!-- SITE LOGO -->
 					<div class="logo-wrapper">
-						<a href="index-2.html" class="logo" title="GFashion - Responsive e-commerce HTML Template">
+						<a href="index-2.blade.php" class="logo" title="GFashion - Responsive e-commerce HTML Template">
 							<img src="img/logo.png" alt="GFashion - Responsive e-commerce HTML Template" />
 						</a>
 					</div>
@@ -176,10 +176,10 @@
 								<a href="index.html">Home</a>
 							</li>
 							<li>
-								<a href="products.html">Women</a>
+								<a href="products.blade.php">Women</a>
 							</li>
 							<li>
-								<a href="products.html">Men</a>
+								<a href="products.blade.php">Men</a>
 								
 								<!-- MEGA MENU -->
 								<div class="mega-menu" data-col-lg="9" data-col-md="12">
@@ -188,36 +188,36 @@
 										<div class="col-md-3">
 											<h4 class="menu-title">Clothing</h4>
 											<ul class="mega-sub">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</div>
 										
 										<div class="col-md-3">
 											<h4 class="menu-title">Accessories</h4>
 											<ul class="mega-sub">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</div>
 										
 										<div class="col-md-3">
 											<h4 class="menu-title">Brands</h4>
 											<ul class="mega-sub">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</div>
 										
@@ -234,7 +234,7 @@
 											</div>
 											<h5 class="text-semibold uppercase m-b-sm">Featured Products</h5>
 											<p>Lorem ipsum dolor sit, consectetur adipiscing elit. Etiam neque velit, blandit sed scelerisque.</p>
-											<a href="products.html" class="btn btn-default btn-round">Go to Shop →</a>
+											<a href="products.blade.php" class="btn btn-default btn-round">Go to Shop →</a>
 										</div>
 										
 									</div>
@@ -246,10 +246,10 @@
 								<a href="components.html">Components</a>
 							</li>
 							<li>
-								<a href="store-locator.html">Store Locator</a>
+								<a href="store-locator.blade.php">Store Locator</a>
 							</li>
 							<li>
-								<a href="contact-us.html">Contact Us</a>
+								<a href="contact-us.blade.php">Contact Us</a>
 							</li>
 							<li>
 								<a href="#">Buy Me!</a>
@@ -271,36 +271,36 @@
 									
 									<ul class="dl-submenu">
 										<li>
-											<a href="products.html">Clothing</a>
+											<a href="products.blade.php">Clothing</a>
 											<ul class="dl-submenu">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</li>
 										<li>
-											<a href="products.html">Accessories</a>
+											<a href="products.blade.php">Accessories</a>
 											<ul class="dl-submenu">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</li>
 										<li>
-											<a href="products.html">Brands</a>
+											<a href="products.blade.php">Brands</a>
 											<ul class="dl-submenu">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</li>
 									</ul>
@@ -323,7 +323,7 @@
 			<div class="container">
 				<div class="relative">
 					<ul class="bc push-up unstyled clearfix">
-						<li><a href="index-2.html">Home</a></li>
+						<li><a href="index-2.blade.php">Home</a></li>
 						<li class="active">Products</li>
 					</ul>
 				</div>
@@ -529,7 +529,7 @@
 													<a href="images/women/basic/688086-0286_1.jpg" data-toggle="lightbox" class="entry-thumbnail">
 														<img src="images/women/basic/688086-0286_1_t.jpg" alt="Inceptos orci hac libero" />
 													</a>
-													<h5 class="entry-title"><a href="product.html">Inceptos orci hac libero</a></h5>
+													<h5 class="entry-title"><a href="product.blade.php">Inceptos orci hac libero</a></h5>
 													<s class="entry-discount m-r-sm"><span class="text-sm">$ 350.00</span></s>
 													<span class="entry-price accent-color">$ 250.00</span>
 												</div>
@@ -539,7 +539,7 @@
 													<a href="images/women/basic/589550-0014_1.jpg" data-toggle="lightbox" class="entry-thumbnail">
 														<img src="images/women/basic/589550-0014_1_t.jpg" alt="Inceptos orci hac libero" />
 													</a>
-													<h5 class="entry-title"><a href="product.html">Inceptos orci hac libero</a></h5>
+													<h5 class="entry-title"><a href="product.blade.php">Inceptos orci hac libero</a></h5>
 													<span class="entry-price">$ 350.00</span>
 												</div>
 											</li>
@@ -555,7 +555,7 @@
 											<h6 class="nmb">New Arrivals</h6>
 											<h5 class="text-semibold uppercase nmb">Leather Fashion</h5>
 											<div class="space10"></div>
-											<a href="products.html" class="with-icon prepend-icon"><i class="iconfont-caret-right"></i><span> Shop Now</span></a>
+											<a href="products.blade.php" class="with-icon prepend-icon"><i class="iconfont-caret-right"></i><span> Shop Now</span></a>
 										</div>
 									</div>
 								</div>
@@ -617,7 +617,7 @@
 										<div class="entry-media">
 											<img data-src="images/women/skirt/430041-0014_1_t.jpg" alt="" class="lazyLoad thumb" />
 											<div class="hover">
-												<a href="product.html" class="entry-url"></a>
+												<a href="product.blade.php" class="entry-url"></a>
 												<ul class="icons unstyled">
 													<li>
 														<div class="circle ribbon ribbon-sale">Sale</div>
@@ -637,7 +637,7 @@
 										</div>
 										<div class="entry-main">
 											<h5 class="entry-title">
-												<a href="product.html">Inceptos orci hac libero</a>
+												<a href="product.blade.php">Inceptos orci hac libero</a>
 											</h5>
 											<div class="entry-description visible-list">
 												<p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
@@ -658,7 +658,7 @@
 										<div class="entry-media">
 											<img data-src="images/women/accessories/582120-0029_1_t.jpg" alt="" class="lazyLoad thumb" />
 											<div class="hover">
-												<a href="product.html" class="entry-url"></a>
+												<a href="product.blade.php" class="entry-url"></a>
 												<ul class="icons unstyled">
 													<li>
 														<a href="images/women/accessories/582120-0029_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
@@ -675,7 +675,7 @@
 										</div>
 										<div class="entry-main">
 											<h5 class="entry-title">
-												<a href="product.html">Inceptos orci hac libero</a>
+												<a href="product.blade.php">Inceptos orci hac libero</a>
 											</h5>
 											<div class="entry-description visible-list">
 												<p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
@@ -695,7 +695,7 @@
 										<div class="entry-media">
 											<img data-src="images/men/accessories/255615-0014_1_t.jpg" alt="" class="lazyLoad thumb" />
 											<div class="hover">
-												<a href="product.html" class="entry-url"></a>
+												<a href="product.blade.php" class="entry-url"></a>
 												<ul class="icons unstyled">
 													<li>
 														<div class="circle ribbon ribbon-new">New</div>
@@ -715,7 +715,7 @@
 										</div>
 										<div class="entry-main">
 											<h5 class="entry-title">
-												<a href="product.html">Inceptos orci hac libero</a>
+												<a href="product.blade.php">Inceptos orci hac libero</a>
 											</h5>
 											<div class="entry-description visible-list">
 												<p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
@@ -735,7 +735,7 @@
 										<div class="entry-media">
 											<img data-src="images/men/blazer/677326-0014_1_t.jpg" alt="" class="lazyLoad thumb" />
 											<div class="hover">
-												<a href="product.html" class="entry-url"></a>
+												<a href="product.blade.php" class="entry-url"></a>
 												<ul class="icons unstyled">
 													<li>
 														<a href="images/men/blazer/677326-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
@@ -752,7 +752,7 @@
 										</div>
 										<div class="entry-main">
 											<h5 class="entry-title">
-												<a href="product.html">Inceptos orci hac libero</a>
+												<a href="product.blade.php">Inceptos orci hac libero</a>
 											</h5>
 											<div class="entry-description visible-list">
 												<p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
@@ -772,7 +772,7 @@
 										<div class="entry-media">
 											<img data-src="images/men/shoes/000312-2259_1_t.jpg" alt="" class="lazyLoad thumb" />
 											<div class="hover">
-												<a href="product.html" class="entry-url"></a>
+												<a href="product.blade.php" class="entry-url"></a>
 												<ul class="icons unstyled">
 													<li>
 														<div class="circle ribbon ribbon-sale">Sale</div>
@@ -792,7 +792,7 @@
 										</div>
 										<div class="entry-main">
 											<h5 class="entry-title">
-												<a href="product.html">Inceptos orci hac libero</a>
+												<a href="product.blade.php">Inceptos orci hac libero</a>
 											</h5>
 											<div class="entry-description visible-list">
 												<p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
@@ -813,7 +813,7 @@
 										<div class="entry-media">
 											<img data-src="images/women/jeans/220008-0054_1_t.jpg" alt="" class="lazyLoad thumb" />
 											<div class="hover">
-												<a href="product.html" class="entry-url"></a>
+												<a href="product.blade.php" class="entry-url"></a>
 												<ul class="icons unstyled">
 													<li>
 														<a href="images/women/jeans/220008-0054_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
@@ -830,7 +830,7 @@
 										</div>
 										<div class="entry-main">
 											<h5 class="entry-title">
-												<a href="product.html">Inceptos orci hac libero</a>
+												<a href="product.blade.php">Inceptos orci hac libero</a>
 											</h5>
 											<div class="entry-description visible-list">
 												<p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
@@ -850,7 +850,7 @@
 										<div class="entry-media">
 											<img data-src="images/women/swimwear/116796-0001_1_t.jpg" alt="" class="lazyLoad thumb" />
 											<div class="hover">
-												<a href="product.html" class="entry-url"></a>
+												<a href="product.blade.php" class="entry-url"></a>
 												<ul class="icons unstyled">
 													<li>
 														<div class="circle ribbon ribbon-new">New</div>
@@ -870,7 +870,7 @@
 										</div>
 										<div class="entry-main">
 											<h5 class="entry-title">
-												<a href="product.html">Inceptos orci hac libero</a>
+												<a href="product.blade.php">Inceptos orci hac libero</a>
 											</h5>
 											<div class="entry-description visible-list">
 												<p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
@@ -890,7 +890,7 @@
 										<div class="entry-media">
 											<img data-src="images/women/dress/278638-0083_1_t.jpg" alt="" class="lazyLoad thumb" />
 											<div class="hover">
-												<a href="product.html" class="entry-url"></a>
+												<a href="product.blade.php" class="entry-url"></a>
 												<ul class="icons unstyled">
 													<li>
 														<a href="images/women/dress/278638-0083_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
@@ -907,7 +907,7 @@
 										</div>
 										<div class="entry-main">
 											<h5 class="entry-title">
-												<a href="product.html">Inceptos orci hac libero</a>
+												<a href="product.blade.php">Inceptos orci hac libero</a>
 											</h5>
 											<div class="entry-description visible-list">
 												<p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
@@ -927,7 +927,7 @@
 										<div class="entry-media">
 											<img data-src="images/men/accessories/000095-0014_2_t.jpg" alt="" class="lazyLoad thumb" />
 											<div class="hover">
-												<a href="product.html" class="entry-url"></a>
+												<a href="product.blade.php" class="entry-url"></a>
 												<ul class="icons unstyled">
 													<li>
 														<a href="images/men/accessories/000095-0014_2.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
@@ -944,7 +944,7 @@
 										</div>
 										<div class="entry-main">
 											<h5 class="entry-title">
-												<a href="product.html">Inceptos orci hac libero</a>
+												<a href="product.blade.php">Inceptos orci hac libero</a>
 											</h5>
 											<div class="entry-description visible-list">
 												<p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
@@ -964,7 +964,7 @@
 										<div class="entry-media">
 											<img data-src="images/women/basic/848051-0014_1_t.jpg" alt="" class="lazyLoad thumb" />
 											<div class="hover">
-												<a href="product.html" class="entry-url"></a>
+												<a href="product.blade.php" class="entry-url"></a>
 												<ul class="icons unstyled">
 													<li>
 														<a href="images/women/basic/848051-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
@@ -981,7 +981,7 @@
 										</div>
 										<div class="entry-main">
 											<h5 class="entry-title">
-												<a href="product.html">Inceptos orci hac libero</a>
+												<a href="product.blade.php">Inceptos orci hac libero</a>
 											</h5>
 											<div class="entry-description visible-list">
 												<p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
@@ -1001,7 +1001,7 @@
 										<div class="entry-media">
 											<img data-src="images/women/basic/848099-0067_1_t.jpg" alt="" class="lazyLoad thumb" />
 											<div class="hover">
-												<a href="product.html" class="entry-url"></a>
+												<a href="product.blade.php" class="entry-url"></a>
 												<ul class="icons unstyled">
 													<li>
 														<a href="images/women/basic/848099-0067_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
@@ -1018,7 +1018,7 @@
 										</div>
 										<div class="entry-main">
 											<h5 class="entry-title">
-												<a href="product.html">Inceptos orci hac libero</a>
+												<a href="product.blade.php">Inceptos orci hac libero</a>
 											</h5>
 											<div class="entry-description visible-list">
 												<p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>

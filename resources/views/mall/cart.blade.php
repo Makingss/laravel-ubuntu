@@ -100,7 +100,7 @@
 								<div id="sub-cart" class="sub-header">
 									<div class="cart-header">
 										<span>Your cart is currently empty.</span>
-										<small><a href="cart.html">(See All)</a></small>
+										<small><a href="cart.blade.php">(See All)</a></small>
 									</div>
 									<ul class="cart-items product-medialist unstyled clearfix"></ul>
 									<div class="cart-footer">
@@ -109,7 +109,7 @@
 											<span class="pull-right total">$ 0</span>
 										</div>
 										<div class="text-right">
-											<a href="cart.html" class="btn btn-default btn-round view-cart">View Cart</a>
+											<a href="cart.blade.php" class="btn btn-default btn-round view-cart">View Cart</a>
 										</div>
 									</div>
 								</div>
@@ -154,8 +154,8 @@
 						<nav id="tiny-menu" class="clearfix">
 							<ul class="user-menu">
 								<li><a href="#">My Account</a></li>
-								<li><a href="cart.html">My Wishlist</a></li>
-								<li><a href="checkout.html">Checkout</a></li>
+								<li><a href="cart.blade.php">My Wishlist</a></li>
+								<li><a href="checkout.blade.php">Checkout</a></li>
 								<li><a href="#">Log Out</a></li>
 							</ul>
 						</nav>
@@ -164,7 +164,7 @@
 					<!-- // CURRENCY / LANGUAGE / USER MENU -->
 					<!-- SITE LOGO -->
 					<div class="logo-wrapper">
-						<a href="index-2.html" class="logo" title="GFashion - Responsive e-commerce HTML Template">
+						<a href="index-2.blade.php" class="logo" title="GFashion - Responsive e-commerce HTML Template">
 							<img src="img/logo.png" alt="GFashion - Responsive e-commerce HTML Template" />
 						</a>
 					</div>
@@ -176,10 +176,10 @@
 								<a href="index.html">Home</a>
 							</li>
 							<li>
-								<a href="products.html">Women</a>
+								<a href="products.blade.php">Women</a>
 							</li>
 							<li>
-								<a href="products.html">Men</a>
+								<a href="products.blade.php">Men</a>
 								
 								<!-- MEGA MENU -->
 								<div class="mega-menu" data-col-lg="9" data-col-md="12">
@@ -188,36 +188,36 @@
 										<div class="col-md-3">
 											<h4 class="menu-title">Clothing</h4>
 											<ul class="mega-sub">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</div>
 										
 										<div class="col-md-3">
 											<h4 class="menu-title">Accessories</h4>
 											<ul class="mega-sub">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</div>
 										
 										<div class="col-md-3">
 											<h4 class="menu-title">Brands</h4>
 											<ul class="mega-sub">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</div>
 										
@@ -234,7 +234,7 @@
 											</div>
 											<h5 class="text-semibold uppercase m-b-sm">Featured Products</h5>
 											<p>Lorem ipsum dolor sit, consectetur adipiscing elit. Etiam neque velit, blandit sed scelerisque.</p>
-											<a href="products.html" class="btn btn-default btn-round">Go to Shop →</a>
+											<a href="products.blade.php" class="btn btn-default btn-round">Go to Shop →</a>
 										</div>
 										
 									</div>
@@ -246,10 +246,10 @@
 								<a href="components.html">Components</a>
 							</li>
 							<li>
-								<a href="store-locator.html">Store Locator</a>
+								<a href="store-locator.blade.php">Store Locator</a>
 							</li>
 							<li>
-								<a href="contact-us.html">Contact Us</a>
+								<a href="contact-us.blade.php">Contact Us</a>
 							</li>
 							<li>
 								<a href="#">Buy Me!</a>
@@ -271,36 +271,36 @@
 									
 									<ul class="dl-submenu">
 										<li>
-											<a href="products.html">Clothing</a>
+											<a href="products.blade.php">Clothing</a>
 											<ul class="dl-submenu">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</li>
 										<li>
-											<a href="products.html">Accessories</a>
+											<a href="products.blade.php">Accessories</a>
 											<ul class="dl-submenu">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</li>
 										<li>
-											<a href="products.html">Brands</a>
+											<a href="products.blade.php">Brands</a>
 											<ul class="dl-submenu">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</li>
 									</ul>
@@ -350,7 +350,7 @@
 						<tbody>
 							<tr class="hide empty-cart">
 								<td colspan="5">
-									It seems your shopping cart is empty, try looking our <a href="products.html">products</a>.
+									It seems your shopping cart is empty, try looking our <a href="products.blade.php">products</a>.
 								</td>
 							</tr>
 							<tr>
@@ -358,7 +358,7 @@
 									<a class="entry-thumbnail" href="images/women/legging/104331-0014_1.jpg" data-toggle="lightbox">
 										<img src="images/women/legging/104331-0014_1.jpg" alt="" />
 									</a>
-									<a class="entry-title" href="product.html">Inceptos orci hac libero</a>
+									<a class="entry-title" href="product.blade.php">Inceptos orci hac libero</a>
 								</td>
 								<td><span class="unit-price">$350.00</span></td>
 								<td>
@@ -394,7 +394,7 @@
 							<span class="pull-right">$1050.00</span>
 						</div>
 						<div class="text-center">
-							<a class="btn btn-round btn-default uppercase" href="checkout.html">Proceed to checkout</a>
+							<a class="btn btn-round btn-default uppercase" href="checkout.blade.php">Proceed to checkout</a>
 						</div>
 					</div>
 					
@@ -428,7 +428,7 @@
 									<div class="entry-media">
 										<img data-src="images/women/basic/848051-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="product.blade.php" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
 													<div class="circle ribbon ribbon-sale">Sale</div>
@@ -465,7 +465,7 @@
 									<div class="entry-media">
 										<img data-src="images/women/basic/688086-0286_1_t.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="product.blade.php" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
 													<a href="images/women/basic/688086-0286_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
@@ -498,7 +498,7 @@
 									<div class="entry-media">
 										<img data-src="images/women/basic/848099-0067_1_t.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="product.blade.php" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
 													<div class="circle ribbon ribbon-new">New</div>
@@ -534,7 +534,7 @@
 									<div class="entry-media">
 										<img data-src="images/women/basic/589550-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="product.blade.php" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
 													<a href="images/women/basic/589550-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
@@ -567,7 +567,7 @@
 									<div class="entry-media">
 										<img data-src="images/women/legging/104331-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="product.blade.php" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
 													<div class="circle ribbon ribbon-sale">Sale</div>
@@ -604,7 +604,7 @@
 									<div class="entry-media">
 										<img data-src="images/women/legging/714384-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="product.blade.php" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
 													<a href="images/women/legging/714384-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
@@ -637,7 +637,7 @@
 									<div class="entry-media">
 										<img data-src="images/women/dress/256479-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="product.blade.php" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
 													<div class="circle ribbon ribbon-new">New</div>
@@ -673,7 +673,7 @@
 									<div class="entry-media">
 										<img data-src="images/women/dress/278638-0083_1_t.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="product.blade.php" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
 													<a href="images/women/dress/278638-0083_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>

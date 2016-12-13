@@ -101,7 +101,7 @@
 								<div id="sub-cart" class="sub-header">
 									<div class="cart-header">
 										<span>Your cart is currently empty.</span>
-										<small><a href="cart.html">(See All)</a></small>
+										<small><a href="cart.blade.php">(See All)</a></small>
 									</div>
 									<ul class="cart-items product-medialist unstyled clearfix"></ul>
 									<div class="cart-footer">
@@ -110,7 +110,7 @@
 											<span class="pull-right total">$ 0</span>
 										</div>
 										<div class="text-right">
-											<a href="cart.html" class="btn btn-default btn-round view-cart">View Cart</a>
+											<a href="cart.blade.php" class="btn btn-default btn-round view-cart">View Cart</a>
 										</div>
 									</div>
 								</div>
@@ -155,8 +155,8 @@
 						<nav id="tiny-menu" class="clearfix">
 							<ul class="user-menu">
 								<li><a href="#">My Account</a></li>
-								<li><a href="cart.html">My Wishlist</a></li>
-								<li><a href="checkout.html">Checkout</a></li>
+								<li><a href="cart.blade.php">My Wishlist</a></li>
+								<li><a href="checkout.blade.php">Checkout</a></li>
 								<li><a href="#">Log Out</a></li>
 							</ul>
 						</nav>
@@ -165,7 +165,7 @@
 					<!-- // CURRENCY / LANGUAGE / USER MENU -->
 					<!-- SITE LOGO -->
 					<div class="logo-wrapper">
-						<a href="index-2.html" class="logo" title="GFashion - Responsive e-commerce HTML Template">
+						<a href="index-2.blade.php" class="logo" title="GFashion - Responsive e-commerce HTML Template">
 							<img src="img/logo.png" alt="GFashion - Responsive e-commerce HTML Template" />
 						</a>
 					</div>
@@ -177,10 +177,10 @@
 								<a href="index.html">Home</a>
 							</li>
 							<li>
-								<a href="products.html">Women</a>
+								<a href="products.blade.php">Women</a>
 							</li>
 							<li>
-								<a href="products.html">Men</a>
+								<a href="products.blade.php">Men</a>
 								
 								<!-- MEGA MENU -->
 								<div class="mega-menu" data-col-lg="9" data-col-md="12">
@@ -189,36 +189,36 @@
 										<div class="col-md-3">
 											<h4 class="menu-title">Clothing</h4>
 											<ul class="mega-sub">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</div>
 										
 										<div class="col-md-3">
 											<h4 class="menu-title">Accessories</h4>
 											<ul class="mega-sub">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</div>
 										
 										<div class="col-md-3">
 											<h4 class="menu-title">Brands</h4>
 											<ul class="mega-sub">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</div>
 										
@@ -235,7 +235,7 @@
 											</div>
 											<h5 class="text-semibold uppercase m-b-sm">Featured Products</h5>
 											<p>Lorem ipsum dolor sit, consectetur adipiscing elit. Etiam neque velit, blandit sed scelerisque.</p>
-											<a href="products.html" class="btn btn-default btn-round">Go to Shop →</a>
+											<a href="products.blade.php" class="btn btn-default btn-round">Go to Shop →</a>
 										</div>
 										
 									</div>
@@ -247,10 +247,10 @@
 								<a href="components.html">Components</a>
 							</li>
 							<li>
-								<a href="store-locator.html">Store Locator</a>
+								<a href="store-locator.blade.php">Store Locator</a>
 							</li>
 							<li>
-								<a href="contact-us.html">Contact Us</a>
+								<a href="contact-us.blade.php">Contact Us</a>
 							</li>
 							<li>
 								<a href="#">Buy Me!</a>
@@ -272,36 +272,36 @@
 									
 									<ul class="dl-submenu">
 										<li>
-											<a href="products.html">Clothing</a>
+											<a href="products.blade.php">Clothing</a>
 											<ul class="dl-submenu">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</li>
 										<li>
-											<a href="products.html">Accessories</a>
+											<a href="products.blade.php">Accessories</a>
 											<ul class="dl-submenu">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</li>
 										<li>
-											<a href="products.html">Brands</a>
+											<a href="products.blade.php">Brands</a>
 											<ul class="dl-submenu">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</li>
 									</ul>
@@ -325,7 +325,7 @@
 				<div class="relative">
 					<ul class="bc unstyled clearfix">
 						<li><a href="#">Home</a></li>
-						<li><a href="products.html">Products</a></li>
+						<li><a href="products.blade.php">Products</a></li>
 						<li class="active">Product Detail</li>
 					</ul>
 				</div>
