@@ -38,10 +38,6 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{config('name','MAKING')}}
                 </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
                 <table class="table">
                     <ul class="nav nav-tabs nav-justified" role="tablist">
                         <li><a href="{{ url('/#') }}">
@@ -58,6 +54,11 @@
                             </a></li>
                     </ul>
                 </table>
+            </div>
+
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <!-- Left Side Of Navbar -->
+
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
