@@ -1,189 +1,269 @@
-    <div class="flexslider">
-        <ul class="slides">
-            <!-- THE FIRST SLIDE -->
-            <li>
-                <!-- THE MAIN IMAGE IN THE SLIDE -->
-                <img src="/rev-slider/img/slides/Street-Fashion.jpg" alt=""/>
-
-                <!-- THE CAPTIONS OF THE FIRST SLIDE -->
-                <div class="flex-caption h6 text-bold gfc uppercase animated"
-                     data-animation="fadeInLeftBig"
-                     data-x="800"
-                     data-y="110"
-                     data-speed="600"
-                     data-start="1200">New Collection
+    <!-- HEADER TOP -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <!--<div class="col-xs-12 col-sm-6 col-md-7">-->
+                    <!-- CONTACT INFO -->
+                    <div class="contact-info">
+                        <i class="iconfont-headphones round-icon"></i>
+                        <strong>+444 (100) 1234</strong>
+                        <span>(Mon- Fri: 09.00 - 21.00)</span>
+                    </div>
+                    <!-- // CONTACT INFO -->
                 </div>
+                <div class="col-xs-12 col-sm-6 col-md-5">
+                    <ul class="actions unstyled clearfix">
+                        <li>
+                            <!-- SEARCH BOX -->
+                            <div class="search-box">
+                                <form action="#" method="post">
+                                    <div class="input-iconed prepend">
+                                        <button class="input-icon"><i class="iconfont-search"></i></button>
+                                        <label for="input-search" class="placeholder">Search here…</label>
+                                        <input type="text" name="q" id="input-search" class="round-input full-width" required/>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- // SEARCH BOX -->
+                        </li>
+                        <li data-toggle="sub-header" data-target="#sub-social">
+                            <!-- SOCIAL ICONS -->
+                            <a href="javascript:void(0);" id="social-icons">
+                                <i class="iconfont-share round-icon"></i>
+                            </a>
 
-                <div class="flex-caption herotext text-bold gfc animated"
-                     data-animation="fadeInRightBig"
-                     data-x="580"
-                     data-y="140"
-                     data-speed="900"
-                     data-start="2000">Autumn Fashions
+                            <div id="sub-social" class="sub-header">
+                                <ul class="social-list unstyled text-center">
+                                    <li><a href="#"><i class="iconfont-facebook round-icon"></i></a></li>
+                                    <li><a href="#"><i class="iconfont-twitter round-icon"></i></a></li>
+                                    <li><a href="#"><i class="iconfont-google-plus round-icon"></i></a></li>
+                                    <li><a href="#"><i class="iconfont-pinterest round-icon"></i></a></li>
+                                    <li><a href="#"><i class="iconfont-rss round-icon"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- // SOCIAL ICONS -->
+                        </li>
+                        <li data-toggle="sub-header" data-target="#sub-cart">
+                            <!-- SHOPPING CART -->
+                            <a href="javascript:void(0);" id="total-cart">
+                                <i class="iconfont-shopping-cart round-icon"></i>
+                            </a>
+
+                            <div id="sub-cart" class="sub-header">
+                                <div class="cart-header">
+                                    <span>Your cart is currently empty.</span>
+                                    <small><a href="cart.html">(See All)</a></small>
+                                </div>
+                                <ul class="cart-items product-medialist unstyled clearfix"></ul>
+                                <div class="cart-footer">
+                                    <div class="cart-total clearfix">
+                                        <span class="pull-left uppercase">Total</span>
+                                        <span class="pull-right total">$ 0</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <a href="cart.html" class="btn btn-default btn-round view-cart">View Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // SHOPPING CART -->
+                        </li>
+                    </ul>
                 </div>
+            </div>
+        </div>
 
-                <div class="flex-caption h6 text-bold gfc text-center animated"
-                     data-animation="fadeInDown"
-                     data-x="639"
-                     data-y="260"
-                     data-speed="1600"
-                     data-start="2900">
-                    Comfy knits and warm jackets for cooler Autumn days<br/>
-                    <a href="products.html" class="btn btn-primary uppercase">Shop Now</a>
-                </div>
-
-            </li>
-
-            <!-- THE SECOND SLIDE -->
-            <li style="background: #fa6f57;">
-                <!-- THE MAIN IMAGE IN THE SLIDE -->
-                <img src="/img/transparent.png" alt=""/>
-
-                <div class="flex-caption super-giant gfc animated uppercase"
-                     data-animation="fadeInUp"
-                     data-x="center"
-                     data-y="60"
-                     data-speed="500"
-                     data-start="900">Sale
-                </div>
-
-                <div id="caption-left-round" class="flex-caption round gfc animated uppercase"
-                     data-animation="fadeInLeftBig"
-                     data-x="140"
-                     data-y="60"
-                     data-speed="600"
-                     data-start="1200">
-                    <div class="vmid"><span>Mid<br/>Season</span></div>
-                </div>
-
-                <div class="flex-caption round gfc animated uppercase"
-                     data-animation="fadeInRightBig"
-                     data-x="925"
-                     data-y="60"
-                     data-speed="600"
-                     data-start="1200">
-                    <div class="vmid"><span>Up to<br/>70% off</span></div>
-                </div>
-
-                <div class="flex-caption h3 gfc animated uppercase"
-                     data-animation="fadeInDown"
-                     data-x="center"
-                     data-y="250"
-                     data-speed="400"
-                     data-start="1800"><strong class="text-bold">500’s </strong>of New Products
-                </div>
-
-            </li>
-
-            <!-- THE SECOND SLIDE -->
-            <li>
-                <!-- THE MAIN IMAGE IN THE SLIDE -->
-                <img src="/rev-slider/img/slides/3303349658_cfaebb811f_o.jpg" alt=""/>
-
-                <div class="flex-caption herotext text-bold gfc bg-dark animated uppercase"
-                     data-animation="fadeInUpBig"
-                     data-x="760"
-                     data-y="60"
-                     data-speed="900"
-                     data-start="100">Free Shipping
-                </div>
-
-                <div class="flex-caption h2 text-bold gfc bg-dark animated uppercase"
-                     data-animation="fadeInUpBig"
-                     data-x="797"
-                     data-y="175"
-                     data-speed="600"
-                     data-start="900">On Order over $2.000
-                </div>
-
-            </li>
-
-        </ul>
+        <!-- ADD TO CART MESSAGE -->
+        <div class="cart-notification">
+            <ul class="unstyled"></ul>
+        </div>
+        <!-- // ADD TO CART MESSAGE -->
     </div>
+    <!-- // HEADER TOP -->
+    <!-- MAIN HEADER -->
+    <div class="main-header-wrapper">
+        <div class="container">
+            <div class="main-header">
+                <!-- CURRENCY / LANGUAGE / USER MENU -->
+                <div class="actions">
+                    <div class="center-xs">
+                        <!-- CURRENCY -->
+                        <ul class="option-list unstyled">
+                            <li class="active"><a href="#" data-toggle="tooltip" title="USD - US Dollar">$</a></li>
+                            <li><a href="#" data-toggle="tooltip" title="GBP - British Pound">£</a></li>
+                            <li><a href="#" data-toggle="tooltip" title="EUR - Euro">€</a></li>
+                        </ul>
+                        <!-- // CURRENCY -->
+                        <!-- LANGUAGES -->
+                        <ul class="option-list unstyled">
+                            <li class="active"><a href="#" data-toggle="tooltip" title="English">EN</a></li>
+                            <li><a href="#" data-toggle="tooltip" title="French">FR</a></li>
+                            <li><a href="#" data-toggle="tooltip" title="Deutsch">DE</a></li>
+                        </ul>
+                        <!-- // LANGUAGES -->
+                    </div>
+                    <div class="clearfix"></div>
+                    <!-- USER RELATED MENU -->
+                    <nav id="tiny-menu" class="clearfix">
+                        <ul class="user-menu">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="cart.html">My Wishlist</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="#">Log Out</a></li>
+                        </ul>
+                    </nav>
+                    <!-- // USER RELATED MENU -->
+                </div>
+                <!-- // CURRENCY / LANGUAGE / USER MENU -->
+                <!-- SITE LOGO -->
+                <div class="logo-wrapper">
+                    <a href="index-2.html" class="logo" title="GFashion - Responsive e-commerce HTML Template">
+                        <img src="/img/logo.png" alt="GFashion - Responsive e-commerce HTML Template"/>
+                    </a>
+                </div>
+                <!-- // SITE LOGO -->
+                <!-- SITE NAVIGATION MENU -->
+                <nav id="site-menu" role="navigation">
+                    <ul class="main-menu hidden-sm hidden-xs">
+                        <li class="active">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="products.html">Women</a>
+                        </li>
+                        <li>
+                            <a href="products.html">Men</a>
 
-    <script>
-        jQuery(function ($) {
-            var $slider = $('#home-slider > .flexslider');
-            $slider.find('.flex-caption').each(function () {
-                var $this = $(this);
-                var configs = {
-                    left: $this.data('x'),
-                    top: $this.data('y'),
-                    speed: $this.data('speed') + 'ms',
-                    delay: $this.data('start') + 'ms'
-                };
-                if (configs.left == 'center' && $this.width() !== 0) {
-                    configs.left = ( $slider.width() - $this.width() ) / 2;
-                }
-                if (configs.top == 'center' && $this.height() !== 0) {
-                    configs.top = ( $slider.height() - $this.height() ) / 2;
-                }
+                            <!-- MEGA MENU -->
+                            <div class="mega-menu" data-col-lg="9" data-col-md="12">
+                                <div class="row">
 
-                $this.data('positions', configs);
+                                    <div class="col-md-3">
+                                        <h4 class="menu-title">Clothing</h4>
+                                        <ul class="mega-sub">
+                                            <li><a href="products.html">Casual Wear</a></li>
+                                            <li><a href="products.html">Evening Wear</a></li>
+                                            <li><a href="products.html">Formal Attire</a></li>
+                                            <li><a href="products.html">Womens Jeans</a></li>
+                                            <li><a href="products.html">Mens Jeans</a></li>
+                                            <li><a href="products.html">Fall Styles</a></li>
+                                        </ul>
+                                    </div>
 
-                $this.css({
-                    'left': configs.left + 'px',
-                    'top': configs.top + 'px',
-                    'animation-duration': configs.speed,
-                    'animation-delay': configs.delay
-                });
-            });
+                                    <div class="col-md-3">
+                                        <h4 class="menu-title">Accessories</h4>
+                                        <ul class="mega-sub">
+                                            <li><a href="products.html">Casual Wear</a></li>
+                                            <li><a href="products.html">Evening Wear</a></li>
+                                            <li><a href="products.html">Formal Attire</a></li>
+                                            <li><a href="products.html">Womens Jeans</a></li>
+                                            <li><a href="products.html">Mens Jeans</a></li>
+                                            <li><a href="products.html">Fall Styles</a></li>
+                                        </ul>
+                                    </div>
 
-            $(window).on('resize', function () {
-                var wW = $(window).width(),
-                        zoom = ( wW >= 1170 ) ? 1 : wW / 1349;
-                $('.flex-caption.gfc').css('zoom', zoom);
-            });
-            $(window).trigger('resize');
+                                    <div class="col-md-3">
+                                        <h4 class="menu-title">Brands</h4>
+                                        <ul class="mega-sub">
+                                            <li><a href="products.html">Casual Wear</a></li>
+                                            <li><a href="products.html">Evening Wear</a></li>
+                                            <li><a href="products.html">Formal Attire</a></li>
+                                            <li><a href="products.html">Womens Jeans</a></li>
+                                            <li><a href="products.html">Mens Jeans</a></li>
+                                            <li><a href="products.html">Fall Styles</a></li>
+                                        </ul>
+                                    </div>
 
+                                    <div class="col-md-3">
+                                        <div class="carousel slide m-b" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="item active">
+                                                    <img src="/images/men/slide1.jpg" alt=""/>
+                                                </div>
+                                                <div class="item">
+                                                    <img src="/images/men/slide2.jpg" alt=""/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5 class="text-semibold uppercase m-b-sm">Featured Products</h5>
+                                        <p>Lorem ipsum dolor sit, consectetur adipiscing elit. Etiam neque velit, blandit sed scelerisque.</p>
+                                        <a href="products.html" class="btn btn-default btn-round">Go to Shop →</a>
+                                    </div>
 
-            $slider.imagesLoaded(function () {
-                $slider.flexslider({
-                    animation: 'slide',
-                    easing: 'easeInQuad',
-                    slideshow: false,
-                    nextText: '<i class="iconfont-angle-right"></i>',
-                    prevText: '<i class="iconfont-angle-left"></i>',
-                    start: function () {
-                        flex_fix_pos(1);
-                    },
-                    before: function (slider) {
-                        // initial caption animation for next show
-                        $slider.find('.slides li .animation-done').each(function () {
-                            $(this).removeClass('animation-done');
-                            var animation = $(this).attr('data-animation');
-                            $(this).removeClass(animation);
-                        });
+                                </div>
+                            </div>
+                            <!-- // MEGA MENU -->
 
-                        flex_fix_pos(slider.animatingTo + 1);
-                    },
-                    after: function () {
-                        // run caption animation
-                        $slider.find('.flex-active-slide .animated').each(function () {
-                            var animation = $(this).attr('data-animation');
-                            $(this).addClass('animation-done').addClass(animation);
-                        });
-                    }
-                });
-            });
+                        </li>
+                        <li>
+                            <a href="components.html">Components</a>
+                        </li>
+                        <li>
+                            <a href="store-locator.html">Store Locator</a>
+                        </li>
+                        <li>
+                            <a href="contact-us.html">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Buy Me!</a>
+                        </li>
+                    </ul>
 
+                    <!-- MOBILE MENU -->
+                    <div id="mobile-menu" class="dl-menuwrapper visible-xs visible-sm">
+                        <button class="dl-trigger"><i class="iconfont-reorder round-icon"></i></button>
+                        <ul class="dl-menu">
+                            <li class="active">
+                                <a href="javsacript:void(0);">Home</a>
+                            </li>
+                            <li>
+                                <a href="javsacript:void(0);">Women</a>
+                            </li>
+                            <li>
+                                <a href="javsacript:void(0);">Men</a>
 
-            function flex_fix_pos(i) {
-                $slider.find('.slides > li:eq(' + i + ') .gfc').each(function () {
-                    var $this = $(this),
-                            pos = $(this).data('positions');
+                                <ul class="dl-submenu">
+                                    <li>
+                                        <a href="products.html">Clothing</a>
+                                        <ul class="dl-submenu">
+                                            <li><a href="products.html">Casual Wear</a></li>
+                                            <li><a href="products.html">Evening Wear</a></li>
+                                            <li><a href="products.html">Formal Attire</a></li>
+                                            <li><a href="products.html">Womens Jeans</a></li>
+                                            <li><a href="products.html">Mens Jeans</a></li>
+                                            <li><a href="products.html">Fall Styles</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="products.html">Accessories</a>
+                                        <ul class="dl-submenu">
+                                            <li><a href="products.html">Casual Wear</a></li>
+                                            <li><a href="products.html">Evening Wear</a></li>
+                                            <li><a href="products.html">Formal Attire</a></li>
+                                            <li><a href="products.html">Womens Jeans</a></li>
+                                            <li><a href="products.html">Mens Jeans</a></li>
+                                            <li><a href="products.html">Fall Styles</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="products.html">Brands</a>
+                                        <ul class="dl-submenu">
+                                            <li><a href="products.html">Casual Wear</a></li>
+                                            <li><a href="products.html">Evening Wear</a></li>
+                                            <li><a href="products.html">Formal Attire</a></li>
+                                            <li><a href="products.html">Womens Jeans</a></li>
+                                            <li><a href="products.html">Mens Jeans</a></li>
+                                            <li><a href="products.html">Fall Styles</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- // MOBILE MENU -->
 
-                    if (pos.left == 'center') {
-                        pos.left = ( $slider.width() - $this.width() ) / 2;
-                        $this.css('left', pos.left + 'px');
-                        $this.data('positions', pos);
-                    }
-                    if (pos.top == 'center') {
-                        pos.top = ( $slider.height() - $this.height() ) / 2;
-                        $this.css('left', pos.top + 'px');
-                        $this.data('positions', pos);
-                    }
-                });
-            }
-        });
-    </script>
+                </nav>
+                <!-- // SITE NAVIGATION MENU -->
+            </div>
+        </div>
+    </div>
+    <!-- // MAIN HEADER -->
