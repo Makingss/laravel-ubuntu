@@ -136,10 +136,10 @@
                 <div class="col-xs-12 col-sm-6">
                     <div class="footer-links center-xs clearfix">
                         <ul class="unstyled">
-                            <li><a href="#">Site Map</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">商城地图</a></li>
+                            <li><a href="#">常见问题解答</a></li>
                             <li><a href="#">Work for us</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">联系我们</a></li>
                         </ul>
                     </div>
                     <div class="space10"></div>
@@ -155,10 +155,10 @@
                 <div class="col-xs-12 col-sm-6 center-xs">
                     <div class="pull-right">
                         <div class="vmid">
-                            <span class="uppercase">Payment Accept&emsp;</span>
+                            <span class="uppercase">支付方式&emsp;</span>
                             <a href="#"><img src="/img/wxpay.png" alt="" width="40" /></a>
                             <a href="#"><img src="/img/alipay.jpg" alt="" width="40" /></a>
-                            <a href="#"><img src="/img/unionPay.jpg" alt="" width="40" /></a>
+                            <a href="#"><img src="/img/nionPay.jpg" alt="" width="40" /></a>
                         </div>
                     </div>
                 </div>
