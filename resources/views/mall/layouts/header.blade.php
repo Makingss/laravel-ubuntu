@@ -19,7 +19,7 @@
                                 <form action="#" method="post">
                                     <div class="input-iconed prepend">
                                         <button class="input-icon"><i class="iconfont-search"></i></button>
-                                        <label for="input-search" class="placeholder">Search here…</label>
+                                        <label for="input-search" class="placeholder">皮草大衣…</label>
                                         <input type="text" name="q" id="input-search" class="round-input full-width" required/>
                                     </div>
                                 </form>
@@ -51,17 +51,17 @@
 
                             <div id="sub-cart" class="sub-header">
                                 <div class="cart-header">
-                                    <span>Your cart is currently empty.</span>
-                                    <small><a href="cart.html">(See All)</a></small>
+                                    <span>您的购物车为空！</span>
+                                    <small><a href="cart.html">(所有)</a></small>
                                 </div>
                                 <ul class="cart-items product-medialist unstyled clearfix"></ul>
                                 <div class="cart-footer">
                                     <div class="cart-total clearfix">
-                                        <span class="pull-left uppercase">Total</span>
-                                        <span class="pull-right total">$ 0</span>
+                                        <span class="pull-left uppercase">合计</span>
+                                        <span class="pull-right total">￥ 0</span>
                                     </div>
                                     <div class="text-right">
-                                        <a href="cart.html" class="btn btn-default btn-round view-cart">View Cart</a>
+                                        <a href="cart.html" class="btn btn-default btn-round view-cart">查看购物车</a>
                                     </div>
                                 </div>
                             </div>
@@ -106,10 +106,10 @@
                     <!-- USER RELATED MENU -->
                     <nav id="tiny-menu" class="clearfix">
                         <ul class="user-menu">
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="cart.html">My Wishlist</a></li>
-                            <li><a href="checkout.html">Checkout</a></li>
-                            <li><a href="#">Log Out</a></li>
+                            <li><a href="#">我的帐户</a></li>
+                            <li><a href="cart.html">清单</a></li>
+                            <li><a href="checkout.html">结算</a></li>
+                            <li><a href="#">退出</a></li>
                         </ul>
                     </nav>
                     <!-- // USER RELATED MENU -->
