@@ -249,7 +249,7 @@
 								<a href="store-locator.blade.php">Store Locator</a>
 							</li>
 							<li>
-								<a href="contact-us.html">Contact Us</a>
+								<a href="contact-us.blade.php">Contact Us</a>
 							</li>
 							<li>
 								<a href="#">Buy Me!</a>

@@ -156,9 +156,9 @@
                     <div class="pull-right">
                         <div class="vmid">
                             <span class="uppercase">Payment Accept&emsp;</span>
-                            <a href="#"><img src="/img/visacard.png" alt="" width="40" /></a>
-                            <a href="#"><img src="/img/mastercard.png" alt="" width="40" /></a>
-                            <a href="#"><img src="/img/paypal.png" alt="" width="40" /></a>
+                            <a href="#"><img src="/img/wxpay.png" alt="" width="40" /></a>
+                            <a href="#"><img src="/img/alipay.jpg" alt="" width="40" /></a>
+                            <a href="#"><img src="/img/unionPay.jpg" alt="" width="40" /></a>
                         </div>
                     </div>
                 </div>
