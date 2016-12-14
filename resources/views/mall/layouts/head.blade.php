@@ -1,4 +1,4 @@
-<head>
+
     <meta charset="UTF-8" />
     <title>GFashion - Responsive e-commerce HTML Template</title>
     <meta name="description" content=""/>
@@ -33,4 +33,3 @@
     <link href="/sites-css/flexslider.css" rel="stylesheet" />
     <!-- // PARTICULAR PAGES CSS FILES -->
     <link rel="stylesheet" href="/sites-css/responsive.css">
-</head>

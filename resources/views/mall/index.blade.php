@@ -592,7 +592,7 @@
 												<div class="circle ribbon ribbon-sale">Sale</div>
 											</li>
 											<li>
-												<a href="images/women/basic/848051-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												<a href="/images/women/basic/848051-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 											</li>
 											<li>
 												<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
@@ -662,7 +662,7 @@
 												<div class="circle ribbon ribbon-new">New</div>
 											</li>
 											<li>
-												<a href="images/women/basic/848099-0067_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												<a href="/images/women/basic/848099-0067_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 											</li>
 											<li>
 												<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
