@@ -2,13 +2,13 @@
     <div class="header-top">
         <div class="container">
             <div class="row">
-                <!--<div class="col-xs-12 col-sm-6 col-md-7">-->
+                <div class="col-xs-12 col-sm-6 col-md-7">
                     <!-- CONTACT INFO -->
-                    <div class="contact-info">
+                    <!--<div class="contact-info">
                         <i class="iconfont-headphones round-icon"></i>
                         <strong>+444 (100) 1234</strong>
                         <span>(Mon- Fri: 09.00 - 21.00)</span>
-                    </div>
+                    </div>-->
                     <!-- // CONTACT INFO -->
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-5">
