@@ -25,8 +25,6 @@
                                 </form>
                             </div>
                             <!-- // SEARCH BOX -->
-                        </li>
-                        <li data-toggle="sub-header" data-target="#sub-social">
                             <!-- SOCIAL ICONS -->
                             <a href="javascript:void(0);" id="social-icons">
                                 <i class="iconfont-share round-icon"></i>
@@ -41,9 +39,6 @@
                                     <li><a href="#"><i class="iconfont-rss round-icon"></i></a></li>
                                 </ul>
                             </div>
-                            <!-- // SOCIAL ICONS -->
-                        </li>
-                        <li data-toggle="sub-header" data-target="#sub-cart">
                             <!-- SHOPPING CART -->
                             <a href="javascript:void(0);" id="total-cart">
                                 <i class="iconfont-shopping-cart round-icon"></i>
@@ -67,6 +62,7 @@
                             </div>
                             <!-- // SHOPPING CART -->
                         </li>
+                        
                     </ul>
                 </div>
             </div>
