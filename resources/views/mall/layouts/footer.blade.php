@@ -106,15 +106,15 @@
 
                     <div class="col-xs-12 col-sm-12 col-md-3">
                         <section class="widget widget-subscription">
-                            <h5 class="widget-title">Newletter</h5>
+                            <h5 class="widget-title">E-mail 订阅</h5>
                             <div class="widget-content">
-                                <p>Subscribe to be the first to know about Sales, Events, and Exclusive Offers!</p>
+                                <p>订阅帮忙您第一个知道销售，活动和独家优惠信息！</p>
                                 <form action="#" method="post">
                                     <div class="input-group">
-                                        <label for="subscription-email" class="placeholder">Enter Your Email</label>
+                                        <label for="subscription-email" class="placeholder">输入您的E-Mail 地址</label>
                                         <input type="email" id="subscription-email" name="email" class="form-control" required />
 											<span class="input-group-btn">
-												<button class="btn btn-primary">Subscribe</button>
+												<button class="btn btn-primary">订阅</button>
 											</span>
                                     </div>
                                 </form>
