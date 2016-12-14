@@ -1,4 +1,3 @@
-<footer class="page-footer">
 
     <!-- WIDGET AREA -->
     <div class="widgets">
@@ -166,5 +165,3 @@
             </div>
         </div>
     </div>
-
-</footer>

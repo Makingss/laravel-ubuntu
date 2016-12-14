@@ -39,7 +39,16 @@
 	<link href="/sites-css/flexslider.css" rel="stylesheet" />
 	<!-- // PARTICULAR PAGES CSS FILES -->
 	<link rel="stylesheet" href="/sites-css/responsive.css">
+	<!-- // PAGE WRAPPER -->
 
+	<!-- Essential Javascripts -->
+	<script src="/sites-js/minified.js"></script>
+	<!-- // Essential Javascripts -->
+
+	<!-- Particular Page Javascripts -->
+	<script src="/sites-js/owl.carousel.js"></script>
+	<script src="/sites-js/jquery.flexslider-min.js"></script>
+	<!-- // Particular Page Javascripts -->
 </head>
 </head>
 <body class="home">

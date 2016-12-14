@@ -1,5 +1,4 @@
-<!-- SITE MAIN CONTENT -->
-<main id="main-content" role="main">
+
     <!-- PROMO BOXES -->
     <section class="section promos">
         <div class="container">
@@ -635,5 +634,3 @@
         </div>
     </section>
     <!-- // NEW ARRIVAL PRODUCTS -->
-
-</main>
