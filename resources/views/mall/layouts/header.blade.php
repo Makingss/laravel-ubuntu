@@ -85,22 +85,23 @@
             <div class="main-header">
                 <!-- CURRENCY / LANGUAGE / USER MENU -->
                 <div class="actions">
-                    <div class="center-xs">
+                    <!--<div class="center-xs">
                         <!-- CURRENCY -->
-                        <ul class="option-list unstyled">
+                        <!--<ul class="option-list unstyled">
                             <li class="active"><a href="#" data-toggle="tooltip" title="USD - US Dollar">$</a></li>
                             <li><a href="#" data-toggle="tooltip" title="GBP - British Pound">£</a></li>
                             <li><a href="#" data-toggle="tooltip" title="EUR - Euro">€</a></li>
                         </ul>
                         <!-- // CURRENCY -->
                         <!-- LANGUAGES -->
-                        <ul class="option-list unstyled">
+                        <!--<ul class="option-list unstyled">
                             <li class="active"><a href="#" data-toggle="tooltip" title="English">EN</a></li>
                             <li><a href="#" data-toggle="tooltip" title="French">FR</a></li>
                             <li><a href="#" data-toggle="tooltip" title="Deutsch">DE</a></li>
                         </ul>
                         <!-- // LANGUAGES -->
-                    </div>
+                   <!-- </div>
+                    -->
                     <div class="clearfix"></div>
                     <!-- USER RELATED MENU -->
                     <nav id="tiny-menu" class="clearfix">
@@ -125,7 +126,7 @@
                 <nav id="site-menu" role="navigation">
                     <ul class="main-menu hidden-sm hidden-xs">
                         <li class="active">
-                            <a href="index.html">Home</a>
+                            <a href="{{url('mall/')}}">Home</a>
                         </li>
                         <li>
                             <a href="products.html">Women</a>
