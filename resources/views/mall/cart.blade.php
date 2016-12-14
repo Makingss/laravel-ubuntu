@@ -12,15 +12,15 @@
 	
 	<!-- Favorite Icons -->
 	<link rel="icon" href="img/favicon/favicon.html" type="image/x-icon" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/apple-touch-icon-144x144-precomposed.html">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/apple-touch-icon-72x72-precomposed.html">
-	<link rel="apple-touch-icon-precomposed" href="img/favicon/apple-touch-icon-precomposed.html">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144-precomposed.html">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72-precomposed.html">
+	<link rel="apple-touch-icon-precomposed" href="/img/favicon/apple-touch-icon-precomposed.html">
 	<!-- // Favorite Icons -->
 	
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 	
 	<!-- GENERAL CSS FILES -->
-	<link rel="stylesheet" href="/sites-css/minified.css">
+	<link rel="stylesheet" href="/sites-csscss/minified.css">
 	<!-- // GENERAL CSS FILES -->
 	
 	<!--[if IE 8]>
@@ -100,7 +100,7 @@
 								<div id="sub-cart" class="sub-header">
 									<div class="cart-header">
 										<span>Your cart is currently empty.</span>
-										<small><a href="cart.html">(See All)</a></small>
+										<small><a href="cart.blade.php">(See All)</a></small>
 									</div>
 									<ul class="cart-items product-medialist unstyled clearfix"></ul>
 									<div class="cart-footer">
@@ -109,7 +109,7 @@
 											<span class="pull-right total">$ 0</span>
 										</div>
 										<div class="text-right">
-											<a href="cart.html" class="btn btn-default btn-round view-cart">View Cart</a>
+											<a href="cart.blade.php" class="btn btn-default btn-round view-cart">View Cart</a>
 										</div>
 									</div>
 								</div>
@@ -154,7 +154,7 @@
 						<nav id="tiny-menu" class="clearfix">
 							<ul class="user-menu">
 								<li><a href="#">My Account</a></li>
-								<li><a href="cart.html">My Wishlist</a></li>
+								<li><a href="cart.blade.php">My Wishlist</a></li>
 								<li><a href="checkout.html">Checkout</a></li>
 								<li><a href="#">Log Out</a></li>
 							</ul>
@@ -165,7 +165,7 @@
 					<!-- SITE LOGO -->
 					<div class="logo-wrapper">
 						<a href="index-2.html" class="logo" title="GFashion - Responsive e-commerce HTML Template">
-							<img src="img/logo.png" alt="GFashion - Responsive e-commerce HTML Template" />
+							<img src="/img/logo.png" alt="GFashion - Responsive e-commerce HTML Template" />
 						</a>
 					</div>
 					<!-- // SITE LOGO -->
@@ -225,10 +225,10 @@
 											<div class="carousel slide m-b" data-ride="carousel">
 												<div class="carousel-inner">
 													<div class="item active">
-														<img src="images/men/slide1.jpg" alt="" />
+														<img src="/images/men/slide1.jpg" alt="" />
 													</div>
 													<div class="item">
-														<img src="images/men/slide2.jpg" alt="" />
+														<img src="/images/men/slide2.jpg" alt="" />
 													</div>
 												</div>
 											</div>
@@ -323,8 +323,8 @@
 			<div class="container">
 				<div class="relative">
 					<ul class="bc unstyled clearfix">
-						<li><a href="index.html">Home</a></li>
-						<li class="active">Store Locator</li>
+						<li><a href="#">Home</a></li>
+						<li class="active">Shopping Cart</li>
 					</ul>
 				</div>
 			</div>
@@ -333,161 +333,385 @@
 		
 		<!-- SITE MAIN CONTENT -->
 		<main id="main-content" role="main">
-			<div class="container">
-				<div class="row">
 				
-					<!-- SIDEBAR -->
-					<aside class="col-xs-12 col-sm-4 col-md-3">
-						<section class="sidebar m-t-b">
-							<section class="side-section">
-								<h3 class="uppercase text-bold"><span class="text-xs">Usefull Pages</span></h3>
-								
-								<ul class="nav nav-tabs nav-stacked">
-									<li><a href="index-3.html">Homepage</a></li>															
-									<li><a href="about-us.html">About us</a></li>															
-									<li><a href="products-2.html">Shop</a></li>															
-									<li><a href="product-2.html">Single Product Details</a></li>															
-									<li><a href="contact-us-2.html">Contact us</a></li>															
-								</ul>
-							</section>
-								
-							<!-- PROMO -->
-							<div class="promo inverse-background" style="background: url('images/demo/Barn-Dress-Girl_t.jpg') no-repeat; background-size: auto 100%;">
-								<div class="inner text-center np">
-									<div class="ribbon">
-										<h6 class="nmb">New Arrivals</h6>
-										<h5 class="text-semibold uppercase nmb">Leather Fashion</h5>
-										<div class="space10"></div>
-										<a href="products.html" class="with-icon prepend-icon"><i class="iconfont-caret-right"></i><span> Shop Now</span></a>
+			<section class="section">
+				<div class="container">
+					
+					<table class="tbl-cart">
+						<thead>
+							<tr>
+								<th>Product Name</th>
+								<th style="width: 15%;">Unit Price</th>
+								<th style="width: 15%;">QTY</th>
+								<th class="hidden-xs" style="width: 15%;">Sub Total</th>
+								<th class="hidden-xs" style="width: 10%;"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="hide empty-cart">
+								<td colspan="5">
+									It seems your shopping cart is empty, try looking our <a href="products.html">products</a>.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a class="entry-thumbnail" href="/images/women/legging/104331-0014_1.jpg" data-toggle="lightbox">
+										<img src="/images/women/legging/104331-0014_1.jpg" alt="" />
+									</a>
+									<a class="entry-title" href="product.html">Inceptos orci hac libero</a>
+								</td>
+								<td><span class="unit-price">$350.00</span></td>
+								<td>
+									<div class="qty-btn-group">
+										<button type="button" class="down"><i class="iconfont-caret-down inline-middle"></i></button>
+										<input type="text" value="1" />
+										<button type="button" class="up"><i class="iconfont-caret-up inline-middle"></i></button>
 									</div>
-								</div>
-							</div>
-							<!-- // PROMO -->
-						</section>
-					</aside>
-					<!-- // SIDEBAR -->
-			
-					<section class="col-xs-12 col-sm-8 col-md-9">
-						<section class="section">
-									
-							<form class="clearfix" role="form">
-								<div class="row">
-									<div class="col-xs-12 col-sm-4">
-										<div class="form-group stylish-input">
-											<label for="inputZIPcode">Enter Post Code or store</label>
-											<input type="text" id="inputZIPcode" class="form-control" required />
-										</div>
-									</div>
-									<div class="col-xs-12 col-sm-4">
-										<div class="form-group stylish-input">
-											<label for="inputLocation">Country / State / City</label>
-											<select id="inputLocation" class="form-control">
-												<option>-- SELECT ONE --</option>
-											</select>
-										</div>
-									</div>
-									<div class="col-xs-12 col-sm-4">
-										<div class="form-group stylish-input">
-											<label for="inputRadius">Radius</label>
-											<select id="inputRadius" class="form-control">
-												<option>1000 m</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xs-12 col-sm-12">
-										<button type="submit" class="btn btn-primary uppercase m-r-sm">submit</button>
-										<button type="reset" class="btn btn-default uppercase">reset</button>
-									</div>
-								</div>
-							</form>
-							
-							<div class="m-t-lg clearfix">
-								<div class="row">
-									<div class="col-xs-12 col-sm-6">
-										<ul class="store-list unstyled">
-											<li>
-												<h4 class="entry-title">
-													<a href="#">Support Center</a>
-													<small>(0.7 km)</small>
-												</h4>
-												<div class="row">
-													<dl class="col-xs-7 col-sm-7">
-														<dt>Address</dt>
-														<dd>Lower Ground Suite 7<br/>32a Oxford Street</dd>
-													</dl>
-													<dl class="col-xs-5 col-sm-5">
-														<dt class="phone">Phone</dt>
-														<dd>(01) 23 456 789</dd>
-														<dd>(02) 23 456 789</dd>
-													</dl>
-												</div>
-											</li>
-											<li>
-												<h4 class="entry-title">
-													<a href="#">Support Center</a>
-													<small>(0.7 km)</small>
-												</h4>
-												<div class="row">
-													<dl class="col-xs-7 col-sm-7">
-														<dt>Address</dt>
-														<dd>Lower Ground Suite 7<br/>32a Oxford Street</dd>
-													</dl>
-													<dl class="col-xs-5 col-sm-5">
-														<dt class="phone">Phone</dt>
-														<dd>(01) 23 456 789</dd>
-														<dd>(02) 23 456 789</dd>
-													</dl>
-												</div>
-											</li>
-											<li>
-												<h4 class="entry-title">
-													<a href="#">Support Center</a>
-													<small>(0.7 km)</small>
-												</h4>
-												<div class="row">
-													<dl class="col-xs-7 col-sm-7">
-														<dt>Address</dt>
-														<dd>Lower Ground Suite 7<br/>32a Oxford Street</dd>
-													</dl>
-													<dl class="col-xs-5 col-sm-5">
-														<dt class="phone">Phone</dt>
-														<dd>(01) 23 456 789</dd>
-														<dd>(02) 23 456 789</dd>
-													</dl>
-												</div>
-											</li>
-											<li>
-												<h4 class="entry-title">
-													<a href="#">Support Center</a>
-													<small>(0.7 km)</small>
-												</h4>
-												<div class="row">
-													<dl class="col-xs-7 col-sm-7">
-														<dt>Address</dt>
-														<dd>Lower Ground Suite 7<br/>32a Oxford Street</dd>
-													</dl>
-													<dl class="col-xs-5 col-sm-5">
-														<dt class="phone">Phone</dt>
-														<dd>(01) 23 456 789</dd>
-														<dd>(02) 23 456 789</dd>
-													</dl>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<div class="col-xs-12 col-sm-6">
-										<div id="store-locator-gmap" class="gmap"></div>
-									</div>
-								</div>
-							</div>
-							
-						</section>
-					</section>
-			
+								</td>
+								<td class="hidden-xs"><strong class="text-bold row-total">$350.00</strong></td>
+								<td class="hidden-xs"><button type="button" class="close" aria-hidden="true">×</button></td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<div class="pull-left coupon m-b">
+						<div class="input-group">
+							<label for="apply-coupon" class="placeholder">Enter Your Coupon Code</label>
+							<input type="text" id="apply-coupon" name="coupon" class="form-control" required />
+							<span class="input-group-btn">
+								<button class="btn btn-primary">Apply Coupon</button>
+							</span>
+						</div>
+					</div>
+					
+					<div class="shopcart-total pull-right clearfix">
+						<div class="cart-subtotal text-xs m-b-sm clearfix">
+							<span class="pull-left">Sub Total:</span>
+							<span class="pull-right">$1050.00</span>
+						</div>
+						<div class="cart-total text-bold m-b-lg clearfix">
+							<span class="pull-left">Grand Total:</span>
+							<span class="pull-right">$1050.00</span>
+						</div>
+						<div class="text-center">
+							<a class="btn btn-round btn-default uppercase" href="checkout.html">Proceed to checkout</a>
+						</div>
+					</div>
+					
 				</div>
-			</div>
+			</section>
+			
+
+			<!-- RELATED PRODUCTS -->
+			<section class="section visible-items-4">
+				<div class="container">
+					<div class="row">
+						<header class="section-header clearfix col-sm-offset-3 col-sm-6">
+							<h3 class="section-title">You may be interested in</h3>
+							<p class="section-teaser">Lorem ipsum dolor sit amet, consectetur adipiscing elit ac lobortis lacus</p>
+						</header>
+						
+						<div class="clearfix"></div>
+						
+						<!-- BEGIN CAROUSEL -->
+						<div id="featured-products" class="add-cart" data-product=".product" data-thumbnail=".entry-media .thumb" data-title=".entry-title > a" data-url=".entry-title > a" data-price=".entry-price > .price">
+						
+							<div class="owl-controls clickable top">
+								<div class="owl-buttons">
+									<div class="owl-prev"><i class="iconfont-angle-left"></i></div>
+									<div class="owl-next"><i class="iconfont-angle-right"></i></div>
+								</div>
+							</div>
+							
+							<div class="owl-carousel owl-theme" data-visible-items="4" data-navigation="true" data-lazyload="true">
+								<div class="product" data-product-id="1">
+									<div class="entry-media">
+										<img data-src="/images/women/basic/848051-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<div class="hover">
+											<a href="product.html" class="entry-url"></a>
+											<ul class="icons unstyled">
+												<li>
+													<div class="circle ribbon ribbon-sale">Sale</div>
+												</li>
+												<li>
+													<a href="/images/women/basic/848051-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												</li>
+												<li>
+													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
+												</li>
+											</ul>
+											<div class="rate-bar">
+												<input type="range" value="4.5" step="0.5" id="backing1" />
+												<div class="rateit" data-rateit-backingfld="#backing1" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
+											</div>
+										</div>
+									</div>
+									<div class="entry-main">
+										<h5 class="entry-title">
+											<a href="#">Inceptos orci hac libero</a>
+										</h5>
+										<div class="entry-price">
+											<s class="entry-discount">$ 350.00</s>
+											<strong class="accent-color price">$ 250.00</strong>
+										</div>
+										<div class="entry-links clearfix">
+											<a href="#" class="pull-left m-r">+ Add to Wishlist</a>
+											<a href="#" class="pull-right">+ Add to Compare</a>
+										</div>
+									</div>
+								</div>
+								
+								<div class="product" data-product-id="2">
+									<div class="entry-media">
+										<img data-src="/images/women/basic/688086-0286_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<div class="hover">
+											<a href="product.html" class="entry-url"></a>
+											<ul class="icons unstyled">
+												<li>
+													<a href="/images/women/basic/688086-0286_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												</li>
+												<li>
+													<a href="#" class="circle add-to-cart" data-><i class="iconfont-shopping-cart"></i></a>
+												</li>
+											</ul>
+											<div class="rate-bar">
+												<input type="range" value="4" step="0.5" id="backing2" />
+												<div class="rateit" data-rateit-backingfld="#backing2" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
+											</div>
+										</div>
+									</div>
+									<div class="entry-main">
+										<h5 class="entry-title">
+											<a href="#">Inceptos orci hac libero</a>
+										</h5>
+										<div class="entry-price">
+											<strong class="price">$ 350.00</strong>
+										</div>
+										<div class="entry-links clearfix">
+											<a href="#" class="pull-left m-r">+ Add to Wishlist</a>
+											<a href="#" class="pull-right">+ Add to Compare</a>
+										</div>
+									</div>
+								</div>
+								
+								<div class="product" data-product-id="3">
+									<div class="entry-media">
+										<img data-src="/images/women/basic/848099-0067_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<div class="hover">
+											<a href="product.html" class="entry-url"></a>
+											<ul class="icons unstyled">
+												<li>
+													<div class="circle ribbon ribbon-new">New</div>
+												</li>
+												<li>
+													<a href="/images/women/basic/848099-0067_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												</li>
+												<li>
+													<a href="#" class="circle add-to-cart" data-><i class="iconfont-shopping-cart"></i></a>
+												</li>
+											</ul>
+											<div class="rate-bar">
+												<input type="range" value="3.5" step="0.5" id="backing3" />
+												<div class="rateit" data-rateit-backingfld="#backing3" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
+											</div>
+										</div>
+									</div>
+									<div class="entry-main">
+										<h5 class="entry-title">
+											<a href="#">Inceptos orci hac libero</a>
+										</h5>
+										<div class="entry-price">
+											<strong class="price">$ 450.00</strong>
+										</div>
+										<div class="entry-links clearfix">
+											<a href="#" class="pull-left m-r">+ Add to Wishlist</a>
+											<a href="#" class="pull-right">+ Add to Compare</a>
+										</div>
+									</div>
+								</div>
+								
+								<div class="product" data-product-id="4">
+									<div class="entry-media">
+										<img data-src="/images/women/basic/589550-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<div class="hover">
+											<a href="product.html" class="entry-url"></a>
+											<ul class="icons unstyled">
+												<li>
+													<a href="/images/women/basic/589550-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												</li>
+												<li>
+													<a href="#" class="circle add-to-cart" data-><i class="iconfont-shopping-cart"></i></a>
+												</li>
+											</ul>
+											<div class="rate-bar">
+												<input type="range" value="5" step="0.5" id="backing4" />
+												<div class="rateit" data-rateit-backingfld="#backing4" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
+											</div>
+										</div>
+									</div>
+									<div class="entry-main">
+										<h5 class="entry-title">
+											<a href="#">Inceptos orci hac libero</a>
+										</h5>
+										<div class="entry-price">
+											<strong class="price">$ 350.00</strong>
+										</div>
+										<div class="entry-links clearfix">
+											<a href="#" class="pull-left m-r">+ Add to Wishlist</a>
+											<a href="#" class="pull-right">+ Add to Compare</a>
+										</div>
+									</div>
+								</div>
+								
+								<div class="product" data-product-id="5">
+									<div class="entry-media">
+										<img data-src="/images/women/legging/104331-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<div class="hover">
+											<a href="product.html" class="entry-url"></a>
+											<ul class="icons unstyled">
+												<li>
+													<div class="circle ribbon ribbon-sale">Sale</div>
+												</li>
+												<li>
+													<a href="/images/women/legging/104331-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												</li>
+												<li>
+													<a href="#" class="circle add-to-cart" data-><i class="iconfont-shopping-cart"></i></a>
+												</li>
+											</ul>
+											<div class="rate-bar">
+												<input type="range" value="4.5" step="0.5" id="backing5" />
+												<div class="rateit" data-rateit-backingfld="#backing5" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
+											</div>
+										</div>
+									</div>
+									<div class="entry-main">
+										<h5 class="entry-title">
+											<a href="#">Inceptos orci hac libero</a>
+										</h5>
+										<div class="entry-price">
+											<s class="entry-discount">$ 350.00</s>
+											<strong class="accent-color price">$ 250.00</strong>
+										</div>
+										<div class="entry-links clearfix">
+											<a href="#" class="pull-left m-r">+ Add to Wishlist</a>
+											<a href="#" class="pull-right">+ Add to Compare</a>
+										</div>
+									</div>
+								</div>
+								
+								<div class="product" data-product-id="6">
+									<div class="entry-media">
+										<img data-src="/images/women/legging/714384-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<div class="hover">
+											<a href="product.html" class="entry-url"></a>
+											<ul class="icons unstyled">
+												<li>
+													<a href="/images/women/legging/714384-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												</li>
+												<li>
+													<a href="#" class="circle add-to-cart" data-><i class="iconfont-shopping-cart"></i></a>
+												</li>
+											</ul>
+											<div class="rate-bar">
+												<input type="range" value="4" step="0.5" id="backing6" />
+												<div class="rateit" data-rateit-backingfld="#backing6" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
+											</div>
+										</div>
+									</div>
+									<div class="entry-main">
+										<h5 class="entry-title">
+											<a href="#">Inceptos orci hac libero</a>
+										</h5>
+										<div class="entry-price">
+											<strong class="price">$ 350.00</strong>
+										</div>
+										<div class="entry-links clearfix">
+											<a href="#" class="pull-left m-r">+ Add to Wishlist</a>
+											<a href="#" class="pull-right">+ Add to Compare</a>
+										</div>
+									</div>
+								</div>
+								
+								<div class="product" data-product-id="7">
+									<div class="entry-media">
+										<img data-src="/images/women/dress/256479-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<div class="hover">
+											<a href="product.html" class="entry-url"></a>
+											<ul class="icons unstyled">
+												<li>
+													<div class="circle ribbon ribbon-new">New</div>
+												</li>
+												<li>
+													<a href="/images/women/dress/256479-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												</li>
+												<li>
+													<a href="#" class="circle add-to-cart" data-><i class="iconfont-shopping-cart"></i></a>
+												</li>
+											</ul>
+											<div class="rate-bar">
+												<input type="range" value="3.5" step="0.5" id="backing7" />
+												<div class="rateit" data-rateit-backingfld="#backing7" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
+											</div>
+										</div>
+									</div>
+									<div class="entry-main">
+										<h5 class="entry-title">
+											<a href="#">Inceptos orci hac libero</a>
+										</h5>
+										<div class="entry-price">
+											<strong class="price">$ 450.00</strong>
+										</div>
+										<div class="entry-links clearfix">
+											<a href="#" class="pull-left m-r">+ Add to Wishlist</a>
+											<a href="#" class="pull-right">+ Add to Compare</a>
+										</div>
+									</div>
+								</div>
+								
+								<div class="product" data-product-id="8">
+									<div class="entry-media">
+										<img data-src="/images/women/dress/278638-0083_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<div class="hover">
+											<a href="product.html" class="entry-url"></a>
+											<ul class="icons unstyled">
+												<li>
+													<a href="/images/women/dress/278638-0083_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+												</li>
+												<li>
+													<a href="#" class="circle add-to-cart" data-><i class="iconfont-shopping-cart"></i></a>
+												</li>
+											</ul>
+											<div class="rate-bar">
+												<input type="range" value="5" step="0.5" id="backing8" />
+												<div class="rateit" data-rateit-backingfld="#backing8" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
+											</div>
+										</div>
+									</div>
+									<div class="entry-main">
+										<h5 class="entry-title">
+											<a href="#">Inceptos orci hac libero</a>
+										</h5>
+										<div class="entry-price">
+											<strong class="price">$ 350.00</strong>
+										</div>
+										<div class="entry-links clearfix">
+											<a href="#" class="pull-left m-r">+ Add to Wishlist</a>
+											<a href="#" class="pull-right">+ Add to Compare</a>
+										</div>
+									</div>
+								</div>
+							
+							</div>
+								
+						</div>
+						<!-- // END CAROUSEL -->
+						
+					</div>
+				</div>
+			</section>
+			<!-- // RELATED PRODUCTS -->
+			
 		</main>
 		<!-- // SITE MAIN CONTENT -->
 		
@@ -585,7 +809,7 @@
 									<div class="center-xs">
 										<div class="ads">
 											<a href="#">
-												<img src="images/demo/images-footer.jpg" alt="" />
+												<img src="/images/demo/images-footer.jpg" alt="" />
 											</a>
 											<div class="ads-caption bottom-right">
 												<a href="#" class="btn btn-default btn-round">
@@ -649,9 +873,9 @@
 						<div class="pull-right">
 							<div class="vmid">
 								<span class="uppercase">Payment Accept&emsp;</span>
-								<a href="#"><img src="img/visacard.png" alt="" width="40" /></a>
-								<a href="#"><img src="img/mastercard.png" alt="" width="40" /></a>
-								<a href="#"><img src="img/paypal.png" alt="" width="40" /></a>
+								<a href="#"><img src="/img/visacard.png" alt="" width="40" /></a>
+								<a href="#"><img src="/img/mastercard.png" alt="" width="40" /></a>
+								<a href="#"><img src="/img/paypal.png" alt="" width="40" /></a>
 							</div>
 						</div>
 					</div>
@@ -673,8 +897,6 @@
 	<!-- Particular Page Javascripts -->
 	<script src="/sites-js/products.js"></script>
 	<script src="/sites-js/owl.carousel.js"></script>
-	<script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
-	<script src="/sites-js/gmap3.min.js"></script>
 	<!-- // Particular Page Javascripts -->
 	
 </body>

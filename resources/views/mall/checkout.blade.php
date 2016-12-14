@@ -98,7 +98,7 @@
 								<div id="sub-cart" class="sub-header">
 									<div class="cart-header">
 										<span>Your cart is currently empty.</span>
-										<small><a href="cart.html">(See All)</a></small>
+										<small><a href="cart.blade.php">(See All)</a></small>
 									</div>
 									<ul class="cart-items product-medialist unstyled clearfix"></ul>
 									<div class="cart-footer">
@@ -107,7 +107,7 @@
 											<span class="pull-right total">$ 0</span>
 										</div>
 										<div class="text-right">
-											<a href="cart.html" class="btn btn-default btn-round view-cart">View Cart</a>
+											<a href="cart.blade.php" class="btn btn-default btn-round view-cart">View Cart</a>
 										</div>
 									</div>
 								</div>
@@ -152,8 +152,8 @@
 						<nav id="tiny-menu" class="clearfix">
 							<ul class="user-menu">
 								<li><a href="#">My Account</a></li>
-								<li><a href="cart.html">My Wishlist</a></li>
-								<li><a href="checkout.html">Checkout</a></li>
+								<li><a href="cart.blade.php">My Wishlist</a></li>
+								<li><a href="checkout.blade.php">Checkout</a></li>
 								<li><a href="#">Log Out</a></li>
 							</ul>
 						</nav>
@@ -343,7 +343,7 @@
 								
 								<ul class="nav nav-tabs nav-stacked">
 									<li><a href="index-3.html">Homepage</a></li>															
-									<li><a href="about-us.html">About us</a></li>															
+									<li><a href="about-us.blade.php">About us</a></li>
 									<li><a href="products-2.html">Shop</a></li>															
 									<li><a href="product-2.html">Single Product Details</a></li>															
 									<li><a href="contact-us-2.html">Contact us</a></li>															

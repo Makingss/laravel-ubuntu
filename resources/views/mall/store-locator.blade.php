@@ -100,7 +100,7 @@
 								<div id="sub-cart" class="sub-header">
 									<div class="cart-header">
 										<span>Your cart is currently empty.</span>
-										<small><a href="cart.html">(See All)</a></small>
+										<small><a href="cart.blade.php">(See All)</a></small>
 									</div>
 									<ul class="cart-items product-medialist unstyled clearfix"></ul>
 									<div class="cart-footer">
@@ -109,7 +109,7 @@
 											<span class="pull-right total">$ 0</span>
 										</div>
 										<div class="text-right">
-											<a href="cart.html" class="btn btn-default btn-round view-cart">View Cart</a>
+											<a href="cart.blade.php" class="btn btn-default btn-round view-cart">View Cart</a>
 										</div>
 									</div>
 								</div>
@@ -154,8 +154,8 @@
 						<nav id="tiny-menu" class="clearfix">
 							<ul class="user-menu">
 								<li><a href="#">My Account</a></li>
-								<li><a href="cart.html">My Wishlist</a></li>
-								<li><a href="checkout.html">Checkout</a></li>
+								<li><a href="cart.blade.php">My Wishlist</a></li>
+								<li><a href="checkout.blade.php">Checkout</a></li>
 								<li><a href="#">Log Out</a></li>
 							</ul>
 						</nav>
@@ -164,7 +164,7 @@
 					<!-- // CURRENCY / LANGUAGE / USER MENU -->
 					<!-- SITE LOGO -->
 					<div class="logo-wrapper">
-						<a href="index-2.html" class="logo" title="GFashion - Responsive e-commerce HTML Template">
+						<a href="index-2.blade.php" class="logo" title="GFashion - Responsive e-commerce HTML Template">
 							<img src="img/logo.png" alt="GFashion - Responsive e-commerce HTML Template" />
 						</a>
 					</div>
@@ -176,10 +176,10 @@
 								<a href="index.html">Home</a>
 							</li>
 							<li>
-								<a href="products.html">Women</a>
+								<a href="products.blade.php">Women</a>
 							</li>
 							<li>
-								<a href="products.html">Men</a>
+								<a href="products.blade.php">Men</a>
 								
 								<!-- MEGA MENU -->
 								<div class="mega-menu" data-col-lg="9" data-col-md="12">
@@ -188,36 +188,36 @@
 										<div class="col-md-3">
 											<h4 class="menu-title">Clothing</h4>
 											<ul class="mega-sub">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</div>
 										
 										<div class="col-md-3">
 											<h4 class="menu-title">Accessories</h4>
 											<ul class="mega-sub">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</div>
 										
 										<div class="col-md-3">
 											<h4 class="menu-title">Brands</h4>
 											<ul class="mega-sub">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</div>
 										
@@ -234,7 +234,7 @@
 											</div>
 											<h5 class="text-semibold uppercase m-b-sm">Featured Products</h5>
 											<p>Lorem ipsum dolor sit, consectetur adipiscing elit. Etiam neque velit, blandit sed scelerisque.</p>
-											<a href="products.html" class="btn btn-default btn-round">Go to Shop →</a>
+											<a href="products.blade.php" class="btn btn-default btn-round">Go to Shop →</a>
 										</div>
 										
 									</div>
@@ -246,7 +246,7 @@
 								<a href="components.html">Components</a>
 							</li>
 							<li>
-								<a href="store-locator.html">Store Locator</a>
+								<a href="store-locator.blade.php">Store Locator</a>
 							</li>
 							<li>
 								<a href="contact-us.html">Contact Us</a>
@@ -271,36 +271,36 @@
 									
 									<ul class="dl-submenu">
 										<li>
-											<a href="products.html">Clothing</a>
+											<a href="products.blade.php">Clothing</a>
 											<ul class="dl-submenu">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</li>
 										<li>
-											<a href="products.html">Accessories</a>
+											<a href="products.blade.php">Accessories</a>
 											<ul class="dl-submenu">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</li>
 										<li>
-											<a href="products.html">Brands</a>
+											<a href="products.blade.php">Brands</a>
 											<ul class="dl-submenu">
-												<li><a href="products.html">Casual Wear</a></li>
-												<li><a href="products.html">Evening Wear</a></li>
-												<li><a href="products.html">Formal Attire</a></li>
-												<li><a href="products.html">Womens Jeans</a></li>
-												<li><a href="products.html">Mens Jeans</a></li>
-												<li><a href="products.html">Fall Styles</a></li>
+												<li><a href="products.blade.php">Casual Wear</a></li>
+												<li><a href="products.blade.php">Evening Wear</a></li>
+												<li><a href="products.blade.php">Formal Attire</a></li>
+												<li><a href="products.blade.php">Womens Jeans</a></li>
+												<li><a href="products.blade.php">Mens Jeans</a></li>
+												<li><a href="products.blade.php">Fall Styles</a></li>
 											</ul>
 										</li>
 									</ul>
@@ -323,8 +323,8 @@
 			<div class="container">
 				<div class="relative">
 					<ul class="bc unstyled clearfix">
-						<li><a href="#">Home</a></li>
-						<li class="active">Contact Us</li>
+						<li><a href="index.html">Home</a></li>
+						<li class="active">Store Locator</li>
 					</ul>
 				</div>
 			</div>
@@ -333,114 +333,161 @@
 		
 		<!-- SITE MAIN CONTENT -->
 		<main id="main-content" role="main">
-				
 			<div class="container">
 				<div class="row">
 				
-					<section class="section">
-						<section class="col-xs-12 col-sm-12">
-							<!-- GOOGLE MAP: You can config map to your cordination in `js/scripts.js` -->
-							<div id="gmap" class="gmap"></div>
-						</section>
-					</section>
-					
-					<section class="section">
-						<section class="col-xs-12 col-sm-8 col-md-9">
-						
-							<h3 class="uppercase text-bold"><span class="text-xs">What about sending us a message</span></h3>
-							<div class="row">
-								<div id="frm-contact-us">
-									<form id="contact-form" class="clearfix" role="form">
-										<div class="col-xs-12 col-sm-12 col-md-5">
-											<div class="form-group stylish-input">
-												<label for="contactName" class="required">Name</label>
-												<input type="text" class="form-control" id="contactName" name="name" data-validate="^[�-�\w\s]{2,30}$" require />
-											</div>
-											<div class="form-group stylish-input">
-												<label for="contactEmail" class="required">Email</label>
-												<input type="email" class="form-control" id="contactEmail" name="email" data-validate="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" require />
-											</div>
-											<div class="form-group stylish-input">
-												<label for="contactSubject">Subject</label>
-												<input type="text" class="form-control" name="subject" id="contactSubject" />
-											</div>
-										</div>
-										<div class="space10 visible-xs visible-sm"></div>
-										<div class="col-xs-12 col-sm-12 col-md-7">
-											<div class="form-group stylish-input">
-												<label for="contactMSG" class="required">Message</label>
-												<textarea id="contactMSG" class="form-control" name="message" style="height: 178px;" data-validate=".{2,400}$" required></textarea>
-											</div>
-										</div>
+					<!-- SIDEBAR -->
+					<aside class="col-xs-12 col-sm-4 col-md-3">
+						<section class="sidebar m-t-b">
+							<section class="side-section">
+								<h3 class="uppercase text-bold"><span class="text-xs">Usefull Pages</span></h3>
+								
+								<ul class="nav nav-tabs nav-stacked">
+									<li><a href="index-3.blade.php">Homepage</a></li>
+									<li><a href="about-us.blade.php">About us</a></li>
+									<li><a href="products-2.blade.php">Shop</a></li>
+									<li><a href="product-2.blade.php">Single Product Details</a></li>
+									<li><a href="contact-us-2.blade.php">Contact us</a></li>
+								</ul>
+							</section>
+								
+							<!-- PROMO -->
+							<div class="promo inverse-background" style="background: url('images/demo/Barn-Dress-Girl_t.jpg') no-repeat; background-size: auto 100%;">
+								<div class="inner text-center np">
+									<div class="ribbon">
+										<h6 class="nmb">New Arrivals</h6>
+										<h5 class="text-semibold uppercase nmb">Leather Fashion</h5>
 										<div class="space10"></div>
-										<div class="col-xs-12 col-sm-12">
-											<button class="btn btn-default btn-round pull-right">Send Message</button>
-										</div>
-									</form>
-									
-									<div class="space40"></div>
-									<div class="clearfix"></div>
-									<!-- CONTACT FORM ALERTS -->
-									<div class="alert alert-success" id="contact_success" style="display: none;">
-										<button type="button" class="close" data-dismiss="alert">&times;</button>
-										<div class="alert-inner">
-											<strong>Thanks,</strong> your message recieved successfully. We'll get back to you as soon as possible.
-										</div>
+										<a href="products.blade.php" class="with-icon prepend-icon"><i class="iconfont-caret-right"></i><span> Shop Now</span></a>
 									</div>
-									<!-- /success msg -->
-									
-									<div class="alert alert-danger" id="contact_fail" style="display: none;">
-										<button type="button" class="close" data-dismiss="alert">&times;</button>
-										<div class="alert-inner"></div>
-									</div>
-									<!-- /error msg -->
-									<!-- /CONTACT FORM ALERTS -->
-
 								</div>
 							</div>
-						
+							<!-- // PROMO -->
 						</section>
-				
-						<!-- SIDEBAR -->
-						<aside class="col-xs-12 col-sm-4 col-md-3">
-						
-							<section class="sidebar">
-								<section class="side-section">
-									<h3 class="uppercase text-bold"><span class="text-xs">place for nice title</span></h3>
-									<p class="light-color text-xs">Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa  amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
-								</section>
-								
-								<section class="side-section">
-									<h3 class="uppercase text-bold"><span class="text-xs">Contact infomation</span></h3>
-									<div class="light-color text-xs">
-										<p>Lorem ipsum maecenas dapibus luctus</p>
-										<ul class="menu iconed-list unstyled">
+					</aside>
+					<!-- // SIDEBAR -->
+			
+					<section class="col-xs-12 col-sm-8 col-md-9">
+						<section class="section">
+									
+							<form class="clearfix" role="form">
+								<div class="row">
+									<div class="col-xs-12 col-sm-4">
+										<div class="form-group stylish-input">
+											<label for="inputZIPcode">Enter Post Code or store</label>
+											<input type="text" id="inputZIPcode" class="form-control" required />
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-4">
+										<div class="form-group stylish-input">
+											<label for="inputLocation">Country / State / City</label>
+											<select id="inputLocation" class="form-control">
+												<option>-- SELECT ONE --</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-4">
+										<div class="form-group stylish-input">
+											<label for="inputRadius">Radius</label>
+											<select id="inputRadius" class="form-control">
+												<option>1000 m</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12 col-sm-12">
+										<button type="submit" class="btn btn-primary uppercase m-r-sm">submit</button>
+										<button type="reset" class="btn btn-default uppercase">reset</button>
+									</div>
+								</div>
+							</form>
+							
+							<div class="m-t-lg clearfix">
+								<div class="row">
+									<div class="col-xs-12 col-sm-6">
+										<ul class="store-list unstyled">
 											<li>
-												<span class="list-icon"><i class="round-icon text-sm iconfont-map-marker"></i></span>
-												<div class="list-content">121 King Street, Melbourne Victoria 3000 Australia</div>
+												<h4 class="entry-title">
+													<a href="#">Support Center</a>
+													<small>(0.7 km)</small>
+												</h4>
+												<div class="row">
+													<dl class="col-xs-7 col-sm-7">
+														<dt>Address</dt>
+														<dd>Lower Ground Suite 7<br/>32a Oxford Street</dd>
+													</dl>
+													<dl class="col-xs-5 col-sm-5">
+														<dt class="phone">Phone</dt>
+														<dd>(01) 23 456 789</dd>
+														<dd>(02) 23 456 789</dd>
+													</dl>
+												</div>
 											</li>
 											<li>
-												<span class="list-icon"><i class="round-icon text-sm iconfont-phone"></i></span>
-												<div class="list-content">(+00)1344356-675</div>
+												<h4 class="entry-title">
+													<a href="#">Support Center</a>
+													<small>(0.7 km)</small>
+												</h4>
+												<div class="row">
+													<dl class="col-xs-7 col-sm-7">
+														<dt>Address</dt>
+														<dd>Lower Ground Suite 7<br/>32a Oxford Street</dd>
+													</dl>
+													<dl class="col-xs-5 col-sm-5">
+														<dt class="phone">Phone</dt>
+														<dd>(01) 23 456 789</dd>
+														<dd>(02) 23 456 789</dd>
+													</dl>
+												</div>
 											</li>
 											<li>
-												<span class="list-icon"><i class="round-icon text-sm iconfont-envelope-alt"></i></span>
-												<div class="list-content">support@themina.net</div>
+												<h4 class="entry-title">
+													<a href="#">Support Center</a>
+													<small>(0.7 km)</small>
+												</h4>
+												<div class="row">
+													<dl class="col-xs-7 col-sm-7">
+														<dt>Address</dt>
+														<dd>Lower Ground Suite 7<br/>32a Oxford Street</dd>
+													</dl>
+													<dl class="col-xs-5 col-sm-5">
+														<dt class="phone">Phone</dt>
+														<dd>(01) 23 456 789</dd>
+														<dd>(02) 23 456 789</dd>
+													</dl>
+												</div>
+											</li>
+											<li>
+												<h4 class="entry-title">
+													<a href="#">Support Center</a>
+													<small>(0.7 km)</small>
+												</h4>
+												<div class="row">
+													<dl class="col-xs-7 col-sm-7">
+														<dt>Address</dt>
+														<dd>Lower Ground Suite 7<br/>32a Oxford Street</dd>
+													</dl>
+													<dl class="col-xs-5 col-sm-5">
+														<dt class="phone">Phone</dt>
+														<dd>(01) 23 456 789</dd>
+														<dd>(02) 23 456 789</dd>
+													</dl>
+												</div>
 											</li>
 										</ul>
 									</div>
-								</section>
-							</section>
+									<div class="col-xs-12 col-sm-6">
+										<div id="store-locator-gmap" class="gmap"></div>
+									</div>
+								</div>
+							</div>
 							
-						</aside>
-						<!-- // SIDEBAR -->
-						
-						<div class="clearfix"></div>
+						</section>
 					</section>
-				
+			
 				</div>
 			</div>
-			
 		</main>
 		<!-- // SITE MAIN CONTENT -->
 		
@@ -619,14 +666,13 @@
 <!-- // PAGE WRAPPER -->
 
 <!-- Essential Javascripts -->
-<script src="/minified.js"></script>
+<script src="/sites-js/minified.js"></script>
 <!-- // Essential Javascripts -->
 
 
 	<!-- Particular Page Javascripts -->
 	<script src="/sites-js/products.js"></script>
 	<script src="/sites-js/owl.carousel.js"></script>
-	<script src="/sites-js/contact.js"></script>
 	<script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
 	<script src="/sites-js/gmap3.min.js"></script>
 	<!-- // Particular Page Javascripts -->

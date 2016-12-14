@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <!--[if IE 7 ]><html class="ie ie7 lte9 lte8 lte7" lang="en-US"><![endif]-->
 <!--[if IE 8]><html class="ie ie8 lte9 lte8" lang="en-US">	<![endif]-->
 <!--[if IE 9]><html class="ie ie9 lte9" lang="en-US"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html class="noIE" lang="en-US"><!--<![endif]-->
 <head>
 	<meta charset="UTF-8" />
-	<title>shopping V1.0</title>
+	<title>GFashion - Responsive e-commerce HTML Template</title>
 	<meta name="description" content=""/>
 	<meta name="keywords" content=""/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -20,26 +20,27 @@
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 	
 	<!-- GENERAL CSS FILES -->
-	<link rel="stylesheet" href="sites-css/minified.css">
+	<link rel="stylesheet" href="/sites-css/minified.css">
 	<!-- // GENERAL CSS FILES -->
 	
 	<!--[if IE 8]>
-		<script src="sites-js/respond.min.js"></script>
-		<script src="sites-js/selectivizr-min.js"></script>
+		<script src="/sites-js/respond.min.js"></script>
+		<script src="/sites-js/selectivizr-min.js"></script>
 	<![endif]-->
 	<!--
 	<script src="js/jquery.min.js"></script>
 	-->
-	<script>window.jQuery || document.write('<script src="sites-js/jquery.min.js"><\/script>');</script>
-	<script src="sites-js/modernizr.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/sites-js/jquery.min.js"><\/script>');</script>
+	<script src="/sites-js/modernizr.min.js"></script>
 	<!-- PARTICULAR PAGES CSS FILES -->
-	<link rel="stylesheet" href="sites-css/owl.carousel.css">
-	<link rel="stylesheet" href="sites-css/owl.theme.css">
-	<link href="sites-css/flexslider.css" rel="stylesheet" />
+	<link rel="stylesheet" href="/sites-css/jquery.nouislider.css">
+	<link rel="stylesheet" href="/sites-css/owl.carousel.css">
+	<link rel="stylesheet" href="/sites-css/owl.theme.css">
+	<link rel="stylesheet" href="/sites-css/innerpage.css">
 	<!-- // PARTICULAR PAGES CSS FILES -->
-	<link rel="stylesheet" href="sites-css/responsive.css">
+	<link rel="stylesheet" href="/sites-css/responsive.css">
 </head>
-<body class="home">
+<body class="product-single">
 			
 	<!-- PAGE WRAPPER -->
 <div id="page-wrapper">
@@ -100,7 +101,7 @@
 								<div id="sub-cart" class="sub-header">
 									<div class="cart-header">
 										<span>Your cart is currently empty.</span>
-										<small><a href="cart.html">(See All)</a></small>
+										<small><a href="cart.blade.php">(See All)</a></small>
 									</div>
 									<ul class="cart-items product-medialist unstyled clearfix"></ul>
 									<div class="cart-footer">
@@ -109,7 +110,7 @@
 											<span class="pull-right total">$ 0</span>
 										</div>
 										<div class="text-right">
-											<a href="cart.html" class="btn btn-default btn-round view-cart">View Cart</a>
+											<a href="cart.blade.php" class="btn btn-default btn-round view-cart">View Cart</a>
 										</div>
 									</div>
 								</div>
@@ -154,8 +155,8 @@
 						<nav id="tiny-menu" class="clearfix">
 							<ul class="user-menu">
 								<li><a href="#">My Account</a></li>
-								<li><a href="cart.html">My Wishlist</a></li>
-								<li><a href="checkout.html">Checkout</a></li>
+								<li><a href="cart.blade.php">My Wishlist</a></li>
+								<li><a href="checkout.blade.php">Checkout</a></li>
 								<li><a href="#">Log Out</a></li>
 							</ul>
 						</nav>
@@ -164,7 +165,7 @@
 					<!-- // CURRENCY / LANGUAGE / USER MENU -->
 					<!-- SITE LOGO -->
 					<div class="logo-wrapper">
-						<a href="index-2.html" class="logo" title="GFashion - Responsive e-commerce HTML Template">
+						<a href="index-2.blade.php" class="logo" title="GFashion - Responsive e-commerce HTML Template">
 							<img src="img/logo.png" alt="GFashion - Responsive e-commerce HTML Template" />
 						</a>
 					</div>
@@ -317,249 +318,156 @@
 		<!-- // MAIN HEADER -->
 	</header>
 	<!-- // SITE HEADER -->
-    
-    <div class="copyrights">Collect from <a href="http://www.jq22.com/" >jQuery插件库</a></div>
-		
-		<!-- HOMEPAGE SLIDER -->
-		<div id="home-slider">
-			<div class="flexslider">
-	<ul class="slides">
-		<!-- THE FIRST SLIDE -->
-		<li>
-			<!-- THE MAIN IMAGE IN THE SLIDE -->
-			<img src="rev-slider/img/slides/Street-Fashion.jpg" alt="" />
-			
-			<!-- THE CAPTIONS OF THE FIRST SLIDE -->
-			<div class="flex-caption h6 text-bold gfc uppercase animated"
-			data-animation="fadeInLeftBig"
-			data-x="800"
-			data-y="110"
-			data-speed="600"
-			data-start="1200">New Collection</div>
-			
-			<div class="flex-caption herotext text-bold gfc animated"
-			data-animation="fadeInRightBig"
-			data-x="580"
-			data-y="140"
-			data-speed="900"
-			data-start="2000">Autumn Fashions</div>
-			
-			<div class="flex-caption h6 text-bold gfc text-center animated"
-			data-animation="fadeInDown"
-			data-x="639"
-			data-y="260"
-			data-speed="1600"
-			data-start="2900">
-				Comfy knits and warm jackets for cooler Autumn days<br/>
-				<a href="products.html" class="btn btn-primary uppercase">Shop Now</a>
+	
+		<!-- BREADCRUMB -->
+		<div class="breadcrumb-container">
+			<div class="container">
+				<div class="relative">
+					<ul class="bc unstyled clearfix">
+						<li><a href="#">Home</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li class="active">Product Detail</li>
+					</ul>
+				</div>
 			</div>
-			
-		</li>
-		
-		<!-- THE SECOND SLIDE -->
-		<li style="background: #fa6f57;">
-			<!-- THE MAIN IMAGE IN THE SLIDE -->
-			<img src="img/transparent.png" alt="" />
-			
-			<div class="flex-caption super-giant gfc animated uppercase"
-			data-animation="fadeInUp"
-			data-x="center"
-			data-y="60"
-			data-speed="500"
-			data-start="900">Sale</div>
-
-			<div id="caption-left-round" class="flex-caption round gfc animated uppercase"
-			data-animation="fadeInLeftBig"
-			data-x="140"
-			data-y="60"
-			data-speed="600"
-			data-start="1200"><div class="vmid"><span>Mid<br/>Season</span></div></div>
-
-			<div class="flex-caption round gfc animated uppercase"
-			data-animation="fadeInRightBig"
-			data-x="925"
-			data-y="60"
-			data-speed="600"
-			data-start="1200"><div class="vmid"><span>Up to<br/>70% off</span></div></div>
-
-			<div class="flex-caption h3 gfc animated uppercase"
-			data-animation="fadeInDown"
-			data-x="center"
-			data-y="250"
-			data-speed="400"
-			data-start="1800"><strong class="text-bold">500’s </strong>of New Products</div>
-
-		</li>
-		
-		<!-- THE SECOND SLIDE -->
-		<li>
-			<!-- THE MAIN IMAGE IN THE SLIDE -->
-			<img src="rev-slider/img/slides/3303349658_cfaebb811f_o.jpg" alt="" />
-			
-			<div class="flex-caption herotext text-bold gfc bg-dark animated uppercase"
-			data-animation="fadeInUpBig"
-			data-x="760"
-			data-y="60"
-			data-speed="900"
-			data-start="100">Free Shipping</div>
-			
-			<div class="flex-caption h2 text-bold gfc bg-dark animated uppercase"
-			data-animation="fadeInUpBig"
-			data-x="797"
-			data-y="175"
-			data-speed="600"
-			data-start="900">On Order over $2.000</div>
-			
-		</li>
-		
-	</ul>
-</div>
-
-<script>
-	jQuery(function($) {
-		var $slider = $('#home-slider > .flexslider');
-		$slider.find('.flex-caption').each(function() {
-			var $this = $(this);
-			var configs = {
-				left: $this.data('x'),
-				top: $this.data('y'),
-				speed: $this.data('speed') + 'ms',
-				delay: $this.data('start') + 'ms'
-			};
-			if ( configs.left == 'center' && $this.width() !== 0 ) 
-			{
-				configs.left = ( $slider.width() - $this.width() ) / 2;
-			}
-			if ( configs.top == 'center' && $this.height() !== 0 ) 
-			{
-				configs.top = ( $slider.height() - $this.height() ) / 2;
-			}
-			
-			$this.data('positions', configs);
-			
-			$this.css({
-				'left': configs.left + 'px',
-				'top': configs.top + 'px',
-				'animation-duration': configs.speed,
-				'animation-delay': configs.delay
-			});
-		});
-		
-		$(window).on('resize', function() {
-			var wW = $(window).width(),
-				zoom = ( wW >= 1170 ) ? 1 : wW / 1349;
-			$('.flex-caption.gfc').css('zoom', zoom);
-		});
-		$(window).trigger('resize');
-		
-		
-		
-		$slider.imagesLoaded(function() {
-			$slider.flexslider({
-				animation: 'slide',
-				easing: 'easeInQuad',
-				slideshow: false,
-				nextText: '<i class="iconfont-angle-right"></i>',
-				prevText: '<i class="iconfont-angle-left"></i>',
-				start: function() {
-					flex_fix_pos(1);
-				},
-				before: function(slider) {
-					// initial caption animation for next show
-					$slider.find('.slides li .animation-done').each(function() {
-						$(this).removeClass('animation-done');
-						var animation = $(this).attr('data-animation');
-						$(this).removeClass(animation);
-					});
-					
-					flex_fix_pos(slider.animatingTo + 1);
-				},
-				after: function() {
-					// run caption animation
-					$slider.find('.flex-active-slide .animated').each(function() {
-						var animation = $(this).attr('data-animation');
-						$(this).addClass('animation-done').addClass(animation);
-					});
-				}
-			});
-		});
-		
-		
-		function flex_fix_pos(i) {
-			$slider.find('.slides > li:eq(' + i + ') .gfc').each(function() {
-				var $this = $(this),
-					pos = $(this).data('positions');
-					
-				if ( pos.left == 'center' )
-				{
-					pos.left = ( $slider.width() - $this.width() ) / 2;
-					$this.css('left', pos.left + 'px');
-					$this.data('positions', pos);
-				}
-				if ( pos.top == 'center' )
-				{
-					pos.top = ( $slider.height() - $this.height() ) / 2;
-					$this.css('left', pos.top + 'px');
-					$this.data('positions', pos);
-				}
-			});
-		}
-	});
-</script>		</div>
-		<!-- // HOMEPAGE SLIDER -->
+		</div>
+		<!-- // BREADCRUMB -->
 		
 		<!-- SITE MAIN CONTENT -->
 		<main id="main-content" role="main">
-			
-			<!-- PROMO BOXES -->
-			<section class="section promos">
+					
+			<section class="section">
 				<div class="container">
 					<div class="row">
-					
-						<div class="col-md-4">
-							<div class="promo accent-background first-child first-row animated" data-animation="fadeInLeft">
-								<div class="inner text-center">
-									<h1 class="uppercase text-semibold">
-										<a href="#">
-											<span class="inverse-color">Sale</span> Up to 35% <span class="inverse-color">OFF</span>
-										</a>
-									</h1>
-									<h5 class="uppercase">Summer collection 2013</h5>
+						<!-- PRODUCT PREVIEW -->
+						<div class="col-xs-12 col-sm-4">
+							
+							<div class="product-preview">
+								<div class="big-image">
+									<a href="images/women/skirt/103314-0735_1_o.jpg" data-toggle="lightbox">
+										<img src="images/women/skirt/103314-0735_1_t.jpg" alt="" />
+									</a>
+								</div>
+								<ul class="thumbs unstyled clearfix">
+									<li><a href="images/women/skirt/103314-0735_1_o.jpg"><img src="images/women/skirt/103314-0735_1_t.jpg" alt="" /></a></li>
+									<li><a href="images/women/skirt/103314-0735_2_o.jpg"><img src="images/women/skirt/103314-0735_2_t.jpg" alt="" /></a></li>
+								</ul>
+							</div>
+							
+						</div>
+						<!-- // PRODUCT PREVIEW -->
+						<div class="space40 visible-xs"></div>
+						<!-- PRODUCT DETAILS -->
+						<div class="col-xs-12 col-sm-8">
+							<section class="product-details add-cart">
+								<header class="entry-header">
+									<h2 class="entry-title uppercase">Sexy Skirt</h2>
+								</header>
+								<article class="entry-content">
+									<figure>
+										<span class="entry-price inline-middle">$120</span>
+										<div class="rate-bar inline-middle">
+											<input type="range" value="4.5" step="0.5" id="backing0" />
+											<div class="rateit" data-rateit-backingfld="#backing0" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
+										</div>
+										<span class="entry-review-count inline-middle">( 2 Reviews )</span>
+										
+										<ul class="entry-meta unstyled">
+											<li>
+												<span class="key">Brand:</span>
+												<span class="value">Versace</span>
+											</li>
+											<li>
+												<span class="key">Availability:</span>
+												<span class="value">In Stock</span>
+											</li>
+											<li>
+												<span class="key">Product Code:</span>
+												<span class="value">GF-123456</span>
+											</li>
+										</ul>
+										
+										<div class="clearfix"></div>
+										
+										<figcaption class="m-b-sm">
+											<h5 class="subheader uppercase">Quick Overview:</h5>
+											<p>Ut suscipit senectus ligula in non nisi nam lobortis sapien curabitur diam, fames morbi pharetra adipiscing massa ornare habitant quam eu placerat himenaeos, sem mattis tortor pretium tortor varius pretium nam metus euismod.</p>
+										</figcaption>
+										
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<h5 class="subheader uppercase">Color:</h5>
+												<div class="inline-middle styled-dd">
+													<select>
+														<option>-- Please Select --</option>
+														<option value="Black">Black</option>
+														<option value="Aubergine">Aubergine</option>
+													</select>
+												</div>
+											</div>
+											<div class="space30 visible-xs"></div>
+											<div class="col-xs-12 col-sm-6">
+												<h5 class="subheader uppercase">Size:</h5>
+												<div class="inline-middle styled-dd">
+													<select>
+														<option>-- Please Select --</option>
+														<option value="xs">X-Small</option>
+														<option value="s">Small</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										
+										<ul class="inline-li li-m-r-l m-t-lg">
+											<li>
+												<a href="#" class="btn btn-default btn-lg btn-round add-to-cart">Add to Cart</a>
+											</li>
+											<li>
+												<a href="#">+ Add to Wishlist</a>
+											</li>
+											<li>
+												<a href="#">+ Add to Compare</a>
+											</li>
+										</ul>
+										
+									</figure>
+								</article>
+							</section>
+						</div>
+						<!-- // PRODUCT DETAILS -->
+					</div>
+					<div class="m-t-lg">
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#product-description" data-toggle="tab">Description</a></li>
+							<li><a href="#product-reviews" data-toggle="tab">Reviews</a></li>
+							<li><a href="#product-shipping" data-toggle="tab">Shipping</a></li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane fade in active" id="product-description">
+								<p>Ultricies et consectetur rhoncus lorem mattis, ligula interdum nibh dolor ipsum, venenatis ultrices sem nisl senectus phasellus lectus facilisis gravida curabitur interdum pretium et pellentesque nullam auctor vestibulum aenean ipsum placerat erat volutpat lectus mi est lacinia sociosqu, pretium habitasse aenean eros tristique augue a vivamus ac, sapien blandit nullam et neque curabitur varius nostra dui dictum cras orci congue.</p>
+								<ul>
+									<li>Sed ornare cras donec litora </li>
+									<li>Integer curabitur orci </li>
+									<li>At nullam aliquam libero nam himenaeos </li>
+								</ul>
+							</div>
+							<div class="tab-pane fade in" id="product-reviews">
+								<div class="comments-list">
+									<div id="disqus_thread"></div>
+									<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+									<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 								</div>
 							</div>
-						</div>
-					
-						<div class="col-md-4">
-							<div class="promo inverse-background first-row animated" data-animation="fadeInDown" style="background: url('images/demo/P2200214.jpg') no-repeat; background-size: 100%;">
-								<div class="inner text-center np">
-									<div class="ribbon">
-										<h6 class="nmb">New Arrivals</h6>
-										<h5 class="text-semibold uppercase nmb">Leather Fashion</h5>
-										<div class="space10"></div>
-										<a href="products.html" class="with-icon prepend-icon"><i class="iconfont-caret-right"></i><span> Shop Now</span></a>
-									</div>
-								</div>
+							<div class="tab-pane fade in" id="product-shipping">
+								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+								<h5 class="m-b-xs"><i class="iconfont-gift inline-middle m-r-sm"></i><span class="inline-middle">Gift Wrap</span></h5>
+								<p>Aenean tincidunt a ante a molestie. Fusce in elit urna. Etiam ornare blandit feugiat. Donec a risus volutpat, placerat mauris quis, scelerisque urna. Donec commodo pretium aliquet. Maecenas mollis tellus ut arcu aliquet, eget lobortis velit volutpat. Proin venenatis non erat venenatis lobortis. </p>
 							</div>
 						</div>
-					
-						<div class="col-md-4">
-							<div class="promo inverse-background first-row animated" data-animation="fadeInRight">
-								<div class="inner text-center">
-									<h1 class="uppercase text-bold">
-										<a href="#">
-											Free <span class="inverse-color">Shipping</span>
-										</a>
-									</h1>
-									<h5 class="uppercase">On oder over $2,000</h5>
-								</div>
-							</div>
-						</div>
-					
 					</div>
 				</div>
 			</section>
-			<!-- // PROMO BOXES -->
-			
+
 			<!-- FEATURED PRODUCTS -->
 			<section class="section featured visible-items-4">
 				<div class="container">
@@ -584,15 +492,15 @@
 							<div class="owl-carousel owl-theme" data-visible-items="4" data-navigation="true" data-lazyload="true">
 								<div class="product" data-product-id="1">
 									<div class="entry-media">
-										<img data-src="images/women/basic/848051-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<img data-src="img/products/1.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="#" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
 													<div class="circle ribbon ribbon-sale">Sale</div>
 												</li>
 												<li>
-													<a href="images/women/basic/848051-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+													<a href="img/products/1.html" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 												</li>
 												<li>
 													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
@@ -621,15 +529,15 @@
 								
 								<div class="product" data-product-id="2">
 									<div class="entry-media">
-										<img data-src="images/women/basic/688086-0286_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<img data-src="img/products/2.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="#" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
-													<a href="images/women/basic/688086-0286_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+													<a href="img/products/2.html" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 												</li>
 												<li>
-													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
+													<a href="#" class="circle add-to-cart" data-><i class="iconfont-shopping-cart"></i></a>
 												</li>
 											</ul>
 											<div class="rate-bar">
@@ -654,18 +562,18 @@
 								
 								<div class="product" data-product-id="3">
 									<div class="entry-media">
-										<img data-src="images/women/basic/848099-0067_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<img data-src="img/products/3.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="#" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
 													<div class="circle ribbon ribbon-new">New</div>
 												</li>
 												<li>
-													<a href="images/women/basic/848099-0067_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+													<a href="img/products/3.html" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 												</li>
 												<li>
-													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
+													<a href="#" class="circle add-to-cart" data-><i class="iconfont-shopping-cart"></i></a>
 												</li>
 											</ul>
 											<div class="rate-bar">
@@ -690,15 +598,15 @@
 								
 								<div class="product" data-product-id="4">
 									<div class="entry-media">
-										<img data-src="images/women/basic/589550-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<img data-src="img/products/4.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="#" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
-													<a href="images/women/basic/589550-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+													<a href="img/products/4.html" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 												</li>
 												<li>
-													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
+													<a href="#" class="circle add-to-cart" data-><i class="iconfont-shopping-cart"></i></a>
 												</li>
 											</ul>
 											<div class="rate-bar">
@@ -723,18 +631,18 @@
 								
 								<div class="product" data-product-id="5">
 									<div class="entry-media">
-										<img data-src="images/women/legging/104331-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<img data-src="img/products/1.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="#" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
 													<div class="circle ribbon ribbon-sale">Sale</div>
 												</li>
 												<li>
-													<a href="images/women/legging/104331-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+													<a href="img/products/1.html" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 												</li>
 												<li>
-													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
+													<a href="#" class="circle add-to-cart" data-><i class="iconfont-shopping-cart"></i></a>
 												</li>
 											</ul>
 											<div class="rate-bar">
@@ -760,15 +668,15 @@
 								
 								<div class="product" data-product-id="6">
 									<div class="entry-media">
-										<img data-src="images/women/legging/714384-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<img data-src="img/products/2.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="#" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
-													<a href="images/women/legging/714384-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+													<a href="img/products/2.html" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 												</li>
 												<li>
-													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
+													<a href="#" class="circle add-to-cart" data-><i class="iconfont-shopping-cart"></i></a>
 												</li>
 											</ul>
 											<div class="rate-bar">
@@ -793,18 +701,18 @@
 								
 								<div class="product" data-product-id="7">
 									<div class="entry-media">
-										<img data-src="images/women/dress/256479-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<img data-src="img/products/3.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="#" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
 													<div class="circle ribbon ribbon-new">New</div>
 												</li>
 												<li>
-													<a href="images/women/dress/256479-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+													<a href="img/products/3.html" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 												</li>
 												<li>
-													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
+													<a href="#" class="circle add-to-cart" data-><i class="iconfont-shopping-cart"></i></a>
 												</li>
 											</ul>
 											<div class="rate-bar">
@@ -829,15 +737,15 @@
 								
 								<div class="product" data-product-id="8">
 									<div class="entry-media">
-										<img data-src="images/women/dress/278638-0083_1_t.jpg" alt="" class="lazyOwl thumb" />
+										<img data-src="img/products/4.jpg" alt="" class="lazyOwl thumb" />
 										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
+											<a href="#" class="entry-url"></a>
 											<ul class="icons unstyled">
 												<li>
-													<a href="images/women/dress/278638-0083_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
+													<a href="img/products/4.html" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
 												</li>
 												<li>
-													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
+													<a href="#" class="circle add-to-cart" data-><i class="iconfont-shopping-cart"></i></a>
 												</li>
 											</ul>
 											<div class="rate-bar">
@@ -870,286 +778,9 @@
 			</section>
 			<!-- // FEATURED PRODUCTS -->
 			
-			<!-- NEW ARRIVAL PRODUCTS -->
-			<section class="section new-arrivals visible-items-5">
-				<div class="container">
-					<div class="row">
-						<header class="section-header clearfix col-sm-offset-3 col-sm-6">
-							<h3 class="section-title">New arrivals</h3>
-							<p class="section-teaser">Lorem ipsum dolor sit amet, consectetur adipiscing elit ac lobortis lacus</p>
-						</header>
-						
-						<div class="clearfix"></div>
-						
-						<!-- BEGIN CAROUSEL -->
-						<div id="new-arrivals-products" class="add-cart" data-product=".product" data-thumbnail=".entry-media .thumb" data-title=".entry-title > a" data-url=".entry-title > a" data-price=".entry-price > .price">
-						
-							<div class="owl-controls clickable outside">
-								<div class="owl-buttons">
-									<div class="owl-prev"><i class="iconfont-angle-left"></i></div>
-									<div class="owl-next"><i class="iconfont-angle-right"></i></div>
-								</div>
-							</div>
-							
-							<div class="owl-carousel owl-theme" data-visible-items="5" data-navigation="true" data-lazyload="true">
-								<div class="product" data-product-id="9">
-									<div class="entry-media">
-										<img data-src="images/men/jacket/271865-0286_1_t.jpg" alt="" class="lazyOwl thumb" />
-										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
-											<ul class="icons unstyled">
-												<li>
-													<div class="circle ribbon ribbon-sale">Sale</div>
-												</li>
-												<li>
-													<a href="images/men/jacket/271865-0286_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-												</li>
-												<li>
-													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-												</li>
-											</ul>
-											<div class="rate-bar">
-												<input type="range" value="4.5" step="0.5" id="backing9" />
-												<div class="rateit" data-rateit-backingfld="#backing9" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
-											</div>
-										</div>
-									</div>
-									<div class="entry-main">
-										<h5 class="entry-title">
-											<a href="#">Inceptos orci hac libero</a>
-										</h5>
-										<div class="entry-price">
-											<s class="entry-discount">$ 350.00</s>
-											<strong class="accent-color price">$ 250.00</strong>
-										</div>
-									</div>
-								</div>
-								
-								<div class="product" data-product-id="10">
-									<div class="entry-media">
-										<img data-src="images/men/jacket/634082-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
-										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
-											<ul class="icons unstyled">
-												<li>
-													<a href="images/men/jacket/634082-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-												</li>
-												<li>
-													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-												</li>
-											</ul>
-											<div class="rate-bar">
-												<input type="range" value="4" step="0.5" id="backing10" />
-												<div class="rateit" data-rateit-backingfld="#backing10" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
-											</div>
-										</div>
-									</div>
-									<div class="entry-main">
-										<h5 class="entry-title">
-											<a href="#">Inceptos orci hac libero</a>
-										</h5>
-										<div class="entry-price">
-											<strong class="price">$ 350.00</strong>
-										</div>
-									</div>
-								</div>
-								
-								<div class="product" data-product-id="11">
-									<div class="entry-media">
-										<img data-src="images/men/jacket/217365-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
-										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
-											<ul class="icons unstyled">
-												<li>
-													<div class="circle ribbon ribbon-new">New</div>
-												</li>
-												<li>
-													<a href="images/men/jacket/217365-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-												</li>
-												<li>
-													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-												</li>
-											</ul>
-											<div class="rate-bar">
-												<input type="range" value="3.5" step="0.5" id="backing11" />
-												<div class="rateit" data-rateit-backingfld="#backing11" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
-											</div>
-										</div>
-									</div>
-									<div class="entry-main">
-										<h5 class="entry-title">
-											<a href="#">Inceptos orci hac libero</a>
-										</h5>
-										<div class="entry-price">
-											<strong class="price">$ 450.00</strong>
-										</div>
-									</div>
-								</div>
-								
-								<div class="product" data-product-id="12">
-									<div class="entry-media">
-										<img data-src="images/men/blazer/105797-1056_1_t.jpg" alt="" class="lazyOwl thumb" />
-										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
-											<ul class="icons unstyled">
-												<li>
-													<a href="images/men/blazer/105797-1056_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-												</li>
-												<li>
-													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-												</li>
-											</ul>
-											<div class="rate-bar">
-												<input type="range" value="5" step="0.5" id="backing12" />
-												<div class="rateit" data-rateit-backingfld="#backing12" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
-											</div>
-										</div>
-									</div>
-									<div class="entry-main">
-										<h5 class="entry-title">
-											<a href="#">Inceptos orci hac libero</a>
-										</h5>
-										<div class="entry-price">
-											<strong class="price">$ 350.00</strong>
-										</div>
-									</div>
-								</div>
-								
-								<div class="product" data-product-id="13">
-									<div class="entry-media">
-										<img data-src="images/men/jumper/271866-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
-										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
-											<ul class="icons unstyled">
-												<li>
-													<div class="circle ribbon ribbon-sale">Sale</div>
-												</li>
-												<li>
-													<a href="images/men/jumper/271866-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-												</li>
-												<li>
-													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-												</li>
-											</ul>
-											<div class="rate-bar">
-												<input type="range" value="4.5" step="0.5" id="backing13" />
-												<div class="rateit" data-rateit-backingfld="#backing13" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
-											</div>
-										</div>
-									</div>
-									<div class="entry-main">
-										<h5 class="entry-title">
-											<a href="#">Inceptos orci hac libero</a>
-										</h5>
-										<div class="entry-price">
-											<s class="entry-discount">$ 350.00</s>
-											<strong class="accent-color price">$ 250.00</strong>
-										</div>
-									</div>
-								</div>
-								
-								<div class="product" data-product-id="14">
-									<div class="entry-media">
-										<img data-src="images/men/shirt/803500-6989_1_t.jpg" alt="" class="lazyOwl thumb" />
-										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
-											<ul class="icons unstyled">
-												<li>
-													<a href="images/men/shirt/803500-6989_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-												</li>
-												<li>
-													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-												</li>
-											</ul>
-											<div class="rate-bar">
-												<input type="range" value="4" step="0.5" id="backing14" />
-												<div class="rateit" data-rateit-backingfld="#backing14" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
-											</div>
-										</div>
-									</div>
-									<div class="entry-main">
-										<h5 class="entry-title">
-											<a href="#">Inceptos orci hac libero</a>
-										</h5>
-										<div class="entry-price">
-											<strong class="price">$ 350.00</strong>
-										</div>
-									</div>
-								</div>
-								
-								<div class="product" data-product-id="15">
-									<div class="entry-media">
-										<img data-src="images/men/shirt/217360-0014_1_t.jpg" alt="" class="lazyOwl thumb" />
-										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
-											<ul class="icons unstyled">
-												<li>
-													<div class="circle ribbon ribbon-new">New</div>
-												</li>
-												<li>
-													<a href="images/men/shirt/217360-0014_1.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-												</li>
-												<li>
-													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-												</li>
-											</ul>
-											<div class="rate-bar">
-												<input type="range" value="3.5" step="0.5" id="backing15" />
-												<div class="rateit" data-rateit-backingfld="#backing15" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
-											</div>
-										</div>
-									</div>
-									<div class="entry-main">
-										<h5 class="entry-title">
-											<a href="#">Inceptos orci hac libero</a>
-										</h5>
-										<div class="entry-price">
-											<strong class="price">$ 450.00</strong>
-										</div>
-									</div>
-								</div>
-								
-								<div class="product" data-product-id="16">
-									<div class="entry-media">
-										<img data-src="images/men/accessories/000095-0014_2_t.jpg" alt="" class="lazyOwl thumb" />
-										<div class="hover">
-											<a href="product.html" class="entry-url"></a>
-											<ul class="icons unstyled">
-												<li>
-													<a href="images/men/accessories/000095-0014_2.jpg" class="circle" data-toggle="lightbox"><i class="iconfont-search"></i></a>
-												</li>
-												<li>
-													<a href="#" class="circle add-to-cart"><i class="iconfont-shopping-cart"></i></a>
-												</li>
-											</ul>
-											<div class="rate-bar">
-												<input type="range" value="5" step="0.5" id="backing16" />
-												<div class="rateit" data-rateit-backingfld="#backing16" data-rateit-starwidth="12" data-rateit-starheight="12" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5"></div>
-											</div>
-										</div>
-									</div>
-									<div class="entry-main">
-										<h5 class="entry-title">
-											<a href="#">Inceptos orci hac libero</a>
-										</h5>
-										<div class="entry-price">
-											<strong class="price">$ 350.00</strong>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-						</div>
-						<!-- // END CAROUSEL -->
-						
-					</div>
-				</div>
-			</section>
-			<!-- // NEW ARRIVAL PRODUCTS -->
-			
 		</main>
 		<!-- // SITE MAIN CONTENT -->
-				
+		
 		<!-- SITE FOOTER -->
 	<footer class="page-footer">
 		
@@ -1330,8 +961,24 @@
 
 
 	<!-- Particular Page Javascripts -->
-	<script src="sites-js/owl.carousel.js"></script>
-	<script src="sites-js/jquery.flexslider-min.js"></script>
+	<script src="/sites-js/jquery.nouislider.js"></script>
+	<script src="/sites-js/owl.carousel.js"></script>
+	<script src="/sites-js/products.js"></script>
 	<!-- // Particular Page Javascripts -->
+	
+	<!-- Disqus -->
+	<script type="text/javascript">
+	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = 'gfashion';		// required: replace example with your forum shortname
+
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<!-- // Disqus -->
+	
 </body>
 </html>
