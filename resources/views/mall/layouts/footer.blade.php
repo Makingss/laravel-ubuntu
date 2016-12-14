@@ -3,13 +3,13 @@
     <div class="widgets">
 
         <!-- FIRST ROW -->
-        <div class="section">
+        <!--<div class="section">
             <div class="container">
                 <div class="row">
 
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <section class="widget widget-text">
-                            <h5 class="widget-title">our store</h5>
+                            <h5 class="widget-title">我们的商城</h5>
                             <div class="widget-content">
                                 <p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
                                 <p>Nisi porttitor inceptos consectetur donec orci, dui ipsum leo class gravida, felis primis viverra placerat.</p>
@@ -34,7 +34,7 @@
 
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <section class="widget widget-menu">
-                            <h5 class="widget-title">information</h5>
+                                <h5 class="widget-title">information</h5>
                             <div class="widget-content">
                                 <ul class="menu iconed-menu unstyled">
                                     <li><a href="#"><i class="iconfont-circle-blank menu-icon"></i>Affiliate</a></li>
@@ -54,7 +54,7 @@
 
                 </div>
             </div>
-        </div>
+        </div>-->
         <!-- // FIRST ROW -->
 
         <!-- SECOND ROW -->
@@ -95,7 +95,7 @@
                                         <div class="ads-caption bottom-right">
                                             <a href="#" class="btn btn-default btn-round">
                                                 <i class="round-icon iconfont-angle-right"></i>
-                                                <span class="inline-middle">Show More</span>
+                                                <span class="inline-middle">显示更多</span>
                                             </a>
                                         </div>
                                     </div>
@@ -158,7 +158,7 @@
                             <span class="uppercase">支付方式&emsp;</span>
                             <a href="#"><img src="/img/wxpay.png" alt="" width="40" /></a>
                             <a href="#"><img src="/img/alipay.jpg" alt="" width="40" /></a>
-                            <a href="#"><img src="/img/nionPay.jpg" alt="" width="40" /></a>
+                            <a href="#"><img src="/img/unionPay.jpg" alt="" width="40" /></a>
                         </div>
                     </div>
                 </div>
