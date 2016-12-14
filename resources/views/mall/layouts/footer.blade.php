@@ -64,20 +64,20 @@
 
                     <div class="col-xs-12 col-sm-12 col-md-3">
                         <section class="widget widget-menu">
-                            <h5 class="widget-title">Contact info</h5>
+                            <h5 class="widget-title">联系信息</h5>
                             <div class="widget-content">
                                 <ul class="menu iconed-list unstyled">
                                     <li>
                                         <span class="list-icon"><i class="round-icon iconfont-map-marker"></i></span>
-                                        <div class="list-content">Lorem ipsum maecenas dapibus luctus euismod 133/2 New York City</div>
+                                        <div class="list-content">中国.广东省深圳市龙华新区大浪服装基地影儿工业园</div>
                                     </li>
                                     <li>
                                         <span class="list-icon"><i class="round-icon iconfont-phone"></i></span>
-                                        <div class="list-content">(+00)1344356-675</div>
+                                        <div class="list-content">(+86)15817464830</div>
                                     </li>
                                     <li>
                                         <span class="list-icon"><i class="round-icon iconfont-envelope-alt"></i></span>
-                                        <div class="list-content">support@themina.net</div>
+                                        <div class="list-content">wuyanping1029@foxmail.com</div>
                                     </li>
                                 </ul>
                             </div>
