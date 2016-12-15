@@ -12,7 +12,9 @@ class HandleUserSignUp
      * Create the event listener.
      *
      * @return void
+     *
      */
+    public $event;
     public function __construct()
     {
         //
