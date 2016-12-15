@@ -15,6 +15,9 @@ class MustBeAnAdmin
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+        if($request->user()&&$request->user()->isAdmin()){
+            return $next($request);
+        }
+            return redirect('/');
     }
 }
