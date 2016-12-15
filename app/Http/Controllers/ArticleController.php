@@ -1,10 +1,12 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Listeners\HandleUserSignUp;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use App\Article;
+use Illuminate\Support\Facades\Event;
 
 class ArticleController extends Controller
 {
@@ -48,7 +50,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-
+        event(new HandleUserSignUp());
         return view('articles.create');
     }
 
