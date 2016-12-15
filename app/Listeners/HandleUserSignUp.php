@@ -15,6 +15,7 @@ class HandleUserSignUp
      *
      */
     public $event;
+
     public function __construct()
     {
         //
@@ -23,11 +24,11 @@ class HandleUserSignUp
     /**
      * Handle the event.
      *
-     * @param  UserSignUp  $event
+     * @param  UserSignUp $event
      * @return void
      */
     public function handle(UserSignUp $event)
     {
-        dd($event->user.'Sign Up');
+        dump($event->user->name . 'Sign Up');
     }
 }
