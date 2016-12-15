@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Events\UserSignUp;
 use App\Listeners\HandleUserSignUp;
+use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -51,7 +52,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        event(new UserSignUp());
+        $user = \App\User::find(1);
+        event(new UserSignUp($user));
         return view('articles.create');
     }
 
