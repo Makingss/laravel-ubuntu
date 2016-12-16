@@ -7,6 +7,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Support\Facades\Auth;
 
 class UserMailPublished extends Notification
 {
@@ -46,7 +47,7 @@ class UserMailPublished extends Notification
     {
         return (new MailMessage)
             ->success()
-            ->greeting('Dear' . $user->name)
+            ->greeting('Dear' $user)
             ->line('The introduction to the notification.')
             ->action('Notification Action', 'https://laravel.com')
             ->line('Thank you for using our application!');
