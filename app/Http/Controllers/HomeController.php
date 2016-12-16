@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\UserSignUp;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $user=App::User();
+        event(new UserSignUp($user));
         return view('home');
     }
 }

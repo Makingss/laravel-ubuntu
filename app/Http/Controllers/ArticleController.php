@@ -52,8 +52,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        $user = \App\User::find(1);
-        event(new UserSignUp($user));
+        #$user = \App\User::find(1);
+        #event(new UserSignUp($user));
         return view('articles.create');
     }
 
