@@ -17,7 +17,8 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\EventListener',
         ],
         'App\Events\UserSignUp'=>[
-            'App\Listeners\HandleUserSignUp'
+            //'App\Listeners\HandleUserSignUp',
+            'App\Listeners\SendMailerUserSignUp',
         ],
     ];
 

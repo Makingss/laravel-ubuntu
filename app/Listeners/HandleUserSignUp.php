@@ -29,6 +29,6 @@ class HandleUserSignUp
      */
     public function handle(UserSignUp $event)
     {
-        dump($event->user->name . 'Sign Up');
+        dump($event->user->name . ' Sign Up');
     }
 }

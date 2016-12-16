@@ -28,6 +28,6 @@ class SendMailerUserSignUp
      */
     public function handle(UserSignUp $event)
     {
-        dd($event->user->email .' Welcome To Making');
+        dump($event->user->email .' Welcome To Making');
     }
 }
