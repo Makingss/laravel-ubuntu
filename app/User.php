@@ -31,4 +31,13 @@ class User extends Authenticatable
     {
         return $this->is_admin === 'Y';
     }
+    /**
+     * Route notifications for the mail channel.
+     *Notifications 指定用户接收E-Mail
+     * @return string
+     */
+    public function routeNotificationForMail()
+    {
+        return $this->email;
+    }
 }
