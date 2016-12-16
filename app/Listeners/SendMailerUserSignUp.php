@@ -3,6 +3,7 @@
 namespace App\Listeners;
 
 use App\Events\UserSignUp;
+use App\Mail\SendMails;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Mail;
@@ -28,6 +29,7 @@ class SendMailerUserSignUp
      */
     public function handle(UserSignUp $event)
     {
+        Mail::to($event->user->email)->send(new SendMails($event->user));
         dump($event->user->email .' Welcome To Making');
     }
 }
