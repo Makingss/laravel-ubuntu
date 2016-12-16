@@ -10,7 +10,6 @@
  * | contains the "web" middleware group. Now create something great!
  * |
  */
-Auth::loginUsingId(2);
 Route::get('/', 'SitesController@index');
 Route::get('/about', 'SitesController@about');
 Route::get('content', 'SitesController@content');
