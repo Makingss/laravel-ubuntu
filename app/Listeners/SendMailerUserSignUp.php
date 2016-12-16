@@ -30,6 +30,6 @@ class SendMailerUserSignUp
     public function handle(UserSignUp $event)
     {
         Mail::to($event->user->email)->send(new SendMails($event->user));
-        dump($event->user->email .' Welcome To Making');
+        #dump($event->user->email .' Welcome To Making');
     }
 }

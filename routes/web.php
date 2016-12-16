@@ -10,6 +10,12 @@
  * | contains the "web" middleware group. Now create something great!
  * |
  */
+
+Route::group(['prefix'=>'admin','middleware'=>'admin'],function(){
+    Route::get('/users',function(){
+        return '我是管理员，我有授权！';
+    });
+});
 Route::get('/', 'SitesController@index');
 Route::get('/about', 'SitesController@about');
 Route::get('content', 'SitesController@content');
@@ -19,11 +25,8 @@ Route::get('/articles/create','ArticleController@create');
 Route::get('/articles/{id}','ArticleController@show');
 Route::post('/articles','ArticleController@store');
 */
-Route::group(['prefix'=>'admin','middleware'=>'admin'],function(){
-    Route::get('/users',function(){
-        return '我是管理员，我有授权！';
-    });
-});
+
+
 Route::resource('articles', 'ArticleController');
 
 Auth::routes();

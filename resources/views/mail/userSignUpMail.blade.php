@@ -22,7 +22,16 @@
     </head>
     <body>
     <h1>Welcome To Making: {{$user->name}}</h1>
-    <p>Welcome To Making dfdafdajekrjkjfdajelkfdjfskjfknnfdfdksjflkjflksjflfjj</p>
+    <div class="jumbotron">
+        <h1>Welcome To Making</h1>
+        <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            Basic panel example
+        </div>
+    </div>
 
     </body>
 </html>
