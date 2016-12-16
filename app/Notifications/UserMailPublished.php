@@ -11,13 +11,14 @@ use Illuminate\Notifications\Messages\MailMessage;
 class UserMailPublished extends Notification
 {
     use Queueable;
-    public $user;
+
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
+    public $user;
     public function __construct(User $user)
     {
         $this->user = $user;
