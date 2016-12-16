@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user=App::User();
+        $user=Auth::User();
         event(new UserSignUp($user));
         return view('home');
     }
