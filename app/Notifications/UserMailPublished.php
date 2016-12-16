@@ -47,7 +47,7 @@ class UserMailPublished extends Notification
     {
         return (new MailMessage)
             ->success()
-            ->greeting('Dear Making'.$notifiable->name)
+            ->greeting('Dear '.$notifiable->name.':')
             ->line('The introduction to the notification.')
             ->action('Notification Action', 'https://laravel.com')
             ->line('Thank you for using our application!');
