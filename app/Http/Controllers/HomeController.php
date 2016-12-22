@@ -27,8 +27,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user=Auth::User();
-        $user->notify(new UserMailPublished($user));
+        #$user=Auth::User();
+        #$user->notify(new UserMailPublished($user));
         #event(new UserSignUp($user));
         return view('home');
     }
