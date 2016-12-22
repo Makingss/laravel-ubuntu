@@ -11,8 +11,8 @@
  * |
  */
 
-Route::group(['prefix'=>'admin','middleware'=>'admin'],function(){
-    Route::get('/users',function(){
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
+    Route::get('/users', function () {
         return '我是管理员，我有授权！';
     });
 });
@@ -32,5 +32,17 @@ Route::resource('articles', 'ArticleController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::resource('mall','Mall\MallController');
+Route::resource('mall', 'Mall\MallController');
+
+Route::get('/redirect', function () {
+    $query = http_build_query([
+        'client_id' => '3',
+        'redirect_uri' => 'http://passport-client.dev/callback',
+        'response_type' => 'code',
+        'scope' => '',
+    ]);
+
+    return redirect('http://passport.dev/oauth/authorize?' . $query);
+});
+Route::get('callback', 'OauthController@oauth');
 
