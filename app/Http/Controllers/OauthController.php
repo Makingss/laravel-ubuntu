@@ -14,7 +14,7 @@ class OauthController extends Controller
                 'grant_type' => 'authorization_code',
                 'client_id' => '3',
                 'client_secret' => 'W8IuK4Ighp56qNGnweMiY0NsmYswhSusy4L1aEF9',
-                'redirect_uri' => 'http://passport-client.dev/callback',
+                'redirect_uri' => 'http://192.168.254.128/callback',
                 'code' => $request->code,
             ],
         ]);

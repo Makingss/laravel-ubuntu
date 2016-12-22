@@ -37,12 +37,12 @@ Route::resource('mall', 'Mall\MallController');
 Route::get('/redirect', function () {
     $query = http_build_query([
         'client_id' => '3',
-        'redirect_uri' => 'http://passport-client.dev/callback',
+        'redirect_uri' => 'http://192.168.254.128/callback',
         'response_type' => 'code',
         'scope' => '',
     ]);
 
-    return redirect('http://passport.dev/oauth/authorize?' . $query);
+    return redirect('http://192.168.254.128/oauth/authorize?' . $query);
 });
 Route::get('callback', 'OauthController@oauth');
 
