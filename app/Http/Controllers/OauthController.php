@@ -9,7 +9,7 @@ class OauthController extends Controller
     public function oauth(Request $request)
     {
         $http = new GuzzleHttp\Client;
-        $response = $http->post('http://your-app.com/oauth/token', [
+        $response = $http->post('http://192.168.254.128/oauth/token', [
             'form_params' => [
                 'grant_type' => 'authorization_code',
                 'client_id' => '3',
