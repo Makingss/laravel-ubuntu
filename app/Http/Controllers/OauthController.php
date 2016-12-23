@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class OauthController extends Controller
 {
     public function oauth(Request $request)
-    {
+    {	dd('dfdfdf');
         $http = new GuzzleHttp\Client;
         $response = $http->post('http://passport.dev/oauth/token', [
             'form_params' => [

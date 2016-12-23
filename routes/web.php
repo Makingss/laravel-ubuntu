@@ -34,15 +34,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::resource('mall', 'Mall\MallController');
 
-Route::get('/redirect', function () {
+Route::get('/oauth', function () {
     $query = http_build_query([
         'client_id' => 3,
         'redirect_uri' => 'http://passport-client.dev/callback',
         'response_type' => 'code',
         'scope' => '',
     ]);
-
     return redirect('http://passport.dev/oauth/authorize?' . $query);
 });
 Route::get('callback', 'OauthController@oauth');
-
