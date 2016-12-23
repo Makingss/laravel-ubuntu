@@ -12,7 +12,7 @@ class OauthController extends Controller
         $response = $http->post('http://passport.dev/oauth/token', [
             'form_params' => [
                 'grant_type' => 'authorization_code',
-                'client_id' => '3',
+                'client_id' => 3,
                 'client_secret' => 'W8IuK4Ighp56qNGnweMiY0NsmYswhSusy4L1aEF9',
                 'redirect_uri' => 'http://passport-client.dev/callback',
                 'code' => $request->code,
