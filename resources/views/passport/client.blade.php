@@ -1,11 +1,10 @@
-/**
- * Created by PhpStorm.
- * User: Making
- * Date: 2016/12/23
- * Time: 16:24
- */
+<!--
+  Created by PhpStorm.
+  User: Making
+  Date: 2016/12/23
+  Time: 16:24
+ -->
 @extends('layouts.app')
-
 @section('content')
     <div class="container">
         <div class="row">
