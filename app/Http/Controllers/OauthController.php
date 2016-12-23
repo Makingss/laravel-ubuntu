@@ -3,22 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use GuzzleHttp\Client;
 class OauthController extends Controller
 {
     public function oauth(Request $request)
-    {
-        $http = new GuzzleHttp\Client;
+    {	
+        $http = new \GuzzleHttp\Client();
         $response = $http->post('http://192.168.254.128/oauth/token', [
             'form_params' => [
                 'grant_type' => 'authorization_code',
-                'client_id' => 3,
+                'client_id' => '3',
                 'client_secret' => 'W8IuK4Ighp56qNGnweMiY0NsmYswhSusy4L1aEF9',
-                'redirect_uri' => 'http:192.168.254.128/callback',
+                'redirect_uri' => 'http://192.168.254.128/callback',
                 'code' => $request->code,
             ],
         ]);
-
+	#dd($response);
         return json_decode((string)$response->getBody(), true);
     }
 }
