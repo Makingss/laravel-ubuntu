@@ -25,8 +25,7 @@ Route::get('/articles/create','ArticleController@create');
 Route::get('/articles/{id}','ArticleController@show');
 Route::post('/articles','ArticleController@store');
 */
-
-
+Route::get('oauth', 'Passport\OauthPassport@showClient');
 Route::resource('articles', 'ArticleController');
 
 Auth::routes();
@@ -36,12 +35,12 @@ Route::resource('mall', 'Mall\MallController');
 
 Route::get('/redirect', function () {
     $query = http_build_query([
-        'client_id' => 3,
+        'client_id' => '3',
         'redirect_uri' => 'http://192.168.254.128/callback',
         'response_type' => 'code',
         'scope' => '',
     ]);
 
-    return redirect('http://192.168.254.128/oauth/authorize?'.$query);
+    return redirect('http://192.168.254.128/oauth/authorize?' . $query);
 });
 Route::get('callback', 'OauthController@oauth');
