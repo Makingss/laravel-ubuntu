@@ -25,7 +25,7 @@ Route::get('/articles/create','ArticleController@create');
 Route::get('/articles/{id}','ArticleController@show');
 Route::post('/articles','ArticleController@store');
 */
-Route::get('oauth', 'Passport\OauthPassport@showClient');
+
 Route::resource('articles', 'ArticleController');
 
 Auth::routes();
@@ -44,3 +44,4 @@ Route::get('/redirect', function () {
     return redirect('http://192.168.254.128/oauth/authorize?' . $query);
 });
 Route::get('callback', 'OauthController@oauth');
+Route::get('oauth', 'OauthController@showClient');

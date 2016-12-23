@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+
 class OauthController extends Controller
 {
     public function oauth(Request $request)
-    {	
+    {
         $http = new \GuzzleHttp\Client();
         $response = $http->post('http://192.168.254.128/oauth/token', [
             'form_params' => [
@@ -18,8 +19,13 @@ class OauthController extends Controller
                 'code' => $request->code,
             ],
         ]);
-	#dd($response);
+        #dd($response);
         return json_decode((string)$response->getBody(), true);
+    }
+
+    public function showClient()
+    {
+        return view('passport.client');
     }
 }
 
