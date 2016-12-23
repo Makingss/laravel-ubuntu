@@ -42,6 +42,6 @@ Route::get('/redirect', function () {
         'scope' => '',
     ]);
 
-    return redirect('http://your-app.com/oauth/authorize?'.$query);
+    return redirect('http://your-app.dev/oauth/authorize?'.$query);
 });
 Route::get('callback', 'OauthController@oauth');
