@@ -31,7 +31,7 @@ class OauthController extends Controller
         $heades = ['Authorization' => 'Bearer' . $accessToken];
         $request = new \GuzzleHttp\Psr7\Request('GET', 'http://192.168.254.128/api/user', $heades);
         $response = $http->send($request);
-        return \GuzzleHttp\json_decode((string)$response->getBody(), true);
+        return json_decode((string)$response->getBody(), true);
 
     }
 
