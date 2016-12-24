@@ -20,7 +20,18 @@ class OauthController extends Controller
             ],
         ]);
         #dd($response);
-        return json_decode((string)$response->getBody(), true);
+        $access_token = Arr::get(json_decode((string)$response->getBody(), true), 'access_token');
+        return $this->getUserByToken($access_token);
+    }
+
+    private function getUserByToken($accessToken)
+    {
+        $http = new \GuzzleHttp\Client();
+        $heades = ['Authorization' => 'Bearer' . $accessToken];
+        $request = new \GuzzleHttp\Psr7\Request('GET', 'http://192.168.254.128/api/user', $heades);
+        $response = $http->send($request);
+        return \GuzzleHttp\json_decode((string)$response->getBody(), true);
+
     }
 
     public function showClient()
