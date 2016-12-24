@@ -33,7 +33,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::resource('mall', 'Mall\MallController');
 
-Route::get('/redirect', function () {
+Route::get('oauth/redirect', function () {
     $query = http_build_query([
         'client_id' => 3,
         'redirect_uri' => 'http://192.168.254.128/callback',
@@ -45,3 +45,6 @@ Route::get('/redirect', function () {
 });
 Route::get('callback', 'OauthController@oauth');
 Route::get('oauth', 'OauthController@showClient');
+Route::get('/user', function (Request $request) {
+    return $request->user();
+})->middleware('auth:api');
