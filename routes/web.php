@@ -45,6 +45,6 @@ Route::get('oauth/redirect', function () {
 });
 Route::get('callback', 'OauthController@oauth');
 Route::get('oauth', 'OauthController@showClient');
-Route::get('/user', function (Request $request) {
+Route::get('/api/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
