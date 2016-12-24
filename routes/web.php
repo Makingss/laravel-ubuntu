@@ -35,7 +35,7 @@ Route::resource('mall', 'Mall\MallController');
 
 Route::get('/redirect', function () {
     $query = http_build_query([
-        'client_id' => '3',
+        'client_id' => 3,
         'redirect_uri' => 'http://192.168.254.128/callback',
         'response_type' => 'code',
         'scope' => '',
