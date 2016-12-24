@@ -8,10 +8,16 @@ use GuzzleHttp\Client;
 
 class OauthController extends Controller
 {
+    protected $http;
+
+    public function __construct(Client $http)
+    {
+        $this->http=$http;
+    }
+
     public function oauth(Request $request)
     {
-        $http = new \GuzzleHttp\Client();
-        $response = $http->post('http://192.168.254.128/oauth/token', [
+        $response = $this->http->post('http://192.168.254.128/oauth/token', [
             'form_params' => [
                 'grant_type' => 'authorization_code',
                 'client_id' => '3',
@@ -20,18 +26,16 @@ class OauthController extends Controller
                 'code' => $request->code,
             ],
         ]);
-        #dd($response);
         $access_token = Arr::get(json_decode((string)$response->getBody(), true), 'access_token');
         return $this->getUserByToken($access_token);
     }
 
     private function getUserByToken($accessToken)
     {
-        $http = new \GuzzleHttp\Client();
         $heades = ['Authorization' => 'Bearer' . $accessToken];
         $request = new \GuzzleHttp\Psr7\Request('GET', 'http://192.168.254.128/api/user', $heades);
-        $response = $http->send($request);
-	return json_decode((string)$response->getBody(), true);
+        $response = $this->http->send($request);
+        return json_decode((string)$response->getBody(), true);
 
     }
 
