@@ -37,3 +37,5 @@ Route::get('oauth/redirect', 'OauthController@redirect');
 Route::get('callback', 'OauthController@oauth');
 Route::get('oauth', 'OauthController@showClient');
 Route::get('notification','Notification@showNotitfcation');
+Route::get('generate','Notification@generate');
+Route::post('notification/isRead','Notification@isRead');

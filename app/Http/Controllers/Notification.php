@@ -25,12 +25,18 @@ class Notification extends Controller
         */
         #foreach (Auth::user()->notifications as $notification)
         #$user = \App\User::find(1)->notifications;
-        $notifications=Auth::user()->notifications;
-        return view('notifications.main',compact('notifications'));
+        $notifications = Auth::user()->notifications;
+        return view('notifications.main', compact('notifications'));
     }
 
     public function generate()
     {
         Auth::user()->notify(new UserSubScribe());
+    }
+
+    public function isRead(Request $request)
+    {
+        dd($request);
+        //Auth::user()->unreadNotifications->markAsRead();
     }
 }
