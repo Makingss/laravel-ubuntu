@@ -34,7 +34,7 @@ class Notification extends Controller
         Auth::user()->notify(new UserSubScribe());
     }
 
-    public function isRead($id)
+    public function is_read($id)
     {
         dd($id);
         //Auth::user()->unreadNotifications->markAsRead();

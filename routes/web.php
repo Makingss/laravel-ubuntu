@@ -38,4 +38,4 @@ Route::get('callback', 'OauthController@oauth');
 Route::get('oauth', 'OauthController@showClient');
 Route::get('notification','Notification@showNotitfcation');
 Route::get('generate','Notification@generate');
-Route::get('notification/isRead','Notification@isRead');
+Route::get('notification/is_read','Notification@is_read');
