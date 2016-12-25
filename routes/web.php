@@ -33,16 +33,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::resource('mall', 'Mall\MallController');
 
-Route::get('oauth/redirect', function () {
-    $query = http_build_query([
-        'client_id' => 3,
-        'redirect_uri' => 'http://192.168.254.128/callback',
-        'response_type' => 'code',
-        'scope' => '',
-    ]);
-
-    return redirect('http://192.168.254.128/oauth/authorize?' . $query);
-});
+Route::get('oauth/redirect', 'OauthController@redirect');
 Route::get('callback', 'OauthController@oauth');
 Route::get('oauth', 'OauthController@showClient');
 Route::get('/api/authuser', function (Request $request) {

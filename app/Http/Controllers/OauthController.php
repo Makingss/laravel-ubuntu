@@ -36,14 +36,24 @@ class OauthController extends Controller
 
     private function getUserByToken($accessToken)
     {
-        $heades = [
-            '',
-            'Authorization' => 'Bearer' . $accessToken];
+        $heades = ['Authorization' => 'Bearer' . $accessToken];
         $request = new \GuzzleHttp\Psr7\Request('GET', 'http://192.168.254.128/api/user', $heades);
         $response = $this->http->send($request);
         dd($response);
         return json_decode((string)$response->getBody(), true);
 
+    }
+
+    public function redirect()
+    {
+        $query = http_build_query([
+            'client_id' => 3,
+            'redirect_uri' => 'http://192.168.254.128/callback',
+            'response_type' => 'code',
+            'scope' => '',
+        ]);
+
+        return redirect('http://192.168.254.128/oauth/authorize?' . $query);
     }
 
     public function showClient()
