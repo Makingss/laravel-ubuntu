@@ -23,8 +23,8 @@ class Notification extends Controller
             return Redirect::guest('login');
         }
         */
-
-        $user=\App\User::find(Auth::user());
+    
+        $user=\App\User::find(Auth::user('id'));
         dd($user);
         return view();
     }
