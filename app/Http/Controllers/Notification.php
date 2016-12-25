@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Notifications\UserSubScribe;
@@ -39,6 +40,9 @@ class Notification extends Controller
         #$notifications = Auth::user()->notifications;
         #foreach ($notifications as $notification) {
         #if ($notification->id == $id) {
+//        DB::table('notifications')
+//            ->where('id', $id)
+//            ->update(array('read_at' => Carbon::now()));
         Auth::user()->unreadNotifications()->where('id',$id)->update(['read_at' => Carbon::now()]);
         #}
         #}
