@@ -8,7 +8,7 @@
                     <div class="panel-heading">我的通知</div>
                     <div class="panel-body">
                         @foreach($notifications as $notification)
-                            @include('notifications'.snake_case(class_basename($notification->type)));
+                            @include('notifications.'.snake_case(class_basename($notification->type)));
                         @endforeach
                     </div>
                 </div>
