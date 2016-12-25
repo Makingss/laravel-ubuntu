@@ -36,6 +36,4 @@ Route::resource('mall', 'Mall\MallController');
 Route::get('oauth/redirect', 'OauthController@redirect');
 Route::get('callback', 'OauthController@oauth');
 Route::get('oauth', 'OauthController@showClient');
-Route::get('/api/authuser', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+Rotue::get('notification','Notification@showNotitfcation');
