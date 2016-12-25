@@ -36,10 +36,12 @@ class OauthController extends Controller
 
     private function getUserByToken($accessToken)
     {
-        $heades = ['Authorization' => 'Bearer' . $accessToken];
+        $heades = [
+            '',
+            'Authorization' => 'Bearer' . $accessToken];
         $request = new \GuzzleHttp\Psr7\Request('GET', 'http://192.168.254.128/api/user', $heades);
-        dd($request);
         $response = $this->http->send($request);
+        dd($response);
         return json_decode((string)$response->getBody(), true);
 
     }
