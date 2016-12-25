@@ -13,6 +13,7 @@ class OauthController extends Controller
     public function __construct(Client $http)
     {
         $this->http = $http;
+        $this->middleware('auth');
     }
 
     public function oauth(Request $request)
