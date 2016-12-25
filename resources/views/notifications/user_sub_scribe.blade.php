@@ -1,0 +1,1 @@
+<li>{{$notification->data['subScribe_at']['date']}}</li>
