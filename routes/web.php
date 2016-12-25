@@ -36,4 +36,4 @@ Route::resource('mall', 'Mall\MallController');
 Route::get('oauth/redirect', 'OauthController@redirect');
 Route::get('callback', 'OauthController@oauth');
 Route::get('oauth', 'OauthController@showClient');
-Rotue::get('notification','Notification@showNotitfcation');
+Route::get('notification','Notification@showNotitfcation');
