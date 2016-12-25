@@ -5,7 +5,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">我的通知
-                        <li>{{$notification->type}}</li>
+                        //<li>{{$notification->type}}</li>
                     </div>
 
                     <div class="panel-body">
