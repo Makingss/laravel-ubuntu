@@ -8,11 +8,18 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use App\Article;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Redirect;
 
 class ArticleController extends Controller
 {
-
+    public function __construct()
+    {
+        if(Auth::check()==false){
+            return Redirect::guest('login');
+        }
+    }
 
     public function index()
     {
