@@ -8,14 +8,16 @@ use Illuminate\Support\Facades\Auth;
 
 class Notification extends Controller
 {
+    protected $user;
 
-    public function __construct()
+    public function __construct(Auth $user)
     {
-        $this->middleware('auth');
+        $this->user = $user;
     }
 
     public function showNotitfcation()
     {
-        notify(new \App\Notifications\UserSubScribe());
+        dd($this->user);
+        $this->user->notify(new \App\Notifications\UserSubScribe());
     }
 }
