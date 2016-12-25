@@ -6,6 +6,8 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Notifications\UserSubScribe;
+use Illuminate\Support\Facades\Redirect;
+
 class Notification extends Controller
 {
     public function __construct()
