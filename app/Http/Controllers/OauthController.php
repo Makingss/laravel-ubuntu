@@ -12,7 +12,7 @@ class OauthController extends Controller
 
     public function __construct(Client $http)
     {
-        $this->http=$http;
+        $this->http = $http;
     }
 
     public function oauth(Request $request)
@@ -21,23 +21,24 @@ class OauthController extends Controller
             'form_params' => [
                 'grant_type' => 'password',//'authorization_code',
                 'client_id' => '5',
-                'client_secret' =>'zJs1YxdzOupnHEEA5eATEsia0bcTmQlHLU7L3dz7',//'W8IuK4Ighp56qNGnweMiY0NsmYswhSusy4L1aEF9',
-               // 'redirect_uri' => 'http://192.168.254.128/callback',
+                'client_secret' => 'zJs1YxdzOupnHEEA5eATEsia0bcTmQlHLU7L3dz7',//'W8IuK4Ighp56qNGnweMiY0NsmYswhSusy4L1aEF9',
+                // 'redirect_uri' => 'http://192.168.254.128/callback',
                 //'code' => $request->code,
-		'username'=>'542397809@qq.com',
-		'password'=>'111111',
-		'scope'=>'',
+                'username' => '542397809@qq.com',
+                'password' => '111111',
+                'scope' => '',
             ],
         ]);
-	return json_decode((string)$response->getBody(), true);
-        #$access_token = Arr::get(json_decode((string)$response->getBody(), true), 'access_token');
-        #return $this->getUserByToken($access_token);
+        #return json_decode((string)$response->getBody(), true);
+        $access_token = Arr::get(json_decode((string)$response->getBody(), true), 'access_token');
+        return $this->getUserByToken($access_token);
     }
 
     private function getUserByToken($accessToken)
     {
         $heades = ['Authorization' => 'Bearer' . $accessToken];
         $request = new \GuzzleHttp\Psr7\Request('GET', 'http://192.168.254.128/api/user', $heades);
+        dd($request);
         $response = $this->http->send($request);
         return json_decode((string)$response->getBody(), true);
 
