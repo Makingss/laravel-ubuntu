@@ -1,5 +1,5 @@
 <li>
-    <a href="{{action("aaaaaaa@aa",[$notification->data['subScribe_at']['date']])}}">
+    <a href="{{action("#")}}">
         {{$notification->data['subScribe_at']['date']}}
     </a>
 </li>
