@@ -25,8 +25,8 @@ class Notification extends Controller
         */
         foreach (Auth::user()->notifications as $notification)
         #$user = \App\User::find(1)->notifications;
-        dd($notification->type);
-        return view();
+        #dd($notification->type);
+        return view('notifications.main',compact('notification'));
     }
 
     public function generate()
