@@ -36,7 +36,12 @@ class Notification extends Controller
 
     public function is_read($id)
     {
-        dd($id);
+        #$notifications = Auth::user()->notifications;
+        #foreach ($notifications as $notification) {
+        #if ($notification->id == $id) {
+        Auth::user()->unreadNotifications()->where('id',$id)->update(['read_at' => Carbon::now()]);
+        #}
+        #}
         //Auth::user()->unreadNotifications->markAsRead();
     }
 }
