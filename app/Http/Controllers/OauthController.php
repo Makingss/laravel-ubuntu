@@ -19,15 +19,19 @@ class OauthController extends Controller
     {
         $response = $this->http->post('http://192.168.254.128/oauth/token', [
             'form_params' => [
-                'grant_type' => 'authorization_code',
-                'client_id' => '3',
-                'client_secret' => 'W8IuK4Ighp56qNGnweMiY0NsmYswhSusy4L1aEF9',
-                'redirect_uri' => 'http://192.168.254.128/callback',
-                'code' => $request->code,
+                'grant_type' => 'password',//'authorization_code',
+                'client_id' => '5',
+                'client_secret' =>'zJs1YxdzOupnHEEA5eATEsia0bcTmQlHLU7L3dz7',//'W8IuK4Ighp56qNGnweMiY0NsmYswhSusy4L1aEF9',
+               // 'redirect_uri' => 'http://192.168.254.128/callback',
+                //'code' => $request->code,
+		'username'=>'542397809@qq.com',
+		'password'=>'111111',
+		'scope'=>'',
             ],
         ]);
-        $access_token = Arr::get(json_decode((string)$response->getBody(), true), 'access_token');
-        return $this->getUserByToken($access_token);
+	return json_decode((string)$response->getBody(), true);
+        #$access_token = Arr::get(json_decode((string)$response->getBody(), true), 'access_token');
+        #return $this->getUserByToken($access_token);
     }
 
     private function getUserByToken($accessToken)
