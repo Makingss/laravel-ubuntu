@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                             <div class="form-group{{$errors->has('captcha')? ' has-error' : ''}}">
-                                <div class="col-md-6 col-md-offset-4">
+                                <div class="input-group">
                                     <input type="text" name="captcha" class="form-control">
                                     <a id="refresh-captcha">
                                         <img src="{{captcha_src()}}"
