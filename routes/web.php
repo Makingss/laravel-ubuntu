@@ -1,5 +1,5 @@
 <?php
-
+use Mews;
 /*
  * |--------------------------------------------------------------------------
  * | Web Routes
@@ -36,6 +36,9 @@ Route::resource('mall', 'Mall\MallController');
 Route::get('oauth/redirect', 'OauthController@redirect');
 Route::get('callback', 'OauthController@oauth');
 Route::get('oauth', 'OauthController@showClient');
-Route::get('notification','Notification@showNotitfcation');
-Route::get('generate','Notification@generate');
-Route::get('/notification/is_read/{id}','Notification@is_read');
+Route::get('notification', 'Notification@showNotitfcation');
+Route::get('generate', 'Notification@generate');
+Route::get('/notification/is_read/{id}', 'Notification@is_read');
+Route::get('captcha/{config?}', function (\Mews\Captcha\Captcha $captcha, $config = 'default') {
+    $captcha->create($config);
+});
