@@ -37,7 +37,7 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group{{$errors->has('captcha')? ' has-error' : ''}}">
                                 <div class="col-md-6 col-md-offset-4">
                                     <input type="text" name="captcha" class="form-control">
                                     <a id="refresh-captcha">
@@ -50,6 +50,11 @@
                                              id="captcha"
                                              data-captcha-config="default"
                                         >
+                                        @if ($errors->has('captcha'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('captcha') }}</strong>
+                                    </span>
+                                        @endif
                                     </a>
                                 </div>
                             </div>
