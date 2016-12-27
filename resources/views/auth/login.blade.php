@@ -39,7 +39,7 @@
                             </div>
                             <div class="form-group{{$errors->has('captcha')? ' has-error' : ''}}">
                                 <label for="password" class="col-md-4 control-label">验证码</label>
-                                <div class="col-md-4 col-md-offset-4">
+                                <div class="col-md-3">
                                     <input type="text" name="captcha" class="form-control">
                                 </div>
                                 <div class="col-md-4">
