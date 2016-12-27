@@ -38,6 +38,6 @@ Route::get('oauth', 'OauthController@showClient');
 Route::get('notification', 'Notification@showNotitfcation');
 Route::get('generate', 'Notification@generate');
 Route::get('/notification/is_read/{id}', 'Notification@is_read');
-Route::get('captcha/{config?}', function (\Mews\Captcha\Captcha $captcha, $config = 'default') {
+Route::get('/captcha/{config?}', function (\Mews\Captcha\Captcha $captcha, $config = 'default') {
     $captcha->create($config);
 });
