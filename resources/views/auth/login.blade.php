@@ -42,11 +42,11 @@
                                     <input type="text" name="captcha" class="form-control">
                                     <a id="refresh-captcha">
                                         <img src="{{captcha_src()}}"
-                                             title="刷新验证码" ,
-                                             alt="验证码" ,
-                                             width="120" ,
-                                             height="36" ,
-                                             border="0" ,
+                                             title="刷新验证码"
+                                             alt="验证码"
+                                             width="120"
+                                             height="36" 
+                                             border="0"
                                              data-captcha-config="default"
                                         >
                                     </a>
