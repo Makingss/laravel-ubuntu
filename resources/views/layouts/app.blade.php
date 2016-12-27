@@ -120,7 +120,7 @@
 <script>
     $('#captcha'.on('click', function () {
         var captcha = $(this);
-        var url = '/captcha/' + captcha.attr('data-captcha-config') + '/?' + Math.random();
+        var url = '/captcha/' + captcha.attr('data-refresh-config') + '/?' + Math.random();
         captcha.attr('src', url);
     }));
 </script>
