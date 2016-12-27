@@ -10,7 +10,6 @@ use Mews;
  * | contains the "web" middleware group. Now create something great!
  * |
  */
-Auth::loginUsingId(1);
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/users', function () {
         return '我是管理员，我有授权！';
