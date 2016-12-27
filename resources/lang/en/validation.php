@@ -39,7 +39,7 @@ return [
     'email'                => 'The :attribute must be a valid email address.',
     'exists'               => 'The selected :attribute is invalid.',
     'file'                 => 'The :attribute must be a file.',
-    'filled'               => 'The :attribute field is required.',
+    'filled'               => 'The :attribute 必填字段.',
     'image'                => 'The :attribute must be an image.',
     'in'                   => 'The selected :attribute is invalid.',
     'in_array'             => 'The :attribute field does not exist in :other.',
@@ -83,7 +83,7 @@ return [
     'unique'               => 'The :attribute has already been taken.',
     'uploaded'             => 'The :attribute failed to upload.',
     'url'                  => 'The :attribute format is invalid.',
-    'captcha'              => '验证码错误',
+    'captcha'              => '验证码错误！',
 
     /*
     |--------------------------------------------------------------------------
