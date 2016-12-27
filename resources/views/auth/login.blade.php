@@ -37,7 +37,21 @@
                                     @endif
                                 </div>
                             </div>
-
+                            <div class="form-group">
+                                <div class="col-md-6 col-md-offset-4">
+                                    <input type="text" name="captcha" class="form-control">
+                                    <a id="refresh-captcha">
+                                        <img src="{{captcha_src()}}"
+                                             title="刷新验证码" ,
+                                             alt="验证码" ,
+                                             width="120" ,
+                                             height="36" ,
+                                             border="0" ,
+                                             data-captcha-config="default"
+                                        >
+                                    </a>
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
                                     <div class="checkbox">
@@ -47,21 +61,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-4">
-                                    <input type="text" name="captcha" class="form-control">
-                                    <a id="refresh-captcha">
-                                        <img src="captcha_src()"
-                                             title="刷新验证码" ,
-                                             alt="验证码",
-                                             width="120",
-                                             height="36",
-                                             border="0",
-                                             data-captcha-config="default"
-                                        >
-                                    </a>
-                                </div>
-                            </div>
+
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
