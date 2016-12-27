@@ -45,8 +45,9 @@
                                              title="刷新验证码"
                                              alt="验证码"
                                              width="120"
-                                             height="36" 
+                                             height="36"
                                              border="0"
+                                             id="captcha"
                                              data-captcha-config="default"
                                         >
                                     </a>
