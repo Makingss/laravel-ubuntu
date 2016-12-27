@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                             <div class="form-group{{$errors->has('captcha')? ' has-error' : ''}}">
-                                <label for="password" class="col-md-4 control-label">验证码</label>
+                                <label for="captcha" class="col-md-4 control-label">验证码</label>
                                 <div class="col-md-3">
                                     <input type="text" name="captcha" class="form-control">
                                 </div>
@@ -53,12 +53,15 @@
                                              id="captcha"
                                              data-captcha-config="default"
                                         >
-                                        @if ($errors->has('captcha'))
-                                            <span class="help-block">
+                                    </a>
+                                </div>
+                                <div class="col-md-4"></div>
+                                <div class="col-md-8">
+                                    @if ($errors->has('captcha'))
+                                        <span class="help-block">
                                         <strong>{{ $errors->first('captcha') }}</strong>
                                     </span>
-                                        @endif
-                                    </a>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-group">
