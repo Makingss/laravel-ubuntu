@@ -78,7 +78,7 @@ class PainterController extends Controller
      *
      * @return Content
      */
-  /*  public function create()
+    public function create()
     {
         return Admin::content(function (Content $content) {
 
@@ -88,5 +88,5 @@ class PainterController extends Controller
             $content->body($this->form());
         });
     }
-	*/
+
 }
