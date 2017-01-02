@@ -7,6 +7,7 @@ use Encore\Admin\Admin;
 use Encore\Admin\Controllers\ModelForm;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
+use Encore\Admin\Layout\Content;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 class PainterController extends Controller
