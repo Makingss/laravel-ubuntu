@@ -38,4 +38,3 @@ Route::get('notification', 'Notification@showNotitfcation');
 Route::get('generate', 'Notification@generate');
 Route::get('/notification/is_read/{id}', 'Notification@is_read');
 Route::get('/captcha/{config?}', 'CaptchaController@getCaptcha');
-Route::get('/painter', '{Http => Admin}/PainterController@grid');
