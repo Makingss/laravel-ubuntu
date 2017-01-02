@@ -75,14 +75,14 @@ class PainterController extends Controller
      *
      * @return Content
      */
-//    public function create()
-//    {
-//        return Admin::content(function (Content $content) {
-//
-//            $content->header('header');
-//            $content->description('description');
-//
-//            $content->body($this->form());
-//        });
-//    }
+    public function create()
+    {
+        return Admin::content(function (Content $content) {
+
+            $content->header('header');
+            $content->description('description');
+
+            $content->body($this->form());
+        });
+    }
 }
