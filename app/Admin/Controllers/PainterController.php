@@ -62,7 +62,7 @@ class PainterController extends Controller
             $form->display('updated_at', 'Updated At');
         });
     }
-    protected function edit($id){
+    public function edit($id){
         //$this->validate($request,['']);
         return Admin::content(function (Content $content) use ($id) {
             $content->header('Painter');
@@ -70,4 +70,19 @@ class PainterController extends Controller
             $content->body($this->form()->edit($id));
         });
     }
+    /**
+     * Create interface.
+     *
+     * @return Content
+     */
+//    public function create()
+//    {
+//        return Admin::content(function (Content $content) {
+//
+//            $content->header('header');
+//            $content->description('description');
+//
+//            $content->body($this->form());
+//        });
+//    }
 }
