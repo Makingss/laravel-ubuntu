@@ -20,8 +20,8 @@ class CreatePaintingsTable extends Migration
             $table->string('title');
             $table->text('body');
             $table->timestamp('completed_at');
-            $table->timestamp('created_at');
-            $table->timestamp('updated_at');
+            #$table->timestamp('created_at');
+            #$table->timestamp('updated_at');
             $table->timestamps();
         });
     }

@@ -19,8 +19,8 @@ class CreatePaintersTable extends Migration
             $table->string('username');
             $table->string('bio');
             $table->timestamps('created_at');
-            $table->timestamp('updated_at');
-            $table->timestamps();
+            #$table->timestamp('updated_at');
+            #$table->timestamps();
         });
     }
 
