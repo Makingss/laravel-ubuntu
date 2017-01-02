@@ -38,7 +38,7 @@ class PainterController extends Controller
         $grids = \Encore\Admin\Facades\Admin::grid(Painter::class, function (Grid $grid) {
             $grid->id('id')->sortable();
             $grid->username('姓名')->editable();
-            $grid->paintings('dfd')->pluck('title')->map(function ($title) {
+            $grid->paintings()->pluck('title')->map(function ($title) {
                 return "<strong><i>$title</i></strong>";
             })->implode('<br/>');
             $grid->created_at();
@@ -56,11 +56,18 @@ class PainterController extends Controller
             $form->hayMany('paintings', function (Form\NestedForm $form) {
                 $form->text('title');
                 $form->textarea('body');
-                $form->datatime(completed_at);
+                $form->datatime('completed_at');
             });
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });
     }
-
+    protected function edit($id){
+        //$this->validate($request,['']);
+        return Admin::content(function (Content $content) use ($id) {
+            $content->header('Painter');
+            $content->description('Painter-description');
+            $content->body($this->form()->edit($id));
+        });
+    }
 }
