@@ -21,7 +21,7 @@ class PainterController extends Controller
      */
     public function index()
     {
-        return Admin::content(function (Content $content) {
+        return \Encore\Admin\Facades\Admin::content(function (Content $content) {
 
             $content->header('header');
             $content->description('description');
