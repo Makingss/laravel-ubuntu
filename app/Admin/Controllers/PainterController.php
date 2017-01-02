@@ -13,6 +13,22 @@ class PainterController extends Controller
 {
     use ModelForm;
 
+    /**
+     * Index interface.
+     *
+     * @return Content
+     */
+    public function index()
+    {
+        return Admin::content(function (Content $content) {
+
+            $content->header('header');
+            $content->description('description');
+
+            $content->body($this->grid());
+        });
+    }
+
     protected function grid()
     {
         $grids = \Encore\Admin\Facades\Admin::grid(Painter::class, function (Grid $grid) {

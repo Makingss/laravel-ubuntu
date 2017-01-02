@@ -13,4 +13,4 @@ Route::group([
 });
 
 $router = app('admin.router');
-$router->get('/painter','ExampleController@grid');
+$router->get('/painter','PainterController@index');
