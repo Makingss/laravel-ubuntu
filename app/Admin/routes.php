@@ -11,4 +11,4 @@ Route::group([
     $router->get('/index', 'HomeController@index');
 
 });
-Router::get('painter','PainterController@grid');
+Route::get('painter','PainterController@grid');
