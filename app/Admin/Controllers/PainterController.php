@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
-
+#namespace App\Http\Controllers;
+namespace App\Admin\Controllers;
 use App\Painter;
 use Encore\Admin\Admin;
 use Encore\Admin\Controllers\ModelForm;
@@ -25,7 +25,6 @@ class PainterController extends Controller
             $grid->created_at();
             $grid->updated_at();
         });
-        dd($grids);
         return $grids;
     }
 
