@@ -62,14 +62,17 @@ class PainterController extends Controller
             $form->display('updated_at', 'Updated At');
         });
     }
-    public function edit($id){
-        //$this->validate($request,['']);
-        return Admin::content(function (Content $content) use ($id) {
-            $content->header('Painter');
-            $content->description('Painter-description');
+    public function edit($id)
+    {
+        return \Encore\Admin\Facades\Admin::content(function (Content $content) use ($id) {
+
+            $content->header('header');
+            $content->description('description');
+
             $content->body($this->form()->edit($id));
         });
     }
+
     /**
      * Create interface.
      *
