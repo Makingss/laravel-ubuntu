@@ -37,9 +37,9 @@ class PainterController extends Controller
     {
         $grids = \Encore\Admin\Facades\Admin::grid(Painter::class, function (Grid $grid) {
             $grid->id('id')->sortable();
-            $grid->username()->editable();
-            $grid->paintings()->pluck('title')->map(function ($title) {
-                return "<strong><i>《$title》</i></strong>>";
+            $grid->username('姓名')->editable();
+            $grid->paintings('dfd')->pluck('title')->map(function ($title) {
+                return "<strong><i>$title</i></strong>";
             })->implode('<br/>');
             $grid->created_at();
             $grid->updated_at();
