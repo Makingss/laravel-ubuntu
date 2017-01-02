@@ -8,6 +8,7 @@ use Encore\Admin\Controllers\ModelForm;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class PainterController extends Controller
 {
