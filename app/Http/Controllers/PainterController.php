@@ -15,7 +15,7 @@ class PainterController extends Controller
 
     protected function grid()
     {
-        return Admin::grid(Painter::class, function (Grid $grid) {
+        return \Encore\Admin\Facades\Admin::grid(Painter::class, function (Grid $grid) {
             $grid->id('id')->sortable();
             $grid->username()->editable();
             $grid->paintings()->pluck('title')->map(function ($title) {
@@ -27,7 +27,7 @@ class PainterController extends Controller
         });
     }
 
-    public function form()
+    protected function form()
     {
         return Admin::form(Painter::class, function (Form $form) {
             $form->display('id', 'ID');
