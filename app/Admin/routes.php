@@ -7,8 +7,10 @@ Route::group([
     'namespace'     => Admin::controllerNamespace(),
     'middleware'    => ['web', 'admin'],
 ], function (Router $router) {
-    $router->get('/painter','PainterController@grid');
+
     $router->get('/index', 'HomeController@index');
 
 });
 
+$router = app('admin.router');
+$router->get('/painter','PainterController@grid');
