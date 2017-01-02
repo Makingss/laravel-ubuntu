@@ -11,6 +11,7 @@ use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Encore\Admin\Widgets\Tab;
 
 class PainterController extends Controller
 {
@@ -37,11 +38,8 @@ class PainterController extends Controller
         $grids = \Encore\Admin\Facades\Admin::grid(Painter::class, function (Grid $grid) {
             $grid->id('id')->sortable();
             $grid->username()->editable();
-//            $grid->paintings()->pluck('title')->map(function ($title) {
-//                return "<strong><i>《$title》</i></strong>";
-//            })->implode('<br />');
             $grid->paintints()->pluck('title')->map(function ($title) {
-                return "<strong><i>$title</i></strong>>";
+                return "<strong><i>《$title》</i></strong>>";
             })->implode('<br/>');
             $grid->created_at();
             $grid->updated_at();
