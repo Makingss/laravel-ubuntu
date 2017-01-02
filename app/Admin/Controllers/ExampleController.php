@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Painter;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Facades\Admin;
@@ -69,7 +70,7 @@ class ExampleController extends Controller
      */
     protected function grid()
     {
-        return Admin::grid(YourModel::class, function (Grid $grid) {
+        return Admin::grid(Painter::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
 

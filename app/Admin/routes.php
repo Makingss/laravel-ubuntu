@@ -8,9 +8,9 @@ Route::group([
     'middleware'    => ['web', 'admin'],
 ], function (Router $router) {
 
-    $router->get('/index', 'HomeController@index');
+    $router->get('/', 'HomeController@index');
 
 });
 
 $router = app('admin.router');
-$router->get('/painter','PainterController@grid');
+$router->get('/painter','ExampleController@grid');
