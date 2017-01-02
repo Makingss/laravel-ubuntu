@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Admin\Controllers;
-
+use App\Painter;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Column;
@@ -18,13 +18,14 @@ use Encore\Admin\Widgets\Collapse;
 use Encore\Admin\Widgets\InfoBox;
 use Encore\Admin\Widgets\Tab;
 use Encore\Admin\Widgets\Table;
+use Illuminate\Support\Facades\Input;
 
 class HomeController extends Controller
 {
+    use ModelForm;
     public function index()
     {
         return Admin::content(function (Content $content) {
-
             $content->header('Dashboard');
             $content->description('Description...');
 
@@ -110,6 +111,38 @@ class HomeController extends Controller
             ];
 
             $content->row((new Box('Table', new Table($headers, $rows)))->style('info')->solid());
+        });
+    }
+
+    protected function grid()
+    {
+        $grids = Admin::grid(Painter::class, function (Grid $grid) {
+            $grid->id('id')->sortable();
+            $grid->username()->editable();
+            $grid->paintings()->pluck('title')->map(function ($title) {
+                return "<strong><i>《$title》</i></strong>";
+            })->implode('<br />');
+
+            $grid->created_at();
+            $grid->updated_at();
+        });
+        dd($grids);
+        return $grids;
+    }
+
+    protected function form()
+    {
+        return Admin::form(Painter::class, function (Form $form) {
+            $form->display('id', 'ID');
+            $form->text('username')->rules('required');
+            $form->textarea('bio')->rules('required');
+            $form->hayMany('paintings', function (Form\NestedForm $form) {
+                $form->text('title');
+                $form->textarea('body');
+                $form->datatime(completed_at);
+            });
+            $form->display('created_at', 'Created At');
+            $form->display('updated_at', 'Updated At');
         });
     }
 }
