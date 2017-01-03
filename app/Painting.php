@@ -4,6 +4,7 @@ namespace App;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use MongoDB\Driver\Query;
 
 class Painting extends Model
 {
@@ -18,5 +19,10 @@ class Painting extends Model
     public function setCompleterAtAttribute($date)
     {
         $this->attributes['completed_at'] = Carbon::createFromFormat('Y-m-d', $date);
+    }
+
+    public function scopeCompleted($query)
+    {
+        $query->where('completed_at', '>=', Carbon::now());
     }
 }
