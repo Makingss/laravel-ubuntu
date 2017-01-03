@@ -82,20 +82,32 @@ class PainterController extends Controller
      *
      * @return Content
      */
-    public function update()
+//    public function update()
+//    {
+////        $this->validate($request, ['username' => 'required|min:3', 'bio' => 'required']);
+////        $painter = Painter::findOrFail($id);
+////        $painter->update($request->all());
+//        return \Encore\Admin\Facades\Admin::content(function (Content $content) {
+//
+//            $content->header('header');
+//            $content->description('description');
+//
+//            $content->body($this->form()->update());
+//        });
+//    }
+    /**
+     * @param $id
+     *
+     * @return $this|\Illuminate\Http\RedirectResponse
+     */
+    public function update($id)
     {
-//        $this->validate($request, ['username' => 'required|min:3', 'bio' => 'required']);
-//        $painter = Painter::findOrFail($id);
-//        $painter->update($request->all());
-        return \Encore\Admin\Facades\Admin::content(function (Content $content) {
+//        if (Request::input('painter_id') == $id) {
+//            throw new \Exception(trans('admin::lang.parent_select_error'));
+//        }
 
-            $content->header('header');
-            $content->description('description');
-
-            $content->body($this->form()->update());
-        });
+        return $this->form()->update($id);
     }
-
     /**
      * Create interface.
      *
