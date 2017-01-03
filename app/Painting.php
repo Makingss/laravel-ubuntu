@@ -23,6 +23,6 @@ class Painting extends Model
 
     public function scopeCompleted($query)
     {
-        $query->where('completed_at', '>=', Carbon::now());
+        $query->where('completed_at', '<=', Carbon::now());
     }
 }
