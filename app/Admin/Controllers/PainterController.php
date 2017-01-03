@@ -4,6 +4,7 @@
 namespace App\Admin\Controllers;
 
 use App\Painter;
+use App\Painting;
 use Encore\Admin\Admin;
 use Encore\Admin\Controllers\ModelForm;
 use Encore\Admin\Form;
@@ -38,7 +39,8 @@ class PainterController extends Controller
     protected function grid()
     {
         $grids = \Encore\Admin\Facades\Admin::grid(Painter::class, function (Grid $grid) {
-            $grid->id('id')->sortable();
+            $grid=Painting::latest()->completer()->get();
+            dd($grid);
             $grid->username('姓名')->editable();
             $grid->paintings()->pluck('title')->map(function ($title) {
                 return "<strong><i>《".$title."》</i></strong>";
