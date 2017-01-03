@@ -93,7 +93,7 @@ class PainterController extends Controller
      */
     public function create()
     {
-        return Admin::content(function (Content $content) {
+        return \Encore\Admin\Facades\Admin::content(function (Content $content) {
 
             $content->header('header');
             $content->description('description');
