@@ -74,13 +74,28 @@ class PainterController extends Controller
     }
 
     /**
+     * update interface.
+     *
+     * @return Content
+     */
+    public function update()
+    {
+        return \Encore\Admin\Facades\Admin::content(function (Content $content,Request $request,$id) {
+            $this->validate($request,['username'=>'required|min:3','bio'=>'required']);
+            $painter=Painter::findOrFail($id);
+            $painter->update($request->all());
+        });
+        
+    }
+
+    /**
      * Create interface.
      *
      * @return Content
      */
     public function create()
     {
-        return \Encore\Admin\Facades\Admin::content(function (Content $content) {
+        return Admin::content(function (Content $content) {
 
             $content->header('header');
             $content->description('description');
