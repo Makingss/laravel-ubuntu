@@ -41,7 +41,7 @@ class PainterController extends Controller
             $grid->id('id')->sortable();
             $grid->username('姓名')->editable();
             $grid->paintings()->pluck('title')->map(function ($title) {
-                return "<strong><i>《$title》</i></strong>";
+                return "<strong><i>《".$title."》</i></strong>";
             })->implode('<br/>');
             $grid->created_at();
             $grid->updated_at();
