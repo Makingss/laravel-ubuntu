@@ -84,9 +84,9 @@ class PainterController extends Controller
      */
     public function update($id)
     {
-        if (Request::input('painter_id') == $id) {
-            throw new \Exception(trans('admin::lang.parent_select_error'));
-        }
+//        if (Request::input('painter_id') == $id) {
+//            throw new \Exception(trans('admin::lang.parent_select_error'));
+//        }
 
         return $this->form()->update($id);
     }
