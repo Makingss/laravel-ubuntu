@@ -17,7 +17,7 @@ class PainterController extends Controller
 {
     use ModelForm;
 
-ser
+
 
     /**
      * Index interface.
