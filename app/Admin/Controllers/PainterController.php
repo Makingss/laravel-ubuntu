@@ -19,7 +19,6 @@ class PainterController extends Controller
     use ModelForm;
 
 
-
     /**
      * Index interface.
      *
@@ -37,16 +36,16 @@ class PainterController extends Controller
     }
 
     protected function grid()
-    {	
+    {
         $grids = \Encore\Admin\Facades\Admin::grid(Painter::class, function (Grid $grid) {
-	    Painting::latest()->completed()->get();
+            Painting::latest()->completed()->get();
             #dd($grid);
             $grid->username('姓名')->editable();
-            $grid->paintings()->pluck('title')->map(function ($title) {
-                return "<strong><i>《".$title."》</i></strong>";
+            $grid->paintings('名称')->pluck('title')->map(function ($title) {
+                return "<strong><i>《" . $title . "》</i></strong>";
             })->implode('<br/>');
-            $grid->created_at();
-            $grid->updated_at();
+            $grid->created_at('新建时间');
+            $grid->updated_at('更新时间');
         });
         return $grids;
     }
@@ -92,6 +91,7 @@ class PainterController extends Controller
 
         return $this->form()->update($id);
     }
+
     /**
      * Create interface.
      *
