@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Painting extends Model
 {
-    protected $fillable = ['painter_id', 'title', 'body'];
+    protected $fillable = ['painter_id', 'title', 'body','published_at'];
 
     public function painter()
     {
