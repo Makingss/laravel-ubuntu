@@ -41,7 +41,7 @@ class PainterController extends Controller
             $grid->id('id')->sortable();
             $grid->username('姓名')->editable();
             $grid->paintings()->pluck('title')->map(function ($title) {
-                return "<strong><i>$title</i></strong>";
+                return "<strong><i>《$title》</i></strong>";
             })->implode('<br/>');
             $grid->created_at();
             $grid->updated_at();
@@ -78,33 +78,15 @@ class PainterController extends Controller
     }
 
     /**
-     * update interface.
-     *
-     * @return Content
-     */
-//    public function update()
-//    {
-////        $this->validate($request, ['username' => 'required|min:3', 'bio' => 'required']);
-////        $painter = Painter::findOrFail($id);
-////        $painter->update($request->all());
-//        return \Encore\Admin\Facades\Admin::content(function (Content $content) {
-//
-//            $content->header('header');
-//            $content->description('description');
-//
-//            $content->body($this->form()->update());
-//        });
-//    }
-    /**
      * @param $id
      *
      * @return $this|\Illuminate\Http\RedirectResponse
      */
     public function update($id)
     {
-//        if (Request::input('painter_id') == $id) {
-//            throw new \Exception(trans('admin::lang.parent_select_error'));
-//        }
+        if (Request::input('painter_id') == $id) {
+            throw new \Exception(trans('admin::lang.parent_select_error'));
+        }
 
         return $this->form()->update($id);
     }
