@@ -39,7 +39,7 @@ class PainterController extends Controller
     protected function grid()
     {	
         $grids = \Encore\Admin\Facades\Admin::grid(Painter::class, function (Grid $grid) {
-	 $grid=Painting::latest()->completed()->get();
+	    Painting::latest()->completed()->get();
             #dd($grid);
             $grid->username('姓名')->editable();
             $grid->paintings()->pluck('title')->map(function ($title) {
