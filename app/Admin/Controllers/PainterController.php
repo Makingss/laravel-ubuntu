@@ -55,11 +55,12 @@ class PainterController extends Controller
             $form->display('id', 'ID');
             $form->text('username')->rules('required');
             $form->textarea('bio')->rules('required');
-            $form->hayMany('paintings', function (Form\NestedForm $form) {
+            $form->hasMany('paintings', function (Form\NestedForm $form) {
                 $form->text('title')->rules('required');
                 $form->textarea('body')->rules('required');
                 $form->datatime('completed_at')->rules('required');
             });
+
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });
