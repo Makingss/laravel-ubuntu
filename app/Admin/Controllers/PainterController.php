@@ -58,7 +58,7 @@ class PainterController extends Controller
             $form->hasMany('paintings', function (Form\NestedForm $form) {
                 $form->text('title')->rules('required');
                 $form->textarea('body')->rules('required');
-                $form->datatime('completed_at')->rules('required');
+                $form->datetime('completed_at');
             });
 
             $form->display('created_at', 'Created At');
@@ -82,11 +82,18 @@ class PainterController extends Controller
      *
      * @return Content
      */
-    public function update(Request $request, $id)
+    public function update()
     {
-        $this->validate($request, ['username' => 'required|min:3', 'bio' => 'required']);
-        $painter = Painter::findOrFail($id);
-        $painter->update($request->all());
+//        $this->validate($request, ['username' => 'required|min:3', 'bio' => 'required']);
+//        $painter = Painter::findOrFail($id);
+//        $painter->update($request->all());
+        return \Encore\Admin\Facades\Admin::content(function (Request $request) {
+
+            $content->header('header');
+            $content->description('description');
+
+            $content->body($this->form()->update($request->all()));
+        });
     }
 
     /**
