@@ -62,6 +62,7 @@ class PainterController extends Controller
             $form->display('updated_at', 'Updated At');
         });
     }
+
     public function edit($id)
     {
         return \Encore\Admin\Facades\Admin::content(function (Content $content) use ($id) {
@@ -78,14 +79,11 @@ class PainterController extends Controller
      *
      * @return Content
      */
-    public function update()
+    public function update(Request $request, $id)
     {
-        return \Encore\Admin\Facades\Admin::content(function (Content $content,Request $request,$id) {
-            $this->validate($request,['username'=>'required|min:3','bio'=>'required']);
-            $painter=Painter::findOrFail($id);
-            $painter->update($request->all());
-        });
-        
+        $this->validate($request, ['username' => 'required|min:3', 'bio' => 'required']);
+        $painter = Painter::findOrFail($id);
+        $painter->update($request->all());
     }
 
     /**
