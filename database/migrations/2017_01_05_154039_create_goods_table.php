@@ -26,8 +26,8 @@ class CreateGoodsTable extends Migration
             $table->integer('store')->unsigned()->default(0)->comment('库存');
             $table->integer('fav')->unsigned()->default(0)->comment('收藏量');
             $table->integer('notify_num')->unsigned()->default(0)->comment('缺货登记量');
-            $table->timestamp('uptime')->comment('上架时间');
-            $table->timestamp('downtime')->comment('下架时间');
+            $table->dateTime('uptime')->comment('上架时间');
+            $table->dateTime('downtime')->comment('下架时间');
             $table->integer('p_order')->default(30)->comment('排序');
             $table->integer('p_vstore')->default(30)->comment('店铺排序');
             $table->integer('d_order')->default(30)->comment('动态排序');
@@ -78,7 +78,7 @@ class CreateGoodsTable extends Migration
             $table->integer('fx_3_price')->default(0)->comment('三级佣金');
             $table->string('goods_status')->comment('商品状态');
             $table->string('modify_status')->comment('变改标识');
-            $table->timestamp('price_modify')->comment('售价变更时间');
+            $table->dateTime('price_modify')->comment('售价变更时间');
             $table->string('good_form')->comment('商品来源');
             $table->integer('buy_limit')->comment('商品限购数量');
             $table->string('taxrate')->comment('税金');
