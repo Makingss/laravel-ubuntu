@@ -49,9 +49,10 @@ class PainterController extends Controller
             $grid->paintings('名称')->pluck('title')->map(function ($title) {
                 return "<strong><i>《" . $title . "》</i></strong>";
             })->implode('<br/>');
-            $grid->director()->value(function ($id) {
-                return Painting::find($id)->body;
-            });
+            $grid->paintings()->body();
+//            $grid->director()->value(function ($id) {
+//                return Painting::find($id)->body;
+//            });
 //            $grid->paintings('内容')->pluck('body')->map(function ($body) {
 //                return $body;
 //            })->implode('body');
