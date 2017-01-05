@@ -40,8 +40,8 @@ class PainterController extends Controller
         $grids = \Encore\Admin\Facades\Admin::grid(Painter::class, function (Grid $grid) {
             Painting::latest()->completed()->get();
             #dd($grid);
-            $grid->filter(function($filter){
-                $filter->is('username','username');
+            $grid->filter(function ($filter) {
+                $filter->is('username', 'username');
                 $filter->disableIdFilter();
             });
             $grid->id('Id');
@@ -49,9 +49,9 @@ class PainterController extends Controller
             $grid->paintings('名称')->pluck('title')->map(function ($title) {
                 return "<strong><i>《" . $title . "》</i></strong>";
             })->implode('<br/>');
-            $grid->paintings()->pluk('body')->map(function ($body){
+            $grid->paintings()->pluk('body')->map(function ($body) {
                 return $body;
-            });
+            })->implode('<br/>');
             $grid->created_at('新建时间');
             $grid->updated_at('更新时间');
         });
