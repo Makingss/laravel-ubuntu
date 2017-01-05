@@ -27,7 +27,7 @@ class CreateGoodsTable extends Migration
             $table->integer('fav')->unsigned()->default(0)->comment('收藏量');
             $table->integer('notify_num')->unsigned()->default(0)->comment('缺货登记量');
             $table->timestamp('uptime')->comment('上架时间');
-            $table->timestamp('downtime')->cmment('下架时间');
+            $table->timestamp('downtime')->comment('下架时间');
             $table->integer('p_order')->default(30)->comment('排序');
             $table->integer('p_vstore')->default(30)->comment('店铺排序');
             $table->integer('d_order')->default(30)->comment('动态排序');
