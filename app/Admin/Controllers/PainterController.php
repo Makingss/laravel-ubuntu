@@ -51,7 +51,7 @@ class PainterController extends Controller
             })->implode('<br/>');
             $grid->director()->value(function ($id) {
                 //dd($id);
-                return Painting::where('painter_id', 4)->get();
+                return Painting::where('painter_id', 4)->get()->implode('body');
             });
 //            $grid->paintings('内容')->pluck('body')->map(function ($body) {
 //                return $body;
