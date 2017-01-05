@@ -46,9 +46,9 @@ class PainterController extends Controller
             });
             $grid->id('Id');
             $grid->username('姓名')->editable();
-//            $grid->paintings('名称')->pluck('title')->map(function ($title) {
-//                return "<strong><i>《" . $title . "》</i></strong>";
-//            })->implode('<br/>');
+            $grid->paintings('名称')->pluck('title')->map(function ($title) {
+                return "<strong><i>《" . $title . "》</i></strong>";
+            })->implode('<br/>');
             $grid->paintings('内容')->pluck('body')->map(function ($body) {
                 return $body;
             })->implode('body');
