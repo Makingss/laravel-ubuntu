@@ -49,9 +49,9 @@ class PainterController extends Controller
             $grid->paintings('名称')->pluck('title')->map(function ($title) {
                 return "<strong><i>《" . $title . "》</i></strong>";
             })->implode('<br/>');
-            $grid->paintings()->pluk('body')->map(function ($body) {
+            $grid->paintings()->pluck('body')->map(function ($body) {
                 return $body;
-            })->implode('<br/>');
+            });
             $grid->created_at('新建时间');
             $grid->updated_at('更新时间');
         });
