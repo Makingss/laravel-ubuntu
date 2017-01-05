@@ -45,13 +45,12 @@ class PainterController extends Controller
                 $filter->disableIdFilter();
             });
             $grid->id('Id');
-            $id=$grid->id;
             $grid->username('姓名')->editable();
             $grid->paintings('名称')->pluck('title')->map(function ($title) {
                 return "<strong><i>《" . $title . "》</i></strong>";
             })->implode('<br/>');
-            $grid->director()->value(function ($id) {
-                dd($id);
+            $grid->director()->value(function (Grid $grid) {
+                dd($grid->id);
                 return Painting::where('painter_id', 4)->get()->implode('body');
             });
 //            $grid->paintings('内容')->pluck('body')->map(function ($body) {
