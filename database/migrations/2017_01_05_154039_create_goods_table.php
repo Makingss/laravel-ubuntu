@@ -15,17 +15,17 @@ class CreateGoodsTable extends Migration
     {
         Schema::create('goods', function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('goods_id')->comment('商品id');
+            $table->increments('goods_id')->unsigned()->comment('商品id');
             $table->string('jooge_goods_id', 200)->comment('商品id');
             $table->string('bn', 200)->comment('商品编号');
             $table->string('name', 255)->default('')->comment('商品名称');
-            $table->integer('type_id')->comment('类型');
-            $table->integer('cat_id')->default(0)->comment('分类');
+            $table->integer('type_id')->unsigned()->comment('类型');
+            $table->integer('cat_id')->unsigned()->default(0)->comment('分类');
             $table->integer('brand_id')->comment('品牌');
             $table->boolean('marketable')->comment('上下架');
-            $table->integer('store')->default(0)->comment('库存');
-            $table->integer('fav')->default(0)->comment('收藏量');
-            $table->integer('notify_num')->default(0)->comment('缺货登记量');
+            $table->integer('store')->unsigned()->default(0)->comment('库存');
+            $table->integer('fav')->unsigned()->default(0)->comment('收藏量');
+            $table->integer('notify_num')->unsigned()->default(0)->comment('缺货登记量');
             $table->timestamp('uptime')->comment('上架时间');
             $table->timestamp('downtime')->cmment('下架时间');
             $table->integer('p_order')->default(30)->comment('排序');
@@ -33,11 +33,11 @@ class CreateGoodsTable extends Migration
             $table->integer('d_order')->default(30)->comment('动态排序');
             $table->integer('d_vstore')->default(30)->comment('店铺动态排序');
             $table->integer('score')->comment('积分');
-            $table->decimal('cost_price')->default(0)->comment('成本价');
-            $table->decimal('mkt_price')->comment('市场价');
-            $table->decimal('price')->default(0)->comment('销售价');
-            $table->decimal('member_price')->default(0)->comment('会员价');
-            $table->decimal('activity_price')->default(0)->comment('活动价');
+            $table->decimal('cost_price')->unsigned()->default(0)->comment('成本价');
+            $table->decimal('mkt_price')->unsigned()->comment('市场价');
+            $table->decimal('price')->unsigned()->default(0)->comment('销售价');
+            $table->decimal('member_price')->unsigned()->default(0)->comment('会员价');
+            $table->decimal('activity_price')->unsigned()->default(0)->comment('活动价');
             $table->decimal('weight')->comment('重量');
             $table->decimal('g_weight')->comment('净重');
             $table->string('unit')->comment('单位');
@@ -63,12 +63,12 @@ class CreateGoodsTable extends Migration
             $table->boolean('nostore_sell')->default(false)->comment('是否开启无库存销售');
             $table->json('goods_setting')->comment('商品设置');
             $table->json('spec_desc')->comment('货品规格');
-            $table->josn('params')->comment('商品规则');
+            $table->json('params')->comment('商品规则');
             $table->integer('visit_count')->comment('被访问次数');
             $table->integer('comments_count')->comment('评论次数');
             $table->integer('view_w_count')->comment('周浏览次数');
             $table->integer('view_count')->comment('浏览次数');
-            $table->josn('count_stat')->comment('统计数据');
+            $table->json('count_stat')->comment('统计数据');
             $table->integer('buy_count')->comment('购买次数');
             $table->integer('buy_w_count')->comment('周购买次数');
             $table->string('barcode')->default(0)->comment('条形码');
