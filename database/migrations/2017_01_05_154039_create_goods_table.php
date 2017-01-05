@@ -43,9 +43,9 @@ class CreateGoodsTable extends Migration
             $table->string('unit')->comment('单位');
             $table->text('brief')->comment('商品简介');
             $table->enum('goods_type', [
-                'normal' => comment('普通商品'),
-                'bind' => comment('绑定商品'),
-                'gift' => comment('赠品')
+                'normal',
+                'bind',
+                'gift'
             ])->comment('销售类型');
             $table->string('image_default_id', 32)->comment('默认图片');
             $table->boolean('udfimg')->default(false)->comment('是否用户自定义图');
