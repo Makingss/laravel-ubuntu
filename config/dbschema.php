@@ -23,11 +23,11 @@ return[
         /**
          * 商品类型表
          */
-        'goods_type_tables'=>'goods_type',
+        'goods_type_tables'=>'goods_types',
         /**
          * 类别属性表
          */
-        'goods_cat_tables'=>'goods_cat',
+        'goods_cat_tables'=>'goods_cats',
         /**
          * 图片表
          */
@@ -35,15 +35,15 @@ return[
         /**
          * 库位表
          */
-        'goods_tip_tables'=>'goods_tip',
+        'goods_tip_tables'=>'goods_tips',
         /**
          * 商品单位表
          */
-        'goods_unit_tables'=>'goods_unit',
+        'goods_unit_tables'=>'goods_units',
         /**
          * 商品会员等级价格
          */
-        'goods_lv_price_tables'=>'goods_lv_price',
+        'goods_lv_price_tables'=>'goods_lv_prices',
         /**
          *
          */
