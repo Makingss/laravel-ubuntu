@@ -33,7 +33,7 @@ class GoodsController extends Controller
             $grid->bn()->editable();
             $grid->name()->editable();
             $grid->created_at();
-            $grid->updated_at()
+            $grid->updated_at();
         });
     }
 }
