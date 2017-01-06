@@ -14,6 +14,7 @@ class CreateDbschemaTables extends Migration
     public function up()
     {
         Schema::create(config('dbschema.databases.goods_types_tables'), function (Blueprint $table) {
+            $table->engine='InnoDB';
             $table->increments('type_id')->unsigned()->comment('类型ID');
             $table->string('name',100)->unique()->comment('类型名称');
             $table->json('type_alias')->nullable()->comment('类型别名(可以存多个别名)');
@@ -60,7 +61,7 @@ class CreateDbschemaTables extends Migration
             $table->integer('d_vstore')->default(30)->comment('店铺动态排序');
             $table->integer('score')->default(0)->comment('积分');
             $table->decimal('cost_price')->unsigned()->default(0)->comment('成本价');
-            $table->decimal('mkt_price')->unsigned()->comment('市场价');
+            $table->decimal('mkt_price')->unsigned()->default(0)->comment('市场价');
             $table->decimal('price')->unsigned()->default(0)->comment('销售价');
             $table->decimal('member_price')->unsigned()->default(0)->comment('会员价');
             $table->decimal('activity_price')->unsigned()->default(0)->comment('活动价');
