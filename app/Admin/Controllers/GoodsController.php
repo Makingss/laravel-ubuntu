@@ -28,7 +28,7 @@ class GoodsController extends Controller
     public function grid()
     {
         Admin::grid(Good::class, function (Grid $grid) {
-            dd($grid);
+            dd($grid->id());
         });
     }
 }
