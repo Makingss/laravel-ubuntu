@@ -8,7 +8,9 @@
 namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Model\Good;
 use Encore\Admin\Facades\Admin;
+use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 
 class GoodsController extends Controller
@@ -19,7 +21,14 @@ class GoodsController extends Controller
         return Admin::content(function (Content $content) {
             $content->header('商品信息');
             $content->description('商品信息列表');
-            $content->body('fdfafdsa');
+            $content->body($this->grid());
+        });
+    }
+
+    public function grid()
+    {
+        Admin::grid(Good::class, function (Grid $grid) {
+            dd($grid);
         });
     }
 }
