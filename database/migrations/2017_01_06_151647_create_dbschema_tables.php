@@ -135,8 +135,8 @@ class CreateDbschemaTables extends Migration
             $table->string('schema_id', 32)->nullable()->comment('供应商编号');
             $table->json('setting')->comment('类型设置');
             $table->json('price')->comment('设置价格区间,用于例表搜索使用');
-            $table->json('minfo')->comment('用户购买时所需输入信息的字段定义序列化数组方式 array(字段名,字段含义,类型(input,select,radio))\'');
-            $table->json('params')->comment('参数表结构(序列化) array(参数组名=>array(参数名1=>别名1|别名2,参数名2=>别名1|别名2))\'');
+            $table->json('minfo')->comment('用户购买时所需输入信息的字段定义序列化数组方式 array(字段名,字段含义,类型(input,select,radio))');
+            $table->json('params')->comment('参数表结构(序列化) array(参数组名=>array(参数名1=>别名1|别名2,参数名2=>别名1|别名2))');
             $table->json('tab')->comment('商品详情页的自定义tab设置');
             $table->boolean('dly_func')->default(0)->comment('是否包含发货函数');
             $table->boolean('ret_func')->default(0)->comment('是否包含退货函数');
