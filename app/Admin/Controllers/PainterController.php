@@ -3,8 +3,8 @@
 #namespace App\Http\Controllers;
 namespace App\Admin\Controllers;
 
-use App\Painter;
-use App\Painting;
+use App\Model\Painter;
+use App\Model\Painting;
 use Encore\Admin\Admin;
 use Encore\Admin\Controllers\ModelForm;
 use Encore\Admin\Form;
