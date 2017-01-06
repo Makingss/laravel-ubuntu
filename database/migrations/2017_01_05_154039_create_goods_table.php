@@ -70,7 +70,7 @@ class CreateGoodsTable extends Migration
             $table->integer('comments_count')->default(0)->comment('评论次数');
             $table->integer('view_w_count')->default(0)->comment('周浏览次数');
             $table->integer('view_count')->default(0)->comment('浏览次数');
-            $table->json('count_stat')->default(0)->comment('统计数据');
+            $table->json('count_stat')->nullable()->comment('统计数据');
             $table->integer('buy_count')->default(0)->comment('购买次数');
             $table->integer('buy_w_count')->default(0)->comment('周购买次数');
             $table->string('barcode')->default(0)->comment('条形码');
