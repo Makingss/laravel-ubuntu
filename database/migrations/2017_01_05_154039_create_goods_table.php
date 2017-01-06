@@ -15,7 +15,7 @@ class CreateGoodsTable extends Migration
     {
         Schema::create('goods', function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('goods_id')->primary()->unsigned()->comment('商品id');
+            $table->increments('goods_id')->unsigned()->comment('商品id');
             $table->string('jooge_goods_id', 200)->comment('商品id');
             $table->string('bn', 200)->unique()->comment('商品编号');
             $table->string('name', 255)->default('')->comment('商品名称');
