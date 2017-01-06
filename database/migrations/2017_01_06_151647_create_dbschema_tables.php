@@ -165,5 +165,6 @@ class CreateDbschemaTables extends Migration
     {
         Schema::dropIfExists(config('dbschema.databases.goods_tables'));
         Schema::dropIfExists(config('dbschema.databases.products_tables'));
+        Schema::dropIfExists(config('dbschema.databases.goods_type'));
     }
 }
