@@ -46,7 +46,7 @@ class CreateDbschemaTables extends Migration
             $table->string('bn', 200)->unique()->comment('商品编号');
             $table->string('name', 255)->comment('商品名称');
             $table->integer('type_id')->unsigned()->comment('类型');
-            $table->foreign('type_id')->references('type_id')->on('goods_types')->comment('goods_type 外键约束');
+            //$table->foreign('type_id')->references('type_id')->on('goods_types')->comment('goods_type 外键约束');
             $table->integer('cat_id')->unsigned()->comment('分类');
             $table->integer('brand_id')->comment('品牌');
             $table->boolean('marketable')->comment('上下架');
@@ -123,7 +123,7 @@ class CreateDbschemaTables extends Migration
             $table->string('jooge_product_id')->unique()->comment('货品ID');
             $table->string('name')->comment('货品名称');
             $table->integer('goods_id')->unsigned()->comment('商品ID');
-            $table->foreign('goods_id')->references('goods_id')->on('goods')->comment('goods 外键约束');
+            //$table->foreign('goods_id')->references('goods_id')->on('goods')->comment('goods 外键约束');
             $table->string('barcode')->unique()->comment('条形码');
             $table->string('title')->comment('标题');
             $table->string('bn', 32)->unique()->comment('货号');
