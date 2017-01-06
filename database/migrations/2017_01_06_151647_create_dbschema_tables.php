@@ -20,9 +20,7 @@ class CreateDbschemaTables extends Migration
             $table->string('bn', 200)->unique()->comment('商品编号');
             $table->string('name', 255)->comment('商品名称');
             $table->integer('type_id')->unsigned()->comment('类型');
-            $table->foreign('type_id')->references('type_id')->on('goods_type')->comment('goods_type 外键约束');
-            $table->integer('cat_id')->unsigned()->default(0)->comment('分类');
-            $table->foreign('cat_id')->references('cat_id')->on('goods_cat')->comment('goods_type 外键约束');
+            $table->integer('cat_id')->unsigned()->comment('分类');
             $table->integer('brand_id')->comment('品牌');
             $table->boolean('marketable')->comment('上下架');
             $table->integer('store')->unsigned()->default(0)->comment('库存');
@@ -131,7 +129,7 @@ class CreateDbschemaTables extends Migration
 
         Schema::create(config('dbschema.databases.goods_type_tables'), function (Blueprint $table) {
             $table->increments('type_id')->unsigned()->comment('类型ID');
-            $table->string('name')->unique()->comment('类型名称');
+            $table->string('name',100)->unique()->comment('类型名称');
             $table->json('type_alias')->nullable()->comment('类型别名(可以存多个别名)');
             $table->boolean('is_physical')->default(1)->comment('实体商品');
             $table->string('schema_id', 32)->nullable()->comment('供应商编号');
