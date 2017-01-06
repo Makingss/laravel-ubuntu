@@ -15,9 +15,9 @@ class CreateGoodsTable extends Migration
     {
         Schema::create('goods', function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('goods_id')->unsigned()->comment('商品id');
+            $table->increments('goods_id')->primary()->unsigned()->comment('商品id');
             $table->string('jooge_goods_id', 200)->comment('商品id');
-            $table->string('bn', 200)->comment('商品编号');
+            $table->string('bn', 200)->unique()->comment('商品编号');
             $table->string('name', 255)->default('')->comment('商品名称');
             $table->integer('type_id')->unsigned()->comment('类型');
             $table->integer('cat_id')->unsigned()->default(0)->comment('分类');
@@ -40,7 +40,7 @@ class CreateGoodsTable extends Migration
             $table->decimal('activity_price')->unsigned()->default(0)->comment('活动价');
             $table->decimal('weight')->comment('重量');
             $table->decimal('g_weight')->comment('净重');
-            $table->string('unit')->comment('单位');
+            $table->integer('unit_id')->unique()->comment('单位');
             $table->text('brief')->comment('商品简介');
             $table->enum('goods_type', [
                 'normal',
@@ -72,7 +72,7 @@ class CreateGoodsTable extends Migration
             $table->integer('buy_count')->comment('购买次数');
             $table->integer('buy_w_count')->comment('周购买次数');
             $table->string('barcode')->default(0)->comment('条形码');
-            $table->boolean('is_line')->default(false)->comment('是否为线上商品');
+            $table->boolean('is_line')->default(false)->comment('是否为线上商品');//增加销售平台的逻辑
             $table->integer('fx_1_price')->default(0)->comment('一级佣金');
             $table->integer('fx_2_price')->default(0)->comment('二级佣金');
             $table->integer('fx_3_price')->default(0)->comment('三级佣金');
