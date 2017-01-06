@@ -29,6 +29,9 @@ class GoodsController extends Controller
     {
         return Admin::grid(Good::class, function (Grid $grid) {
             $grid->goods_id();
+            $grid->jooge_goods_id();
+            $grid->bn()->editable();
+            $grid->name()->editable();
         });
     }
 }
