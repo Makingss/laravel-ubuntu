@@ -15,7 +15,7 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->engine='InnoDB';
-            $table->increments('product_id')->primary()->unsigned()->comment('货品ID');
+            $table->increments('product_id')->unsigned()->comment('货品ID');
             $table->string('jooge_product_id')->unique()->comment('货品ID');
             $table->string('name')->comment('货品名称');
             $table->integer('goods_id')->index()->comment('商品ID');
