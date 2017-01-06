@@ -44,7 +44,7 @@ class CreateDbschemaTables extends Migration
             $table->decimal('g_weight')->nullable()->comment('净重');
             $table->integer('unit_id')->comment('单位');
             $table->text('brief')->nullable()->comment('商品简介');
-            $table->enum('goods_type', [
+            $table->enum('goods_sales_type', [
                 'normal',
                 'bind',
                 'gift'
