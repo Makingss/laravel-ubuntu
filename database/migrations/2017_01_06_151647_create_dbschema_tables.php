@@ -18,7 +18,7 @@ class CreateDbschemaTables extends Migration
             $table->increments('goods_id')->unsigned()->comment('商品id');
             $table->string('jooge_goods_id', 200)->comment('商品id');
             $table->string('bn', 200)->unique()->comment('商品编号');
-            $table->string('name', 255)->default('')->comment('商品名称');
+            $table->string('name', 255)->comment('商品名称');
             $table->integer('type_id')->unsigned()->comment('类型');
             $table->foreign('type_id')->references('type_id')->on('goods_type')->comment('goods_type 外键约束');
             $table->integer('cat_id')->unsigned()->default(0)->comment('分类');
