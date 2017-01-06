@@ -13,31 +13,7 @@ class CreateDbschemaTables extends Migration
      */
     public function up()
     {
-        Schema::create(config('dbschema.databases.goods_types_tables'), function (Blueprint $table) {
-            $table->increments('type_id')->unsigned()->comment('类型ID');
-            $table->string('name',100)->unique()->comment('类型名称');
-            $table->json('type_alias')->nullable()->comment('类型别名(可以存多个别名)');
-            $table->boolean('is_physical')->default(1)->comment('实体商品');
-            $table->string('schema_id', 32)->nullable()->comment('供应商编号');
-            $table->json('setting')->comment('类型设置');
-            $table->json('price')->comment('设置价格区间,用于例表搜索使用');
-            $table->json('minfo')->comment('用户购买时所需输入信息的字段定义序列化数组方式 array(字段名,字段含义,类型(input,select,radio))');
-            $table->json('params')->comment('参数表结构(序列化) array(参数组名=>array(参数名1=>别名1|别名2,参数名2=>别名1|别名2))');
-            $table->json('tab')->comment('商品详情页的自定义tab设置');
-            $table->boolean('dly_func')->default(0)->comment('是否包含发货函数');
-            $table->boolean('ret_func')->default(0)->comment('是否包含退货函数');
-            $table->enum('reship', [
-                    'disabled',//不支持退货
-                    'func',//通过函数退货
-                    'normal',//物流退货
-                    'mixed'//物流退货+函数式动作
-                ]
-            )->default('normal')->comment('退货方式 disabled:不允许退货 func:函数式');
-            $table->boolean('disabled')->default(false);
-            $table->boolean('is_def')->default(false)->comment('类型标示,是否系统默认');
-            $table->dateTime('schema_lastmodify')->nullable()->comment('供应商最后更新时间');
-            $table->timestamps();
-        });
+
         Schema::create(config('dbschema.databases.goods_tables'), function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('goods_id')->unsigned()->comment('商品id');
@@ -152,7 +128,31 @@ class CreateDbschemaTables extends Migration
             $table->boolean('marketable')->default(true)->comment('上架');
             $table->timestamps();
         });
-
+        Schema::create(config('dbschema.databases.goods_types_tables'), function (Blueprint $table) {
+            $table->increments('type_id')->unsigned()->comment('类型ID');
+            $table->string('name', 100)->unique()->comment('类型名称');
+            $table->json('type_alias')->nullable()->comment('类型别名(可以存多个别名)');
+            $table->boolean('is_physical')->default(1)->comment('实体商品');
+            $table->string('schema_id', 32)->nullable()->comment('供应商编号');
+            $table->json('setting')->comment('类型设置');
+            $table->json('price')->comment('设置价格区间,用于例表搜索使用');
+            $table->json('minfo')->comment('用户购买时所需输入信息的字段定义序列化数组方式 array(字段名,字段含义,类型(input,select,radio))');
+            $table->json('params')->comment('参数表结构(序列化) array(参数组名=>array(参数名1=>别名1|别名2,参数名2=>别名1|别名2))');
+            $table->json('tab')->comment('商品详情页的自定义tab设置');
+            $table->boolean('dly_func')->default(0)->comment('是否包含发货函数');
+            $table->boolean('ret_func')->default(0)->comment('是否包含退货函数');
+            $table->enum('reship', [
+                    'disabled',//不支持退货
+                    'func',//通过函数退货
+                    'normal',//物流退货
+                    'mixed'//物流退货+函数式动作
+                ]
+            )->default('normal')->comment('退货方式 disabled:不允许退货 func:函数式');
+            $table->boolean('disabled')->default(false);
+            $table->boolean('is_def')->default(false)->comment('类型标示,是否系统默认');
+            $table->dateTime('schema_lastmodify')->nullable()->comment('供应商最后更新时间');
+            $table->timestamps();
+        });
 
     }
 
