@@ -12,10 +12,11 @@ use App\Model\Good;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
+use Encore\Admin\Controllers\ModelForm;
 
 class GoodsController extends Controller
 {
-
+    use ModelForm;
     public function index()
     {
         return Admin::content(function (Content $content) {
