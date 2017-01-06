@@ -29,7 +29,7 @@ class GoodsController extends Controller
     public function grid()
     {
         return Admin::grid(Good::class, function (Grid $grid) {
-            $grid->goods_id('id')->sortable();
+            $grid->goods_id('goods_id')->sortable();
             //$grid->jooge_goods_id()->sortable();
             $grid->bn('编码')->editable();
             $grid->name('名称')->editable();
