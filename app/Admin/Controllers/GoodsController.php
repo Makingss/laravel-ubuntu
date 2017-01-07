@@ -13,7 +13,6 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Controllers\ModelForm;
-use Encore\Admin\Widgets\Form;
 
 class GoodsController extends Controller
 {
@@ -52,7 +51,7 @@ class GoodsController extends Controller
 
     public function form()
     {
-        return Admin::form(Good::class, function (Form $form) {
+        return Admin::form(Good::class, function (\Encore\Admin\Form $form) {
             $form->display('id', 'id');
             $form->text('bn')->rules('required');
             $form->text('name')->rules('required');
