@@ -67,7 +67,7 @@ class GoodsController extends Controller
 
     public function create()
     {
-        Admin::content(function (Content $content) {
+       return Admin::content(function (Content $content) {
             $content->header('新建商品');
             $content->description('新建货品列表');
             $content->body($this->form());
