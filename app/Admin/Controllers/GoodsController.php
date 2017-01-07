@@ -32,8 +32,8 @@ class GoodsController extends Controller
         return Admin::grid(Good::class, function (Grid $grid) {
             $grid->goods_id('goods_id');
             //$grid->jooge_goods_id()->sortable();
-            $grid->bn('编码')->editable();
-            $grid->name('名称')->editable();
+            $grid->bn('编码');//->editable();
+            $grid->name('名称');//->editable();
             $grid->created_at();
             $grid->updated_at();
         });
