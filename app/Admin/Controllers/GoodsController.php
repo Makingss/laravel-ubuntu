@@ -42,11 +42,12 @@ class GoodsController extends Controller
 
     public function edit($id)
     {
-        return Admin::content(Good::class, function (Content $content) use ($id) {
+        return Admin::content(function (Content $content) use ($id) {
             $content->header('商品信息');
             $content->description('商品信息列表');
             $content->body($this->form()->edit($id));
         });
+
     }
 
     public function form()
