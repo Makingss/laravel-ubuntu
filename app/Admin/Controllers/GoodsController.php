@@ -52,8 +52,8 @@ class GoodsController extends Controller
 
     public function form()
     {
-        return Admin::from(Good::class, function (Form $form) {
-            $form->display('goods_id', 'Goods id');
+        return Admin::form(Good::class, function (Form $form) {
+            $form->display('id', 'id');
             $form->text('bn')->rules('required');
             $form->text('name')->rules('required');
             $form->display('created_at');
