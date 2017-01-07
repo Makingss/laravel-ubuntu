@@ -35,8 +35,8 @@ class GoodsController extends Controller
             $grid->bn('编码')->editable();
             $grid->name('名称')->editable();
             $status = [
-                'true' => ['text' => '上架'],
-                'false' => ['text' => '下架']
+                '1' => ['text' => '上架'],
+                '0' => ['text' => '下架']
             ];
             $grid->marketable('上架')->switch($status);
             $grid->created_at();
