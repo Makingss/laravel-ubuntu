@@ -34,6 +34,11 @@ class GoodsController extends Controller
             //$grid->jooge_goods_id()->sortable();
             $grid->bn('编码')->editable();
             $grid->name('名称')->editable();
+            $status = [
+                'true' => '上架',
+                'false' => '下架'
+            ];
+            $grid->marketable('上架')->switch($status);
             $grid->created_at();
             $grid->updated_at();
         });
