@@ -35,10 +35,10 @@ class GoodsController extends Controller
             $grid->bn('编码')->editable();
             $grid->name('名称')->editable();
             $states = [
-                'on' => 'YES',
-                'off' => 'NO',
+                'on' => ['text' => 'YES'],
+                'off' => ['text' => 'NO'],
             ];
-            $grid->marketable('上架')->switch()->states($states);
+            $grid->marketable('上架')->switch($states);
             $grid->created_at();
             $grid->updated_at();
         });
