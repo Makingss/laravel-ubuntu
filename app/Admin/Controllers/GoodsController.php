@@ -62,6 +62,7 @@ class GoodsController extends Controller
             $form->display('id', 'id');
             $form->text('bn')->rules('required');
             $form->text('name')->rules('required');
+            $form->select('类型')->options([1 => 'foo', 2 => 'bar', 'val' => 'Option name']);
             $form->display('created_at');
             $form->display('updated_at');
         });
