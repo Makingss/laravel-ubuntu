@@ -13,6 +13,7 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Controllers\ModelForm;
+use Encore\Admin\Widgets\Form;
 
 class GoodsController extends Controller
 {
@@ -29,12 +30,23 @@ class GoodsController extends Controller
     public function grid()
     {
         return Admin::grid(Good::class, function (Grid $grid) {
-            $grid->goods_id('goods_id')->sortable();
+            $grid->goods_id('goods_id');
             //$grid->jooge_goods_id()->sortable();
             $grid->bn('编码')->editable();
             $grid->name('名称')->editable();
             $grid->created_at();
             $grid->updated_at();
+        });
+    }
+    public function edit(){
+
+    }
+
+    public function form(){
+        return Admin::from(Good::class,function(Form $form){
+            $form->display('goods_id','Goods id');
+            $form->text('bn')->rules('required');
+            $form->text('name')->rules('required');
         });
     }
 }
