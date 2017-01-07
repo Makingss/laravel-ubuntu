@@ -64,4 +64,13 @@ class GoodsController extends Controller
             $form->display('updated_at');
         });
     }
+
+    public function create()
+    {
+        Admin::content(Good::class, function (Content $content) {
+            $content->header('新建商品');
+            $content->description('新建货品列表');
+            $content->body($this->form());
+        });
+    }
 }
