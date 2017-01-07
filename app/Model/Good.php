@@ -15,6 +15,7 @@ class Good extends Model
         'fx_3_price', 'goods_status', 'modify_status', 'price_modify', 'good_form', 'buy_limit', 'taxrate', 'tip_id', 'pmt_tag',
         'pmt_id', 'goods_profit_ratio', 'is_pkg', 'pkg_info'
     ];
+    protected $primaryKey='goods_id';
 
     public function goods_types()
     {
