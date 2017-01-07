@@ -39,6 +39,8 @@ class GoodsController extends Controller
                 'off' => ['value' => 0, 'text' => 'NO', 'color' => 'danger'],
             ];
             $grid->marketable('上架')->switch($states);
+            $grid->type_id('类型');
+            $grid->car_id('分类');
             $grid->created_at();
             $grid->updated_at();
         });
