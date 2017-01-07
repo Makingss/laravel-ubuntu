@@ -38,7 +38,7 @@ class GoodsController extends Controller
                 'on' => 'YES',
                 'off' => 'NO',
             ];
-            $grid->marketable('上架')->switch($states);
+            $grid->marketable('上架')->switch()->states($states);
             $grid->created_at();
             $grid->updated_at();
         });
