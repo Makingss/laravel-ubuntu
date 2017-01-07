@@ -18,6 +18,7 @@ use Encore\Admin\Widgets\Form;
 class GoodsController extends Controller
 {
     use ModelForm;
+
     public function index()
     {
         return Admin::content(function (Content $content) {
@@ -38,15 +39,24 @@ class GoodsController extends Controller
             $grid->updated_at();
         });
     }
-    public function edit(){
 
+    public function edit($id)
+    {
+        return Admin::content(Good::class, function (Content $content) use ($id) {
+            $content->header('商品信息');
+            $content->description('商品信息列表');
+            $content->body($this->form()->edit($id));
+        });
     }
 
-    public function form(){
-        return Admin::from(Good::class,function(Form $form){
-            $form->display('goods_id','Goods id');
+    public function form()
+    {
+        return Admin::from(Good::class, function (Form $form) {
+            $form->display('goods_id', 'Goods id');
             $form->text('bn')->rules('required');
             $form->text('name')->rules('required');
+            $form->display('created_at');
+            $form->display('updated_at');
         });
     }
 }
