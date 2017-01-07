@@ -60,11 +60,11 @@ class GoodsController extends Controller
     {
         return Admin::form(Good::class, function (\Encore\Admin\Form $form) {
             $form->display('goods_id', 'id');
-            $form->text('编码')->rules('required');
-            $form->text('名称')->rules('required');
-            $form->select("类型")->options([1 => 'foo', 2 => 'bar', 'val' => 'Option name']);
-            $form->display('新建时间');
-            $form->display('最后更新时间');
+            $form->text('bn','编码')->rules('required');
+            $form->text('name','名称')->rules('required');
+            $form->select('type_id',"类型")->options([1 => 'foo', 2 => 'bar', 'val' => 'Option name']);
+            $form->display('created_at','新建时间');
+            $form->display('updated_at','最后更新时间');
         });
     }
 
