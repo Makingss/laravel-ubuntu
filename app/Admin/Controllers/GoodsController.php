@@ -42,6 +42,7 @@ class GoodsController extends Controller
 
     public function edit($id)
     {
+        dd($id);
         return Admin::content(function (Content $content) use ($id) {
             $content->header('商品信息');
             $content->description('商品信息列表');
