@@ -67,7 +67,7 @@ class GoodsController extends Controller
             $form->select('type_id', "类型")->options(function () {
                 $goods_types=Goods_type::all();
                 foreach ($goods_types as $goods_type) {
-                    $name=array_pluck($goods_type,$goods_type->name,$goods_type->type_id);
+                    $name=array_add([],$goods_type->type_id,$goods_type->name);
                 }
                 dd($name);
                 return $name;
