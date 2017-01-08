@@ -69,7 +69,7 @@ class GoodsController extends Controller
                 foreach ($goods_types as $goods_type) {
                     $name=array_add([],$goods_type->type_id,$goods_type->name);
                 }
-                dd($name);
+                //dd($name);
                 return $name;
             });
             $form->display('created_at', '创建时间');
