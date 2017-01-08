@@ -15,7 +15,7 @@ Route::group([
 $router = app('admin.router');
 $router->resource('/painter', 'PainterController');
 $router->resource('/goods', 'GoodsController');
-$router->resource('/goods/type','GoodsTypeController');
+$router->resource('/goodstype','GoodsTypeController');
 //$router->get('/painter','PainterController@index');
 //$router->get('/painter/{id}','PainterController@create');
 //$router->get('/painter/{id}/edit','PainterController@edit');
