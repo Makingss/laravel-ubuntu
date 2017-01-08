@@ -42,7 +42,7 @@ class GoodsTypeController extends Controller
     protected function grid()
     {
         $grid=Admin::grid(Goods_type::class,function(Grid $grid){
-            $grid->type_id('id');
+            $grid->type_id('type_id');
             $grid->name('类型名称')->editable();
             $grid->type_alias('别名')->albel();
             $grid->is_physical('实体商品');
