@@ -9,6 +9,7 @@ namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Model\Good;
+use App\Model\Goods_type;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
@@ -46,7 +47,7 @@ class GoodsController extends Controller
         });
     }
 
-    public function edit($id)
+    protected function edit($id)
     {
         return Admin::content(function (Content $content) use ($id) {
             $content->header('商品信息');
@@ -56,24 +57,24 @@ class GoodsController extends Controller
 
     }
 
-    public function form()
+    protected function form()
     {
         return Admin::form(Good::class, function (\Encore\Admin\Form $form) {
             $form->display('goods_id', 'id');
-            $form->text('bn','编码')->rules('required');
-            $form->text('name','名称')->rules('required');
+            $form->text('bn', '编码')->rules('required');
+            $form->text('name', '名称')->rules('required');
             //[1 => 'foo', 2 => 'bar', 'val' => 'Option name']
-            $form->select('type_id',"类型")->options(function($goods_id){
-                return $goods_id;
+            $form->select('type_id', "类型")->options(function ($type_id) {
+                return $type_id;
             });
-            $form->display('created_at','创建时间');
-            $form->display('updated_at','最后更新时间');
+            $form->display('created_at', '创建时间');
+            $form->display('updated_at', '最后更新时间');
         });
     }
 
     public function create()
     {
-       return Admin::content(function (Content $content) {
+        return Admin::content(function (Content $content) {
             $content->header('新建商品');
             $content->description('新建货品列表');
             $content->body($this->form());
