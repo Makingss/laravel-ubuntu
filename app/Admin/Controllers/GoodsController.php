@@ -67,8 +67,9 @@ class GoodsController extends Controller
             $form->select('type_id', "类型")->options(function () {
                 $goods_types=Goods_type::all();
                 foreach ($goods_types as $goods_type) {
-                    $name=$goods_type->name;
+                    $name=array_pluck($goods_type,$goods_type->name,$goods_type->type_id);
                 }
+                dd($name);
                 return $name;
             });
             $form->display('created_at', '创建时间');
