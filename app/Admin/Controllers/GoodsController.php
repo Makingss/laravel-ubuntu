@@ -40,7 +40,10 @@ class GoodsController extends Controller
                 'off' => ['value' => 0, 'text' => 'NO', 'color' => 'danger'],
             ];
             $grid->marketable('上架')->switch($states);
-            $grid->goods_types()->pluck('name')->label();
+            $grid->type_id('名称')->value(function ($type_id) {
+                return Goods_type::find($type_id)->name;
+            });
+            //$grid->goods_types()->pluck('name')->label();
             /**
              * ->map(function ($name) {
              * return $name;
