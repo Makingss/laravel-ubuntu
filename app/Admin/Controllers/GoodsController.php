@@ -47,13 +47,6 @@ class GoodsController extends Controller
             $grid->cat_id('分类名称')->value(function ($cat_id) {
                 return Goods_cat::find($cat_id)->name;
             });
-            //$grid->goods_types()->pluck('name')->label();
-            /**
-             * ->map(function ($name) {
-             * return $name;
-             * });
-             */
-            $grid->car_id('分类');
             $grid->created_at();
             $grid->updated_at();
         });
@@ -79,10 +72,16 @@ class GoodsController extends Controller
             $form->select('type_id', "类型")->options(function () {
                 $goods_types = Goods_type::all();
                 foreach ($goods_types as $goods_type) {
-                    $name = array_add([], $goods_type->type_id, $goods_type->name);
+                    $type_name = array_add([], $goods_type->type_id, $goods_type->name);
                 }
-                //dd($name);
-                return $name;
+                return $type_name;
+            });
+            $form->select('cat_id', '分类')->options(function () {
+                $goods_cats = Goods_cat::all();
+                foreach ($goods_cats as $goods_cat) {
+                    $cat_name = array_add([], $goods_cat->cat_id, $goods_cat->name);
+                }
+                return $cat_name;
             });
             $form->display('created_at', '创建时间');
             $form->display('updated_at', '最后更新时间');
