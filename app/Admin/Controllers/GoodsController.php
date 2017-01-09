@@ -79,9 +79,11 @@ class GoodsController extends Controller
             $form->select('cat_id', '分类')->options(function () {
                 $goods_cats = Goods_cat::all();
                 foreach ($goods_cats as $goods_cat) {
-                    $cat_name[] = array_add([], $goods_cat->cat_id, $goods_cat->name);
+                    //$cat_name[] = array_add([], $goods_cat->cat_id, $goods_cat->name);
+                    $cat_name[]=array_pluck([],$goods_cat->name,$goods_cat->cat_id);
                 }
-                dd(array_collapse($cat_name));
+
+                dd($cat_name);
                 return array_collapse($cat_name);
             });
             $form->display('created_at', '创建时间');
