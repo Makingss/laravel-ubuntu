@@ -80,7 +80,7 @@ class GoodsController extends Controller
                 $goods_cats = Goods_cat::all();
                 foreach ($goods_cats as $goods_cat) {
                     $cat_name = array_add([], $goods_cat->cat_id, $goods_cat->name);
-                    $cat_name=array_prepend([],$cat_name);
+                    $cat_name=array_prepend($cat_name,$cat_name);
                 }
                 dd($cat_name);
                 return $cat_name;
