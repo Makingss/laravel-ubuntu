@@ -40,7 +40,7 @@ class GoodsController extends Controller
                 'off' => ['value' => 0, 'text' => 'NO', 'color' => 'danger'],
             ];
             $grid->marketable('上架')->switch($states);
-            $grid->goods_types('类型')->pluck('name')->map(function($name){
+            $grid->goods_types('类型')->pluck('name')->map(function ($name) {
                 dd($name);
                 return $name;
             })->implode('name');
@@ -68,9 +68,9 @@ class GoodsController extends Controller
             $form->text('name', '名称')->rules('required');
             //[1 => 'foo', 2 => 'bar', 'val' => 'Option name']
             $form->select('type_id', "类型")->options(function () {
-                $goods_types=Goods_type::all();
+                $goods_types = Goods_type::all();
                 foreach ($goods_types as $goods_type) {
-                    $name=array_add([],$goods_type->type_id,$goods_type->name);
+                    $name = array_add([], $goods_type->type_id, $goods_type->name);
                 }
                 //dd($name);
                 return $name;
