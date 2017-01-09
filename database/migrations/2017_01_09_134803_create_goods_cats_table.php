@@ -24,7 +24,7 @@ class CreateGoodsCatsTable extends Migration
             $table->integer('p_order')->default(0)->comment('排序');
             $table->integer('goods_count')->default(0)->comment('商品数');
             $table->string('cat_path', 200)->nullable()->comment('分类路径(从根至本结点的路径,逗号分隔,首部有逗号)');
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 
