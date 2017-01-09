@@ -72,9 +72,10 @@ class GoodsCatController extends Controller
     protected function form()
     {
         return Admin::form(Goods_cat::class, function (Form $form) {
-            $form->display('id');
+            $form->display('cat_id','id');
             $form->select('type_id', '类型')->options(function () {
                 $goods_types = Goods_type::all();
+                dd($goods_types);
                 foreach ($goods_types as $goods_type) {
                     $type_names = array_add([], $goods_type->cat_id, $goods_type->name);
                 }
