@@ -81,7 +81,8 @@ class GoodsController extends Controller
                 foreach ($goods_cats as $goods_cat) {
                     $cat_name[] = array_add([], $goods_cat->cat_id, $goods_cat->name);
                 }
-                foreach ($cat_name as $item) {
+                foreach ($cat_name  as $itemK=> $item) {
+                    dd($itemK);
                     $item = array_merge($item);
                 }
                 dd($item);
