@@ -73,12 +73,20 @@ class GoodsCatController extends Controller
     {
         return Admin::form(Goods_cat::class, function (Form $form) {
             $form->display('cat_id','id');
-            $form->select('type_id', '类型')->options(function () {
+//            $form->select('type_id', '类型')->options(function () {
+//                $goods_types = Goods_type::all();
+//                foreach ($goods_types as $goods_type) {
+//                    $type_names = array_add([], $goods_type->cat_id, $goods_type->name);
+//                }
+//                return $type_names;
+//            });
+
+            $form->select('type_id', "类型")->options(function () {
                 $goods_types = Goods_type::all();
                 foreach ($goods_types as $goods_type) {
-                    $type_names = array_add([], $goods_type->cat_id, $goods_type->name);
+                    $type_name = array_add([], $goods_type->type_id, $goods_type->name);
                 }
-                return $type_names;
+                return $type_name;
             });
             $form->text('name','分类名称');
 
