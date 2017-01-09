@@ -15,14 +15,15 @@ class Good extends Model
         'fx_3_price', 'goods_status', 'modify_status', 'price_modify', 'good_form', 'buy_limit', 'taxrate', 'tip_id', 'pmt_tag',
         'pmt_id', 'goods_profit_ratio', 'is_pkg', 'pkg_info'
     ];
-    protected $primaryKey='goods_id';
+    protected $primaryKey = 'goods_id';
 
     public function Goods_types()
     {
-        $this->belongsTo(Goods_type::class, 'type_id');
+        return $this->belongsTo(Goods_type::class, 'type_id');
     }
 
-    public function Products(){
-        $this->hasMany(Product::class,'goods_id');
+    public function Products()
+    {
+        return $this->hasMany(Product::class, 'goods_id');
     }
 }
