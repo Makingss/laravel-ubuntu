@@ -35,7 +35,7 @@ class GoodsCatController extends Controller
         return Admin::content(function (Content $content) use ($id) {
             $content->header('编辑商品类型');
             $content->description('商品类型列表');
-            $content->body($this->form()->edit($ids));
+            $content->body($this->form()->edit($id));
         });
 
     }
