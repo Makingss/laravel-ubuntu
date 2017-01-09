@@ -45,7 +45,6 @@ class GoodsController extends Controller
                 return Goods_type::find($type_id)->name;
             });
             $grid->cat_id('分类名称')->value(function ($cat_id) {
-                dd($cat_id);
                 return Goods_cat::find($cat_id)->name;
             });
             $grid->created_at();
@@ -96,5 +95,14 @@ class GoodsController extends Controller
             $content->description('新建货品列表');
             $content->body($this->form());
         });
+    }
+
+    public function update($id)
+    {
+//        if (Request::input('painter_id') == $id) {
+//            throw new \Exception(trans('admin::lang.parent_select_error'));
+//        }
+
+        return $this->form()->update($id);
     }
 }
