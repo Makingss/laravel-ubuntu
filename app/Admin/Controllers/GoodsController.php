@@ -40,9 +40,12 @@ class GoodsController extends Controller
                 'off' => ['value' => 0, 'text' => 'NO', 'color' => 'danger'],
             ];
             $grid->marketable('上架')->switch($states);
-            $grid->goods_types('类型')->pluck('name')->map(function ($name) {
-                return $name;
-            });
+            $grid->goods_types()->pluck('name')->label();
+            /**
+             * ->map(function ($name) {
+             * return $name;
+             * });
+             */
             $grid->car_id('分类');
             $grid->created_at();
             $grid->updated_at();
