@@ -59,6 +59,9 @@ class GoodsCatController extends Controller
             $grid->goods_count('商品数量');
             $grid->created_at('创建时间');
             $grid->created_at('最后更新时间');
+            $grid->name()->display(function ($name) {
+                return "<span class='label'>$name</span>";
+            });
         });
         return $grid;
     }
