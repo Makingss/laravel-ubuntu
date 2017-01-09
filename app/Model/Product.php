@@ -8,7 +8,7 @@ class Product extends Model
 {
     protected $table = [];
 
-    public function goods()
+    public function Goods()
     {
         $this->belongsTo(Good::class, 'goods_id');
     }

@@ -13,7 +13,7 @@ class Goods_type extends Model
 
     protected $primaryKey = 'type_id';
 
-    public function goods()
+    public function Goods()
     {
         return $this->hasMany(Good::class, 'type_id');
     }

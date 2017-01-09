@@ -17,12 +17,12 @@ class Good extends Model
     ];
     protected $primaryKey='goods_id';
 
-    public function goods_types()
+    public function Goods_types()
     {
         $this->belongsTo(Goods_type::class, 'type_id');
     }
 
-    public function products(){
+    public function Products(){
         $this->hasMany(Product::class,'goods_id');
     }
 }
