@@ -41,6 +41,7 @@ class PainterController extends Controller
             Painting::latest()->completed()->get();
             #dd($grid);
             $grid->filter(function ($filter) {
+                $filter->useModal();
                 $filter->is('username', 'username');
                 $filter->disableIdFilter();
             });
