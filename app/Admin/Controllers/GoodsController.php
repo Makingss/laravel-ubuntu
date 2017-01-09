@@ -79,7 +79,7 @@ class GoodsController extends Controller
             $form->select('cat_id', '分类')->options(function () {
                 $goods_cats = Goods_cat::all();
                 foreach ($goods_cats as $goods_cat) {
-                    $cat_name = array_add($cat_name, $goods_cat->cat_id, $goods_cat->name);
+                    $cat_name = array_add([$goods_cat->cat_id=>$goods_cat->name], $goods_cat->cat_id, $goods_cat->name);
                     //$cat_name=array_prepend($cat_name,$cat_name);
                 }
                 dd($cat_name);
