@@ -15,6 +15,6 @@ class Goods_type extends Model
 
     public function Goods()
     {
-        return $this->hasMany(Good::class, 'type_id');
+        return $this->hasOne(Good::class, 'type_id');
     }
 }
