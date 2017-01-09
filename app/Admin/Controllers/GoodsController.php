@@ -81,8 +81,7 @@ class GoodsController extends Controller
                 foreach ($goods_cats as $goods_cat) {
                     $cat_name[] = array_add([], $goods_cat->cat_id, $goods_cat->name);
                 }
-                dd(array_collapse($cat_name));
-                return $cat_name;
+                return array_collapse($cat_name);
             });
             $form->display('created_at', '创建时间');
             $form->display('updated_at', '最后更新时间');
