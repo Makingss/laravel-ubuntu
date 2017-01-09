@@ -12,6 +12,7 @@ use App\Model\Goods_cat;
 use App\Model\Goods_type;
 use Encore\Admin\Controllers\ModelForm;
 use Encore\Admin\Facades\Admin;
+use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 
@@ -29,8 +30,13 @@ class GoodsCatController extends Controller
         return $content;
     }
 
-    public function edit()
+    public function edit($id)
     {
+        return Admin::content(function (Content $content) use ($id) {
+            $content->header('编辑商品类型');
+            $content->description('商品类型列表');
+            $content->body($this->form()->edit($ids));
+        });
 
     }
 
@@ -65,6 +71,18 @@ class GoodsCatController extends Controller
 
     protected function form()
     {
+        return Admin::form(Goods_cat::class, function (Form $form) {
+            $form->display('id');
+            $form->select('type_id', '类型')->options(function () {
+                $goods_types = Goods_type::all();
+                foreach ($goods_types as $goods_type) {
+                    $type_names = array_add([], $goods_type->cat_id, $goods_type->name);
+                }
+                return $type_names;
+            });
+            $form->text('name','分类名称');
+
+        });
 
     }
 }
