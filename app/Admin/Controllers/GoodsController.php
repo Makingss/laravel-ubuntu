@@ -82,7 +82,7 @@ class GoodsController extends Controller
                     $cat_name[] = array_add([], $goods_cat->cat_id, $goods_cat->name);
                 }
                 foreach ($cat_name as $v => $k) {
-                    foreach ($v as $val => $key) {
+                    foreach ($k as $key => $val) {
                         $new_arr[$key] = $val;
                     }
                 }
