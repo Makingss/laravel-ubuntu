@@ -9,6 +9,7 @@ namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Model\Good;
+use App\Model\Goods_cat;
 use App\Model\Goods_type;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Grid;
@@ -40,8 +41,11 @@ class GoodsController extends Controller
                 'off' => ['value' => 0, 'text' => 'NO', 'color' => 'danger'],
             ];
             $grid->marketable('上架')->switch($states);
-            $grid->type_id('名称')->value(function ($type_id) {
+            $grid->type_id('类型名称')->value(function ($type_id) {
                 return Goods_type::find($type_id)->name;
+            });
+            $grid->cat_id('分类名称')->value(function ($cat_id) {
+                return Goods_cat::find($cat_id)->name;
             });
             //$grid->goods_types()->pluck('name')->label();
             /**
