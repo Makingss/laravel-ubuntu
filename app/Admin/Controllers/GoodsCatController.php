@@ -9,6 +9,7 @@ namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Model\Goods_cat;
+use App\Model\Goods_type;
 use Encore\Admin\Controllers\ModelForm;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Grid;
@@ -43,7 +44,7 @@ class GoodsCatController extends Controller
         $grid = Admin::grid(Goods_cat::class, function (Grid $grid) {
             $grid->cat_id('ID');
             $grid->type_id('类型')->value(function ($type_id) {
-                return Goods_cat::find($type_id)->name;
+                return Goods_type::find($type_id)->name;
             });
             $grid->name('分类名称')->editable();
             $grid->is_leaf('是否为子节点')->value(function ($is_leaf) {
