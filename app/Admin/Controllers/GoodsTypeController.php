@@ -47,9 +47,10 @@ class GoodsTypeController extends Controller
             $grid->type_alias('别名')->value(function ($type_alias) {
                 return \GuzzleHttp\json_decode($type_alias);
             })->label();
-            $grid->is_physical('实体商品');
+            $grid->is_physical('实体商品?')->value(function ($is_physical) {
+                return $is_physical ? '是' : '否';
+            });
             $grid->schema_id('供应商编码')->editable();
-            $grid->setting('类型');
             $grid->created_at('创建时间');
             $grid->updated_at('最后更新时间');
 
