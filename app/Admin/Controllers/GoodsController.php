@@ -81,13 +81,12 @@ class GoodsController extends Controller
                 foreach ($goods_cats as $goods_cat) {
                     $cat_name[] = array_add([], $goods_cat->cat_id, $goods_cat->name);
                 }
-                foreach ($cat_name as $v => $k) {
-                    foreach ($k as $key => $val) {
+                foreach ($cat_name as $cat_name => $cat_nameV) {
+                    foreach ($cat_nameV as $key => $val) {
                         $new_arr[$key] = $val;
                     }
                 }
-                dd($new_arr);
-                return array_collapse($cat_name);
+                return $new_arr;
             });
             $form->display('created_at', '创建时间');
             $form->display('updated_at', '最后更新时间');
