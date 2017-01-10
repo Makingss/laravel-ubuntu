@@ -78,10 +78,10 @@ class GoodsController extends Controller
             });
             $form->select('cat_id', '分类')->options(function () {
                 $goods_cats = Goods_cat::all();
-                foreach ($goods_cats as $goods_cat) {
-                    $cat_name[] = array_add([], $goods_cat->cat_id, $goods_cat->name);
-                }
-                foreach ($cat_name as $cat_name => $cat_nameV) {
+//                foreach ($goods_cats as $goods_catK=>$goods_cat) {
+//                    $cat_name[] = array_add([], $goods_cat->cat_id, $goods_cat->name);
+//                }
+                foreach ($goods_cats as $cat_name => $cat_nameV) {
                     foreach ($cat_nameV as $key => $val) {
                         $new_arr[$key] = $val;
                     }
