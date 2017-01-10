@@ -61,7 +61,8 @@ class GoodsCatController extends Controller
                 'off' => ['value' => 0, 'text' => 'NO', 'color' => 'danger'],
             ];
             $grid->disabled('隐藏')->switch($states);
-            $grid->p_order('排序')->orderable();
+            $grid->column('p_order','排序')->orderable();
+//            $grid->p_order('排序')->orderable();
             $grid->goods_count('商品数量');
             $grid->created_at('创建时间');
             $grid->created_at('最后更新时间');
