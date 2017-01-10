@@ -92,6 +92,7 @@ class GoodsCatController extends Controller
 //                return $type_name;
 //            });
             $form->text('name', '分类名称');
+            $form->disabled('隐藏')->switch();
 
         });
 
