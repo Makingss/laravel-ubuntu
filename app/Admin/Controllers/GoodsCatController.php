@@ -49,6 +49,7 @@ class GoodsCatController extends Controller
     {
         $grid = Admin::grid(Goods_cat::class, function (Grid $grid) {
             $grid->model()->ordered();
+
             $grid->cat_id('ID');
             $grid->type_id('类型')->value(function ($type_id) {
                 return Goods_type::find($type_id)->name;
@@ -62,8 +63,8 @@ class GoodsCatController extends Controller
                 'off' => ['value' => 0, 'text' => 'NO', 'color' => 'danger'],
             ];
             $grid->disabled('隐藏')->switch($states);
-            $grid->column('p_order', '排序')->orderable();
-//            $grid->p_order('排序')->orderable();
+//            $grid->column('p_order', '排序')->orderable();
+            $grid->p_order('排序')->orderable();
             $grid->goods_count('商品数量');
             $grid->created_at('创建时间');
             $grid->created_at('最后更新时间');
