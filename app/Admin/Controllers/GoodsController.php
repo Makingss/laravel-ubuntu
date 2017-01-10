@@ -78,7 +78,7 @@ class GoodsController extends Controller
             });
             $form->select('cat_id', '分类')->options(function () {
                 $goods_cats = Goods_cat::all();
-                foreach ($goods_cats as $goods_catK=>$goods_cat) {
+                foreach ($goods_cats as $goods_catK => $goods_cat) {
                     $cat_name[] = array_add([], $goods_cat->cat_id, $goods_cat->name);
                 }
                 foreach ($cat_name as $cat_name => $cat_nameV) {
@@ -88,6 +88,7 @@ class GoodsController extends Controller
                 }
                 return $new_arr;
             });
+            $form->switch('marketable');
             $form->display('created_at', '创建时间');
             $form->display('updated_at', '最后更新时间');
         });
