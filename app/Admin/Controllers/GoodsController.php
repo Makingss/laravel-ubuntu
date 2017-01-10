@@ -88,7 +88,11 @@ class GoodsController extends Controller
                 }
                 return $new_arr;
             });
-            $form->switch('marketable');
+            $states = [
+                'on' => ['value' => 1, 'text' => 'YES', 'color' => 'success'],
+                'off' => ['value' => 0, 'text' => 'NO', 'color' => 'danger'],
+            ];
+            $form->switch('marketable', $states);
             $form->display('created_at', '创建时间');
             $form->display('updated_at', '最后更新时间');
         });
