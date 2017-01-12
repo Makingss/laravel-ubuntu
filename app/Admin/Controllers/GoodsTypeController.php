@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 use App\Model\Goods_type;
 use Encore\Admin\Controllers\ModelForm;
 use Encore\Admin\Facades\Admin;
+use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 
@@ -29,9 +30,14 @@ class GoodsTypeController extends Controller
         return $content;
     }
 
-    public function edit()
+    public function edit($id)
     {
-
+        $content=Admin::content(function (Content $content)use ($id) {
+            $content->header('商品类型');
+            $content->description('商品类型编辑');
+            $content->body($this->form()->edit($id));
+        });
+        return $content;
     }
 
     public function create()
@@ -61,6 +67,9 @@ class GoodsTypeController extends Controller
 
     protected function form()
     {
-
+        Admin::form(Goods_type::class,function(Form $form){
+            $form->display('type_id','id');
+            $form->text('name');
+        });
     }
 }
