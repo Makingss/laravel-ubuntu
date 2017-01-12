@@ -67,7 +67,7 @@ class GoodsTypeController extends Controller
 
     protected function form()
     {
-        Admin::form(Goods_type::class,function(Form $form){
+       return Admin::form(Goods_type::class,function(Form $form){
             $form->display('type_id','id');
             $form->text('name');
         });
