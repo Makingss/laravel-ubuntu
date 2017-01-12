@@ -42,7 +42,7 @@ class PainterController extends Controller
             #dd($grid);
             $grid->filter(function ($filter) {
                 $filter->useModal();
-                $filter->is('username', 'username');
+                $filter->like('username', 'username');
                 $filter->disableIdFilter();
             });
             $grid->id('Id');
