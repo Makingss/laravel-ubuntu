@@ -79,20 +79,18 @@ class GoodsCatController extends Controller
             $form->select('type_id', '类型')->options(function () {
                 $goods_types = Goods_type::all();
                 foreach ($goods_types as $goods_type) {
-                    $type_names = array_add([], $goods_type->type_id, $goods_type->name);
+                    $type_names[] = array_add([], $goods_type->type_id, $goods_type->name);
                 }
-                return $type_names;
+                foreach($type_names as $type_nameK=>$type_nameV){
+                    foreach ($type_nameV as $key=>$value){
+                        $new_arr[$key]=$value;
+                    }
+                }
+                return $new_arr;
             });
 
-//            $form->select('type_id', "类型")->options(function () {
-//                $goods_types = Goods_type::all();
-//                foreach ($goods_types as $goods_type) {
-//                    $type_name = array_add([], $goods_type->type_id, $goods_type->name);
-//                }
-//                return $type_name;
-//            });
             $form->text('name', '分类名称');
-            $form->switch('disabled');
+            $form->switch('disabled', '隐藏');
 
         });
 

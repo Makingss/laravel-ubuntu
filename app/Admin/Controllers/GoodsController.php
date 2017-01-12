@@ -72,16 +72,21 @@ class GoodsController extends Controller
             $form->select('type_id', "类型")->options(function () {
                 $goods_types = Goods_type::all();
                 foreach ($goods_types as $goods_type) {
-                    $type_name = array_add([], $goods_type->type_id, $goods_type->name);
+                    $type_name[] = array_add([], $goods_type->type_id, $goods_type->name);
                 }
-                return $type_name;
+                foreach ($type_name as $type_nameK => $type_nameV) {
+                    foreach ($type_nameV as $key => $value) {
+                        $new_arr[$key] = $value;
+                    }
+                }
+                return $new_arr;
             });
             $form->select('cat_id', '分类')->options(function () {
                 $goods_cats = Goods_cat::all();
                 foreach ($goods_cats as $goods_catK => $goods_cat) {
                     $cat_name[] = array_add([], $goods_cat->cat_id, $goods_cat->name);
                 }
-                foreach ($cat_name as $cat_name => $cat_nameV) {
+                foreach ($cat_name as $cat_nameK => $cat_nameV) {
                     foreach ($cat_nameV as $key => $val) {
                         $new_arr[$key] = $val;
                     }
