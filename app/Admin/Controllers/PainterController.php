@@ -43,7 +43,7 @@ class PainterController extends Controller
             $grid->filter(function ($filter) {
                 $filter->useModal();
                 $filter->like('username', 'username');
-                $filter->disableIdFilter();
+                #$filter->disableIdFilter();
             });
             $grid->id('Id');
             $grid->username('姓名')->editable();
