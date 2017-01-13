@@ -13,7 +13,7 @@ class CreateGoodsPromotionRefsTables extends Migration
      */
     public function up()
     {
-        Schema::create(config('dbschema.databases.goods_promotion_ref_tables'), function (Blueprint $table) {
+        Schema::create(config('dbschema.databases.goods_promotion_refs_tables'), function (Blueprint $table) {
             $table->increments('ref_id');
             $table->integer('goods_id')->unsigned()->comment('商品ID');
             $table->integer('rule_id')->unsigned()->comment('优惠规则ID');
@@ -39,6 +39,6 @@ class CreateGoodsPromotionRefsTables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('dbschema.databases.goods_promotion_ref_tables'));
+        Schema::dropIfExists(config('dbschema.databases.goods_promotion_refs_tables'));
     }
 }
