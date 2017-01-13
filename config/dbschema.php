@@ -6,47 +6,51 @@
  * Time: 14:24
  * dbschema tables
  */
-return[
-    'databases'=>[
+return [
+    'databases' => [
         /**
          * 商品主表
          */
-        'goods_tables'=>'goods',
+        'goods_tables' => 'goods',
         /**
          * 货品主表
          */
-        'products_tables'=>'products',
+        'products_tables' => 'products',
         /**
          * 品牌表
          */
-        'brand_tables'=>'brands',
+        'brand_tables' => 'brands',
         /**
          * 商品类型表
          */
-        'goods_types_tables'=>'goods_types',
+        'goods_types_tables' => 'goods_types',
         /**
          * 类别属性表
          */
-        'goods_cats_tables'=>'goods_cats',
+        'goods_cats_tables' => 'goods_cats',
         /**
          * 图片表
          */
-        'images_tables'=>'images',
+        'images_tables' => 'images',
         /**
          * 库位表
          */
-        'goods_tips_tables'=>'goods_tips',
+        'goods_tips_tables' => 'goods_tips',
         /**
          * 商品单位表
          */
-        'goods_units_tables'=>'goods_units',
+        'goods_units_tables' => 'goods_units',
         /**
          * 商品会员等级价格
          */
-        'goods_lv_price_tables'=>'goods_lv_prices',
+        'goods_lv_price_tables' => 'goods_lv_prices',
         /**
          *商品搜索关键字表
          */
-        'goods_keywords_tables'=>'goods_keywords'
+        'goods_keywords_tables' => 'goods_keywords',
+        /**
+         *商品会员等级价格
+         */
+        'goods_lv_price_tables' => 'goods_lv_prices',
     ],
 ];
