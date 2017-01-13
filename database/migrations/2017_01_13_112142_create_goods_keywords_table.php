@@ -15,8 +15,8 @@ class CreateGoodsKeywordsTable extends Migration
     {
         Schema::create(config('dbschema.databases.goods_keywords_tables'), function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('goods_id')->primary('goods_id')->unsigned()->comment('商品ID');
-            $table->string('keyword', 50)->primary('keyword')->comment('搜索关键字');
+            $table->integer('goods_id')->index('goods_id')->unsigned()->comment('商品ID');
+            $table->string('keyword', 50)->index('keyword')->comment('搜索关键字');
             $table->string('refer', 255)->nullable()->comment('来源');
             $table->enum('res_type', ['goods', 'article'])->default('goods')->comment('搜索结果类型');
             $table->integer('last_modify')->unsigned()->nullable()->comment('更新时间');
