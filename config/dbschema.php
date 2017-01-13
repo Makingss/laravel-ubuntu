@@ -43,14 +43,15 @@ return [
         /**
          * 商品会员等级价格
          */
-        'goods_lv_price_tables' => 'goods_lv_prices',
+        'goods_lv_prices_tables' => 'goods_lv_prices',
         /**
          *商品搜索关键字表
          */
         'goods_keywords_tables' => 'goods_keywords',
         /**
-         *商品会员等级价格
+         *商品与商品促销规则
          */
-        'goods_lv_price_tables' => 'goods_lv_prices',
+        'goods_promotion_refs_tables' => 'goods_promotion_refs'
+
     ],
 ];
