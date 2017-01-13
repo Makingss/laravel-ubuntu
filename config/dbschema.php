@@ -45,7 +45,8 @@ return[
          */
         'goods_lv_price_tables'=>'goods_lv_prices',
         /**
-         *
+         *商品搜索关键字表
          */
+        'goods_keywords_tables'=>'goods_keywords'
     ],
 ];
