@@ -60,5 +60,9 @@ return [
          * 商品规格值表
          */
         'spec_values_tables'=>'spec_values',
+        /**
+         * 类型品牌关联表
+         */
+        'type_brand_tables'=>'type_brands'
     ],
 ];
