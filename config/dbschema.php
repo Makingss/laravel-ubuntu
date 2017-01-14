@@ -55,6 +55,10 @@ return [
         /**
          * 商品规格表
          */
-        'specifications_tables'=>'sdb_b2c_specifications',
+        'specifications_tables'=>'specifications',
+        /**
+         * 商品规格值表
+         */
+        'spec_values_tables'=>'spec_values',
     ],
 ];
