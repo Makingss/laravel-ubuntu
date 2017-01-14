@@ -63,6 +63,10 @@ return [
         /**
          * 类型品牌关联表
          */
-        'type_brands_tables'=>'type_brands'
+        'type_brands_tables'=>'type_brands',
+        /**
+         * 商品销售记录表
+         */
+        'goods_sales_logs_tables'=>'goods_sales_logs',
     ],
 ];
