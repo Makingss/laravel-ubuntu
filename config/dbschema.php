@@ -63,6 +63,6 @@ return [
         /**
          * 类型品牌关联表
          */
-        'type_brand_tables'=>'type_brands'
+        'type_brands_tables'=>'type_brands'
     ],
 ];
