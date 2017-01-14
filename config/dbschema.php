@@ -51,7 +51,10 @@ return [
         /**
          *商品与商品促销规则
          */
-        'goods_promotion_refs_tables' => 'goods_promotion_refs'
-
+        'goods_promotion_refs_tables' => 'goods_promotion_refs',
+        /**
+         * 商品规格表
+         */
+        'specifications_tables'=>'sdb_b2c_specifications',
     ],
 ];
