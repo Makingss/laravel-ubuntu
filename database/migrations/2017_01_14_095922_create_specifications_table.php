@@ -13,7 +13,7 @@ class CreateSpecificationsTable extends Migration
      */
     public function up()
     {
-        Schema::create(config('dbschema.databases.specifications'), function (Blueprint $table) {
+        Schema::create(config('dbschema.databases.specifications_tables'), function (Blueprint $table) {
             $table->increments('spec_id')->comment('规格id');
             $table->string('spec_name', 50)->comment('规格名称');
             $table->enum('spec_show_type', ['select', 'flat'])->comment('显示方式 select:下拉;flat:平铺');
@@ -33,6 +33,6 @@ class CreateSpecificationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('dbschema.databases.specifications'));
+        Schema::dropIfExists(config('dbschema.databases.specifications_tables'));
     }
 }
