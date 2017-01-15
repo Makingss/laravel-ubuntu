@@ -70,7 +70,7 @@ return [
         'goods_sales_logs_tables'=>'goods_sales_logs',
         /**
          *  售后服务表
-         */.
+         */
         'aftersales_return_products_tables'=>'aftersales_return_products',
     ],
 ];
