@@ -27,6 +27,6 @@ class CreateAftersalesReturnProductTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('dbschema.databases.aftersales_return_products_tables');
+        Schema::dropIfExists(config('dbschema.databases.aftersales_return_products_tables'));
     }
 }
