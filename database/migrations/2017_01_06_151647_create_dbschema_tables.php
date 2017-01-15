@@ -14,17 +14,17 @@ class CreateDbschemaTables extends Migration
     public function up()
     {
         Schema::create(config('dbschema.databases.goods_types_tables'), function (Blueprint $table) {
-            $table->engine='InnoDB';
+            $table->engine = 'InnoDB';
             $table->increments('type_id')->unsigned()->comment('类型ID');
-            $table->string('name',100)->unique()->comment('类型名称');
-            $table->json('type_alias')->nullable()->comment('类型别名(可以存多个别名)');
+            $table->string('name', 100)->unique()->comment('类型名称');
+            $table->longText('type_alias')->nullable()->comment('类型别名(可以存多个别名)');
             $table->boolean('is_physical')->default(1)->comment('实体商品');
             $table->string('schema_id', 32)->nullable()->comment('供应商编号');
-            $table->json('setting')->comment('类型设置');
-            $table->json('price')->comment('设置价格区间,用于例表搜索使用');
-            $table->json('minfo')->comment('用户购买时所需输入信息的字段定义序列化数组方式 array(字段名,字段含义,类型(input,select,radio))');
-            $table->json('params')->comment('参数表结构(序列化) array(参数组名=>array(参数名1=>别名1|别名2,参数名2=>别名1|别名2))');
-            $table->json('tab')->comment('商品详情页的自定义tab设置');
+            $table->longText('setting')->comment('类型设置');
+            $table->longText('price')->comment('设置价格区间,用于例表搜索使用');
+            $table->longText('minfo')->nullable()->comment('用户购买时所需输入信息的字段定义序列化数组方式 array(字段名,字段含义,类型(input,select,radio))');
+            $table->longText('params')->nullable()->comment('参数表结构(序列化) array(参数组名=>array(参数名1=>别名1|别名2,参数名2=>别名1|别名2))');
+            $table->longText('tab')->nullable()->comment('商品详情页的自定义tab设置');
             $table->boolean('dly_func')->default(0)->comment('是否包含发货函数');
             $table->boolean('ret_func')->default(0)->comment('是否包含退货函数');
             $table->enum('reship', [
@@ -39,6 +39,19 @@ class CreateDbschemaTables extends Migration
             $table->dateTime('schema_lastmodify')->nullable()->comment('供应商最后更新时间');
             $table->timestamps();
         });
+        Schema::create(config('dbschema.databases.goods_cats_tables'), function (Blueprint $table) {
+            $table->increments('cat_id')->unsigned()->comment('分类ID');
+            $table->integer('parent_id')->unsigned()->comment('上级分类');
+            $table->integer('type_id')->comment('类型序号');
+            $table->string('name',50)->unique()->comment('分类名称');
+            $table->boolean('is_leaf')->default(false)->comment('是否子节点');
+            $table->longText('gallery_setting')->nullable()->comment('商品分类设置');
+            $table->boolean('disabled')->default(false)->comment('是否隐藏');
+            $table->integer('p_order')->default(0)->comment('排序');
+            $table->integer('goods_count')->default(0)->comment('商品数');
+            $table->string('cat_path',200)->nullable()->comment('分类路径(从根至本结点的路径,逗号分隔,首部有逗号)');
+            $table->timestamps();
+        });
         Schema::create(config('dbschema.databases.goods_tables'), function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('goods_id')->unsigned()->comment('商品id');
@@ -49,7 +62,7 @@ class CreateDbschemaTables extends Migration
             //$table->foreign('type_id')->references('type_id')->on('goods_types')->comment('goods_type 外键约束');
             $table->integer('cat_id')->unsigned()->comment('分类');
             $table->integer('brand_id')->comment('品牌');
-            $table->boolean('marketable')->comment('上下架');
+            $table->integer('marketable')->default(0)->comment('上下架');
             $table->integer('store')->unsigned()->default(0)->comment('库存');
             $table->integer('fav')->unsigned()->default(0)->nullable()->comment('收藏量');
             $table->integer('notify_num')->unsigned()->nullable()->default(0)->comment('缺货登记量');
@@ -88,14 +101,14 @@ class CreateDbschemaTables extends Migration
             $table->boolean('package_use')->nullable()->comment('是否开启打包');
             $table->integer('store_prompt')->nullable()->comment('库存提示规则');
             $table->boolean('nostore_sell')->default(false)->comment('是否开启无库存销售');
-            $table->json('goods_setting')->comment('商品设置');
-            $table->json('spec_desc')->comment('货品规格');
-            $table->json('params')->comment('商品规则');
+            $table->longText('goods_setting')->comment('商品设置');
+            $table->longText('spec_desc')->comment('货品规格');
+            $table->longText('params')->comment('商品规则');
             $table->integer('visit_count')->default(0)->comment('被访问次数');
             $table->integer('comments_count')->default(0)->comment('评论次数');
             $table->integer('view_w_count')->default(0)->comment('周浏览次数');
             $table->integer('view_count')->default(0)->comment('浏览次数');
-            $table->json('count_stat')->nullable()->comment('统计数据');
+            $table->longText('count_stat')->nullable()->comment('统计数据');
             $table->integer('buy_count')->default(0)->comment('购买次数');
             $table->integer('buy_w_count')->default(0)->comment('周购买次数');
             $table->string('barcode')->default(0)->comment('条形码');
@@ -110,11 +123,11 @@ class CreateDbschemaTables extends Migration
             $table->integer('buy_limit')->nullable()->comment('商品限购数量');
             $table->string('taxrate')->nullable()->comment('税金');
             $table->integer('tip_id')->nullable()->comment('发货仓');
-            $table->json('pmt_tag')->nullable()->comment('标签');
+            $table->longText('pmt_tag')->nullable()->comment('标签');
             $table->integer('pmt_id')->default(0)->comment('促销方案');
             $table->decimal('goods_profit_ratio')->default(0)->comment('返佣比例');
             $table->boolean('is_pkg')->default(true)->comment('是否搭配商品');
-            $table->json('pkg_info')->nullable()->comment('搭配商品系列化信息');
+            $table->longText('pkg_info')->nullable()->comment('搭配商品系列化信息');
             $table->timestamps();
         });
         Schema::create(config('dbschema.databases.products_tables'), function (Blueprint $table) {
@@ -145,7 +158,7 @@ class CreateDbschemaTables extends Migration
                 'gift'
             ])->comment('销售类型');
             $table->string('spec_info')->comment('产品描述');
-            $table->json('spec_desc')->comment('产品规格');
+            $table->longText('spec_desc')->comment('产品规格');
             $table->boolean('is_default')->default(false)->commnet('is_default');
             $table->string('qrcode_image_id')->nullable()->comment('二维码图片');
             $table->dateTime('uptime')->comment('产品录入时间');
@@ -167,5 +180,6 @@ class CreateDbschemaTables extends Migration
         Schema::dropIfExists(config('dbschema.databases.goods_tables'));
         Schema::dropIfExists(config('dbschema.databases.products_tables'));
         Schema::dropIfExists(config('dbschema.databases.goods_types_tables'));
+        Schema::dropIfExists(config('dbschema.databases.goods_cats_tables'));
     }
 }
