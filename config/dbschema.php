@@ -68,5 +68,9 @@ return [
          * 商品销售记录表
          */
         'goods_sales_logs_tables'=>'goods_sales_logs',
+        /**
+         *  售后服务表
+         */
+        'aftersales_return_products_tables'=>'aftersales_return_products',
     ],
 ];
