@@ -16,6 +16,7 @@ class CreateAftersalesReturnProductTable extends Migration
         Schema::create(config('dbschema.databases.aftersales_return_products_tables'), function (Blueprint $table) {
             $table->increments('return_id');
             $table->bigInteger('order_id')->nullable()->comment('订单号');
+            
             $table->timestamps();
         });
     }
