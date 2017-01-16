@@ -13,7 +13,7 @@ class CreateGoodsLvPricesTables extends Migration
      */
     public function up()
     {
-        Schema::create(config('dbschema.databases.goods_lv_price_tables'), function (Blueprint $table) {
+        Schema::create(config('dbschema.databases.goods_lv_prices_tables'), function (Blueprint $table) {
             $table->increments('id');
             $table->integer('goods_id')->index('goods_id')->unsigned()->comment('商品ID');
             $table->integer('product_id')->index('product_id')->unsigned()->comment('货品ID');
@@ -30,6 +30,6 @@ class CreateGoodsLvPricesTables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('dbschema.databases.goods_lv_price_tables'));
+        Schema::dropIfExists(config('dbschema.databases.goods_lv_prices_tables'));
     }
 }
