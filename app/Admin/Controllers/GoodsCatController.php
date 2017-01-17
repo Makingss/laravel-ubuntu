@@ -42,11 +42,7 @@ class GoodsCatController extends Controller
 
     public function create()
     {
-        return Admin::content(function(Content $content){
-            $content->header('新建商品类型');
-            $content->description('新建商品类型列表');
-            $content->body($this->form());
-        });
+
     }
 
     protected function grid()
