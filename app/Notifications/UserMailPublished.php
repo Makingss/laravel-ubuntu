@@ -34,7 +34,7 @@ class UserMailPublished extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail','database'];
     }
 
     /**
@@ -59,10 +59,13 @@ class UserMailPublished extends Notification
      * @param  mixed $notifiable
      * @return array
      */
+    public function toDatabase(){
+
+    }
     public function toArray($notifiable)
     {
         return [
-            //
+            
         ];
     }
 }

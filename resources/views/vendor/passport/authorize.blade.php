@@ -47,7 +47,7 @@
                     </div>
                     <div class="panel-body">
                         <!-- Introduction -->
-                        <p><strong>{{ $client->name }}</strong> is requesting permission to access your account.</p>
+                        <p><strong>{{ $client->name }}</strong>正在请求访问您的帐户的权限...</p>
 
                         <!-- Scope List -->
                         @if (count($scopes) > 0)

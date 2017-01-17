@@ -36,6 +36,7 @@ class ArticleController extends Controller
          * find()
          * findOrFail()
          */
+        
         $article = Article::findOrFail($id);
         #$article = $article->published_at->diffForHumans();
         return view('articles.show')->with('article', $article);

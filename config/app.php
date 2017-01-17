@@ -90,7 +90,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'zh_CN',
 
     /*
     |--------------------------------------------------------------------------
@@ -162,14 +162,20 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-	Collective\Html\HtmlServiceProvider::class,
+	#Collective\Html\HtmlServiceProvider::class,
 	Laravel\Passport\PassportServiceProvider::class,
         /*
          * Package Service Providers...
          */
+<<<<<<< HEAD
 
         Mews\Captcha\CaptchaServiceProvider::class,
 	Encore\Admin\Providers\AdminServiceProvider::class,
+=======
+		Encore\Admin\Providers\AdminServiceProvider::class,
+        //
+
+>>>>>>> 8df47a09fae8626465e270ff0136740290be95a9
         /*
          * Application Service Providers...
          */
@@ -226,9 +232,14 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+<<<<<<< HEAD
         'Form' => Collective\Html\FormFacade::class,
 	'Html' => Collective\Html\HtmlFacade::class,
 	'Captcha' => Mews\Captcha\Facades\Captcha::class,
+=======
+        #'Form' => Collective\Html\FormFacade::class,
+	#'Html' => Collective\Html\HtmlFacade::class,
+>>>>>>> 8df47a09fae8626465e270ff0136740290be95a9
 	],
 
 ];
