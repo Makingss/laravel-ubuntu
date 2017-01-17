@@ -57,7 +57,6 @@ class UserSubScribe extends Notification
     {
         return [
             'subScribe_at'=>Carbon::now()
-            //  ...........
         ];
     }
 }

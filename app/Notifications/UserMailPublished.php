@@ -59,13 +59,10 @@ class UserMailPublished extends Notification
      * @param  mixed $notifiable
      * @return array
      */
-    public function toDatabase(){
-
-    }
     public function toArray($notifiable)
     {
         return [
-            
+            //
         ];
     }
 }

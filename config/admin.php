@@ -111,7 +111,7 @@ return [
     |               | sidebar-mini                            |
     |---------------------------------------------------------|
      */
-    'layout'  => ['sidebar-mini'],
+    'layout'  => ['sidebar-mimi'],
 
     'version'   => '1.0',
     'poweredUrl'=>'http://192.168.254.128/admin',

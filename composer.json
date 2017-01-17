@@ -13,14 +13,9 @@
     "guzzlehttp/guzzle": "^6.2",
     "doctrine/dbal": "^2.5",
     "laravel/passport": "^1.0",
-<<<<<<< HEAD
     "laravelcollective/html": "^5.3.0",
     "mews/captcha": "^2.1",
     "encore/laravel-admin": "1.3.x-dev"
-=======
-    "encore/laravel-admin": "1.3.x-dev",
-    "spatie/eloquent-sortable": "^3.1"
->>>>>>> 8df47a09fae8626465e270ff0136740290be95a9
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",

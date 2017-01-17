@@ -14,7 +14,7 @@ class CreateDbschemaTables extends Migration
     public function up()
     {
         Schema::create(config('dbschema.databases.goods_types_tables'), function (Blueprint $table) {
-            $table->engine = 'InnoDB';
+            $table->engine='InnoDB';
             $table->increments('type_id')->unsigned()->comment('类型ID');
             $table->string('name', 100)->unique()->comment('类型名称');
             $table->longText('type_alias')->nullable()->comment('类型别名(可以存多个别名)');
