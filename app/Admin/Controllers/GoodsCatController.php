@@ -52,7 +52,8 @@ class GoodsCatController extends Controller
     protected function grid()
     {
         $grid = Admin::grid(Goods_cat::class, function (Grid $grid) {
-            $grid->cat_id('ID');
+            $grid->model()->ordered();
+            $grid->cat_id('ID')->sortable();
             $grid->type_id('类型')->value(function ($type_id) {
                 return Goods_type::find($type_id)->name;
             });
@@ -77,6 +78,10 @@ class GoodsCatController extends Controller
     {
         return Admin::form(Goods_cat::class, function (Form $form) {
             $form->display('cat_id','id');
+            $form->select('cat_id','父级类型')->options(function(){
+                    $arg=['cat_id'=>'name'];
+                    return $arg;
+            });
             $form->select('type_id', '类型')->options(function () {
                 $goods_types = Goods_type::all();
                 foreach ($goods_types as $goods_type) {
