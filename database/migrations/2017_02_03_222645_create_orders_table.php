@@ -13,37 +13,38 @@ class CreateOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
-            $table->unsignedBigInteger('order_id','20');
+        Schema::create(config('dbschema.databases.orders_tables'), function (Blueprint $table) {
+            $table->engine='InnoDB';
+            $table->unsignedBigInteger('order_id',20)->index()->comment('订单编号');
             $table->decimal('total_amount', 20, 3)->comment('订单总金额');
             $table->decimal('final_amount', 20, 3)->comment('订单支付总金额');
             $table->enum('pay_status', ['1','2','3','4','5'])->comment('付款状态 0:未支付;1:已支付;2:已付款至到担保方;3:部分付款;4:部分退款;5:全额退款');
             $table->enum('received_status', ['0','1'])->comment('收货状态 0:未收货;1:已收货');
             $table->string('payment',100)->comment('支付方式');
-            $table->unsignedInteger('last_modified', 10)->nullable()->comment('订单最后一次操作时间');
-            $table->unsignedInteger('createtime','10')->nullable()->comment("下单时间");
-            $table->unsignedMediumInteger('shipping_id','8')->nullable()->comment("配送方式编号");
-            $table->string('shipping','100')->nullable()->comment("配送方式名称");
-            $table->unsignedMediumInteger('member_id','8')->comment("会员编号id");
+            $table->integer('last_modified')->nullable()->comment('订单最后一次操作时间');
+            $table->integer('createtime')->comment("下单时间");
+            $table->integer('shipping_id')->comment("配送方式编号");
+            $table->string('shipping',100)->nullable()->comment("配送方式名称");
+            $table->integer('member_id')->comment("会员编号id");
             $table->enum('status',['active','dead','finish'])->comment("订单状态 active:活动订单;dead:已作废;finish:已完成;");
-            $table->string('ship_area','255')->nullable()->comment("收货地区");
-            $table->string('ship_name','50')->nullable()->comment("收货人");
-            $table->decimal('weight',20,3)->nullable()->comment("订单总重量");
+            $table->string('ship_area',255)->nullable()->comment("收货地区");
+            $table->string('ship_name',50)->nullable()->comment("收货人");
+            $table->integer('weight')->nullable()->comment("订单总重量");
             $table->enum('confirm',['Y','N'])->comment("确认状态");
             $table->enum('promotion_type',['normal','prepare'])->comment("销售类型 normal:普通订单;prepare:预售订单");
             $table->longText('tostr')->nullable()->comment("订单文字描述");
-            $table->unsignedMediumInteger('itemnum','8')->nullable()->comment("订单子数量");
-            $table->string('ip','15')->nullable()->comment("IP地址");
-            $table->string('ship_addr','15')->nullable()->comment("收货人邮编");
-            $table->string('ship_zip','20')->nullable()->comment("收货人邮编");
-            $table->string('ship_tel','20')->nullable()->comment("收货电话");
-            $table->string('ship_email','200')->nullable()->comment("收货人email");
-            $table->string('ship_time','50')->nullable()->comment("配送时间");
+            $table->integer('itemnum')->comment("订单子数量");
+            $table->string('ip',100)->nullable()->comment("IP地址");
+            $table->string('ship_addr',15)->nullable()->comment("收货人邮编");
+            $table->string('ship_zip',20)->nullable()->comment("收货人邮编");
+            $table->string('ship_tel',20)->nullable()->comment("收货电话");
+            $table->string('ship_email',200)->nullable()->comment("收货人email");
+            $table->string('ship_time',50)->nullable()->comment("配送时间");
             $table->decimal('cost_item',20,3)->comment("订单商品总价格");
             $table->enum('is_tax',['true','false'])->comment("是否需要开发票");
             $table->enum('tax_type',['false','personal','company'])->comment("发票类型 false:不需发票;personal:个人发票;company:公司发票;");
-            $table->string('tax_content','255')->nullable()->comment("发票内容");
-            $table->decimal('cost_tax',20,3)->comment("订票税率");
+            $table->string('tax_content',255)->nullable()->comment("发票内容");
+            $table->decimal('cost_tax',20,3)->comment("订单税率");
             $table->string('tax_company',255)->nullable()->comment("发票抬头");
             $table->enum('is_protect',['true','false'])->comment("是否还有保价费");
             $table->decimal('cost_protect',20,3)->comment("保价费");
@@ -78,6 +79,6 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists(config('dbschema.databases.orders_tables'));
     }
 }

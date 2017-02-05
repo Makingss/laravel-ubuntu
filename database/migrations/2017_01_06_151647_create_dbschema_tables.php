@@ -46,7 +46,7 @@ class CreateDbschemaTables extends Migration
             $table->string('name',50)->unique()->comment('分类名称');
             $table->boolean('is_leaf')->default(false)->comment('是否子节点');
             $table->longText('gallery_setting')->nullable()->comment('商品分类设置');
-            $table->boolean('disabled')->default(false)->comment('是否隐藏');
+            $table->integer('disabled')->default(0)->comment('是否隐藏');
             $table->integer('p_order')->default(0)->comment('排序');
             $table->integer('goods_count')->default(0)->comment('商品数');
             $table->string('cat_path',200)->nullable()->comment('分类路径(从根至本结点的路径,逗号分隔,首部有逗号)');

@@ -15,19 +15,19 @@ class CreateOrderItemsTable extends Migration
     {
         Schema::create('order_items', function (Blueprint $table) {
             $table->increments('item_id',8)->comment("订单明细ID");
-            $table->unsignedBigInteger('order_id',20)->commont("订单ID");
-            $table->unsignedMediumInteger("obj_id",8)->commont("订单明细对应的商品对象ID, 对应到sdb_b2c_order_objects表");
-            $table->unsignedMediumInteger("product_id",8)->commont("货品ID");
-            $table->unsignedBigInteger("goods_id",20)->commont("商品ID");
-            $table->unsignedMediumInteger("type_id",8)->nullable()->commont("商品类型ID");
+            $table->unsignedBigInteger('order_id')->commont("订单ID");
+            $table->unsignedMediumInteger("obj_id")->commont("订单明细对应的商品对象ID, 对应到sdb_b2c_order_objects表");
+            $table->unsignedMediumInteger("product_id")->commont("货品ID");
+            $table->unsignedBigInteger("goods_id")->commont("商品ID");
+            $table->unsignedMediumInteger("type_id")->nullable()->commont("商品类型ID");
             $table->string("bn",40)->nullable()->commont("明细商品的品牌名");
             $table->string("name",200)->nullable()->commont("明细商品的名称");
             $table->decimal("cost",20,3)->nullable()->commont("明细商品的成本");
             $table->decimal("price",20,3)->commont("明细商品的销售价(购入价)");
             $table->decimal("g_price",20,3)->commont("明细商品的会员价原价");
             $table->decimal("amount",20,3)->nullable()->commont("明细商品总额");
-            $table->unsignedMediumInteger("score",8)->nullable()->commont("明细商品积分");
-            $table->unsignedMediumInteger("weight",8)->nullable()->commont("明细商品重量");
+            $table->unsignedMediumInteger("score")->nullable()->commont("明细商品积分");
+            $table->unsignedMediumInteger("weight")->nullable()->commont("明细商品重量");
             $table->float("nums")->commont("明细商品购买数量");
             $table->float("sendnum")->commont("明细商品发货数量");
             $table->longText("addon")->nullable()->commont("明细商品的规格属性");
