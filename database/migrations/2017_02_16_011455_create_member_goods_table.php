@@ -14,6 +14,7 @@ class CreateMemberGoodsTable extends Migration {
 	{
 		Schema::create('member_goods', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('gnotify_id')->comment('ID');
 			$table->bigInteger('goods_id')->unsigned()->comment('商品ID');
 			$table->integer('member_id')->unsigned()->nullable()->index('ind_member_id')->comment('会员用户名');
@@ -29,7 +30,7 @@ class CreateMemberGoodsTable extends Migration {
 			$table->enum('disabled', array('true','false'))->nullable()->default('false');
 			$table->text('remark')->nullable()->comment('备注');
 			$table->enum('type', array('fav','sto'))->nullable()->comment('类型, 收藏还是缺货');
-			$table->string('object_type', 100)->nullable()->default('goods')->comment('收藏的类型，goods');
+			$table->string('object_type', 100)->nullable()->default('goods')->comment('收藏的类型，goods');$table->timestamps();
 		});
 	}
 

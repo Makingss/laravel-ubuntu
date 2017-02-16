@@ -14,6 +14,7 @@ class CreateOrderPmtTable extends Migration {
 	{
 		Schema::create('order_pmt', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('pmt_id')->comment('促销规则id');
 			$table->bigInteger('order_id')->unsigned()->comment('订单id');
 			$table->integer('product_id')->unsigned()->nullable()->comment('商品ID');
@@ -22,7 +23,7 @@ class CreateOrderPmtTable extends Migration {
 			$table->text('pmt_tag')->nullable();
 			$table->text('pmt_memo')->nullable();
 			$table->text('pmt_describe')->nullable();
-			$table->primary(['pmt_id','order_id','pmt_type']);
+			$table->primary(['pmt_id','order_id','pmt_type']);$table->timestamps();
 		});
 	}
 

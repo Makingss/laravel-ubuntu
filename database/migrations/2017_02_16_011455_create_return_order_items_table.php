@@ -14,6 +14,7 @@ class CreateReturnOrderItemsTable extends Migration {
 	{
 		Schema::create('return_order_items', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('item_id')->comment('订单明细ID');
 			$table->bigInteger('order_sn')->nullable()->default(0)->comment('报损/退货单号');
 			$table->integer('product_id')->unsigned()->default(0)->comment('货品ID');
@@ -32,6 +33,7 @@ class CreateReturnOrderItemsTable extends Migration {
 			$table->string('local_name', 50)->nullable()->comment('名称');
 			$table->float('nums', 10, 0)->default(1)->comment('商品购买数量');
 			$table->integer('create_time')->unsigned()->nullable()->comment('退货时间');
+			$table->timestamps();
 		});
 	}
 

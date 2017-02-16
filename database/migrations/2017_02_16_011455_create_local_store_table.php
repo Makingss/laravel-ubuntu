@@ -14,6 +14,7 @@ class CreateLocalStoreTable extends Migration {
 	{
 		Schema::create('local_store', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('local_id', true)->comment('门店ID');
 			$table->integer('member_id')->nullable()->default(0)->comment('会员ID');
 			$table->string('name', 50)->nullable()->comment('地址名称');
@@ -26,7 +27,7 @@ class CreateLocalStoreTable extends Migration {
 			$table->string('tel', 50)->nullable()->comment('电话');
 			$table->string('mobile', 50)->nullable()->comment('手机');
 			$table->string('day')->nullable()->default('任意日期')->comment('上门日期');
-			$table->string('time')->nullable()->default('任意时间段')->comment('上门时间');
+			$table->string('time')->nullable()->default('任意时间段')->comment('上门时间');$table->timestamps();
 		});
 	}
 

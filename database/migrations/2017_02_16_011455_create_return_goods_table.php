@@ -14,6 +14,7 @@ class CreateReturnGoodsTable extends Migration {
 	{
 		Schema::create('return_goods', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('re_id', true)->comment('退货/报损ID');
 			$table->integer('type')->nullable()->default(0)->comment('类型');
 			$table->bigInteger('order_sn')->nullable()->default(0)->comment('退货/报损单号');
@@ -21,6 +22,7 @@ class CreateReturnGoodsTable extends Migration {
 			$table->string('local_name', 50)->nullable()->comment('名称');
 			$table->decimal('price', 20)->default(0.00)->comment('退货的销售总价');
 			$table->integer('create_time')->unsigned()->nullable()->comment('退货时间');
+			$table->timestamps();
 		});
 	}
 

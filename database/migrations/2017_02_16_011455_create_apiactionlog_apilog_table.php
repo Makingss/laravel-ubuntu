@@ -14,6 +14,7 @@ class CreateApiactionlogApilogTable extends Migration {
 	{
 		Schema::create('apiactionlog_apilog', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->bigInteger('apilog_id', true)->unsigned();
 			$table->string('apilog', 32)->nullable()->default('')->comment('日志编号');
 			$table->string('original_bn', 50)->nullable()->comment('单据号');
@@ -33,6 +34,7 @@ class CreateApiactionlogApilogTable extends Migration {
 			$table->index(['msg_id','api_type'], 'ind_msg_id_api_type');
 			$table->index(['status','api_type'], 'ind_status_api_type');
 			$table->index(['apilog','api_type','calltime'], 'ind_apilog_api_type_calltime');
+			$table->timestamps();
 		});
 	}
 

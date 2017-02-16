@@ -14,6 +14,7 @@ class CreateGoodsOpinionsTable extends Migration {
 	{
 		Schema::create('goods_opinions', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id')->comment('推荐ID');
 			$table->bigInteger('goods_id')->unsigned()->comment('商品ID');
 			$table->bigInteger('order_id')->unsigned()->comment('订单号');
@@ -26,7 +27,7 @@ class CreateGoodsOpinionsTable extends Migration {
 			$table->enum('fancy', array('0','1'))->nullable()->default('0')->comment('精选');
 			$table->integer('c_num')->nullable()->default(0)->comment('评论数');
 			$table->integer('p_num')->nullable()->default(0)->comment('点赞数');
-			$table->enum('status', array('normal','del'))->nullable()->comment('状态');
+			$table->enum('status', array('normal','del'))->nullable()->comment('状态');$table->timestamps();
 		});
 	}
 

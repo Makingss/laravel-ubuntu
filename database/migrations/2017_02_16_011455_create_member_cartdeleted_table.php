@@ -14,8 +14,9 @@ class CreateMemberCartdeletedTable extends Migration {
 	{
 		Schema::create('member_cartdeleted', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->bigInteger('member_id')->unsigned()->default(0)->primary()->comment('会员id');
-			$table->text('json', 65535)->comment('临时删除购物车');
+			$table->text('json', 65535)->comment('临时删除购物车');$table->timestamps();
 		});
 	}
 

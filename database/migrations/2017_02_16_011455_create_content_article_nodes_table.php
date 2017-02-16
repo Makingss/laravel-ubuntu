@@ -14,6 +14,7 @@ class CreateContentArticleNodesTable extends Migration {
 	{
 		Schema::create('content_article_nodes', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('node_id')->comment('节点id');
 			$table->integer('parent_id')->unsigned()->default(0)->comment('父节点');
 			$table->boolean('node_depth')->default(0)->comment('节点深度');
@@ -33,6 +34,7 @@ class CreateContentArticleNodesTable extends Migration {
 			$table->string('list_tmpl_path', 50)->nullable()->comment('列表页模板');
 			$table->text('content')->nullable()->comment('文章内容');
 			$table->enum('disabled', array('true','false'))->default('false')->index('ind_disabled');
+			$table->timestamps();
 		});
 	}
 

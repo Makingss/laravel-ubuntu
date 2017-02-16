@@ -14,6 +14,7 @@ class CreateErrorcodeTable extends Migration {
 	{
 		Schema::create('errorcode', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('id', true)->comment('id');
 			$table->integer('code_id')->unsigned()->nullable()->comment('code');
 			$table->string('controller', 50)->nullable()->comment('控制器');
@@ -25,6 +26,7 @@ class CreateErrorcodeTable extends Migration {
 			$table->string('params', 50)->nullable()->comment('函数参数');
 			$table->string('return_code', 200)->nullable()->comment('返回值');
 			$table->integer('createtime')->unsigned()->nullable()->comment('创建时间');
+			$table->timestamps();
 		});
 	}
 

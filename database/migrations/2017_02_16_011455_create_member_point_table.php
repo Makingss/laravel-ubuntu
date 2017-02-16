@@ -14,6 +14,7 @@ class CreateMemberPointTable extends Migration {
 	{
 		Schema::create('member_point', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id')->comment('积分日志ID');
 			$table->integer('member_id')->unsigned()->default(0)->index('ind_member_id')->comment('会员ID');
 			$table->integer('point')->default(0)->comment('积分阶段总结');
@@ -26,7 +27,7 @@ class CreateMemberPointTable extends Migration {
 			$table->bigInteger('related_id')->unsigned()->nullable()->comment('积分关联对象ID');
 			$table->boolean('type')->default(1)->comment('操作类型');
 			$table->string('operator', 50)->nullable()->comment('操作员ID');
-			$table->enum('status', array('true','false'))->default('false')->comment('同步CRM的状态');
+			$table->enum('status', array('true','false'))->default('false')->comment('同步CRM的状态');$table->timestamps();
 		});
 	}
 

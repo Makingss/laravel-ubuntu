@@ -14,6 +14,7 @@ class CreateMemberCommentsTable extends Migration {
 	{
 		Schema::create('member_comments', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('comment_id')->comment('评论ID');
 			$table->integer('for_comment_id')->nullable()->default(0)->index('index_for_comment_id')->comment('对m的回复');
 			$table->bigInteger('type_id')->unsigned()->nullable()->comment('名称');
@@ -40,7 +41,7 @@ class CreateMemberCommentsTable extends Migration {
 			$table->string('gask_type', 50)->nullable()->default('')->comment('留言类型 针对订单留言');
 			$table->text('addon')->nullable()->comment('序列化');
 			$table->boolean('p_index')->nullable()->comment('弃用');
-			$table->enum('disabled', array('false','true'))->nullable()->default('false');
+			$table->enum('disabled', array('false','true'))->nullable()->default('false');$table->timestamps();
 		});
 	}
 

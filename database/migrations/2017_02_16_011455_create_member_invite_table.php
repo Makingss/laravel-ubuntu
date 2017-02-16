@@ -14,10 +14,11 @@ class CreateMemberInviteTable extends Migration {
 	{
 		Schema::create('member_invite', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('invite_id', true)->comment('会员邀请ID');
 			$table->integer('member_id')->unsigned()->index('member_id')->comment('会员ID');
 			$table->string('invite_phone', 50)->nullable()->index('invite_phone')->comment('邀请手机号');
-			$table->integer('invite_time')->unsigned()->nullable()->default(0)->comment('邀请时间');
+			$table->integer('invite_time')->unsigned()->nullable()->default(0)->comment('邀请时间');$table->timestamps();
 		});
 	}
 

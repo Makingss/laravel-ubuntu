@@ -14,6 +14,7 @@ class CreateCartObjectsTable extends Migration {
 	{
 		Schema::create('cart_objects', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->string('obj_ident')->comment('对象ident');
 			$table->string('member_ident', 50)->comment('会员ident,会员信息和serssion生成的唯一值');
 			$table->integer('member_id')->default(-1)->index('ind_member_id')->comment('会员 id');
@@ -26,6 +27,7 @@ class CreateCartObjectsTable extends Migration {
 			$table->string('buy_url', 200)->nullable()->default('')->comment('推广URL');
 			$table->bigInteger('parent_order_id')->unsigned()->nullable()->default(0)->comment('换货母订单号');
 			$table->primary(['obj_ident','member_ident','member_id']);
+			$table->timestamps();
 		});
 	}
 

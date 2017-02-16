@@ -14,9 +14,11 @@ class CreateCouponlogOrderCouponRefTable extends Migration {
 	{
 		Schema::create('couponlog_order_coupon_ref', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->bigInteger('id', true)->unsigned()->comment('优惠券使用记录关联表ID');
 			$table->bigInteger('order_id')->unsigned()->default(0)->comment('应用订单号');
 			$table->string('memc_code')->nullable()->index('ind_cpnscode')->comment('使用的优惠券号码');
+			$table->timestamps();
 		});
 	}
 

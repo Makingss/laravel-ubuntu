@@ -14,6 +14,7 @@ class CreateCpsUsermonthprofitTable extends Migration {
 	{
 		Schema::create('cps_usermonthprofit', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('ump_id')->comment('ID');
 			$table->string('u_name', 50)->default('')->index('ind_u_name')->comment('用户名');
 			$table->enum('state', array('1','2'))->default('1')->index('ind_state')->comment('发放状态');
@@ -24,6 +25,7 @@ class CreateCpsUsermonthprofitTable extends Migration {
 			$table->integer('month')->unsigned()->default(1)->comment('月份');
 			$table->integer('u_id')->unsigned()->default(0)->index('ind_u_id')->comment('联盟商ID');
 			$table->enum('disabled', array('false','true'))->default('false')->index('ind_disabled')->comment('是否有效');
+			$table->timestamps();
 		});
 	}
 

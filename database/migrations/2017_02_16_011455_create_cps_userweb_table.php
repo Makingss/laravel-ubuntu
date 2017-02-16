@@ -14,6 +14,7 @@ class CreateCpsUserwebTable extends Migration {
 	{
 		Schema::create('cps_userweb', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('web_id')->comment('ID');
 			$table->integer('u_id')->unsigned()->default(0)->index('ind_u_id')->comment('联盟商推广ID');
 			$table->string('webname', 100)->default('')->comment('网站名称');
@@ -23,6 +24,7 @@ class CreateCpsUserwebTable extends Migration {
 			$table->string('visits', 100)->default('')->comment('访问量');
 			$table->string('alex_rank', 100)->default('')->comment('积分');
 			$table->enum('disabled', array('false','true'))->default('false')->index('ind_disabled')->comment('是否有效');
+			$table->timestamps();
 		});
 	}
 

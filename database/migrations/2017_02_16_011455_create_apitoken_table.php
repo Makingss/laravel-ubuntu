@@ -14,6 +14,7 @@ class CreateApitokenTable extends Migration {
 	{
 		Schema::create('apitoken', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id')->comment('序列ID');
 			$table->string('api_ticket')->comment('api_ticket');
 			$table->string('oldapi_ticket')->comment('oldapi_ticket');
@@ -26,6 +27,7 @@ class CreateApitokenTable extends Migration {
 			$table->string('oldaccess_token')->comment('oldaccess_token');
 			$table->integer('old_time')->unsigned()->comment('上次过期时间');
 			$table->integer('token_number')->unsigned()->comment('更新次数');
+			$table->timestamps();
 		});
 	}
 

@@ -14,6 +14,7 @@ class CreateOrderItemsTable extends Migration {
 	{
 		Schema::create('order_items', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('item_id')->comment('订单明细ID');
 			$table->bigInteger('order_id')->unsigned()->default(0)->index('ind_order_id')->comment('订单ID');
 			$table->bigInteger('parent_order_id')->unsigned()->nullable()->default(0)->comment('父订单号,该字段值大于0 表示该订单是子订单');
@@ -40,6 +41,7 @@ class CreateOrderItemsTable extends Migration {
 			$table->string('buy_url', 200)->nullable()->default('')->comment('推广URL');
 			$table->string('buyurl', 200)->nullable()->default('')->comment('推广URL');
 			$table->boolean('user_cancel_status')->default(0)->comment('售前产品状态，用户是否需要该产品,0:需要，1:不需要');
+			$table->timestamps();
 		});
 	}
 

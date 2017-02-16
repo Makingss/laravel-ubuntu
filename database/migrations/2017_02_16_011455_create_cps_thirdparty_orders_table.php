@@ -14,6 +14,7 @@ class CreateCpsThirdpartyOrdersTable extends Migration {
 	{
 		Schema::create('cps_thirdparty_orders', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->bigInteger('order_id', true)->unsigned()->comment('订单号');
 			$table->string('src', 20)->default('')->comment('来源');
 			$table->text('url', 65535)->comment('来源地址');
@@ -21,6 +22,7 @@ class CreateCpsThirdpartyOrdersTable extends Migration {
 			$table->integer('createtime')->unsigned()->default(0)->index('ind_createtime')->comment('下单时间');
 			$table->enum('status', array('0','1','2'))->default('0')->comment('状态');
 			$table->text('params', 65535)->comment('参数');
+			$table->timestamps();
 		});
 	}
 

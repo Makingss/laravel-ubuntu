@@ -14,9 +14,11 @@ class CreateEctoolsPaymentListTable extends Migration {
 	{
 		Schema::create('ectools_payment_list', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('list_id', true)->comment('序号');
 			$table->string('account', 50)->nullable()->comment('收款账号');
 			$table->string('bank', 50)->nullable()->comment('收款银行');
+			$table->timestamps();
 		});
 	}
 

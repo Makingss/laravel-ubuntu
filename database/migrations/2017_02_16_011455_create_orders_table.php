@@ -14,6 +14,7 @@ class CreateOrdersTable extends Migration {
 	{
 		Schema::create('orders', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->bigInteger('order_id')->unsigned()->default(0)->primary()->comment('订单号');
 			$table->bigInteger('porderid')->unsigned()->nullable()->default(0)->comment('母订单号');
 			$table->bigInteger('parent_order_id')->unsigned()->nullable()->default(0)->comment('父订单号,该字段值大于0 表示该订单是子订单');
@@ -96,7 +97,7 @@ class CreateOrdersTable extends Migration {
 			$table->enum('sync_refund', array('0','1'))->nullable()->default('0')->comment('退货同步丽晶');
 			$table->bigInteger('temp_refund_id')->unsigned()->nullable()->default(0)->comment('售后单ID');
 			$table->enum('not_shipped', array('0','1'))->nullable()->default('0')->comment('售前退货');
-			$table->integer('delivery_time')->unsigned()->nullable()->comment('发货时间');
+			$table->integer('delivery_time')->unsigned()->nullable()->comment('发货时间');$table->timestamps();
 		});
 	}
 

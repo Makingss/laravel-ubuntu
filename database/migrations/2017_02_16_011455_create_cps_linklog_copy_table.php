@@ -14,6 +14,7 @@ class CreateCpsLinklogCopyTable extends Migration {
 	{
 		Schema::create('cps_linklog_copy', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('linklog_id')->comment('ID');
 			$table->string('refer_id', 10)->default('')->index('ind_refer_id')->comment('首次联盟商户推广ID');
 			$table->string('refer_url', 200)->default('')->comment('首次来源URL');
@@ -23,6 +24,7 @@ class CreateCpsLinklogCopyTable extends Migration {
 			$table->integer('c_refer_time')->unsigned()->default(0)->comment('本次来源时间');
 			$table->string('target_id', 32)->default('')->index('ind_target_id')->comment('会员ID/订单ID');
 			$table->string('target_type', 50)->default('')->index('ind_target_type')->comment('类型标记');
+			$table->timestamps();
 		});
 	}
 

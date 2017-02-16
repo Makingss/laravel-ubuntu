@@ -14,6 +14,7 @@ class CreateContentArticleBodysTable extends Migration {
 	{
 		Schema::create('content_article_bodys', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id')->comment('自增id');
 			$table->integer('article_id')->unsigned()->unique('ind_article_id')->comment('文章id');
 			$table->string('tmpl_path', 50)->nullable()->comment('单独页模板');
@@ -25,6 +26,7 @@ class CreateContentArticleBodysTable extends Migration {
 			$table->text('hot_link')->nullable()->comment('热词');
 			$table->integer('length')->unsigned()->nullable()->comment('内容长度');
 			$table->string('image_id', 32)->nullable()->comment('图片id');
+			$table->timestamps();
 		});
 	}
 

@@ -14,13 +14,14 @@ class CreateStoreImportLogTable extends Migration {
 	{
 		Schema::create('store_import_log', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('id', true)->comment('导入id');
 			$table->string('bn', 200)->nullable()->comment('sku编号');
 			$table->integer('pre_store')->unsigned()->nullable()->default(0)->comment('调整前库存');
 			$table->integer('store')->unsigned()->nullable()->default(0)->comment('调整后库存');
 			$table->string('import_time', 30)->nullable()->default('0')->comment('导入时间');
 			$table->integer('import_id')->nullable()->default(0)->comment('导入批次id');
-			$table->string('spec', 200)->nullable()->comment('说明');
+			$table->string('spec', 200)->nullable()->comment('说明');$table->timestamps();
 		});
 	}
 

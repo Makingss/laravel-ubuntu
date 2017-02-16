@@ -14,8 +14,9 @@ class CreateImportsTable extends Migration {
 	{
 		Schema::create('imports', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('import_id', true)->comment('导入id');
-			$table->integer('import_time')->unsigned()->nullable()->default(0)->comment('导入时间');
+			$table->integer('import_time')->unsigned()->nullable()->default(0)->comment('导入时间');$table->timestamps();
 		});
 	}
 

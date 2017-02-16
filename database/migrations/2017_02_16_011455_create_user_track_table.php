@@ -23,6 +23,7 @@ class CreateUserTrackTable extends Migration {
 			$table->integer('page_nums')->unsigned()->nullable()->comment('页面次数');
 			$table->integer('skim_number')->unsigned()->nullable()->comment('阅读次数');
 			$table->string('remarks')->nullable()->comment('备注');
+			$table->timestamps();
 		});
 	}
 

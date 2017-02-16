@@ -14,6 +14,7 @@ class CreateMemberCouponTable extends Migration {
 	{
 		Schema::create('member_coupon', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->string('memc_code')->default('')->comment('优惠券code');
 			$table->integer('cpns_id')->unsigned()->default(0)->comment('会员优惠券ID');
 			$table->integer('member_id')->unsigned()->default(0)->index('ind_member_id')->comment('会员ID');
@@ -24,7 +25,7 @@ class CreateMemberCouponTable extends Migration {
 			$table->integer('memc_gen_time')->unsigned()->nullable()->comment('优惠券产生时间');
 			$table->enum('disabled', array('true','busy','false'))->nullable()->default('false')->comment('无效');
 			$table->enum('memc_isvalid', array('true','false'))->default('true')->comment('会员优惠券是否当前可用');
-			$table->primary(['memc_code','member_id']);
+			$table->primary(['memc_code','member_id']);$table->timestamps();
 		});
 	}
 

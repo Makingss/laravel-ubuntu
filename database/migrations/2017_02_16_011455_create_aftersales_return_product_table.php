@@ -14,6 +14,7 @@ class CreateAftersalesReturnProductTable extends Migration {
 	{
 		Schema::create('aftersales_return_product', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->bigInteger('order_id')->unsigned()->default(0)->comment('订单号');
 			$table->integer('member_id')->unsigned()->default(0)->comment('申请人');
 			$table->bigInteger('return_id')->primary()->comment('退货记录流水号');
@@ -30,6 +31,7 @@ class CreateAftersalesReturnProductTable extends Migration {
 			$table->enum('disabled', array('true','false'))->default('false')->comment('是否有效');
 			$table->enum('sync_lijing', array('0','1'))->nullable()->default('0')->comment('同步丽晶');
 			$table->enum('is_reship', array('0','1'))->nullable()->default('0')->comment('是否生成退货单');
+			$table->timestamps();
 		});
 	}
 

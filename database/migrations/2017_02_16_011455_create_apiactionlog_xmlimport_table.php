@@ -14,10 +14,12 @@ class CreateApiactionlogXmlimportTable extends Migration {
 	{
 		Schema::create('apiactionlog_xmlimport', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('log_id')->comment('日志ID');
 			$table->string('file_name', 50)->comment('文件名称');
 			$table->text('log_data')->nullable()->comment('说明');
 			$table->integer('last_modify')->unsigned()->nullable()->comment('更新时间');
+			$table->timestamps();
 		});
 	}
 

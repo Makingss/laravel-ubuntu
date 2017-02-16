@@ -14,6 +14,7 @@ class CreateStarbuySpecialRemindTable extends Migration {
 	{
 		Schema::create('starbuy_special_remind', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('remind_id');
 			$table->integer('member_id')->unsigned()->nullable();
 			$table->integer('product_id')->unsigned()->nullable();
@@ -23,7 +24,7 @@ class CreateStarbuySpecialRemindTable extends Migration {
 			$table->string('goal', 50)->nullable();
 			$table->integer('savetime')->unsigned()->nullable();
 			$table->integer('remind_time')->unsigned()->nullable();
-			$table->integer('begin_time')->unsigned()->nullable();
+			$table->integer('begin_time')->unsigned()->nullable();$table->timestamps();
 		});
 	}
 

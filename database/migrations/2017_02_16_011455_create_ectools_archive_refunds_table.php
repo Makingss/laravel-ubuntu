@@ -14,6 +14,7 @@ class CreateEctoolsArchiveRefundsTable extends Migration {
 	{
 		Schema::create('ectools_archive_refunds', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->string('refund_id', 20)->comment('退款单号');
 			$table->decimal('money', 20)->default(0.00);
 			$table->decimal('cur_money', 20)->default(0.00)->comment('支付金额');
@@ -36,6 +37,7 @@ class CreateEctoolsArchiveRefundsTable extends Migration {
 			$table->text('memo')->nullable()->comment('备注');
 			$table->enum('disabled', array('true','false'))->nullable()->default('false')->index('ind_disabled');
 			$table->string('trade_no', 30)->nullable()->comment('退款单交易编号');
+			$table->timestamps();
 		});
 	}
 

@@ -14,6 +14,7 @@ class CreateGoodsTypeTable extends Migration {
 	{
 		Schema::create('goods_type', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('type_id')->comment('类型序号');
 			$table->string('name', 100)->default('')->comment('类型名称');
 			$table->enum('floatstore', array('0','1'))->default('0')->comment('小数型库存');
@@ -30,7 +31,7 @@ class CreateGoodsTypeTable extends Migration {
 			$table->enum('reship', array('disabled','func','normal','mixed'))->default('normal')->comment('退货方式 disabled:不允许退货 func:函数式');
 			$table->enum('disabled', array('true','false'))->nullable()->default('false')->index('ind_disabled');
 			$table->enum('is_def', array('true','false'))->default('false')->comment('是否系统默认');
-			$table->integer('lastmodify')->unsigned()->nullable()->comment('上次修改时间');
+			$table->integer('lastmodify')->unsigned()->nullable()->comment('上次修改时间');$table->timestamps();
 		});
 	}
 

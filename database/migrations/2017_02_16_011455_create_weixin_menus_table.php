@@ -14,6 +14,7 @@ class CreateWeixinMenusTable extends Migration {
 	{
 		Schema::create('weixin_menus', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('menu_id')->comment('节点id');
 			$table->integer('parent_id')->unsigned()->default(0)->comment('父节点');
 			$table->boolean('menu_depth')->default(0)->comment('节点深度');
@@ -28,7 +29,7 @@ class CreateWeixinMenusTable extends Migration {
 			$table->enum('has_children', array('true','false'))->default('false')->comment('是否存在子节点');
 			$table->integer('ordernum')->unsigned()->default(0)->index('ind_ordernum')->comment('排序');
 			$table->integer('uptime')->unsigned()->nullable()->comment('修改时间');
-			$table->enum('disabled', array('true','false'))->default('false')->index('ind_disabled');
+			$table->enum('disabled', array('true','false'))->default('false')->index('ind_disabled');$table->timestamps();
 		});
 	}
 

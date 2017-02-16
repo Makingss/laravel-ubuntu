@@ -14,8 +14,9 @@ class CreateOrderDeliveryTimeTable extends Migration {
 	{
 		Schema::create('order_delivery_time', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->bigInteger('order_id')->unsigned()->default(0)->primary()->comment('订单ID');
-			$table->integer('delivery_time')->unsigned()->nullable()->comment('自动确认收货时间');
+			$table->integer('delivery_time')->unsigned()->nullable()->comment('自动确认收货时间');$table->timestamps();
 		});
 	}
 

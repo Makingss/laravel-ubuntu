@@ -14,6 +14,7 @@ class CreateEctoolsArchivePaymentsTable extends Migration {
 	{
 		Schema::create('ectools_archive_payments', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->string('payment_id', 20)->comment('支付单号');
 			$table->decimal('money', 20)->default(0.00)->comment('支付金额');
 			$table->decimal('cur_money', 20)->default(0.00)->comment('支付货币金额');
@@ -38,6 +39,7 @@ class CreateEctoolsArchivePaymentsTable extends Migration {
 			$table->string('return_url', 100)->nullable()->comment('支付返回地址');
 			$table->enum('disabled', array('true','false'))->nullable()->default('false')->index('ind_disabled')->comment('支付单状态');
 			$table->string('trade_no', 30)->nullable()->comment('支付单交易编号');
+			$table->timestamps();
 		});
 	}
 

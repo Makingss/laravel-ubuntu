@@ -14,6 +14,7 @@ class CreateDlytypeTable extends Migration {
 	{
 		Schema::create('dlytype', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('dt_id')->comment('配送ID');
 			$table->string('dt_name', 50)->nullable()->comment('配送方式');
 			$table->enum('has_cod', array('true','false'))->default('false')->comment('货到付款');
@@ -37,6 +38,7 @@ class CreateDlytypeTable extends Migration {
 			$table->text('area_fee_conf')->nullable()->comment('指定地区配置的一系列参数');
 			$table->smallInteger('ordernum')->nullable()->default(0)->comment('排序');
 			$table->enum('disabled', array('true','false'))->nullable()->default('false')->index('ind_disabled');
+			$table->timestamps();
 		});
 	}
 

@@ -14,6 +14,7 @@ class CreateSellLogsTable extends Migration {
 	{
 		Schema::create('sell_logs', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('log_id', true)->comment('销售日志ID');
 			$table->integer('member_id')->unsigned()->default(0)->comment('会员ID');
 			$table->bigInteger('order_id')->unsigned()->default(0)->comment('订单号');
@@ -26,6 +27,7 @@ class CreateSellLogsTable extends Migration {
 			$table->integer('number')->unsigned()->nullable()->default(0)->comment('商品购买数量');
 			$table->integer('createtime')->unsigned()->nullable()->comment('记录创建时间');
 			$table->index(['member_id','product_id','goods_id'], 'ind_goods_id');
+			$table->timestamps();
 		});
 	}
 

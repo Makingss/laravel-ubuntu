@@ -14,6 +14,7 @@ class CreateEctoolsRefundsTable extends Migration {
 	{
 		Schema::create('ectools_refunds', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->string('refund_id', 20)->default('')->primary()->comment('退款单号');
 			$table->decimal('money', 20)->default(0.00);
 			$table->decimal('cur_money', 20)->default(0.00)->comment('支付金额');
@@ -39,6 +40,7 @@ class CreateEctoolsRefundsTable extends Migration {
 			$table->string('return_id', 50)->nullable()->comment('售后服务单ID');
 			$table->string('op_useraccount', 50)->nullable()->comment('退货通知审核人编码');
 			$table->string('op_username', 50)->nullable()->comment('退货通知审核人姓名');
+			$table->timestamps();
 		});
 	}
 

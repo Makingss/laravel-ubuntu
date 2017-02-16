@@ -14,9 +14,10 @@ class CreateImportspriceTable extends Migration {
 	{
 		Schema::create('importsprice', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('import_id', true)->comment('导入id');
 			$table->integer('import_time')->unsigned()->nullable()->default(0)->comment('导入时间');
-			$table->enum('import_status', array('0','1'))->default('0')->comment('审核状态');
+			$table->enum('import_status', array('0','1'))->default('0')->comment('审核状态');$table->timestamps();
 		});
 	}
 

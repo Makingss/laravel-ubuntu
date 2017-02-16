@@ -14,6 +14,7 @@ class CreateContentArticleIndexsTable extends Migration {
 	{
 		Schema::create('content_article_indexs', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('article_id')->comment('文章ID');
 			$table->string('title', 200)->comment('文章标题');
 			$table->enum('platform', array('pc','wap'))->default('pc')->comment('客户端');
@@ -27,6 +28,7 @@ class CreateContentArticleIndexsTable extends Migration {
 			$table->integer('pv')->unsigned()->nullable()->default(0)->index('ind_pv')->comment('pageview');
 			$table->enum('disabled', array('true','false'))->default('false')->index('ind_disabled');
 			$table->char('sctype', 1)->nullable()->default(0);
+			$table->timestamps();
 		});
 	}
 

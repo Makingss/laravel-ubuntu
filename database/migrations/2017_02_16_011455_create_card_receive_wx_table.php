@@ -14,7 +14,8 @@ class CreateCardReceiveWxTable extends Migration {
 	{
 		Schema::create('card_receive_wx', function(Blueprint $table)
 		{
-			$table->integer('Id', true)->comment('用户领取卡券自增编号id');
+			$table->engine='InnoDB';
+			$table->increments('Id', true)->comment('用户领取卡券自增编号id');
 			$table->integer('MemberId')->nullable()->default(0)->comment('会员用户名');
 			$table->char('OpenId', 32)->comment('开发者微信号');
 			$table->enum('Status', array('active','gift','dead','finish'))->comment('卡券状态');
@@ -29,6 +30,7 @@ class CreateCardReceiveWxTable extends Migration {
 			$table->char('OuterStr', 32)->nullable()->default(0)->comment('领取场景值');
 			$table->integer('LocalCreateTime')->unsigned()->comment('创建时间');
 //			$table->primary(['Id','CardId','UserCardCode']);
+			$table->timestamps();
 		});
 	}
 

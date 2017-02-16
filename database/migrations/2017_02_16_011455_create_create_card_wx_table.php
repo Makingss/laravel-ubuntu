@@ -14,12 +14,13 @@ class CreateCreateCardWxTable extends Migration {
 	{
 		Schema::create('create_card_wx', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('Id', true)->comment('id');
-			$table->string('CardNo', 48);
+			$table->string('CardNo', 48)->unique();
 			$table->enum('CardType', array('GROUPON','CASH','DISCOUNT','GIFT','GENERAL_COUPON'))->comment('微信卡券类型');
 			$table->string('CardAttr');
 			$table->string('LogoId', 48)->comment('素材管理logo_id');
-			$table->string('BrandName', 36)->default('影儿时尚集团')->comment('商户名称');
+			$table->string('BrandName', 36)->default('')->comment('商户名称');
 			$table->enum('CodeType', array('CODE_TYPE_TEXT','CODE_TYPE_BARCODE','CODE_TYPE_QRCODE','CODE_TYPE_ONLY_QRCODE','CODE_TYPE_ONLY_BARCODE','CODE_TYPE_NONE'))->default('CODE_TYPE_TEXT')->comment('卡券编码类型');
 			$table->string('Title', 27)->comment('卡券名称');
 			$table->enum('Color', array('Color010','Color020','Color030','Color040','Color050','Color060','Color070','Color080','Color090','Color100','Color101','Color102'))->comment('券颜色');
@@ -63,6 +64,7 @@ class CreateCreateCardWxTable extends Migration {
 			$table->char('EndHour', 2)->nullable()->default(0)->comment('当天具体结束时间(时)');
 			$table->char('EndMinute', 2)->nullable()->default(0)->comment('当天具体结束时间(分)');
 //			$table->primary(['Id','CardNo']);
+			$table->timestamps();
 		});
 	}
 

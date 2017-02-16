@@ -14,8 +14,10 @@ class CreateCpsSettingTable extends Migration {
 	{
 		Schema::create('cps_setting', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->string('skey', 20)->primary()->comment('关键字');
 			$table->text('value', 65535)->comment('保存数据');
+			$table->timestamps();
 		});
 	}
 

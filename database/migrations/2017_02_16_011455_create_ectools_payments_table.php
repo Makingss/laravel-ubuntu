@@ -14,6 +14,7 @@ class CreateEctoolsPaymentsTable extends Migration {
 	{
 		Schema::create('ectools_payments', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->string('payment_id', 20)->default('')->primary()->comment('支付单号');
 			$table->decimal('money', 20)->default(0.00)->comment('支付金额');
 			$table->decimal('cur_money', 20)->default(0.00)->comment('支付货币金额');
@@ -39,6 +40,7 @@ class CreateEctoolsPaymentsTable extends Migration {
 			$table->enum('disabled', array('true','false'))->nullable()->default('false')->index('ind_disabled')->comment('支付单状态');
 			$table->string('trade_no', 30)->nullable()->comment('支付单交易编号');
 			$table->string('thirdparty_account', 50)->nullable()->default('')->comment('第三方支付账户');
+			$table->timestamps();
 		});
 	}
 

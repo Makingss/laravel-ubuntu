@@ -14,6 +14,7 @@ class CreateCardEventWxTable extends Migration {
 	{
 		Schema::create('card_event_wx', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('EventId', true)->comment('id');
 			$table->integer('MemberId')->comment('会员用户名');
 			$table->char('ToUserName', 32)->comment('开发者微信号');
@@ -27,6 +28,7 @@ class CreateCardEventWxTable extends Migration {
 			$table->char('UserCardCode', 32)->comment('code 序列号');
 			$table->char('OldUserCardCode', 32)->nullable()->comment('转赠前的code');
 			$table->char('OuterStr', 32)->nullable()->comment('领取场景值');
+			$table->timestamps();
 		});
 	}
 

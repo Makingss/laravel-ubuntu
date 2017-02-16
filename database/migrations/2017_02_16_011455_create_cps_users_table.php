@@ -14,6 +14,7 @@ class CreateCpsUsersTable extends Migration {
 	{
 		Schema::create('cps_users', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('u_id')->unsigned()->primary()->comment('ID');
 			$table->string('u_name', 50)->default('')->index('ind_u_name')->comment('用户名');
 			$table->string('realname', 100)->default('')->comment('联系人姓名');
@@ -35,6 +36,7 @@ class CreateCpsUsersTable extends Migration {
 			$table->string('identity_card', 20)->default('')->comment('身份证号码');
 			$table->enum('state', array('0','1','2'))->default('1')->index('ind_state')->comment('审核状态');
 			$table->enum('disabled', array('false','true'))->default('false')->index('ind_disabled')->comment('是否有效');
+			$table->timestamps();
 		});
 	}
 

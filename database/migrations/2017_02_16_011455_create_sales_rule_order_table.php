@@ -14,6 +14,7 @@ class CreateSalesRuleOrderTable extends Migration {
 	{
 		Schema::create('sales_rule_order', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('rule_id', true)->comment('规则id');
 			$table->string('name')->default('')->comment('规则名称');
 			$table->text('description', 65535)->nullable()->comment('规则描述');
@@ -31,6 +32,7 @@ class CreateSalesRuleOrderTable extends Migration {
 			$table->string('c_template', 100)->nullable()->comment('过滤条件模板');
 			$table->string('s_template')->nullable()->comment('优惠方案模板');
 			$table->string('apply_platform')->nullable()->default('1,2')->comment('活动平台');
+			$table->timestamps();
 		});
 	}
 

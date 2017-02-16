@@ -14,6 +14,7 @@ class CreateGoodsCatTable extends Migration {
 	{
 		Schema::create('goods_cat', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('cat_id')->comment('分类ID');
 			$table->integer('parent_id')->unsigned()->nullable()->comment('分类ID');
 			$table->string('cat_path', 100)->nullable()->default(',')->index('ind_cat_path')->comment('分类路径(从根至本结点的路径,逗号分隔,首部有逗号)');
@@ -35,6 +36,7 @@ class CreateGoodsCatTable extends Migration {
 			$table->integer('from_time')->unsigned()->nullable()->comment('活动开始时间');
 			$table->integer('to_time')->unsigned()->nullable()->comment('活动结束时间');
 			$table->enum('is_starbuy', array('0','1'))->nullable()->default('0')->comment('是否激活');
+			$table->timestamps();
 		});
 	}
 

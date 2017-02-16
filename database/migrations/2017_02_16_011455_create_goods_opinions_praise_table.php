@@ -14,10 +14,11 @@ class CreateGoodsOpinionsPraiseTable extends Migration {
 	{
 		Schema::create('goods_opinions_praise', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id')->comment('主键ID');
 			$table->integer('opinions_id')->unsigned()->comment('推荐ID');
 			$table->integer('member_id')->unsigned()->comment('点赞用户');
-			$table->integer('created')->unsigned()->comment('点赞时间');
+			$table->integer('created')->unsigned()->comment('点赞时间');$table->timestamps();
 		});
 	}
 

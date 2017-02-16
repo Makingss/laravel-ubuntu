@@ -14,6 +14,7 @@ class CreateGoodsPromotionRefTable extends Migration {
 	{
 		Schema::create('goods_promotion_ref', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('ref_id', true)->comment('商品与商品促销规则关联表');
 			$table->bigInteger('goods_id')->unsigned()->default(0)->index('ind_goods_id')->comment('商品ID');
 			$table->integer('rule_id')->default(0)->comment('优惠规则ID');
@@ -27,7 +28,7 @@ class CreateGoodsPromotionRefTable extends Migration {
 			$table->enum('stop_rules_processing', array('true','false'))->default('false')->comment('是否排斥其他规则');
 			$table->integer('sort_order')->unsigned()->default(0)->comment('优先级');
 			$table->text('action_solution', 65535)->comment('动作方案');
-			$table->boolean('free_shipping')->nullable()->default(0)->comment('免运费');
+			$table->boolean('free_shipping')->nullable()->default(0)->comment('免运费');$table->timestamps();
 		});
 	}
 

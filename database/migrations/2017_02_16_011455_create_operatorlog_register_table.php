@@ -14,6 +14,7 @@ class CreateOperatorlogRegisterTable extends Migration {
 	{
 		Schema::create('operatorlog_register', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id');
 			$table->string('app', 50)->comment('程序目录');
 			$table->string('ctl', 50)->comment('控制器');
@@ -24,7 +25,7 @@ class CreateOperatorlogRegisterTable extends Migration {
 			$table->string('template')->nullable()->comment('模板');
 			$table->string('param')->nullable()->comment('参数');
 			$table->string('prk')->nullable()->default('0')->comment('修改项唯一值');
-			$table->unique(['app','ctl','act'], 'ind_index');
+			$table->unique(['app','ctl','act'], 'ind_index');$table->timestamps();
 		});
 	}
 

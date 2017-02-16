@@ -14,6 +14,7 @@ class CreateDlyHAreaTable extends Migration {
 	{
 		Schema::create('dly_h_area', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('dha_id');
 			$table->integer('dt_id')->unsigned()->nullable();
 			$table->integer('area_id')->unsigned()->nullable()->default(0);
@@ -24,6 +25,7 @@ class CreateDlyHAreaTable extends Migration {
 			$table->string('config')->nullable();
 			$table->string('expressions')->nullable();
 			$table->smallInteger('ordernum')->unsigned()->nullable();
+			$table->timestamps();
 		});
 	}
 

@@ -14,6 +14,7 @@ class CreateCpsUserorderprofitTable extends Migration {
 	{
 		Schema::create('cps_userorderprofit', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('profit_id')->comment('ID');
 			$table->bigInteger('order_id')->unsigned()->default(0)->index('ind_orderid')->comment('订单号');
 			$table->string('u_name', 50)->default('')->index('ind_uname')->comment('联盟商用户名');
@@ -25,6 +26,7 @@ class CreateCpsUserorderprofitTable extends Migration {
 			$table->integer('u_id')->unsigned()->default(0)->index('ind_u_id')->comment('联盟商ID');
 			$table->integer('yam')->unsigned()->default(0)->index('ind_yam')->comment('订单完成年月');
 			$table->enum('disabled', array('false','true'))->default('false')->index('ind_disabled')->comment('是否有效');
+			$table->timestamps();
 		});
 	}
 

@@ -14,6 +14,7 @@ class CreateExpressPrintTmplTable extends Migration {
 	{
 		Schema::create('express_print_tmpl', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('prt_tmpl_id', true)->comment('打印快递单模板ID');
 			$table->string('prt_tmpl_title', 100)->default('0')->comment('单据名称');
 			$table->enum('shortcut', array('true','false'))->nullable()->default('false')->comment('是否启用');
@@ -23,6 +24,7 @@ class CreateExpressPrintTmplTable extends Migration {
 			$table->boolean('prt_tmpl_offsety')->default(0)->comment('打印偏移(右)mm');
 			$table->text('prt_tmpl_data')->nullable()->comment('数据');
 			$table->enum('disabled', array('true','false'))->default('false');
+			$table->timestamps();
 		});
 	}
 

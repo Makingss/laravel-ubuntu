@@ -14,6 +14,7 @@ class CreateStarbuySpecialGoodsTable extends Migration {
 	{
 		Schema::create('starbuy_special_goods', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id');
 			$table->integer('special_id')->unsigned()->nullable()->comment('规则id');
 			$table->integer('product_id')->unsigned()->nullable()->comment('货品id');
@@ -29,7 +30,7 @@ class CreateStarbuySpecialGoodsTable extends Migration {
 			$table->enum('cdown', array('true','false'))->nullable()->comment('是显示否倒计时');
 			$table->integer('initial_num')->unsigned()->nullable()->comment('初始销售量');
 			$table->enum('status', array('true','false'))->nullable()->default('false')->comment('状态');
-			$table->text('description', 65535)->nullable()->comment('规则描述');
+			$table->text('description', 65535)->nullable()->comment('规则描述');$table->timestamps();
 		});
 	}
 

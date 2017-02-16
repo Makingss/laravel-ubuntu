@@ -14,6 +14,7 @@ class CreateDeliveryItemsTable extends Migration {
 	{
 		Schema::create('delivery_items', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('item_id')->comment('序号');
 			$table->bigInteger('delivery_id')->unsigned()->default(0)->comment('发货单号');
 			$table->integer('order_item_id')->unsigned()->nullable()->default(0)->comment('发货明细订单号');
@@ -23,6 +24,7 @@ class CreateDeliveryItemsTable extends Migration {
 			$table->string('product_name', 200)->nullable()->comment('货品名称');
 			$table->float('number', 10, 0)->default(0)->comment('发货数量');
 			$table->string('agency_no', 30)->nullable()->default('')->comment('发货商编号');
+			$table->timestamps();
 		});
 	}
 

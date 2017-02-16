@@ -14,6 +14,7 @@ class CreateMemberWithdrawalTable extends Migration {
 	{
 		Schema::create('member_withdrawal', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id');
 			$table->integer('member_id')->unsigned()->index('ind_member_id')->comment('用户ID');
 			$table->decimal('amount', 20)->comment('申请提现金额');
@@ -29,7 +30,7 @@ class CreateMemberWithdrawalTable extends Migration {
 			$table->decimal('member_advances', 20)->default(0.00)->comment('总佣金');
 			$table->decimal('member_nofinadv', 20)->default(0.00)->comment('未完成佣金');
 			$table->integer('edit_time')->unsigned()->nullable()->comment('修改时间');
-			$table->enum('has_op', array('1','2','3'))->nullable()->default('1')->comment('提现状态');
+			$table->enum('has_op', array('1','2','3'))->nullable()->default('1')->comment('提现状态');$table->timestamps();
 		});
 	}
 

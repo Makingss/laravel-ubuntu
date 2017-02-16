@@ -14,6 +14,7 @@ class CreateCpsInfoTable extends Migration {
 	{
 		Schema::create('cps_info', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('info_id')->comment('ID');
 			$table->string('title', 200)->default('')->comment('文章标题');
 			$table->enum('ifpub', array('false','true'))->default('false')->index('ind_ifpub')->comment('发布状态');
@@ -21,6 +22,7 @@ class CreateCpsInfoTable extends Migration {
 			$table->enum('i_type', array('1','2'))->default('1')->index('ind_i_type')->comment('文章类型');
 			$table->text('content', 65535)->comment('文章内容');
 			$table->enum('disabled', array('false','true'))->default('true')->index('ind_disabled')->comment('是否有效');
+			$table->timestamps();
 		});
 	}
 

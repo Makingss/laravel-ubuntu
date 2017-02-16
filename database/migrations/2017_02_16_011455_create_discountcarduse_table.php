@@ -14,6 +14,7 @@ class CreateDiscountcarduseTable extends Migration {
 	{
 		Schema::create('discountcarduse', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->string('id')->default('')->primary()->comment('卡券号');
 			$table->integer('card_id')->unsigned()->comment('卡券id');
 			$table->integer('member_id')->unsigned()->comment('会员ID');
@@ -22,6 +23,7 @@ class CreateDiscountcarduseTable extends Migration {
 			$table->integer('usedate')->unsigned()->nullable()->comment('使用时间');
 			$table->string('remarks')->nullable()->comment('备注');
 			$table->integer('agentid')->unsigned()->nullable()->comment('导购ID');
+			$table->timestamps();
 		});
 	}
 

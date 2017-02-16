@@ -14,6 +14,7 @@ class CreateReshipTable extends Migration {
 	{
 		Schema::create('reship', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->bigInteger('reship_id', true)->unsigned()->comment('配送流水号');
 			$table->string('order_id', 100)->nullable()->comment('订单号');
 			$table->string('reship_bn', 32)->nullable()->comment('退货流水号');
@@ -38,6 +39,7 @@ class CreateReshipTable extends Migration {
 			$table->enum('status', array('succ','failed','cancel','lost','progress','timeout','ready'))->default('ready')->comment('状态');
 			$table->text('memo')->nullable()->comment('备注');
 			$table->enum('disabled', array('true','false'))->nullable()->default('false')->index('ind_disabled')->comment('无效');
+			$table->timestamps();
 		});
 	}
 

@@ -14,9 +14,11 @@ class CreateCommentGoodsTypeTable extends Migration {
 	{
 		Schema::create('comment_goods_type', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('type_id')->comment('ID');
 			$table->string('name', 100)->comment('评论类型名称');
 			$table->text('addon')->nullable()->comment('序列化');
+			$table->timestamps();
 		});
 	}
 

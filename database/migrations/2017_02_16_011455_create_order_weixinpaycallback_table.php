@@ -14,8 +14,9 @@ class CreateOrderWeixinpaycallbackTable extends Migration {
 	{
 		Schema::create('order_weixinpaycallback', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->bigInteger('order_id')->unsigned()->default(0)->primary()->comment('订单号');
-			$table->string('sign', 100)->default('0')->comment('sign');
+			$table->string('sign', 100)->default('0')->comment('sign');$table->timestamps();
 		});
 	}
 

@@ -14,6 +14,7 @@ class CreateWeixinSafeguardTable extends Migration {
 	{
 		Schema::create('weixin_safeguard', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id')->comment('ID');
 			$table->string('appid', 100)->default('')->comment('公众号ID');
 			$table->string('openid', 100)->default('')->comment('用户ID');
@@ -27,6 +28,7 @@ class CreateWeixinSafeguardTable extends Migration {
 			$table->text('extinfo', 65535)->nullable()->comment('备注信息+电话');
 			$table->text('picurl', 65535)->nullable()->comment('用户上传的图片凭证,最多五张');
 			$table->integer('timestamp')->unsigned()->nullable()->comment('创建时间');
+			$table->timestamps();
 		});
 	}
 

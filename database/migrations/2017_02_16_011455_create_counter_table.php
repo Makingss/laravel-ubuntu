@@ -14,10 +14,12 @@ class CreateCounterTable extends Migration {
 	{
 		Schema::create('counter', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('counter_id')->comment('ID');
 			$table->string('counter_type', 50)->comment('类型');
 			$table->string('counter_name', 30)->nullable()->comment('计数器名');
 			$table->index(['counter_type','counter_name'], 'uni_value');
+			$table->timestamps();
 		});
 	}
 

@@ -14,10 +14,11 @@ class CreateTypeBrandTable extends Migration {
 	{
 		Schema::create('type_brand', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('type_id')->unsigned()->default(0)->comment('商品类型ID');
 			$table->integer('brand_id')->unsigned()->default(0)->comment('品牌ID');
 			$table->integer('brand_order')->unsigned()->nullable()->comment('排序');
-			$table->primary(['type_id','brand_id']);
+			$table->primary(['type_id','brand_id']);$table->timestamps();
 		});
 	}
 

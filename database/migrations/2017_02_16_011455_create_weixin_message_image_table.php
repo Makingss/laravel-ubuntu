@@ -14,6 +14,7 @@ class CreateWeixinMessageImageTable extends Migration {
 	{
 		Schema::create('weixin_message_image', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id')->comment('节点ID');
 			$table->string('name')->comment('消息名称');
 			$table->string('title')->nullable()->comment('图文消息标题');
@@ -26,6 +27,7 @@ class CreateWeixinMessageImageTable extends Migration {
 			$table->integer('ordernum')->unsigned()->default(0)->comment('排序');
 			$table->integer('uptime')->unsigned()->nullable()->comment('修改时间');
 			$table->enum('is_check_bind', array('true','false'))->nullable()->default('false')->comment('发生此消息前是否需要验证绑定');
+			$table->timestamps();
 		});
 	}
 

@@ -14,8 +14,10 @@ class CreateStarbuyCancelorderTable extends Migration {
 	{
 		Schema::create('starbuy_cancelorder', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->bigInteger('order_id')->unsigned()->nullable();
 			$table->integer('canceltime')->unsigned()->nullable();
+			$table->timestamps();
 		});
 	}
 

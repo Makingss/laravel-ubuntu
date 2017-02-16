@@ -14,6 +14,7 @@ class CreateCouponsTable extends Migration {
 	{
 		Schema::create('coupons', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('cpns_id')->comment('优惠券方案id');
 			$table->string('cpns_name')->nullable()->comment('优惠券名称');
 			$table->integer('pmt_id')->unsigned()->nullable()->comment('促销序号(暂时废弃)');
@@ -25,6 +26,7 @@ class CreateCouponsTable extends Migration {
 			$table->integer('cpns_point')->unsigned()->nullable()->comment('兑换优惠券积分');
 			$table->integer('rule_id')->nullable()->comment('相关的订单促销规则ID');
 			$table->integer('cpns_max_num')->unsigned()->nullable()->comment('最大兑换数量');
+			$table->timestamps();
 		});
 	}
 

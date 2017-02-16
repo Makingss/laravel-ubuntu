@@ -14,6 +14,7 @@ class CreateOrderObjectsTable extends Migration {
 	{
 		Schema::create('order_objects', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('obj_id')->comment('订单商品对象ID');
 			$table->bigInteger('order_id')->unsigned()->default(0)->index('ind_order_id')->comment('订单ID');
 			$table->string('obj_type', 50)->default('')->comment('对象类型');
@@ -25,7 +26,7 @@ class CreateOrderObjectsTable extends Migration {
 			$table->decimal('amount', 20)->default(0.00)->comment('商品对象总金额');
 			$table->float('quantity', 10, 0)->default(1)->comment('商品对象购买量');
 			$table->integer('weight')->unsigned()->nullable()->comment('总重量');
-			$table->integer('score')->unsigned()->nullable()->comment('获得积分');
+			$table->integer('score')->unsigned()->nullable()->comment('获得积分');$table->timestamps();
 		});
 	}
 

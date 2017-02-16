@@ -14,9 +14,11 @@ class CreateApisequenceTable extends Migration {
 	{
 		Schema::create('apisequence', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id')->comment('序列ID');
 			$table->integer('sequence')->unsigned()->comment('序列号');
 			$table->string('sequenceName')->comment('序列名');
+			$table->timestamps();
 		});
 	}
 

@@ -14,10 +14,12 @@ class CreateEctoolsAnalysisTable extends Migration {
 	{
 		Schema::create('ectools_analysis', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id')->comment('ectools统计ID');
 			$table->string('service', 100)->comment('对应的service');
 			$table->enum('interval', array('hour','day','comment'));
 			$table->integer('modify')->unsigned()->default(0)->comment('最后修改时间');
+			$table->timestamps();
 		});
 	}
 

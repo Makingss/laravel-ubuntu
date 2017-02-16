@@ -14,6 +14,7 @@ class CreateMemberAddrsTable extends Migration {
 	{
 		Schema::create('member_addrs', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('addr_id', true)->comment('会员地址ID');
 			$table->integer('member_id')->unsigned()->default(0)->comment('会员ID');
 			$table->string('name', 50)->nullable()->comment('会员地址名称');
@@ -28,7 +29,7 @@ class CreateMemberAddrsTable extends Migration {
 			$table->string('time')->nullable()->default('任意时间段')->comment('上门时间');
 			$table->boolean('def_addr')->nullable()->default(0)->comment('默认地址');
 			$table->integer('local_id')->nullable()->default(0)->comment('门店ID');
-			$table->string('card_num', 50)->nullable()->comment('身份证号码');
+			$table->string('card_num', 50)->nullable()->comment('身份证号码');$table->timestamps();
 		});
 	}
 

@@ -14,9 +14,10 @@ class CreateVisitorcurrentTable extends Migration {
 	{
 		Schema::create('visitorcurrent', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id')->comment('统计ID');
 			$table->integer('shop_id')->unsigned()->nullable()->unique('ind_date_mid')->comment('店铺ID');
-			$table->integer('total')->unsigned()->nullable()->default(0)->comment('当天访问次数');
+			$table->integer('total')->unsigned()->nullable()->default(0)->comment('当天访问次数');$table->timestamps();
 		});
 	}
 

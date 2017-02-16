@@ -14,10 +14,11 @@ class CreateOrderCancelReasonTable extends Migration {
 	{
 		Schema::create('order_cancel_reason', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->bigInteger('order_id')->unsigned()->default(0)->primary()->comment('订单ID');
 			$table->enum('reason_type', array('0','1','2','3','4','5','6','7'))->default('0')->comment('取消原因类型');
 			$table->string('reason_desc', 150)->nullable()->comment('其他原因');
-			$table->integer('cancel_time')->unsigned()->nullable()->comment('取消时间');
+			$table->integer('cancel_time')->unsigned()->nullable()->comment('取消时间');$table->timestamps();
 		});
 	}
 

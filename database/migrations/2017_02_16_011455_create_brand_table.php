@@ -14,6 +14,7 @@ class CreateBrandTable extends Migration {
 	{
 		Schema::create('brand', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('brand_id')->comment('品牌id');
 			$table->string('brand_name', 50)->comment('品牌名称');
 			$table->string('brand_url')->nullable()->comment('品牌网址');
@@ -24,6 +25,7 @@ class CreateBrandTable extends Migration {
 			$table->enum('disabled', array('true','false'))->nullable()->default('false')->index('ind_disabled')->comment('失效');
 			$table->integer('ordernum')->unsigned()->nullable()->index('ind_ordernum')->comment('排序');
 			$table->integer('last_modify')->unsigned()->nullable()->comment('更新时间');
+			$table->timestamps();
 		});
 	}
 

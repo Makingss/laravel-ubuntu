@@ -14,12 +14,14 @@ class CreateEctoolsOrderBillsTable extends Migration {
 	{
 		Schema::create('ectools_order_bills', function(Blueprint $table)
 		{
+			$table->engin='InnoDB';
 			$table->bigInteger('rel_id')->unsigned()->default(0);
 			$table->enum('bill_type', array('payments','refunds'))->default('payments')->comment('单据类型');
 			$table->enum('pay_object', array('order','recharge','joinfee','prepaid_recharge'))->default('order')->comment('支付类型');
 			$table->string('bill_id', 20)->comment('关联退款/付款单号');
 			$table->decimal('money', 20)->nullable()->comment('金额');
 			$table->primary(['rel_id','bill_id']);
+			$table->timestamps();
 		});
 	}
 

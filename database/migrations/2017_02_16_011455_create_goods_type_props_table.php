@@ -14,6 +14,7 @@ class CreateGoodsTypePropsTable extends Migration {
 	{
 		Schema::create('goods_type_props', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('props_id')->comment('属性序号');
 			$table->integer('type_id')->unsigned()->index('ind_type_id')->comment('类型序号');
 			$table->string('type', 20)->comment('展示类型');
@@ -23,7 +24,7 @@ class CreateGoodsTypePropsTable extends Migration {
 			$table->text('alias')->nullable()->comment('别名');
 			$table->smallInteger('goods_p')->nullable()->comment('商品位置');
 			$table->integer('ordernum')->nullable()->default(0)->comment('排序');
-			$table->integer('lastmodify')->unsigned()->nullable()->comment('供应商最后更新时间');
+			$table->integer('lastmodify')->unsigned()->nullable()->comment('供应商最后更新时间');$table->timestamps();
 		});
 	}
 

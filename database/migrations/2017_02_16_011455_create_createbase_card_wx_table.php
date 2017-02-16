@@ -14,6 +14,7 @@ class CreateCreatebaseCardWxTable extends Migration {
 	{
 		Schema::create('createbase_card_wx', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('id', true)->comment('id');
 			$table->string('card_id', 48);
 			$table->enum('card_type', array('GROUPON','CASH','DISCOUNT','GIFT','GENERAL_COUPON'))->comment('微信卡券类型');
@@ -61,6 +62,7 @@ class CreateCreatebaseCardWxTable extends Migration {
 			$table->char('begin_minute', 2)->nullable()->default(0)->comment('当天具体有效时间(分)');
 			$table->char('end_hour', 2)->nullable()->default(0)->comment('当天具体结束时间(时)');
 			$table->char('end_minute', 2)->nullable()->default(0)->comment('当天具体结束时间(分)');
+			$table->timestamps();
 		});
 	}
 

@@ -14,10 +14,12 @@ class CreateCounterAttachTable extends Migration {
 	{
 		Schema::create('counter_attach', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('counter_value')->unsigned()->nullable()->default(0)->index('uni_value')->comment('计数值');
 			$table->integer('attach_id')->unsigned()->default(0)->comment('关联id');
 			$table->integer('counter_id')->unsigned()->comment('计数器ID');
 			$table->primary(['attach_id','counter_id']);
+			$table->timestamps();
 		});
 	}
 

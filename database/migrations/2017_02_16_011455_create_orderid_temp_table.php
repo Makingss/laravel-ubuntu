@@ -14,8 +14,9 @@ class CreateOrderidTempTable extends Migration {
 	{
 		Schema::create('orderid_temp', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->string('order_id', 200)->comment('order_id');
-			$table->string('cour_id', 200)->comment('cour_id');
+			$table->string('cour_id', 200)->comment('cour_id');$table->timestamps();
 		});
 	}
 

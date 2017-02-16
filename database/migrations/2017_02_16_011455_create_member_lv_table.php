@@ -14,6 +14,7 @@ class CreateMemberLvTable extends Migration {
 	{
 		Schema::create('member_lv', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('member_lv_id')->comment('ID');
 			$table->string('name', 100)->default('')->unique('ind_name')->comment('等级名称');
 			$table->string('lv_logo')->nullable()->comment('会员等级LOGO');
@@ -31,7 +32,7 @@ class CreateMemberLvTable extends Migration {
 			$table->decimal('order_limit_price', 20)->default(0.00)->comment('每次下单必须达到的金额');
 			$table->text('lv_remark', 65535)->nullable()->comment('会员等级备注');
 			$table->integer('experience')->default(0)->comment('经验值');
-			$table->integer('expiretime')->default(0)->comment('积分过期时间');
+			$table->integer('expiretime')->default(0)->comment('积分过期时间');$table->timestamps();
 		});
 	}
 

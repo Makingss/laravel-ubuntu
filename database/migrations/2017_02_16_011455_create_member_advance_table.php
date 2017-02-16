@@ -14,6 +14,7 @@ class CreateMemberAdvanceTable extends Migration {
 	{
 		Schema::create('member_advance', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('log_id')->comment('日志id');
 			$table->integer('member_id')->unsigned()->default(0)->comment('用户id');
 			$table->decimal('money', 20)->default(0.00)->comment('出入金额');
@@ -30,6 +31,7 @@ class CreateMemberAdvanceTable extends Migration {
 			$table->enum('is_fx', array('true','false'))->default('false')->comment('是否佣金');
 			$table->enum('is_finish', array('true','false'))->default('false')->comment('是否完成');
 			$table->enum('disabled', array('true','false'))->default('false')->index('ind_disabled')->comment('失效');
+			$table->timestamps();
 		});
 	}
 

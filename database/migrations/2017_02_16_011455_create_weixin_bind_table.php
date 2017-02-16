@@ -14,6 +14,7 @@ class CreateWeixinBindTable extends Migration {
 	{
 		Schema::create('weixin_bind', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id')->comment('ID');
 			$table->string('name', 100)->default('')->comment('公众账号名称');
 			$table->string('eid', 100)->unique('eid')->comment('微信公众账号api中标识');
@@ -27,7 +28,7 @@ class CreateWeixinBindTable extends Migration {
 			$table->string('token', 100)->comment('接口配置token');
 			$table->string('appid', 100)->nullable()->comment('AppId');
 			$table->string('appsecret', 100)->nullable()->comment('AppSecret');
-			$table->char('qr', 32)->nullable()->comment('二维码');
+			$table->char('qr', 32)->nullable()->comment('二维码');$table->timestamps();
 		});
 	}
 

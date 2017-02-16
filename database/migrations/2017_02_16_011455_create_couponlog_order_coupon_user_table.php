@@ -14,6 +14,7 @@ class CreateCouponlogOrderCouponUserTable extends Migration {
 	{
 		Schema::create('couponlog_order_coupon_user', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->bigInteger('id', true)->unsigned()->comment('ID');
 			$table->bigInteger('order_id')->unsigned()->default(0)->comment('应用订单号');
 			$table->integer('cpns_id')->unsigned()->default(0)->index('ind_cpnsid')->comment('优惠券方案ID');
@@ -23,6 +24,7 @@ class CreateCouponlogOrderCouponUserTable extends Migration {
 			$table->integer('member_id')->unsigned()->nullable()->comment('使用者');
 			$table->string('memc_code')->nullable()->index('ind_cpnscode')->comment('使用的优惠券号码');
 			$table->enum('cpns_type', array('0','1','2'))->nullable()->comment('优惠券类型');
+			$table->timestamps();
 		});
 	}
 

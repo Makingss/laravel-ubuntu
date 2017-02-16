@@ -14,10 +14,11 @@ class CreateMembersErrorTable extends Migration {
 	{
 		Schema::create('members_error', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('member_id')->unsigned()->nullable()->index('ind_createtime')->comment('会员用户名');
 			$table->integer('etime')->unsigned()->default(0)->comment('错误时间');
 			$table->integer('error_num')->unsigned()->nullable()->default(0)->comment('错误计数');
-			$table->enum('type', array('check','possword'))->comment('错误类型');
+			$table->enum('type', array('check','possword'))->comment('错误类型');$table->timestamps();
 		});
 	}
 

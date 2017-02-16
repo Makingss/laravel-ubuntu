@@ -14,6 +14,7 @@ class CreateProductsTable extends Migration {
 	{
 		Schema::create('products', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('product_id')->comment('货品ID');
 			$table->string('jooge_product_id', 200)->nullable()->comment('货品ID');
 			$table->bigInteger('goods_id')->unsigned()->default(0)->index('ind_goods_id')->comment('商品ID');
@@ -38,7 +39,7 @@ class CreateProductsTable extends Migration {
 			$table->integer('uptime')->unsigned()->nullable()->comment('录入时间');
 			$table->integer('last_modify')->unsigned()->nullable()->comment('最后修改时间');
 			$table->enum('disabled', array('true','false'))->nullable()->default('false')->index('ind_disabled');
-			$table->enum('marketable', array('true','false'))->default('true')->comment('上架');
+			$table->enum('marketable', array('true','false'))->default('true')->comment('上架');$table->timestamps();
 		});
 	}
 

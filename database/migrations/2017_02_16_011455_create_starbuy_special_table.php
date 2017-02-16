@@ -14,6 +14,7 @@ class CreateStarbuySpecialTable extends Migration {
 	{
 		Schema::create('starbuy_special', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('special_id')->comment('规则id');
 			$table->string('name')->default('')->comment('规则名称');
 			$table->text('description', 65535)->nullable()->comment('规则描述');
@@ -30,7 +31,7 @@ class CreateStarbuySpecialTable extends Migration {
 			$table->integer('timeout')->unsigned()->nullable()->default(0)->comment('超时时间');
 			$table->integer('initial_num')->unsigned()->nullable()->default(0)->comment('初始销售量');
 			$table->integer('type_id')->unsigned()->nullable()->comment('促销类型');
-			$table->text('promotion_pro')->nullable()->comment('促销商品组合 ');
+			$table->text('promotion_pro')->nullable()->comment('促销商品组合 ');$table->timestamps();
 		});
 	}
 

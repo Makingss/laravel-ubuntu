@@ -14,6 +14,7 @@ class CreateCommentGoodsPointTable extends Migration {
 	{
 		Schema::create('comment_goods_point', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('point_id')->comment('ID');
 			$table->decimal('goods_point', 2, 1)->nullable()->comment('分数');
 			$table->integer('comment_id')->unsigned()->nullable()->comment('评论ID');
@@ -23,7 +24,8 @@ class CreateCommentGoodsPointTable extends Migration {
 			$table->enum('display', array('false','true'))->nullable()->default('false')->comment('前台是否显示');
 			$table->text('addon')->nullable()->comment('额外序列化信息');
 			$table->enum('disabled', array('false','true'))->nullable()->default('false');
-			$table->index(['goods_id','type_id'], 'ind_point_avg');
+//			$table->index(['goods_id','type_id'], 'ind_point_avg');
+			$table->timestamps();
 		});
 	}
 

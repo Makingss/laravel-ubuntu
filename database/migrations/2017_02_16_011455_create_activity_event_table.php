@@ -14,6 +14,7 @@ class CreateActivityEventTable extends Migration {
 	{
 		Schema::create('activity_event', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id')->comment('积分日志ID');
 			$table->integer('member_id')->default(0)->index('ind_member_id')->comment('会员ID');
 			$table->enum('type_value', array('point'))->comment('优惠项');
@@ -28,6 +29,7 @@ class CreateActivityEventTable extends Migration {
 			$table->string('operator', 50)->nullable()->comment('操作员ID');
 			$table->enum('status', array('true','false'))->default('false')->comment('同步CRM的状态');
 			$table->enum('is_repeat', array('true','false'))->default('false')->comment('是否重复使用');
+			$table->timestamps();
 		});
 	}
 

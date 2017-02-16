@@ -14,6 +14,7 @@ class CreateDiscountcardTable extends Migration {
 	{
 		Schema::create('discountcard', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('id')->comment('序号');
 			$table->string('brand', 50)->comment('品牌名称');
 			$table->string('content')->nullable()->comment('内容');
@@ -25,6 +26,7 @@ class CreateDiscountcardTable extends Migration {
 			$table->decimal('discount', 20)->nullable()->default(0.00)->comment('优惠');
 			$table->integer('typeid')->unsigned()->comment('类型id');
 			$table->string('url_pic')->nullable()->comment('图片');
+			$table->timestamps();
 		});
 	}
 

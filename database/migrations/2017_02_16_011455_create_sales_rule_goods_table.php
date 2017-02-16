@@ -14,6 +14,7 @@ class CreateSalesRuleGoodsTable extends Migration {
 	{
 		Schema::create('sales_rule_goods', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('rule_id', true)->comment('规则id');
 			$table->integer('article_id')->nullable()->comment('文章id');
 			$table->string('name')->default('')->comment('规则名称');
@@ -34,6 +35,7 @@ class CreateSalesRuleGoodsTable extends Migration {
 			$table->integer('apply_time')->unsigned()->nullable()->comment('预过滤时间');
 			$table->string('apply_platform')->nullable()->default('1,2')->comment('活动平台');
 			$table->text('presell')->comment('活动中的预售商品');
+			$table->timestamps();
 		});
 	}
 

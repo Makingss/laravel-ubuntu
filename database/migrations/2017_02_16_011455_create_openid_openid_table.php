@@ -14,6 +14,7 @@ class CreateOpenidOpenidTable extends Migration {
 	{
 		Schema::create('openid_openid', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('member_id')->unsigned()->nullable()->comment('用户名');
 			$table->string('openid', 50)->default('')->primary()->comment('openid');
 			$table->string('provider_openid', 50)->nullable()->comment('第三方标识');
@@ -23,7 +24,7 @@ class CreateOpenidOpenidTable extends Migration {
 			$table->string('email', 200)->nullable()->comment('EMAIL');
 			$table->enum('gender', array('0','1','2'))->nullable()->comment('性别');
 			$table->string('address')->nullable()->comment('地址');
-			$table->string('avatar')->nullable()->comment('头像');
+			$table->string('avatar')->nullable()->comment('头像');$table->timestamps();
 		});
 	}
 

@@ -14,11 +14,12 @@ class CreateOrderDeliveryTable extends Migration {
 	{
 		Schema::create('order_delivery', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->bigInteger('order_id')->unsigned()->default(0)->comment('订单ID');
 			$table->enum('dlytype', array('delivery','reship'))->default('delivery')->comment('单据类型');
 			$table->string('dly_id', 20)->comment('关联单号');
 			$table->text('items', 65535)->nullable()->comment('货品明细');
-			$table->primary(['order_id','dly_id']);
+			$table->primary(['order_id','dly_id']);$table->timestamps();
 		});
 	}
 

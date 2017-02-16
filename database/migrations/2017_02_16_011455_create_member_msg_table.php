@@ -14,6 +14,7 @@ class CreateMemberMsgTable extends Migration {
 	{
 		Schema::create('member_msg', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('msg_id')->comment('ID');
 			$table->integer('for_id')->nullable()->default(0)->comment('回复哪个信件');
 			$table->integer('from_id')->unsigned()->comment('发起会员ID');
@@ -31,7 +32,7 @@ class CreateMemberMsgTable extends Migration {
 			$table->enum('has_star', array('true','false'))->nullable()->default('false')->comment('是否打上星标');
 			$table->enum('has_sent', array('true','false'))->nullable()->default('true')->comment('是否发送');
 			$table->index(['to_id','has_read','has_sent'], 'ind_to_id');
-			$table->index(['from_id','has_read','has_sent'], 'ind_from_id');
+			$table->index(['from_id','has_read','has_sent'], 'ind_from_id');$table->timestamps();
 		});
 	}
 

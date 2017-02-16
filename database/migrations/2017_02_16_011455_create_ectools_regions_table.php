@@ -14,6 +14,7 @@ class CreateEctoolsRegionsTable extends Migration {
 	{
 		Schema::create('ectools_regions', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('region_id')->comment('区域序号');
 			$table->string('local_name', 50)->default('')->comment('地区名称');
 			$table->string('package', 20)->default('')->comment('地区包的类别, 中国/外国等. 中国大陆的编号目前为mainland');
@@ -25,6 +26,7 @@ class CreateEctoolsRegionsTable extends Migration {
 			$table->integer('ordernum')->unsigned()->nullable()->comment('排序');
 			$table->enum('disabled', array('true','false'))->nullable()->default('false');
 			$table->unique(['p_region_id','region_grade','local_name'], 'ind_p_regions_id');
+			$table->timestamps();
 		});
 	}
 

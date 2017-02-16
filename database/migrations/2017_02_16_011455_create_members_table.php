@@ -14,6 +14,7 @@ class CreateMembersTable extends Migration {
 	{
 		Schema::create('members', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('member_id')->comment('会员用户名');
 			$table->integer('member_lv_id')->unsigned()->default(0)->comment('会员等级');
 			$table->integer('member_agency_id')->unsigned()->default(0)->comment('代理商等级');
@@ -108,7 +109,7 @@ class CreateMembersTable extends Migration {
 			$table->enum('sid_sign', array('true','false'))->nullable()->default('false')->comment('导购标记');
 			$table->string('sid', 100)->nullable()->comment('导购id');
 			$table->string('province', 100)->nullable()->comment('省份');
-			$table->string('city', 100)->nullable()->comment('城市');
+			$table->string('city', 100)->nullable()->comment('城市');$table->timestamps();
 		});
 	}
 

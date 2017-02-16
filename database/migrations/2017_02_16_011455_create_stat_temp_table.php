@@ -14,6 +14,7 @@ class CreateStatTempTable extends Migration {
 	{
 		Schema::create('stat_temp', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->bigInteger('order_id')->unsigned()->default(0)->comment('订单号');
 			$table->string('goods_id', 200)->nullable()->comment('商品编号');
 			$table->string('barcode', 40)->nullable()->comment('明细商品的品牌名');
@@ -34,7 +35,7 @@ class CreateStatTempTable extends Migration {
 			$table->string('member_share_area')->nullable()->comment('区域');
 			$table->integer('order_time')->unsigned()->nullable()->comment('下单时间');
 			$table->integer('last_modified')->unsigned()->nullable()->comment('最后更新时间');
-			$table->integer('share_type')->nullable();
+			$table->integer('share_type')->nullable();$table->timestamps();
 		});
 	}
 

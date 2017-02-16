@@ -14,9 +14,11 @@ class CreateStarbuyPromotionsTypeTable extends Migration {
 	{
 		Schema::create('starbuy_promotions_type', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->increments('type_id')->comment('类型id');
 			$table->string('name')->default('')->comment('类型名称');
 			$table->enum('bydefault', array('true','false'))->nullable()->default('false')->comment('是否系统默认');
+			$table->timestamps();
 		});
 	}
 

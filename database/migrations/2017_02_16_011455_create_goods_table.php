@@ -14,6 +14,7 @@ class CreateGoodsTable extends Migration {
 	{
 		Schema::create('goods', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->bigInteger('goods_id', true)->unsigned()->comment('商品ID');
 			$table->string('jooge_goods_id', 200)->comment('商品ID');
 			$table->string('bn', 200)->nullable()->unique('uni_bn')->comment('商品编号');
@@ -22,7 +23,7 @@ class CreateGoodsTable extends Migration {
 			$table->integer('type_id')->unsigned()->nullable()->comment('类型');
 			$table->integer('cat_id')->unsigned()->default(0)->comment('分类');
 			$table->integer('brand_id')->unsigned()->nullable()->comment('品牌');
-			$table->enum('marketable', array('true','false'))->default('true')->index('idx_marketable')->comment('上架');
+			$table->integer('marketable')->default(0)->index('idx_marketable')->comment('上架');
 			$table->integer('store')->unsigned()->nullable()->default(0)->comment('库存');
 			$table->integer('fav')->unsigned()->nullable()->default(0)->comment('收藏量');
 			$table->integer('notify_num')->unsigned()->default(0)->comment('缺货登记');
@@ -139,7 +140,7 @@ class CreateGoodsTable extends Migration {
 			$table->enum('is_starbuy', array('0','1'))->nullable()->default('0')->comment('是否激活');
 			$table->integer('rule_id')->unsigned()->default(0)->comment('活动ID');
 			$table->index(['disabled','goods_type','marketable'], 'ind_frontend');
-			$table->index(['goods_type','d_order'], 'idx_goods_type_d_order');
+			$table->index(['goods_type','d_order'], 'idx_goods_type_d_order');$table->timestamps();
 		});
 	}
 

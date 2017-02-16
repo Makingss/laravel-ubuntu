@@ -14,6 +14,7 @@ class CreateExpressDlyCenterTable extends Migration {
 	{
 		Schema::create('express_dly_center', function(Blueprint $table)
 		{
+			$table->engine='InnoDB';
 			$table->integer('dly_center_id', true)->comment('发货地址ID');
 			$table->string('name', 50)->default('0')->comment('发货地址名称');
 			$table->string('address', 200)->comment('发货地址');
@@ -25,6 +26,7 @@ class CreateExpressDlyCenterTable extends Migration {
 			$table->enum('sex', array('female','male'))->nullable()->default('male')->comment('性别');
 			$table->text('memo')->nullable()->comment('备注');
 			$table->enum('disabled', array('true','false'))->default('false');
+			$table->timestamps();
 		});
 	}
 
