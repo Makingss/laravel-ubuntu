@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Video extends Model
 {
-    protected $fillable=['title','body'];
+    protected $fillable = ['title', 'url'];
+
     public function comments()
     {
         return $this->morphMany(\App\Model\Comment::class, 'commentable');
