@@ -11,3 +11,5 @@ Homestead.yaml
 .settings/org.eclipse.php.core.prefs
 .settings/org.eclipse.wst.validation.prefs
 index.php
+composer.lock
+composer.json
