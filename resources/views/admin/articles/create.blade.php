@@ -1,6 +1,6 @@
 @extends('layouts.app') @section('content')
     <h1>撰写新文章</h1>
-    {!! Form::open(['url'=>'/articles']) !!}
+    {!! Form::open(['url'=>'/admin/articles']) !!}
     <div class="form-groups">
         {!! Form::label('Title') !!}
         {!! Form::text('title',null,['class'=>'form-control']) !!}

@@ -1,7 +1,7 @@
 @extends('layouts.app') @section('content')
 
     <h1>{{$article->title}}</h1>
-    {!! Form::model($article,['method'=>'PATCH','url'=>'/articles/'.$article->id]) !!}
+    {!! Form::model($article,['method'=>'PATCH','url'=>'/admin/articles/'.$article->id]) !!}
     <div class="form-groups">
         {!! Form::label('Title') !!}
         {!! Form::text('title',null,['class'=>'form-control']) !!}

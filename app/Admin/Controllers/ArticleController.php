@@ -1,7 +1,8 @@
 <?php
-namespace App\Http\Controllers;
+namespace App\Admin\Controllers;
 
 use App\Events\UserSignUp;
+use App\Http\Controllers\Controller;
 use App\Listeners\HandleUserSignUp;
 use App\User;
 use Carbon\Carbon;
@@ -17,14 +18,14 @@ class ArticleController extends Controller
     public function __construct()
     {
         //如果用户没有登录,重定向到login,成功登录后返回当前页面
-        $this->middleware('auth');
+//        $this->middleware('auth');
     }
 
     public function index()
     {
         #$article = Article::latest()->where('published_at','<=',Carbon::now())->get();
         $article = Article::latest()->published()->get();
-        return view('articles.index', compact('article'));
+        return view('admin.articles.index', compact('article'));
     }
 
     /**
@@ -38,7 +39,7 @@ class ArticleController extends Controller
          */
         $article = Article::findOrFail($id);
         #$article = $article->published_at->diffForHumans();
-        return view('articles.show')->with('article', $article);
+        return view('admin.articles.show')->with('article', $article);
     }
 
     /**
@@ -49,7 +50,7 @@ class ArticleController extends Controller
         $this->validate($request, ['title' => 'required|min:3', 'content' => 'required', 'published_at' => 'required']);
         $article = Article::findOrFail($id);
         $article->update($request->all());
-        return redirect('/articles');
+        return redirect('/admin/articles');
 
     }
 
@@ -60,7 +61,7 @@ class ArticleController extends Controller
     {
         #$user = \App\User::find(1);
         #event(new UserSignUp($user));
-        return view('articles.create');
+        return view('admin.articles.create');
     }
 
     public function store(Request $request)
@@ -71,12 +72,12 @@ class ArticleController extends Controller
         $this->validate($request, ['title' => 'required|min:3', 'content' => 'required', 'published_at' => 'required']);
         $input = $request->all();
         Article::create($input);
-        return redirect('/articles');
+        return redirect('/admin/articles');
     }
 
     public function edit($id)
     {
         $article = Article::findOrFail($id);
-        return view('articles.edit', compact('article'));
+        return view('admin.articles.edit', compact('article'));
     }
 }
