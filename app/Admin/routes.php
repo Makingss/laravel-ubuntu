@@ -17,6 +17,7 @@ $router->resource('/painter', 'PainterController');
 $router->resource('/goods', 'GoodsController');
 $router->resource('/goodstype','GoodsTypeController');
 $router->resource('goodscat','GoodsCatController');
+$router->resource('wandeditor','WangEditorController@index');
 //$router->get('/painter','PainterController@index');
 //$router->get('/painter/{id}','PainterController@create');
 //$router->get('/painter/{id}/edit','PainterController@edit');
