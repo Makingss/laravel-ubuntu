@@ -17,4 +17,5 @@
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
+app('translator')->addNamespace('admin', resource_path('lang/admin'));
 
