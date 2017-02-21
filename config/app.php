@@ -162,14 +162,14 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-	Collective\Html\HtmlServiceProvider::class,
-	Laravel\Passport\PassportServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
         /*
          * Package Service Providers...
          */
 
         Mews\Captcha\CaptchaServiceProvider::class,
-	Encore\Admin\Providers\AdminServiceProvider::class,
+        Encore\Admin\Providers\AdminServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -178,6 +178,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Overtrue\LaravelUEditor\UEditorServiceProvider::class,
+        Way\Generators\GeneratorsServiceProvider::class,
+        Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
 
     ],
 
@@ -227,8 +230,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
-	'Html' => Collective\Html\HtmlFacade::class,
-	'Captcha' => Mews\Captcha\Facades\Captcha::class,
-	],
+        'Html' => Collective\Html\HtmlFacade::class,
+        'Captcha' => Mews\Captcha\Facades\Captcha::class,
+
+    ],
 
 ];

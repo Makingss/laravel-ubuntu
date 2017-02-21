@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace App\Admin\Models;
 
 use App\Model\Auth\Administrator;
 use App\User;

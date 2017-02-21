@@ -1,4 +1,5 @@
 <?php
+use \Encore\Admin\Form;
 
 /**
  * Laravel-admin - admin builder based on Laravel.
@@ -17,5 +18,9 @@
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
-app('translator')->addNamespace('admin', resource_path('lang/admin'));
+
+//app('translator')->addNamespace('admin', resource_path('lang/admin'));
+//app('view')->prependNamespace('admin', resource_path('views/admin'));
+Form::extend('editor', \App\Admin\Extensions\UEditor::class);
+
 

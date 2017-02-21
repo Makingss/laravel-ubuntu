@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace App\Admin\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -25,5 +25,22 @@ class Good extends Model
     public function Products()
     {
         return $this->hasMany(Product::class, 'goods_id');
+    }
+    /**
+     * One To Many
+     * Goods To Goods_lv_price
+     * Goods.goods_id To Goods_lv_price.goods_id
+     */
+    public function goods_lv_price(){
+        return $this->hasMany(Goods_lv_price::class,'goods_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * One To Many
+     *Good.goods_id To Member_goods.goods_id
+     */
+    public function member_goods(){
+        return $this->hasMany(Member_good::class,'goods_id');
     }
 }

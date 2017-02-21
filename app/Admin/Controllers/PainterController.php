@@ -74,7 +74,7 @@ class PainterController extends Controller
                 $form->textarea('body')->rules('required');
                 $form->datetime('completed_at');
             });
-
+            $form->editor('Editor','Text')->default('<img src="/upload/image/Koala.jpg">');
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });

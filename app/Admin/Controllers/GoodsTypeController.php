@@ -8,7 +8,7 @@
 namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Model\Goods_type;
+use App\Admin\Models\Goods_type;
 use Encore\Admin\Controllers\ModelForm;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Grid;
@@ -44,9 +44,10 @@ class GoodsTypeController extends Controller
         $grid = Admin::grid(Goods_type::class, function (Grid $grid) {
             $grid->type_id('type_id');
             $grid->name('类型名称')->editable();
-            $grid->type_alias('别名')->value(function ($type_alias) {
-                return \GuzzleHttp\json_decode($type_alias);
-            })->label();
+            $grid->type_alias('别名')->label();
+//            $grid->type_alias('别名')->value(function ($type_alias) {
+//                return \GuzzleHttp\json_decode($type_alias);
+//            })->label();
             $grid->is_physical('实体商品')->value(function ($is_physical) {
                 return $is_physical ? '是' : '否';
             });

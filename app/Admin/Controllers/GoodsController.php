@@ -8,9 +8,9 @@
 namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Model\Good;
-use App\Model\Goods_cat;
-use App\Model\Goods_type;
+use App\Admin\Models\Good;
+use App\Admin\Models\Goods_cat;
+use App\Admin\Models\Goods_type;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
