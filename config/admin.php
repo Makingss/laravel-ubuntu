@@ -43,7 +43,7 @@ return [
             'file' => 'file',
         ],
 
-        'host' => 'http://localhost/uploads/',
+        'host' => 'http://laravel.app/uploads/',
     ],
 
     /*
