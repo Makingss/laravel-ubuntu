@@ -17,8 +17,8 @@ class ToolsbaseController extends Controller
 //    protected $path=[];
     public function fileUpload(Request $request)
     {
-        if ($request->hasFile('files[]')) {
-            $file = $request->file('files[]');
+        if ($request->hasFile('files')) {
+            $file = $request->file('files');
             $folderName = date('Ymd');
             if (!Storage::disk('local')->exists($folderName)) {
                 Storage::makeDirectory($folderName);

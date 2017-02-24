@@ -10,7 +10,7 @@
 
         @include('admin::form.error')
         <div class="form-group">
-            <input id="file-fr" name="files[]" type="file" multiple>
+            <input id="file-fr" name="files" type="file" multiple>
         </div>
         @include('admin::form.help-block')
 
