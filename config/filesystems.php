@@ -55,7 +55,12 @@ return [
         ],
         'admin' => [
             'driver' => 'local',
-            'root' => public_path('app/public'),
+            'root' => public_path('uploads'),
+            'visibility' => 'public',
+        ],
+        'uploadimage' => [
+            'driver' => 'local',
+            'root' => public_path('uploads'),
             'visibility' => 'public',
         ],
         's3' => [
