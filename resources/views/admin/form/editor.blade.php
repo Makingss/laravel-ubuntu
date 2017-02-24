@@ -1,14 +1,22 @@
+@include('vendor.ueditor.assets')
 <div class="form-group {!! !$errors->has($errorKey) ?: 'has-error' !!}">
 
     <label for="{{$id}}" class="col-sm-{{$width['label']}} control-label">{{$label}}</label>
 
-    <div class="col-sm-{{$width['field']}}">
+    <div class="col-md-10">
 
         @include('admin::form.error')
-
-        <textarea class="form-control" id="{{$id}}" name="{{$name}}" placeholder="{{ $placeholder }}" {!! $attributes !!} >{{ old($column, $value) }}</textarea>
-
+        <script id="container" name="content" type="text/plain"></script>
         @include('admin::form.help-block')
 
     </div>
 </div>
+
+{{--<script type="text/javascript">--}}
+    {{--var ue = UE.getEditor('container');--}}
+    {{--ue.ready(function() {--}}
+        {{--ue.execCommand('serverparam', '_token', '{{ csrf_token() }}');--}}
+    {{--});--}}
+{{--</script>--}}
+
+

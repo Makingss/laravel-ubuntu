@@ -78,14 +78,14 @@ class GoodsController extends Controller
             $form->select('type_id', "类型")->options(function () {
                 $goods_types = Goods_type::all();
                 foreach ($goods_types as $goods_type) {
-                    $type_name[] = array_add([], $goods_type->type_id, $goods_type->name);
+                    $new_arr[$goods_type->type_id] = $goods_type->name;
                 }
-                foreach ($type_name as $type_nameK => $type_nameV) {
-                    foreach ($type_nameV as $key => $value) {
-                        $new_arr[$key] = $value;
-                    }
-                }
-                return $new_arr;
+//                foreach ($type_name as $type_nameK => $type_nameV) {
+//                    foreach ($type_nameV as $key => $value) {
+//                        $new_arr[$key] = $value;
+//                    }
+//                }
+                return @$new_arr;
             });
             $form->select('cat_id', '分类')->options(function () {
                 $goods_cats = Goods_cat::all();
@@ -97,7 +97,7 @@ class GoodsController extends Controller
 //                        $new_arr[$key] = $value;
 //                    }
 //                }
-                return $new_arr;
+                return @$new_arr;
             });
             $form->text('bn', '商品编码')->rules('required');
             $form->text('name', '商品名称')->rules('required');
@@ -106,7 +106,7 @@ class GoodsController extends Controller
                 foreach ($brands as $brandK => $brandV) {
                     $new_arr[$brandV->brand_id] = $brandV->brand_name;
                 }
-                return $new_arr;
+                return @$new_arr;
             });
             $form->switch('marketable', '是否上架')->states($states);
             $form->text('p_order', '排序');
