@@ -8,8 +8,8 @@
 namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Model\Goods_cat;
-use App\Model\Goods_type;
+use App\Admin\Models\Goods_cat;
+use App\Admin\Models\Goods_type;
 use Encore\Admin\Controllers\ModelForm;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Form;
@@ -55,11 +55,15 @@ class GoodsCatController extends Controller
             $grid->model()->ordered();
             $grid->cat_id('ID')->sortable();
             $grid->type_id('类型')->value(function ($type_id) {
-                return Goods_type::find($type_id)->name;
+                return @Goods_type::find($type_id)->name;
             });
-            $grid->name('分类名称')->editable();
+            $grid->cat_name('分类名称')->editable();
             $grid->is_leaf('是否为子节点')->value(function ($is_leaf) {
-                return $is_leaf ? '是' : '否';
+                if($is_leaf=='true')
+                    return '是';
+                else
+                    return '否';
+//                return $is_leaf='true' ? '是' : '否';
             });
             $states = [
                 'on' => ['value' => 1, 'text' => 'YES', 'color' => 'success'],
@@ -77,27 +81,24 @@ class GoodsCatController extends Controller
     protected function form()
     {
         return Admin::form(Goods_cat::class, function (Form $form) {
-            $form->display('cat_id','id');
-            $form->select('cat_id','父级类型')->options(function(){
-                    $arg=['cat_id'=>'name'];
-                    return $arg;
-            });
-            $form->select('type_id', '类型')->options(function () {
+//            $form->hidden('cat_id','id');
+            $form->text('cat_name','分类名称');
+//            $form->select('cat_id','上级分类')->options(function($cat_id){
+////                dd($cat_id);
+//                    $arg=[$cat_id=>''];
+//                    return $arg;
+//            });
+            $form->select('type_id', '商品类型')->options(function () {
                 $goods_types = Goods_type::all();
                 foreach ($goods_types as $goods_type) {
-                    $type_names = array_add([], $goods_type->type_id, $goods_type->name);
+                    $type_names[$goods_type->type_id]=$goods_type->name;
                 }
                 return $type_names;
             });
+            $form->text('p_order','排序');
+            $form->display('created_at','新建时间');
+            $form->display('updated_at','更新时间');
 
-//            $form->select('type_id', "类型")->options(function () {
-//                $goods_types = Goods_type::all();
-//                foreach ($goods_types as $goods_type) {
-//                    $type_name = array_add([], $goods_type->type_id, $goods_type->name);
-//                }
-//                return $type_name;
-//            });
-            $form->text('name','分类名称');
 
         });
 

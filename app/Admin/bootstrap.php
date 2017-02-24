@@ -18,9 +18,10 @@ use \Encore\Admin\Form;
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
-
-//app('translator')->addNamespace('admin', resource_path('lang/admin'));
-//app('view')->prependNamespace('admin', resource_path('views/admin'));
 Form::extend('editor', \App\Admin\Extensions\UEditor::class);
+Form::extend('fileinput',\App\Admin\Extensions\Fileinput::class);
+app('translator')->addNamespace('admin', resource_path('lang/admin'));
+app('view')->prependNamespace('admin', resource_path('views/admin'));
+
 
 

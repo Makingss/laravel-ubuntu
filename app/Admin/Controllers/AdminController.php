@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\Admin\Controllers;
+namespace App\Admin\Controllers;
 
 trait AdminController
 {

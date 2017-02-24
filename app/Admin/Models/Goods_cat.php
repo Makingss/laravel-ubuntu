@@ -9,6 +9,7 @@ use Spatie\EloquentSortable\SortableTrait;
 class Goods_cat extends Model implements Sortable
 {
     use SortableTrait;
+    protected $table='goods_cat';
     protected $primaryKey = 'cat_id';
     protected $fillable = ['parent_id', 'type_id', 'name', 'is_leaf', 'gallery_setting', 'disabled', 'p_order', 'goods_count', 'cat_path'];
 

@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Goods_type extends Model
 {
-    protected $fillable = ['name', 'type_alias', 'is_physical', 'schema_id', 'setting',
+    protected $table='goods_type';
+    protected $fillable = ['name', 'alias', 'is_physical', 'schema_id', 'setting',
         'price', 'minfo', 'params', 'tab', 'dly_func', 'ret_func', 'reship', 'disabled', 'is_def',
         'schema_lastmodify'
     ];

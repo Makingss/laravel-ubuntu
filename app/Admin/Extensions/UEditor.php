@@ -8,7 +8,7 @@
 
 namespace App\Admin\Extensions;
 
-@include('vendor.ueditor.assets');
+//@include('vendor.ueditor.assets');
 use Encore\Admin\Form\Field;
 
 class UEditor extends Field
@@ -18,12 +18,11 @@ class UEditor extends Field
 
     public function render()
     {
-        $csrfToken = csrf_token();
         $this->script = <<<EOT
-        var ue = UE.getEditor('container');
-        ue.ready(function() {
-        ue.execCommand('serverparam', '_token', '{{ csrf_token() }}'); // 设置 CSRF token.
-        });
+    var ue = UE.getEditor('container');
+    ue.ready(function() {
+        ue.execCommand('serverparam', '_token', '{{ csrf_token() }}');
+    });
 
 EOT;
         return parent::render();

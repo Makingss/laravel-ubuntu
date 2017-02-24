@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Brand extends Model
 {
+    protected $table='brand';
     protected $fillable = ['brand_name', 'brand_url', 'brand_logo', 'brand_keywords', 'brand_setting', 'disabled', 'p_order', 'last_modify'];
     protected $primaryKey = 'brand_id';
 
